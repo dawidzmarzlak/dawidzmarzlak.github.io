@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { Services } from "@/components/sections/Services";
 import { Technologies } from "@/components/sections/Technologies";
 import { Process } from "@/components/sections/Process";
@@ -10,13 +9,14 @@ export const metadata: Metadata = {
   description: "Kompleksowe usługi web development - Next.js, WordPress, WooCommerce, PrestaShop i aplikacje webowe.",
 };
 
+export const dynamic = 'force-static';
+
 export default async function ServicesPage({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>

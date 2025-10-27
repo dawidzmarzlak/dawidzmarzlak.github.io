@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { About } from "@/components/sections/About";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -10,13 +9,14 @@ export const metadata: Metadata = {
   description: "Poznaj zespół IT Solutions i dowiedz się więcej o naszej misji i wartościach.",
 };
 
+export const dynamic = 'force-static';
+
 export default async function AboutPage({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTA } from "@/components/sections/CTA";
@@ -9,13 +8,14 @@ export const metadata: Metadata = {
   description: "Poznaj nasze realizacje - ponad 150 projektów dla zadowolonych klientów.",
 };
 
+export const dynamic = 'force-static';
+
 export default async function PortfolioPage({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
@@ -9,13 +8,14 @@ import { Technologies } from "@/components/sections/Technologies";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
+export const dynamic = 'force-static';
+
 export default async function Home({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 import type { Metadata } from "next";
@@ -8,13 +7,14 @@ export const metadata: Metadata = {
   description: "Skontaktuj się z IT Solutions - odpowiemy w ciągu 24 godzin.",
 };
 
+export const dynamic = 'force-static';
+
 export default async function ContactPage({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { Check } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -55,13 +54,14 @@ const pricingPlans = [
   },
 ];
 
+export const dynamic = 'force-static';
+
 export default async function PricingPage({
   params
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+  await params;
 
   return (
     <>
