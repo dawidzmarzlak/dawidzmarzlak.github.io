@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "settings": "Settings",
+    "language": "Language",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
+  },
+  "hero": {
+    "badge": "Over 150 completed projects since 2020",
+    "title": "We Build Websites That Sell",
+    "subtitle": "We specialize in Next.js, WordPress, WooCommerce, PrestaShop, and web applications built on Spring Boot. We transform your ideas into working digital solutions.",
+    "cta": "Get a Free Quote",
+    "cta_secondary": "View Our Portfolio"
+  },
+  "stats": {
+    "projects": {
+      "value": "150+",
+      "label": "Completed Projects"
+    },
+    "clients": {
+      "value": "80+",
+      "label": "Satisfied Clients"
+    },
+    "years": {
+      "value": "5 years",
+      "label": "In Business"
+    },
+    "satisfaction": {
+      "value": "98%",
+      "label": "Positive Reviews"
+    }
+  },
+  "about": {
+    "title": "Who We Are",
+    "description": "We are a team of technology enthusiasts who have been creating modern web solutions for companies across Poland and Europe since 2020.",
+    "mission": "Our mission is to deliver high-quality websites and applications that not only look great but, most importantly, bring real business results.",
+    "values": {
+      "quality": {
+        "title": "Quality",
+        "description": "We treat each project individually. We care about the smallest details to deliver the highest quality product."
+      },
+      "timeliness": {
+        "title": "Timeliness",
+        "description": "We respect your time. We deliver projects according to the agreed schedule, without delays."
+      },
+      "support": {
+        "title": "Support",
+        "description": "We don't end cooperation after deployment. We offer full technical support and help in developing your project."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "We keep you updated at every stage of the project. You know exactly what's happening and what you're paying for."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer comprehensive web solutions tailored to your needs",
+    "nextjs": {
+      "title": "Next.js Websites",
+      "description": "Lightning-fast, SEO-friendly web applications"
+    },
+    "wordpress": {
+      "title": "WordPress",
+      "description": "Professional business websites and blogs with the most popular CMS"
+    },
+    "woocommerce": {
+      "title": "WooCommerce",
+      "description": "Complete e-commerce stores on WordPress"
+    },
+    "prestashop": {
+      "title": "PrestaShop",
+      "description": "Advanced e-commerce platforms for demanding clients"
+    },
+    "webapp": {
+      "title": "Web Applications",
+      "description": "Spring Boot backend + React/Next.js/Angular frontend"
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Discover projects we've created for our clients",
+    "categories": {
+      "all": "All",
+      "nextjs": "Next.js",
+      "wordpress": "WordPress",
+      "webapp": "Web Apps"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Reviews from satisfied clients we work with"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest articles about web development",
+    "readMore": "Read more",
+    "readTime": "min read"
+  },
+  "process": {
+    "title": "Cooperation Process",
+    "subtitle": "How working with us looks like step by step",
+    "steps": {
+      "consultation": {
+        "title": "Consultation",
+        "description": "Free consultation and needs analysis. We get to know your business and project goals."
+      },
+      "quote": {
+        "title": "Quote",
+        "description": "We prepare a detailed quote and project timeline."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We create graphic design and UX/UI tailored to your brand."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Professional development using best practices and technologies."
+      },
+      "testing": {
+        "title": "Testing",
+        "description": "Thorough testing of functionality, performance, and security."
+      },
+      "deployment": {
+        "title": "Deployment",
+        "description": "Deployment to production server and system training."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Full technical support and help in project development."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Technologies We Use",
+    "subtitle": "The most modern tools and frameworks"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to questions you ask us most often",
+    "items": {
+      "duration": {
+        "question": "How long does project delivery take?",
+        "answer": "Delivery time depends on project complexity. A simple business card website takes 2-3 weeks, more advanced e-commerce takes 6-12 weeks."
+      },
+      "cost": {
+        "question": "How much does a website cost?",
+        "answer": "Prices are individual and depend on project scope. Simple business card websites start from $1,200, advanced online stores from $3,500."
+      },
+      "hosting": {
+        "question": "Do you offer hosting?",
+        "answer": "Yes, we can handle your website hosting. We work with the best hosting providers in Poland and abroad."
+      },
+      "cms": {
+        "question": "Can I edit the website myself?",
+        "answer": "Of course! All our projects come with intuitive admin panels. Additionally, we provide training on how to use them."
+      },
+      "changes": {
+        "question": "What if I need changes after deployment?",
+        "answer": "We offer technical support packages and the ability to commission further changes and extensions."
+      },
+      "responsive": {
+        "question": "Do you create responsive websites?",
+        "answer": "Yes, all our websites are fully responsive and adapted to mobile devices, tablets and desktops."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready for a New Project?",
+    "description": "Contact us today and get a free quote and consultation. Let's talk about your project and find the best solution.",
+    "button": "Contact Us",
+    "quote": "Quote Form"
+  },
+  "footer": {
+    "tagline": "We create modern web solutions for companies across Poland and Europe",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "newsletter": "Newsletter",
+    "newsletterText": "Subscribe to our newsletter and receive the latest articles",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "servicesList": {
+      "nextjs": "Next.js Websites",
+      "wordpress": "WordPress",
+      "woocommerce": "WooCommerce",
+      "prestashop": "PrestaShop",
+      "webapp": "Web Applications"
+    }
+  },
+  "quote": {
+    "title": "Quote Form",
+    "description": "Fill out the form and we'll prepare a free quote for you"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions? Write to us and we'll respond as soon as possible"
+  },
+  "metadata": {
+    "title": "IT Solutions - Professional Web Development",
+    "siteName": "IT Solutions",
+    "description": "We create modern websites and web applications. Next.js, WordPress, WooCommerce, PrestaShop. Over 150 completed projects.",
+    "keywords": "web development, web applications, Next.js, WordPress, WooCommerce, PrestaShop, software development"
+  }
+}

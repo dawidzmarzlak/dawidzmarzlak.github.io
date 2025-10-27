@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "O nas",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "pricing": "Cennik",
+    "contact": "Kontakt",
+    "settings": "Ustawienia",
+    "language": "Język",
+    "lightMode": "Jasny motyw",
+    "darkMode": "Ciemny motyw"
+  },
+  "hero": {
+    "badge": "Ponad 150 zrealizowanych projektów od 2020 roku",
+    "title": "Tworzymy Strony, Które Sprzedają",
+    "subtitle": "Specjalizujemy się w Next.js, WordPress, WooCommerce, PrestaShop i aplikacjach webowych opartych na Spring Boot. Przekształcamy Twoje pomysły w działające rozwiązania cyfrowe.",
+    "cta": "Zamów bezpłatną wycenę",
+    "cta_secondary": "Zobacz nasze portfolio"
+  },
+  "stats": {
+    "projects": {
+      "value": "150+",
+      "label": "Zakończonych projektów"
+    },
+    "clients": {
+      "value": "80+",
+      "label": "Zadowolonych klientów"
+    },
+    "years": {
+      "value": "5 lat",
+      "label": "Na rynku"
+    },
+    "satisfaction": {
+      "value": "98%",
+      "label": "Pozytywnych opinii"
+    }
+  },
+  "about": {
+    "title": "Kim jesteśmy?",
+    "description": "Jesteśmy zespołem pasjonatów technologii, który od 2020 roku tworzy nowoczesne rozwiązania webowe dla firm z całej Polski i Europy.",
+    "mission": "Naszą misją jest dostarczanie wysokiej jakości stron internetowych i aplikacji, które nie tylko świetnie wyglądają, ale przede wszystkim - przynoszą realne rezultaty biznesowe.",
+    "values": {
+      "quality": {
+        "title": "Jakość",
+        "description": "Każdy projekt traktujemy indywidualnie. Dbamy o najmniejsze detale, aby dostarczyć produkt najwyższej jakości."
+      },
+      "timeliness": {
+        "title": "Terminowość",
+        "description": "Szanujemy Twój czas. Realizujemy projekty zgodnie z ustalonym harmonogramem, bez opóźnień."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "description": "Nie kończymy współpracy po wdrożeniu. Oferujemy pełne wsparcie techniczne i pomoc w rozwoju Twojego projektu."
+      },
+      "transparency": {
+        "title": "Transparentność",
+        "description": "Trzymamy Cię na bieżąco na każdym etapie projektu. Wiesz dokładnie, co się dzieje i za co płacisz."
+      }
+    }
+  },
+  "services": {
+    "title": "Nasze Usługi",
+    "subtitle": "Oferujemy kompleksowe rozwiązania webowe dostosowane do Twoich potrzeb",
+    "nextjs": {
+      "title": "Strony w Next.js",
+      "description": "Błyskawicznie szybkie, SEO-friendly aplikacje webowe"
+    },
+    "wordpress": {
+      "title": "WordPress",
+      "description": "Profesjonalne strony firmowe i blogi z najpopularniejszym CMS"
+    },
+    "woocommerce": {
+      "title": "WooCommerce",
+      "description": "Kompleksowe sklepy internetowe na WordPress"
+    },
+    "prestashop": {
+      "title": "PrestaShop",
+      "description": "Zaawansowane platformy e-commerce dla wymagających"
+    },
+    "webapp": {
+      "title": "Aplikacje Webowe",
+      "description": "Spring Boot backend + React/Next.js/Angular frontend"
+    }
+  },
+  "portfolio": {
+    "title": "Nasze Realizacje",
+    "subtitle": "Poznaj projekty, które stworzyliśmy dla naszych klientów",
+    "categories": {
+      "all": "Wszystkie",
+      "nextjs": "Next.js",
+      "wordpress": "WordPress",
+      "webapp": "Aplikacje"
+    }
+  },
+  "testimonials": {
+    "title": "Co mówią nasi klienci",
+    "subtitle": "Opinie zadowolonych klientów, z którymi współpracujemy"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Najnowsze artykuły o web developmencie",
+    "readMore": "Czytaj więcej",
+    "readTime": "min czytania"
+  },
+  "process": {
+    "title": "Proces Współpracy",
+    "subtitle": "Jak wygląda współpraca z nami krok po kroku",
+    "steps": {
+      "consultation": {
+        "title": "Konsultacja",
+        "description": "Bezpłatna konsultacja i analiza potrzeb. Poznajemy Twój biznes i cele projektu."
+      },
+      "quote": {
+        "title": "Wycena",
+        "description": "Przygotowujemy szczegółową wycenę i harmonogram realizacji projektu."
+      },
+      "design": {
+        "title": "Projekt",
+        "description": "Tworzymy projekt graficzny i UX/UI, dopasowany do Twojej marki."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Profesjonalny development z wykorzystaniem najlepszych praktyk i technologii."
+      },
+      "testing": {
+        "title": "Testy",
+        "description": "Dokładne testy funkcjonalności, wydajności i bezpieczeństwa."
+      },
+      "deployment": {
+        "title": "Wdrożenie",
+        "description": "Wdrożenie na serwer produkcyjny i szkolenie z obsługi systemu."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "description": "Pełne wsparcie techniczne i pomoc w rozwoju projektu."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Technologie, z których korzystamy",
+    "subtitle": "Najnowocześniejsze narzędzia i frameworki"
+  },
+  "faq": {
+    "title": "Najczęściej Zadawane Pytania",
+    "subtitle": "Odpowiedzi na pytania, które nas najczęściej zadajecie",
+    "items": {
+      "duration": {
+        "question": "Jak długo trwa realizacja projektu?",
+        "answer": "Czas realizacji zależy od skomplikowania projektu. Prosta strona wizytówka to 2-3 tygodnie, bardziej zaawansowany e-commerce to 6-12 tygodni."
+      },
+      "cost": {
+        "question": "Ile kosztuje strona internetowa?",
+        "answer": "Ceny są indywidualne i zależą od zakresu projektu. Proste strony wizytówki startują od 5000 zł, zaawansowane sklepy internetowe od 15000 zł."
+      },
+      "hosting": {
+        "question": "Czy oferujecie hosting?",
+        "answer": "Tak, możemy zająć się hostingiem Twojej strony. Współpracujemy z najlepszymi dostawcami hostingu w Polsce i za granicą."
+      },
+      "cms": {
+        "question": "Czy mogę samodzielnie edytować stronę?",
+        "answer": "Oczywiście! Wszystkie nasze projekty są wyposażone w intuicyjne panele administracyjne. Dodatkowo przeprowadzamy szkolenia z obsługi."
+      },
+      "changes": {
+        "question": "Co jeśli będę potrzebować zmian po wdrożeniu?",
+        "answer": "Oferujemy pakiety wsparcia technicznego oraz możliwość zlecania kolejnych zmian i rozszerzeń."
+      },
+      "responsive": {
+        "question": "Czy tworzycie strony responsywne?",
+        "answer": "Tak, wszystkie nasze strony są w pełni responsywne i dostosowane do urządzeń mobilnych, tabletów i desktopów."
+      }
+    }
+  },
+  "cta": {
+    "title": "Gotowy na nowy projekt?",
+    "description": "Skontaktuj się z nami już dziś i otrzymaj bezpłatną wycenę oraz konsultację. Porozmawiajmy o Twoim projekcie i znajdźmy najlepsze rozwiązanie.",
+    "button": "Skontaktuj się z nami",
+    "quote": "Formularz wyceny"
+  },
+  "footer": {
+    "tagline": "Tworzymy nowoczesne rozwiązania webowe dla firm z całej Polski i Europy",
+    "quickLinks": "Szybkie linki",
+    "services": "Usługi",
+    "newsletter": "Newsletter",
+    "newsletterText": "Zapisz się do newslettera i otrzymuj najnowsze artykuły",
+    "emailPlaceholder": "Twój email",
+    "subscribe": "Zapisz się",
+    "rights": "Wszystkie prawa zastrzeżone.",
+    "links": {
+      "about": "O nas",
+      "services": "Usługi",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    },
+    "servicesList": {
+      "nextjs": "Strony w Next.js",
+      "wordpress": "WordPress",
+      "woocommerce": "WooCommerce",
+      "prestashop": "PrestaShop",
+      "webapp": "Aplikacje Webowe"
+    }
+  },
+  "quote": {
+    "title": "Formularz Wyceny",
+    "description": "Wypełnij formularz, a my przygotujemy dla Ciebie bezpłatną wycenę"
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "description": "Masz pytania? Napisz do nas, a odpowiemy najszybciej jak to możliwe"
+  },
+  "metadata": {
+    "title": "IT Solutions - Profesjonalne Strony Internetowe",
+    "siteName": "IT Solutions",
+    "description": "Tworzymy nowoczesne strony internetowe i aplikacje webowe. Next.js, WordPress, WooCommerce, PrestaShop. Ponad 150 zrealizowanych projektów.",
+    "keywords": "strony internetowe, aplikacje webowe, Next.js, WordPress, WooCommerce, PrestaShop, web development"
+  }
+}
