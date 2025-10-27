@@ -76,10 +76,14 @@ export function Process() {
         </motion.div>
 
         {/* Timeline */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto relative">
+          {/* Continuous vertical line for desktop - from first to last number */}
+          <div className="hidden md:block absolute left-1/2 top-10 bottom-10 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary opacity-20 -translate-x-1/2" />
+
           {steps.map((step, index) => {
             const Icon = step.icon;
             const isEven = index % 2 === 0;
+            const isLast = index === steps.length - 1;
 
             return (
               <motion.div
@@ -87,44 +91,112 @@ export function Process() {
                 initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative mb-12 last:mb-0"
+                className={`relative ${isLast ? 'mb-0' : 'mb-8 md:mb-16'}`}
               >
-                <div className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-8 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Content */}
-                  <div className="flex-1">
-                    <Card className="hover:shadow-xl transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                              <Icon className="w-6 h-6 text-primary" />
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-bold mb-2">
-                              {t(`steps.${step.key}.title`)}
-                            </h3>
-                            <p className="text-muted-foreground">
-                              {t(`steps.${step.key}.description`)}
-                            </p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+                {/* Mobile Layout: Number on top, continuous line connecting everything */}
+                <div className="flex flex-col md:hidden items-center relative">
+                  {/* Continuous vertical line on mobile - ends after last content */}
+                  {!isLast && (
+                    <div className="absolute left-1/2 top-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary opacity-20 -translate-x-1/2" style={{height: 'calc(100% + 2rem)'}} />
+                  )}
+
+                  {/* Number */}
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-base shadow-lg z-10 relative">
+                    {step.number}
                   </div>
 
-                  {/* Timeline dot */}
-                  <div className="flex-shrink-0 relative mx-auto md:mx-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                      {step.number}
-                    </div>
-                    {index < steps.length - 1 && (
-                      <div className="absolute left-1/2 top-full -translate-x-1/2 w-0.5 h-12 bg-gradient-to-b from-primary to-secondary opacity-30" />
+                  {/* Connecting line between number and content */}
+                  <div className="w-0.5 h-4 bg-gradient-to-b from-primary to-secondary opacity-20 relative z-0" />
+
+                  {/* Content Card */}
+                  <Card className="w-full hover:shadow-xl transition-all duration-300 relative z-10">
+                    <CardContent className="p-5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Icon className="w-5 h-5 text-primary" />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold mb-1">
+                            {t(`steps.${step.key}.title`)}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {t(`steps.${step.key}.description`)}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Spacer to next item on mobile */}
+                  {!isLast && (
+                    <div className="w-0.5 h-8 bg-transparent" />
+                  )}
+                </div>
+
+                {/* Desktop Layout: Centered numbers with content on both sides */}
+                <div className="hidden md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                  {/* Left side content */}
+                  <div className={`flex items-center justify-end ${isEven ? '' : 'invisible'}`}>
+                    {isEven && (
+                      <>
+                        <Card className="hover:shadow-xl transition-all duration-300 flex-1">
+                          <CardContent className="p-6">
+                            <div className="flex items-start gap-4">
+                              <div className="flex-shrink-0">
+                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                  <Icon className="w-6 h-6 text-primary" />
+                                </div>
+                              </div>
+                              <div className="flex-1">
+                                <h3 className="text-xl font-bold mb-2">
+                                  {t(`steps.${step.key}.title`)}
+                                </h3>
+                                <p className="text-muted-foreground">
+                                  {t(`steps.${step.key}.description`)}
+                                </p>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                        <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-secondary opacity-30 flex-shrink-0" />
+                      </>
                     )}
                   </div>
 
-                  {/* Spacer for alignment */}
-                  <div className="flex-1 hidden md:block" />
+                  {/* Right side content */}
+                  <div className={`flex items-center justify-start ${!isEven ? '' : 'invisible'}`}>
+                    {!isEven && (
+                      <>
+                        <div className="h-0.5 w-16 bg-gradient-to-l from-primary to-secondary opacity-30 flex-shrink-0" />
+                        <Card className="hover:shadow-xl transition-all duration-300 flex-1">
+                          <CardContent className="p-6">
+                            <div className="flex items-start gap-4">
+                              <div className="flex-shrink-0">
+                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                  <Icon className="w-6 h-6 text-primary" />
+                                </div>
+                              </div>
+                              <div className="flex-1">
+                                <h3 className="text-xl font-bold mb-2">
+                                  {t(`steps.${step.key}.title`)}
+                                </h3>
+                                <p className="text-muted-foreground">
+                                  {t(`steps.${step.key}.description`)}
+                                </p>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Center: Timeline dot - absolutely positioned at vertical center */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-lg shadow-lg z-10">
+                    {step.number}
+                  </div>
                 </div>
               </motion.div>
             );
