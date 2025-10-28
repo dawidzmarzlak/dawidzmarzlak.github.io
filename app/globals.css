@@ -57,17 +57,12 @@
   * {
     border-color: hsl(var(--border));
   }
-
-  /* Font display optimization */
-  @font-face {
-    font-family: 'GeistSans';
-    font-display: swap;
-  }
-
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color var(--animation-duration) var(--animation-easing),
+                color var(--animation-duration) var(--animation-easing);
   }
 }
 
