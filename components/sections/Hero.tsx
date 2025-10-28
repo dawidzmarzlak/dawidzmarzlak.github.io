@@ -19,8 +19,8 @@ export function Hero() {
   // Company name typewriter effect
   const companyName = useTypewriter({
     text: "IT Solutions",
-    speed: 100,
-    delay: 300
+    speed: 80,
+    delay: 100
   });
 
   // Animation stages
@@ -33,7 +33,7 @@ export function Hero() {
   const titleText = t('title');
   const title = useTypewriter({
     text: titleText,
-    speed: 80,
+    speed: 50,
     delay: 0,
     startTyping: showTitle
   });
@@ -41,36 +41,36 @@ export function Hero() {
   // Subtitle typewriter
   const subtitle = useTypewriter({
     text: t('subtitle'),
-    speed: 30,
+    speed: 20,
     delay: 0,
     startTyping: showSubtitle
   });
 
-  // Sequential animation chain
+  // Sequential animation chain (optimized delays)
   useEffect(() => {
     if (companyName.isComplete && !showBadge) {
-      const timer = setTimeout(() => setShowBadge(true), 200);
+      const timer = setTimeout(() => setShowBadge(true), 100);
       return () => clearTimeout(timer);
     }
   }, [companyName.isComplete, showBadge]);
 
   useEffect(() => {
     if (showBadge && !showTitle) {
-      const timer = setTimeout(() => setShowTitle(true), 400);
+      const timer = setTimeout(() => setShowTitle(true), 200);
       return () => clearTimeout(timer);
     }
   }, [showBadge, showTitle]);
 
   useEffect(() => {
     if (title.isComplete && !showSubtitle) {
-      const timer = setTimeout(() => setShowSubtitle(true), 200);
+      const timer = setTimeout(() => setShowSubtitle(true), 100);
       return () => clearTimeout(timer);
     }
   }, [title.isComplete, showSubtitle]);
 
   useEffect(() => {
     if (subtitle.isComplete && !showButtons) {
-      const timer = setTimeout(() => setShowButtons(true), 300);
+      const timer = setTimeout(() => setShowButtons(true), 150);
       return () => clearTimeout(timer);
     }
   }, [subtitle.isComplete, showButtons]);
@@ -94,7 +94,7 @@ export function Hero() {
       >
         {/* Company Name with Gradient and Typewriter */}
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent min-h-[4rem] md:min-h-[5rem]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {companyName.displayText}
             {!companyName.isComplete && <span className="animate-pulse">|</span>}
           </h2>
@@ -114,13 +114,13 @@ export function Hero() {
         </motion.div>
 
         {/* Main Heading with Typewriter */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 min-h-[5rem] md:min-h-[8rem]">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
           {title.displayText}
           {showTitle && !title.isComplete && <span className="animate-pulse ml-2">|</span>}
         </h1>
 
         {/* Subtitle with Typewriter */}
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 min-h-[4rem]">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
           {subtitle.displayText}
           {showSubtitle && !subtitle.isComplete && <span className="animate-pulse">|</span>}
         </p>

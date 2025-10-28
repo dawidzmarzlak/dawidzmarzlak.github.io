@@ -10,9 +10,9 @@ function seededRandom(seed: number) {
 }
 
 export function FloatingElements() {
-  // Generate consistent random values using useMemo
+  // Generate consistent random values using useMemo (reduced from 20 to 8 for better performance)
   const particles = useMemo(() => {
-    return Array.from({ length: 20 }).map((_, i) => {
+    return Array.from({ length: 8 }).map((_, i) => {
       const seed = i * 1000;
       return {
         id: i,
@@ -27,9 +27,9 @@ export function FloatingElements() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Circle 1 */}
+      {/* Circle 1 - reduced blur for better performance */}
       <motion.div
-        className="absolute w-64 h-64 rounded-full bg-primary/10 blur-3xl"
+        className="absolute w-64 h-64 rounded-full bg-primary/10 blur-2xl hidden md:block"
         animate={{
           x: [0, 100, 0],
           y: [0, 50, 0],
@@ -43,9 +43,9 @@ export function FloatingElements() {
         style={{ top: "20%", left: "10%" }}
       />
 
-      {/* Circle 2 */}
+      {/* Circle 2 - reduced blur for better performance */}
       <motion.div
-        className="absolute w-96 h-96 rounded-full bg-secondary/10 blur-3xl"
+        className="absolute w-96 h-96 rounded-full bg-secondary/10 blur-2xl hidden md:block"
         animate={{
           x: [0, -100, 0],
           y: [0, 100, 0],
@@ -60,9 +60,9 @@ export function FloatingElements() {
         style={{ top: "40%", right: "10%" }}
       />
 
-      {/* Circle 3 */}
+      {/* Circle 3 - reduced blur for better performance */}
       <motion.div
-        className="absolute w-80 h-80 rounded-full bg-accent/10 blur-3xl"
+        className="absolute w-80 h-80 rounded-full bg-accent/10 blur-2xl hidden md:block"
         animate={{
           x: [0, 50, 0],
           y: [0, -50, 0],

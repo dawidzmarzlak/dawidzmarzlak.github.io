@@ -49,7 +49,7 @@ export default async function RootLayout({
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange={false}
+            disableTransitionOnChange={true}
           >
             <div className="relative min-h-screen flex flex-col overflow-x-hidden">
               <Navbar />

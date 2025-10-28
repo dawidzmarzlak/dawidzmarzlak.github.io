@@ -54,13 +54,12 @@ export function Navbar() {
   return (
     <motion.nav
       style={{
-        backgroundColor: theme === 'dark' ? backgroundColorDark : backgroundColor,
-        translateY
+        backgroundColor: theme === 'dark' ? backgroundColorDark : backgroundColor
       }}
-      className="fixed top-0 w-full z-50 backdrop-blur-md border-b border-border/40"
+      className="fixed top-0 w-full z-50 backdrop-blur-sm border-b border-border/40 h-16"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex justify-between items-center h-full">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
