@@ -33,7 +33,7 @@ export function useTypewriter({
 
     const cursorInterval = setInterval(() => {
       setShowCursorState(prev => !prev);
-    }, 500);
+    }, 300);
 
     return () => clearInterval(cursorInterval);
   }, [showCursor, isComplete, startTyping]);

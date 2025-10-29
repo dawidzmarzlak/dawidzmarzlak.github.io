@@ -19,8 +19,8 @@ export function Hero() {
   // Company name typewriter effect
   const companyName = useTypewriter({
     text: "IT Solutions",
-    speed: 100,
-    delay: 20
+    speed: 85,
+    delay: 10
   });
 
   // Animation stages
@@ -33,7 +33,7 @@ export function Hero() {
   const titleText = t('title');
   const title = useTypewriter({
     text: titleText,
-    speed: 80,
+    speed: 70,
     delay: 0,
     startTyping: showTitle
   });
@@ -49,21 +49,21 @@ export function Hero() {
   // Sequential animation chain
   useEffect(() => {
     if (companyName.isComplete && !showBadge) {
-      const timer = setTimeout(() => setShowBadge(true), 200);
+      const timer = setTimeout(() => setShowBadge(true), 150);
       return () => clearTimeout(timer);
     }
   }, [companyName.isComplete, showBadge]);
 
   useEffect(() => {
     if (showBadge && !showTitle) {
-      const timer = setTimeout(() => setShowTitle(true), 400);
+      const timer = setTimeout(() => setShowTitle(true), 300);
       return () => clearTimeout(timer);
     }
   }, [showBadge, showTitle]);
 
   useEffect(() => {
     if (title.isComplete && !showSubtitle) {
-      const timer = setTimeout(() => setShowSubtitle(true), 200);
+      const timer = setTimeout(() => setShowSubtitle(true), 150);
       return () => clearTimeout(timer);
     }
   }, [title.isComplete, showSubtitle]);
