@@ -20,7 +20,7 @@ export function Hero() {
   const companyName = useTypewriter({
     text: "IT Solutions",
     speed: 100,
-    delay: 300
+    delay: 20
   });
 
   // Animation stages
@@ -94,8 +94,8 @@ export function Hero() {
       >
         {/* Company Name with Gradient and Typewriter */}
         <div className="mb-6 md:mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent min-h-[2.75rem] sm:min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem] flex items-start justify-center">
-            <span className="inline-block text-center">{companyName.displayText}</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent h-[2.75rem] sm:h-[3rem] md:h-[3.5rem] lg:h-[4rem] flex items-center justify-center">
+            <span className="inline-block text-center whitespace-nowrap">{companyName.displayText}</span>
           </h2>
         </div>
 
@@ -113,13 +113,13 @@ export function Hero() {
         </motion.div>
 
         {/* Main Heading with Typewriter */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 min-h-[4rem] sm:min-h-[4.5rem] md:min-h-[6rem] lg:min-h-[7rem] flex items-start justify-center">
-          <span className="inline-block text-center">{title.displayText}</span>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 h-[12rem] sm:h-[10rem] md:h-[12rem] lg:h-[14rem] flex items-start justify-center">
+          <span className="inline-block text-center max-w-5xl leading-tight">{title.displayText}</span>
         </h1>
 
         {/* Subtitle with Typewriter */}
-        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 lg:mb-10 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] lg:min-h-[5rem] flex items-start justify-center">
-          <span className="inline-block text-center">{subtitle.displayText}</span>
+        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 lg:mb-10 h-[14rem] sm:h-[11rem] md:h-[10rem] lg:h-[10rem] flex items-start justify-center">
+          <span className="inline-block text-center leading-relaxed">{subtitle.displayText}</span>
         </p>
 
         {/* CTA Buttons with Slide Animations */}
@@ -149,25 +149,25 @@ export function Hero() {
             </Button>
           </motion.div>
         </div>
-      </motion.div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: showButtons ? 1 : 0 }}
-        transition={{ delay: 0.5 }}
-        className="absolute bottom-8 sm:bottom-10 md:bottom-8 left-1/2 -translate-x-1/2"
-      >
+        {/* Scroll Indicator */}
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: showButtons ? 1 : 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-8 sm:mt-8 md:mt-8 flex justify-center"
         >
           <motion.div
-            animate={{ y: [0, 12, 0] }}
+            animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1.5 h-1.5 bg-primary rounded-full"
-          />
+            className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2"
+          >
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="w-1.5 h-1.5 bg-primary rounded-full"
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>
