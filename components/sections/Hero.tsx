@@ -76,7 +76,7 @@ export function Hero() {
   }, [subtitle.isComplete, showButtons]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4 pb-8">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-8 pb-12 sm:pt-12 md:pt-16 lg:pt-20">
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
         <motion.div
@@ -90,13 +90,12 @@ export function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="container mx-auto px-4 text-center"
+        className="container mx-auto px-6 sm:px-8 md:px-4 text-center"
       >
         {/* Company Name with Gradient and Typewriter */}
-        <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent min-h-[4rem] md:min-h-[5rem]">
-            {companyName.displayText}
-            {!companyName.isComplete && <span className="animate-pulse">|</span>}
+        <div className="mb-6 md:mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent min-h-[2.75rem] sm:min-h-[3rem] md:min-h-[3.5rem] lg:min-h-[4rem] flex items-start justify-center">
+            <span className="inline-block text-center">{companyName.displayText}</span>
           </h2>
         </div>
 
@@ -105,7 +104,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: showBadge ? 1 : 0, scale: showBadge ? 1 : 0.8 }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4 md:mb-6"
         >
           <Sparkles className="h-4 w-4" />
           <span className="text-sm font-medium">
@@ -114,15 +113,13 @@ export function Hero() {
         </motion.div>
 
         {/* Main Heading with Typewriter */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 min-h-[5rem] md:min-h-[8rem]">
-          {title.displayText}
-          {showTitle && !title.isComplete && <span className="animate-pulse ml-2">|</span>}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 min-h-[4rem] sm:min-h-[4.5rem] md:min-h-[6rem] lg:min-h-[7rem] flex items-start justify-center">
+          <span className="inline-block text-center">{title.displayText}</span>
         </h1>
 
         {/* Subtitle with Typewriter */}
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 min-h-[4rem]">
-          {subtitle.displayText}
-          {showSubtitle && !subtitle.isComplete && <span className="animate-pulse">|</span>}
+        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 lg:mb-10 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] lg:min-h-[5rem] flex items-start justify-center">
+          <span className="inline-block text-center">{subtitle.displayText}</span>
         </p>
 
         {/* CTA Buttons with Slide Animations */}
@@ -159,7 +156,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: showButtons ? 1 : 0 }}
         transition={{ delay: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 sm:bottom-10 md:bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

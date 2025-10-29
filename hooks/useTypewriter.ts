@@ -5,18 +5,38 @@ interface UseTypewriterProps {
   speed?: number; // milliseconds per character
   delay?: number; // delay before starting
   startTyping?: boolean; // external trigger to start typing
+  showCursor?: boolean; // whether to show the cursor inline
 }
 
 export function useTypewriter({
   text,
   speed = 80,
   delay = 0,
-  startTyping = true
+  startTyping = true,
+  showCursor = true
 }: UseTypewriterProps) {
   const [displayText, setDisplayText] = useState('');
   const [isComplete, setIsComplete] = useState(false);
+  const [showCursorState, setShowCursorState] = useState(true);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cursor blinking effect - should start when startTyping is true
+  useEffect(() => {
+    if (!showCursor || isComplete || !startTyping) {
+      setShowCursorState(false);
+      return;
+    }
+
+    // Show cursor immediately when startTyping becomes true
+    setShowCursorState(true);
+
+    const cursorInterval = setInterval(() => {
+      setShowCursorState(prev => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
+  }, [showCursor, isComplete, startTyping]);
 
   useEffect(() => {
     // Clear any existing timers
@@ -65,5 +85,11 @@ export function useTypewriter({
     };
   }, [text, speed, delay, startTyping]);
 
-  return { displayText, isComplete };
+  // Return display text with cursor inline if needed
+  // Show cursor when startTyping is true (even during delay before text appears)
+  const textWithCursor = showCursor && !isComplete && showCursorState && startTyping
+    ? displayText + '|'
+    : displayText;
+
+  return { displayText: textWithCursor, isComplete };
 }
