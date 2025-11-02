@@ -135,7 +135,7 @@ export function TechnologyCarousel({ technologies }: TechnologyCarouselProps) {
             return (
               <div
                 key={key}
-                ref={(el) => (elementRefs.current[key] = el)}
+                ref={(el) => { elementRefs.current[key] = el; }}
                 className="flex-none min-w-[160px]"
               >
                 <div className="relative">

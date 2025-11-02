@@ -183,11 +183,10 @@ export function Technologies() {
               {categoriesNeedCarousel[category.key] ? (
                 <TechnologyCarousel
                   technologies={category.technologies}
-                  autoplay={true}
                 />
               ) : (
                 <div
-                  ref={(el) => (containerRefs.current[category.key] = el)}
+                  ref={(el) => { containerRefs.current[category.key] = el; }}
                   className="flex flex-wrap gap-4"
                   onMouseMove={(e) => handleContainerMouseMove(e, category.key)}
                   onMouseLeave={() => handleContainerMouseLeave(category.key)}
