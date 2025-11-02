@@ -140,7 +140,14 @@
   },
   "technologies": {
     "title": "Technologie, z których korzystamy",
-    "subtitle": "Najnowocześniejsze narzędzia i frameworki"
+    "subtitle": "Najnowocześniejsze narzędzia i frameworki",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cms": "CMS i E-commerce",
+      "database": "Bazy Danych",
+      "cloud": "Cloud i DevOps"
+    }
   },
   "faq": {
     "title": "Najczęściej Zadawane Pytania",

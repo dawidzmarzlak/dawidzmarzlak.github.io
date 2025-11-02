@@ -140,7 +140,14 @@
   },
   "technologies": {
     "title": "Technologies We Use",
-    "subtitle": "The most modern tools and frameworks"
+    "subtitle": "The most modern tools and frameworks",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cms": "CMS & E-commerce",
+      "database": "Databases",
+      "cloud": "Cloud & DevOps"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
