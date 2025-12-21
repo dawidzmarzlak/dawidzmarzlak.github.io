@@ -1,0 +1,18 @@
+# Robots.txt for IT Solutions
+# https://itsolutions.pl
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://itsolutions.pl/sitemap.xml
+
+# Block API routes
+Disallow: /api/
+
+# Allow all crawlers to access all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

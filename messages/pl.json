@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Start",
-    "about": "O nas",
+    "about": "O mnie",
     "services": "Usługi",
     "portfolio": "Portfolio",
     "blog": "Blog",
@@ -13,56 +13,56 @@
     "darkMode": "Ciemny motyw"
   },
   "hero": {
-    "badge": "Ponad 150 zrealizowanych projektów od 2020 roku",
-    "title": "Tworzymy Strony, Które Sprzedają",
-    "subtitle": "Specjalizujemy się w Next.js, WordPress, WooCommerce, PrestaShop i aplikacjach webowych opartych na Spring Boot. Przekształcamy Twoje pomysły w działające rozwiązania cyfrowe.",
+    "badge": "Ponad 50 zrealizowanych projektów od 2020 roku",
+    "title": "Tworzę Strony, Które Sprzedają",
+    "subtitle": "Specjalizuję się w Next.js, WordPress, WooCommerce, PrestaShop i aplikacjach webowych opartych na Spring Boot. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
     "cta": "Zamów bezpłatną wycenę",
-    "cta_secondary": "Zobacz nasze portfolio"
+    "cta_secondary": "Zobacz moje portfolio"
   },
   "stats": {
     "projects": {
-      "value": "150+",
+      "value": "50+",
       "label": "Zakończonych projektów"
     },
     "clients": {
-      "value": "80+",
+      "value": "30+",
       "label": "Zadowolonych klientów"
     },
     "years": {
       "value": "5 lat",
-      "label": "Na rynku"
+      "label": "Doświadczenia"
     },
     "satisfaction": {
-      "value": "98%",
-      "label": "Pozytywnych opinii"
+      "value": "100%",
+      "label": "Zaangażowania"
     }
   },
   "about": {
-    "title": "Kim jesteśmy?",
-    "description": "Jesteśmy zespołem pasjonatów technologii, który od 2020 roku tworzy nowoczesne rozwiązania webowe dla firm z całej Polski i Europy.",
-    "mission": "Naszą misją jest dostarczanie wysokiej jakości stron internetowych i aplikacji, które nie tylko świetnie wyglądają, ale przede wszystkim - przynoszą realne rezultaty biznesowe.",
+    "title": "Kim jestem?",
+    "description": "Jestem doświadczonym web developerem, który od 2020 roku tworzy nowoczesne rozwiązania webowe dla firm z całej Polski i Europy.",
+    "mission": "Moją misją jest dostarczanie wysokiej jakości stron internetowych i aplikacji, które nie tylko świetnie wyglądają, ale przede wszystkim - przynoszą realne rezultaty biznesowe.",
     "values": {
       "quality": {
         "title": "Jakość",
-        "description": "Każdy projekt traktujemy indywidualnie. Dbamy o najmniejsze detale, aby dostarczyć produkt najwyższej jakości."
+        "description": "Każdy projekt traktuję indywidualnie. Dbam o najmniejsze detale, aby dostarczyć produkt najwyższej jakości."
       },
       "timeliness": {
         "title": "Terminowość",
-        "description": "Szanujemy Twój czas. Realizujemy projekty zgodnie z ustalonym harmonogramem, bez opóźnień."
+        "description": "Szanuję Twój czas. Realizuję projekty zgodnie z ustalonym harmonogramem, bez opóźnień."
       },
       "support": {
         "title": "Wsparcie",
-        "description": "Nie kończymy współpracy po wdrożeniu. Oferujemy pełne wsparcie techniczne i pomoc w rozwoju Twojego projektu."
+        "description": "Nie kończę współpracy po wdrożeniu. Oferuję pełne wsparcie techniczne i pomoc w rozwoju Twojego projektu."
       },
       "transparency": {
         "title": "Transparentność",
-        "description": "Trzymamy Cię na bieżąco na każdym etapie projektu. Wiesz dokładnie, co się dzieje i za co płacisz."
+        "description": "Trzymam Cię na bieżąco na każdym etapie projektu. Wiesz dokładnie, co się dzieje i za co płacisz."
       }
     }
   },
   "services": {
-    "title": "Nasze Usługi",
-    "subtitle": "Oferujemy kompleksowe rozwiązania webowe dostosowane do Twoich potrzeb",
+    "title": "Moje Usługi",
+    "subtitle": "Oferuję kompleksowe rozwiązania webowe dostosowane do Twoich potrzeb",
     "nextjs": {
       "title": "Strony w Next.js",
       "description": "Błyskawicznie szybkie, SEO-friendly aplikacje webowe"
@@ -85,8 +85,8 @@
     }
   },
   "portfolio": {
-    "title": "Nasze Realizacje",
-    "subtitle": "Poznaj projekty, które stworzyliśmy dla naszych klientów",
+    "title": "Moje Realizacje",
+    "subtitle": "Poznaj projekty, które stworzyłem dla moich klientów",
     "categories": {
       "all": "Wszystkie",
       "nextjs": "Next.js",
@@ -95,8 +95,8 @@
     }
   },
   "testimonials": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Opinie zadowolonych klientów, z którymi współpracujemy"
+    "title": "Co mówią moi klienci",
+    "subtitle": "Opinie zadowolonych klientów, z którymi współpracuję"
   },
   "blog": {
     "title": "Blog",
@@ -106,19 +106,19 @@
   },
   "process": {
     "title": "Proces Współpracy",
-    "subtitle": "Jak wygląda współpraca z nami krok po kroku",
+    "subtitle": "Jak wygląda współpraca ze mną krok po kroku",
     "steps": {
       "consultation": {
         "title": "Konsultacja",
-        "description": "Bezpłatna konsultacja i analiza potrzeb. Poznajemy Twój biznes i cele projektu."
+        "description": "Bezpłatna konsultacja i analiza potrzeb. Poznaję Twój biznes i cele projektu."
       },
       "quote": {
         "title": "Wycena",
-        "description": "Przygotowujemy szczegółową wycenę i harmonogram realizacji projektu."
+        "description": "Przygotowuję szczegółową wycenę i harmonogram realizacji projektu."
       },
       "design": {
         "title": "Projekt",
-        "description": "Tworzymy projekt graficzny i UX/UI, dopasowany do Twojej marki."
+        "description": "Tworzę projekt graficzny i UX/UI, dopasowany do Twojej marki."
       },
       "development": {
         "title": "Development",
@@ -139,7 +139,7 @@
     }
   },
   "technologies": {
-    "title": "Technologie, z których korzystamy",
+    "title": "Technologie, z których korzystam",
     "subtitle": "Najnowocześniejsze narzędzia i frameworki",
     "categories": {
       "frontend": "Frontend",
@@ -151,7 +151,7 @@
   },
   "faq": {
     "title": "Najczęściej Zadawane Pytania",
-    "subtitle": "Odpowiedzi na pytania, które nas najczęściej zadajecie",
+    "subtitle": "Odpowiedzi na pytania, które najczęściej mi zadajesz",
     "items": {
       "duration": {
         "question": "Jak długo trwa realizacja projektu?",
@@ -162,31 +162,31 @@
         "answer": "Ceny są indywidualne i zależą od zakresu projektu. Proste strony wizytówki startują od 5000 zł, zaawansowane sklepy internetowe od 15000 zł."
       },
       "hosting": {
-        "question": "Czy oferujecie hosting?",
-        "answer": "Tak, możemy zająć się hostingiem Twojej strony. Współpracujemy z najlepszymi dostawcami hostingu w Polsce i za granicą."
+        "question": "Czy oferujesz hosting?",
+        "answer": "Tak, mogę zająć się hostingiem Twojej strony. Współpracuję z najlepszymi dostawcami hostingu w Polsce i za granicą."
       },
       "cms": {
         "question": "Czy mogę samodzielnie edytować stronę?",
-        "answer": "Oczywiście! Wszystkie nasze projekty są wyposażone w intuicyjne panele administracyjne. Dodatkowo przeprowadzamy szkolenia z obsługi."
+        "answer": "Oczywiście! Wszystkie moje projekty są wyposażone w intuicyjne panele administracyjne. Dodatkowo przeprowadzam szkolenia z obsługi."
       },
       "changes": {
         "question": "Co jeśli będę potrzebować zmian po wdrożeniu?",
-        "answer": "Oferujemy pakiety wsparcia technicznego oraz możliwość zlecania kolejnych zmian i rozszerzeń."
+        "answer": "Oferuję pakiety wsparcia technicznego oraz możliwość zlecania kolejnych zmian i rozszerzeń."
       },
       "responsive": {
-        "question": "Czy tworzycie strony responsywne?",
-        "answer": "Tak, wszystkie nasze strony są w pełni responsywne i dostosowane do urządzeń mobilnych, tabletów i desktopów."
+        "question": "Czy tworzysz strony responsywne?",
+        "answer": "Tak, wszystkie moje strony są w pełni responsywne i dostosowane do urządzeń mobilnych, tabletów i desktopów."
       }
     }
   },
   "cta": {
     "title": "Gotowy na nowy projekt?",
-    "description": "Skontaktuj się z nami już dziś i otrzymaj bezpłatną wycenę oraz konsultację. Porozmawiajmy o Twoim projekcie i znajdźmy najlepsze rozwiązanie.",
-    "button": "Skontaktuj się z nami",
+    "description": "Skontaktuj się ze mną już dziś i otrzymaj bezpłatną wycenę oraz konsultację. Porozmawiajmy o Twoim projekcie i znajdźmy najlepsze rozwiązanie.",
+    "button": "Skontaktuj się ze mną",
     "quote": "Formularz wyceny"
   },
   "footer": {
-    "tagline": "Tworzymy nowoczesne rozwiązania webowe dla firm z całej Polski i Europy",
+    "tagline": "Tworzę nowoczesne rozwiązania webowe dla firm z całej Polski i Europy",
     "quickLinks": "Szybkie linki",
     "services": "Usługi",
     "newsletter": "Newsletter",
@@ -195,7 +195,7 @@
     "subscribe": "Zapisz się",
     "rights": "Wszystkie prawa zastrzeżone.",
     "links": {
-      "about": "O nas",
+      "about": "O mnie",
       "services": "Usługi",
       "portfolio": "Portfolio",
       "blog": "Blog",
@@ -211,16 +211,295 @@
   },
   "quote": {
     "title": "Formularz Wyceny",
-    "description": "Wypełnij formularz, a my przygotujemy dla Ciebie bezpłatną wycenę"
+    "description": "Wypełnij formularz, a przygotuję dla Ciebie bezpłatną wycenę"
   },
   "contact": {
-    "title": "Skontaktuj się z nami",
-    "description": "Masz pytania? Napisz do nas, a odpowiemy najszybciej jak to możliwe"
+    "title": "Skontaktuj się ze mną",
+    "description": "Masz pytania? Napisz do mnie, a odpowiem najszybciej jak to możliwe"
   },
   "metadata": {
-    "title": "IT Solutions - Profesjonalne Strony Internetowe",
+    "title": "IT Solutions - Freelance Web Developer | Strony Internetowe",
     "siteName": "IT Solutions",
-    "description": "Tworzymy nowoczesne strony internetowe i aplikacje webowe. Next.js, WordPress, WooCommerce, PrestaShop. Ponad 150 zrealizowanych projektów.",
-    "keywords": "strony internetowe, aplikacje webowe, Next.js, WordPress, WooCommerce, PrestaShop, web development"
+    "description": "Freelance web developer - tworzę profesjonalne strony internetowe i sklepy online. Next.js, WordPress, WooCommerce, PrestaShop. Indywidualne podejście do projektu.",
+    "keywords": "freelance web developer, strony internetowe, tworzenie stron www, sklepy internetowe, WordPress developer, Next.js developer, web developer polska"
+  },
+  "showcase": {
+    "sectionTitle": "Jak może wyglądać Twoja strona?",
+    "sectionSubtitle": "Każdy projekt to unikalna wizja. Przekonaj się, jakie możliwości oferuję dla różnych branż.",
+    "viewDemo": "Zobacz demo",
+    "viewAllProjects": "Zobacz wszystkie projekty",
+    "backToShowcase": "Powrót",
+    "backToHome": "Strona główna",
+    "ctaBadge": "Podoba Ci się ten styl?",
+    "ctaTitle": "Stwórzmy razem Twoją stronę",
+    "ctaDescription": "Każdy z tych projektów może być dostosowany do Twojej marki. Skontaktuj się, a omówimy możliwości.",
+    "ctaButton": "Zamów wycenę",
+    "viewOtherProjects": "Zobacz inne projekty",
+    "demoNote": "To jest demo projektu:",
+    "contactMe": "Kontakt",
+    "pageTitle": "Showcase Portfolio",
+    "pageSubtitle": "Odkryj różnorodność stylów i możliwości dla Twojej branży",
+    "exploreProject": "Eksploruj projekt",
+
+    "luxury-hotel": {
+      "name": "Luksusowy Hotel",
+      "brandName": "Grand Riviera",
+      "tagline": "Doświadcz Ponadczasowej Elegancji",
+      "industry": "Hotelarstwo",
+      "hero": {
+        "title": "Gdzie Luksus Spotyka Spokój",
+        "subtitle": "Odkryj niezrównany komfort w sercu natury. Ekskluzywne apartamenty, światowej klasy spa i wykwintna kuchnia.",
+        "cta": "Zarezerwuj Pobyt",
+        "ctaSecondary": "Odkryj Pokoje"
+      },
+      "about": {
+        "title": "Nasza Historia",
+        "description": "Od 1925 roku Grand Riviera definiuje luksusową gościnność. Położony nad malowniczym wybrzeżem, nasz hotel łączy ponadczasową elegancję z nowoczesnym komfortem.",
+        "heritage": "Prawie 100 lat tradycji",
+        "awards": "Nagrodzony 5 gwiazdkami Forbes"
+      },
+      "rooms": {
+        "title": "Pokoje i Apartamenty",
+        "subtitle": "Każdy pokój to osobne doświadczenie luksusu",
+        "deluxe": {
+          "name": "Pokój Deluxe",
+          "size": "45 m²",
+          "price": "od 1200 zł/noc"
+        },
+        "suite": {
+          "name": "Apartament Executive",
+          "size": "85 m²",
+          "price": "od 2500 zł/noc"
+        },
+        "penthouse": {
+          "name": "Penthouse Royal",
+          "size": "150 m²",
+          "price": "od 5000 zł/noc"
+        },
+        "viewDetails": "Zobacz szczegóły"
+      },
+      "amenities": {
+        "title": "Udogodnienia",
+        "subtitle": "Wszystko, czego potrzebujesz do idealnego wypoczynku",
+        "spa": "Spa & Wellness",
+        "pool": "Basen infinity",
+        "restaurant": "Restauracja fine dining",
+        "gym": "Siłownia 24/7",
+        "concierge": "Concierge 24/7",
+        "parking": "Parking z obsługą"
+      },
+      "testimonials": {
+        "title": "Opinie Gości"
+      },
+      "booking": {
+        "title": "Zarezerwuj Swój Pobyt",
+        "checkIn": "Zameldowanie",
+        "checkOut": "Wymeldowanie",
+        "guests": "Goście",
+        "rooms": "Pokoje",
+        "bookNow": "Sprawdź dostępność"
+      }
+    },
+
+    "fine-dining": {
+      "name": "Restauracja Fine Dining",
+      "brandName": "Noir et Or",
+      "tagline": "Sztuka Kulinarna na Najwyższym Poziomie",
+      "industry": "Gastronomia",
+      "hero": {
+        "title": "Gdzie Smak Staje Się Sztuką",
+        "subtitle": "Doświadczenie kulinarne, które angażuje wszystkie zmysły. Sezonowe menu stworzone przez nagrodzonego szefa kuchni.",
+        "cta": "Zarezerwuj Stolik",
+        "ctaSecondary": "Zobacz Menu"
+      },
+      "philosophy": {
+        "title": "Nasza Filozofia",
+        "description": "W Noir et Or wierzymy, że jedzenie to więcej niż posiłek - to opowieść. Każde danie łączy lokalne składniki z innowacyjnymi technikami."
+      },
+      "menu": {
+        "title": "Menu Sezonowe",
+        "subtitle": "Smaki, które zmieniają się z porami roku",
+        "categories": {
+          "appetizers": "Przystawki",
+          "mains": "Dania Główne",
+          "desserts": "Desery",
+          "wine": "Karta Win"
+        },
+        "seasonal": "Sezonowe"
+      },
+      "chef": {
+        "title": "Szef Kuchni",
+        "name": "Aleksander Nowak",
+        "role": "Executive Chef",
+        "bio": "20 lat doświadczenia w najlepszych restauracjach Europy. Laureat 2 gwiazdek Michelin.",
+        "quote": "Gotowanie to moja pasja, a każdy talerz to płótno dla mojej twórczości."
+      },
+      "reservation": {
+        "title": "Rezerwacje",
+        "date": "Data",
+        "time": "Godzina",
+        "guests": "Liczba osób",
+        "specialRequests": "Specjalne życzenia",
+        "submit": "Zarezerwuj Stolik"
+      },
+      "hours": {
+        "title": "Godziny Otwarcia",
+        "dinner": "Kolacja: 18:00 - 23:00",
+        "closed": "Zamknięte: Poniedziałki"
+      }
+    },
+
+    "spa-wellness": {
+      "name": "Spa & Wellness",
+      "brandName": "Serenity Springs",
+      "tagline": "Odnajdź Wewnętrzny Spokój",
+      "industry": "Wellness",
+      "hero": {
+        "title": "Twoja Droga do Harmonii",
+        "subtitle": "Kompleksowe podejście do zdrowia i relaksu. Naturalne terapie, profesjonalni terapeuci i atmosfera spokoju.",
+        "cta": "Zarezerwuj Zabieg",
+        "ctaSecondary": "Poznaj Zabiegi"
+      },
+      "about": {
+        "title": "O Nas",
+        "description": "Serenity Springs to oaza spokoju w sercu miasta. Łączymy starożytne tradycje wellness z nowoczesnymi technikami, oferując holistyczne podejście do zdrowia.",
+        "mission": "Nasza misja: Przywrócić równowagę ciała i umysłu."
+      },
+      "treatments": {
+        "title": "Nasze Zabiegi",
+        "subtitle": "Wybierz idealną terapię dla siebie",
+        "categories": {
+          "massage": "Masaże",
+          "facial": "Zabiegi na Twarz",
+          "body": "Zabiegi na Ciało",
+          "packages": "Pakiety"
+        },
+        "duration": "Czas trwania",
+        "book": "Zarezerwuj"
+      },
+      "team": {
+        "title": "Nasz Zespół",
+        "subtitle": "Certyfikowani specjaliści z wieloletnim doświadczeniem"
+      },
+      "wellness": {
+        "title": "Porady Wellness",
+        "subtitle": "Inspiracje do zdrowego życia"
+      },
+      "booking": {
+        "title": "Zarezerwuj Wizytę",
+        "selectTreatment": "Wybierz zabieg",
+        "selectDate": "Wybierz datę",
+        "selectTime": "Wybierz godzinę",
+        "submit": "Potwierdź rezerwację"
+      }
+    },
+
+    "architecture-studio": {
+      "name": "Studio Architektoniczne",
+      "brandName": "FORM & VOID",
+      "tagline": "Projektujemy Przestrzeń, Która Inspiruje",
+      "industry": "Architektura",
+      "hero": {
+        "title": "Architektura to Dialog",
+        "subtitle": "Między formą a pustką. Tworzymy przestrzenie, które opowiadają historie.",
+        "cta": "Zobacz Projekty",
+        "ctaSecondary": "Kontakt"
+      },
+      "philosophy": {
+        "title": "Filozofia",
+        "statement1": "Forma podąża za funkcją.",
+        "statement2": "Pustka ma znaczenie.",
+        "statement3": "Detale definiują całość."
+      },
+      "works": {
+        "title": "Wybrane Projekty",
+        "viewProject": "Zobacz Projekt",
+        "year": "Rok",
+        "location": "Lokalizacja",
+        "area": "Powierzchnia"
+      },
+      "process": {
+        "title": "Nasz Proces",
+        "steps": {
+          "concept": {
+            "title": "Koncept",
+            "description": "Analiza potrzeb i wizji klienta"
+          },
+          "design": {
+            "title": "Projekt",
+            "description": "Rozwój koncepcji i dokumentacja"
+          },
+          "development": {
+            "title": "Realizacja",
+            "description": "Nadzór i koordynacja budowy"
+          },
+          "delivery": {
+            "title": "Odbiór",
+            "description": "Finalizacja i przekazanie"
+          }
+        }
+      },
+      "team": {
+        "title": "Zespół",
+        "subtitle": "Architekci i projektanci z pasją"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "email": "Email",
+        "phone": "Telefon",
+        "address": "Adres"
+      }
+    },
+
+    "artisan-cafe": {
+      "name": "Kawiarnia Rzemieślnicza",
+      "brandName": "Bean & Brew",
+      "tagline": "Kawa z Pasją, Smak z Charakterem",
+      "industry": "Gastronomia",
+      "hero": {
+        "title": "Każda Filiżanka to Historia",
+        "subtitle": "Rzemieślnicza kawa parzenna z miłością. Ziarna z małych farm, wypiek na miejscu.",
+        "cta": "Odwiedź Nas",
+        "ctaSecondary": "Zobacz Menu"
+      },
+      "story": {
+        "title": "Nasza Historia",
+        "description": "Bean & Brew powstało z miłości do kawy i przekonania, że najlepsza filiżanka to ta, którą robi się z sercem. Od 2018 roku serwujemy kawę z najlepszych mikro-palarni.",
+        "values": {
+          "quality": "Jakość ponad wszystko",
+          "sustainability": "Zrównoważone źródła",
+          "community": "Lokalna społeczność"
+        }
+      },
+      "menu": {
+        "title": "Nasze Menu",
+        "subtitle": "Ręcznie przygotowane z najlepszych składników",
+        "categories": {
+          "coffee": "Kawa",
+          "tea": "Herbata",
+          "food": "Przekąski",
+          "pastries": "Wypieki"
+        },
+        "featured": "Polecane"
+      },
+      "coffee": {
+        "title": "Podróż Kawy",
+        "subtitle": "Od ziarna do filiżanki",
+        "origin": "Pochodzenie",
+        "roasting": "Palenie",
+        "brewing": "Parzenie"
+      },
+      "instagram": {
+        "title": "Obserwuj Nas",
+        "handle": "@beanandbrewpl",
+        "followUs": "Śledź nas na Instagramie"
+      },
+      "location": {
+        "title": "Odwiedź Nas",
+        "address": "ul. Kawowa 15, Warszawa",
+        "hours": "Pon-Pt: 7:00-20:00 | Sob-Nd: 8:00-18:00",
+        "directions": "Jak dojechać"
+      }
+    }
   }
 }

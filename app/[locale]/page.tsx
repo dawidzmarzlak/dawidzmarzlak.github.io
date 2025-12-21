@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
 import { Portfolio } from "@/components/sections/Portfolio";
+import { ShowcasePreview } from "@/components/sections/ShowcasePreview";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Process } from "@/components/sections/Process";
 import { Technologies } from "@/components/sections/Technologies";
@@ -23,6 +24,7 @@ export default async function Home({
       <Services />
       <About />
       <Portfolio />
+      <ShowcasePreview />
       <Testimonials />
       <Process />
       <Technologies />
