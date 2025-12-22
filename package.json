@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:hero": "playwright test tests/hero-section.spec.ts"
+    "test:hero": "playwright test tests/hero-section.spec.ts",
+    "generate-thumbnails": "npx tsx scripts/generate-thumbnails.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
@@ -19,6 +20,7 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {

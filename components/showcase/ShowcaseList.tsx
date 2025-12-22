@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Sparkles } from "lucide-react";
 import { getAllThemes } from "@/lib/showcase/themes";
+import Image from "next/image";
 
 export function ShowcaseList() {
   const t = useTranslations("showcase");
@@ -66,11 +67,17 @@ export function ShowcaseList() {
               >
                 <Link href={`/showcase/${theme.slug}`}>
                   <Card className="overflow-hidden group cursor-pointer h-full hover:shadow-2xl transition-all duration-500 border-0">
-                    {/* Gradient Header */}
-                    <div
-                      className={`h-72 md:h-80 bg-gradient-to-br ${theme.gradient} relative overflow-hidden`}
-                    >
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors duration-500" />
+                    {/* Screenshot Header */}
+                    <div className="h-72 md:h-80 relative overflow-hidden">
+                      <Image
+                        src={`/showcase/${theme.slug}/thumbnail.png`}
+                        alt={t(`${theme.slug}.brandName`)}
+                        fill
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
 
                       {/* Content */}
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
