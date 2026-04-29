@@ -6,7 +6,8 @@ test("home shows public project name and NDA badge for private case", async ({ p
   const cards = page.locator("[data-portfolio-card]");
   await expect(cards.first()).toBeVisible({ timeout: 30_000 });
   await expect(page.locator("[data-portfolio-card][data-kind='public']").first()).toBeVisible();
-  await expect(page.locator("[data-portfolio-card][data-kind='private']").first()).toBeVisible();
-  await expect(page.getByText(/NDA/i).first()).toBeVisible();
-  await expect(page.getByText(/Duży klient|Mały klient/i).first()).toBeVisible();
+  const privateCard = page.locator("[data-portfolio-card][data-kind='private']").first();
+  await expect(privateCard).toBeVisible();
+  await expect(privateCard.getByText(/NDA/i)).toBeVisible();
+  await expect(privateCard.getByText(/Duży klient|Mały klient/i)).toBeVisible();
 });
