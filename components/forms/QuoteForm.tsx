@@ -168,7 +168,7 @@ export function QuoteForm() {
                     ))}
                   </div>
                   <div className="flex justify-end pt-4">
-                    <Button onClick={handleNext} disabled={!isStep1Valid}>
+                    <Button variant="lime" onClick={handleNext} disabled={!isStep1Valid}>
                       Dalej
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -256,7 +256,7 @@ export function QuoteForm() {
                       <ArrowLeft className="mr-2 w-4 h-4" />
                       Wstecz
                     </Button>
-                    <Button type="button" onClick={handleNext} disabled={!isStep2Valid}>
+                    <Button type="button" variant="lime" onClick={handleNext} disabled={!isStep2Valid}>
                       Dalej
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -336,7 +336,7 @@ export function QuoteForm() {
                       <ArrowLeft className="mr-2 w-4 h-4" />
                       Wstecz
                     </Button>
-                    <Button type="submit" disabled={isSubmitting}>
+                    <Button type="submit" variant="lime" disabled={isSubmitting}>
                       {isSubmitting ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
@@ -366,7 +366,7 @@ export function QuoteForm() {
               <p className="text-muted-foreground mb-6">
                 Dziękujemy za przesłanie formularza. Skontaktujemy się z Tobą w ciągu 24 godzin.
               </p>
-              <Button onClick={() => { setIsSuccess(false); setStep(1); setFormData({ service: "", projectSize: "", name: "", email: "", phone: "", company: "", description: "", budget: "", deadline: "" }); }}>
+              <Button variant="lime" onClick={() => { setIsSuccess(false); setStep(1); setFormData({ service: "", projectSize: "", name: "", email: "", phone: "", company: "", description: "", budget: "", deadline: "" }); }}>
                 Wyślij kolejne zapytanie
               </Button>
             </motion.div>

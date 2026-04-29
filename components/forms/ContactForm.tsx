@@ -114,6 +114,7 @@ export function ContactForm() {
 
           <Button
             type="submit"
+            variant="lime"
             className="w-full"
             disabled={isSubmitting}
           >
