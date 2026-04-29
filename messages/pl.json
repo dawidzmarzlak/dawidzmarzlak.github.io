@@ -125,6 +125,15 @@
       "nextjs": "Next.js",
       "wordpress": "WordPress",
       "webapp": "Aplikacje"
+    },
+    "privacy": {
+      "anonymous": "Projekt zamknięty",
+      "badge": "NDA",
+      "blurb": "Projekt objęty NDA. O szczegółach mogę opowiedzieć podczas konsultacji.",
+      "size": {
+        "small": "Mały klient",
+        "large": "Duży klient"
+      }
     }
   },
   "testimonials": {
@@ -2358,13 +2367,5 @@
         "title": ["Pytania, które ", "najczęściej słyszę", "."]
       }
     }
-  },
-  "projects": [
-    { "name": "FashionHub", "cat": "E-commerce", "year": "2024", "metric": "+187%", "tone": "dark" },
-    { "name": "TechCorp", "cat": "Korporacyjny", "year": "2024", "metric": "LCP 1.2s", "tone": "light" },
-    { "name": "MediClinic", "cat": "Aplikacja", "year": "2023", "metric": "12k pacjentów", "tone": "accent" },
-    { "name": "HomeDesign", "cat": "WooCommerce", "year": "2023", "metric": "2400 SKU", "tone": "light" },
-    { "name": "EduPlatform", "cat": "EdTech", "year": "2023", "metric": "8k studentów", "tone": "dark" },
-    { "name": "FoodDelivery", "cat": "Marketplace", "year": "2022", "metric": "150+ restauracji", "tone": "accent" }
-  ]
+  }
 }
