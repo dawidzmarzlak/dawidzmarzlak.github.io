@@ -1,137 +1,78 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { Mail, Phone, MapPin, Settings2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useCookieConsent } from "@/components/cookies/CookieConsentProvider";
 
 export function Footer() {
   const t = useTranslations("footer");
-  const tLegal = useTranslations("legal");
-  const { openSettings } = useCookieConsent();
-  const currentYear = new Date().getFullYear();
+  const studioLinks = t.raw("linksList.studio") as string[];
+  const serviceLinks = t.raw("linksList.services") as string[];
 
   return (
-    <footer className="bg-muted/50 border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
+    <footer className="max-w-[1400px] mx-auto px-9 py-10">
+      <div className="bg-bg-card rounded-[32px] p-14">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 pb-9 border-b border-line">
           <div>
-            <h3 className="font-bold text-lg mb-4">
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                IT Solutions
-              </span>
+            <h3 className="text-[32px] m-0 mb-4 font-semibold tracking-[-0.02em] text-fg">
+              {t("brand")}
             </h3>
-            <p className="text-muted-foreground mb-4 text-sm">
+            <p className="text-[14px] text-fg-muted max-w-[32ch] leading-[1.55] m-0">
               {t("tagline")}
             </p>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:hello@itsolutions.com" className="hover:text-foreground transition-colors">
-                  hello@itsolutions.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+48123456789" className="hover:text-foreground transition-colors">
-                  +48 123 456 789
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Warszawa, Polska</span>
-              </div>
-            </div>
           </div>
-
-          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">{t("quickLinks")}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {["about", "services", "portfolio", "blog", "contact"].map((item) => (
-                <li key={item}>
+            <h5 className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted m-0 mb-4">
+              {t("colServices")}
+            </h5>
+            <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
+              {serviceLinks.map((label, i) => (
+                <li key={i}>
                   <Link
-                    href={item === "about" ? "/about" : `/${item}`}
-                    className="hover:text-foreground transition-colors"
+                    href="/services"
+                    className="text-fg opacity-75 text-[14px] no-underline hover:opacity-100 transition-opacity"
                   >
-                    {t(`links.${item}`)}
+                    {label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">{t("services")}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {["nextjs", "wordpress", "woocommerce", "prestashop", "webapp"].map((service) => (
-                <li key={service}>
-                  <Link href="/services" className="hover:text-foreground transition-colors">
-                    {t(`servicesList.${service}`)}
-                  </Link>
-                </li>
-              ))}
+            <h5 className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted m-0 mb-4">
+              {t("colStudio")}
+            </h5>
+            <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
+              {studioLinks.map((label, i) => {
+                // [About, Portfolio, Blog, Pricing] — Portfolio (1) -> /portfolio,
+                // About (0) -> /about, Pricing (3) -> /pricing; Blog (2) stubs to "#"
+                // until that page lands.
+                const href =
+                  i === 1 ? "/portfolio" : i === 0 ? "/about" : i === 3 ? "/pricing" : "#";
+                return (
+                  <li key={i}>
+                    <Link
+                      href={href}
+                      className="text-fg opacity-75 text-[14px] no-underline hover:opacity-100 transition-opacity"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
-
-          {/* Newsletter */}
           <div>
-            <h4 className="font-semibold mb-4">{t("newsletter")}</h4>
-            <p className="text-sm text-muted-foreground mb-4">
-              {t("newsletterText")}
-            </p>
-            <form className="flex flex-col gap-2">
-              <input
-                type="email"
-                placeholder={t("emailPlaceholder")}
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <Button type="submit" className="w-full">
-                {t("subscribe")}
-              </Button>
-            </form>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold mb-4">{tLegal("title")}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="hover:text-foreground transition-colors"
-                >
-                  {tLegal("privacyPolicy")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookies-policy"
-                  className="hover:text-foreground transition-colors"
-                >
-                  {tLegal("cookiesPolicy")}
-                </Link>
-              </li>
-              <li>
-                <button
-                  onClick={openSettings}
-                  className="hover:text-foreground transition-colors flex items-center gap-1"
-                >
-                  <Settings2 className="h-3 w-3" />
-                  {tLegal("cookieSettings")}
-                </button>
-              </li>
+            <h5 className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted m-0 mb-4">
+              {t("colContact")}
+            </h5>
+            <ul className="list-none p-0 m-0 flex flex-col gap-2.5 text-fg opacity-75 text-[14px]">
+              <li>hello@itsolutions.com</li>
+              <li>+48 123 456 789</li>
+              <li>Warszawa, PL</li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>
-            © {currentYear} IT Solutions. {t("rights")}
-          </p>
+        <div className="pt-6 flex justify-between gap-4 flex-wrap font-mono text-[11px] text-fg-muted">
+          <span>{t("copy")}</span>
+          <span>{t("legal")}</span>
         </div>
       </div>
     </footer>

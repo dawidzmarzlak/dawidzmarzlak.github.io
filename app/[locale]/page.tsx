@@ -1,18 +1,32 @@
-import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
-import { About } from "@/components/sections/About";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { ShowcasePreview } from "@/components/sections/ShowcasePreview";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Process } from "@/components/sections/Process";
-import { Technologies } from "@/components/sections/Technologies";
-import { FAQ } from "@/components/sections/FAQ";
-import { CTA } from "@/components/sections/CTA";
+import { Hero } from "@/components/sections/redesign/Hero";
+import { StackTicker } from "@/components/sections/redesign/StackTicker";
+import { ServicesBento } from "@/components/sections/redesign/ServicesBento";
+import { AboutBento } from "@/components/sections/redesign/AboutBento";
+import { PortfolioGrid } from "@/components/sections/redesign/PortfolioGrid";
+import { Testimonials } from "@/components/sections/redesign/Testimonials";
+import { Process } from "@/components/sections/redesign/Process";
+import { Faq } from "@/components/sections/redesign/Faq";
+import { CtaCard } from "@/components/sections/redesign/CtaCard";
+import { useTranslations } from "next-intl";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
+
+function HomeCta() {
+  const t = useTranslations("cta");
+  return (
+    <CtaCard
+      heading={t("h")}
+      sub={t("p")}
+      primaryHref="/contact"
+      primaryLabel={t("primary")}
+      secondaryHref="mailto:hello@itsolutions.com"
+      secondaryLabel="hello@itsolutions.com"
+    />
+  );
+}
 
 export default async function Home({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
@@ -21,15 +35,14 @@ export default async function Home({
   return (
     <>
       <Hero />
-      <Services />
-      <About />
-      <Portfolio />
-      <ShowcasePreview />
+      <StackTicker />
+      <ServicesBento />
+      <AboutBento />
+      <PortfolioGrid />
       <Testimonials />
       <Process />
-      <Technologies />
-      <FAQ />
-      <CTA />
+      <Faq />
+      <HomeCta />
     </>
   );
 }
