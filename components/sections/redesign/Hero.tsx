@@ -57,7 +57,7 @@ export function Hero() {
               <div className="text-[18px] font-medium leading-[1.2] mt-2 tracking-[-0.01em]">{tCalc("heroStat")}</div>
             </div>
             <div className="font-display italic text-[64px] font-normal leading-none tracking-[-0.04em]">
-              5<span className="font-sans not-italic text-[0.35em] align-super opacity-60 ml-1">+ lat</span>
+              5<span className="font-sans not-italic text-[0.35em] align-super opacity-60 ml-1">{tCalc("heroUnit")}</span>
             </div>
           </div>
         </div>

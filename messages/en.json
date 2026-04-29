@@ -2323,6 +2323,7 @@
     "out": "Estimated from",
     "currency": "PLN",
     "heroStat": "Years on production since the first deploy in 2020.",
+    "heroUnit": "+ yr",
     "types": {
       "next": "Next",
       "wp": "WP",

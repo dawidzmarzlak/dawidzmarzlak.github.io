@@ -2329,6 +2329,7 @@
     "out": "Szacunkowo od",
     "currency": "PLN",
     "heroStat": "Lat na produkcji od pierwszego deployu w 2020.",
+    "heroUnit": "+ lat",
     "types": {
       "next": "Next",
       "wp": "WP",
