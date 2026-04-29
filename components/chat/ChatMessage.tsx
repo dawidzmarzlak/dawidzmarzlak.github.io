@@ -23,7 +23,7 @@ export function ChatMessage({ role, content, timestamp }: ChatMessageProps) {
       <div
         className={cn(
           "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center",
-          isUser ? "bg-primary text-primary-foreground" : "bg-muted"
+          isUser ? "bg-accent text-accent-fg" : "bg-bg-alt text-fg"
         )}
       >
         {isUser ? (
@@ -34,21 +34,18 @@ export function ChatMessage({ role, content, timestamp }: ChatMessageProps) {
       </div>
 
       {/* Message bubble */}
-      <div
-        className={cn(
-          "max-w-[80%] rounded-2xl px-4 py-2",
-          isUser
-            ? "bg-primary text-primary-foreground"
-            : "bg-muted"
-        )}
-      >
-        <p className="text-sm whitespace-pre-wrap">{content}</p>
-        <span
+      <div className={cn("flex flex-col max-w-[80%]", isUser ? "items-end" : "items-start")}>
+        <div
           className={cn(
-            "text-xs mt-1 block",
-            isUser ? "text-primary-foreground/70" : "text-muted-foreground"
+            "rounded-2xl px-4 py-2.5",
+            isUser
+              ? "bg-accent text-accent-fg rounded-br-sm"
+              : "bg-bg-alt text-fg rounded-bl-sm"
           )}
         >
+          <p className="text-[14px] whitespace-pre-wrap leading-relaxed">{content}</p>
+        </div>
+        <span className="font-mono text-[10px] text-fg-muted mt-1 px-1">
           {timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
         </span>
       </div>

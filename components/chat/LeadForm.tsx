@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { LeadData } from "@/lib/chat/types";
 import { X } from "lucide-react";
 
@@ -35,9 +33,9 @@ export function LeadForm({ leadData, onSubmit, onClose }: LeadFormProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg p-4 text-center"
+        className="bg-bg-alt border border-line rounded-2xl p-4 text-center"
       >
-        <p className="text-green-700 dark:text-green-300 text-sm">
+        <p className="text-fg text-sm">
           {t("success")}
         </p>
       </motion.div>
@@ -48,47 +46,70 @@ export function LeadForm({ leadData, onSubmit, onClose }: LeadFormProps) {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-muted/50 rounded-lg p-4 border"
+      className="bg-bg-alt border border-line rounded-2xl p-4"
     >
-      <div className="flex items-center justify-between mb-3">
-        <h4 className="text-sm font-medium">{t("title")}</h4>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-6 w-6"
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">
+          {t("title")}
+        </h4>
+        <button
+          type="button"
+          aria-label="Close form"
+          className="h-6 w-6 grid place-items-center rounded-full text-fg-muted hover:text-fg hover:bg-line transition-colors"
           onClick={onClose}
         >
-          <X className="w-4 h-4" />
-        </Button>
+          <X className="w-3.5 h-3.5" />
+        </button>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-3">
-        <Input
-          type="text"
-          placeholder={t("name")}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="h-9 text-sm"
-        />
-        <Input
-          type="email"
-          placeholder={t("email")}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="h-9 text-sm"
-        />
-        <Input
-          type="tel"
-          placeholder={t("phone")}
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="h-9 text-sm"
-        />
-        <Button type="submit" size="sm" className="w-full">
+        <div className="space-y-1.5">
+          <label htmlFor="lead-name" className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted block">
+            {t("name")}
+          </label>
+          <input
+            id="lead-name"
+            type="text"
+            placeholder={t("name")}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-[14px] text-fg placeholder:text-fg-muted focus:outline-none focus:border-accent transition-colors"
+          />
+        </div>
+        <div className="space-y-1.5">
+          <label htmlFor="lead-email" className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted block">
+            {t("email")}
+          </label>
+          <input
+            id="lead-email"
+            type="email"
+            placeholder={t("email")}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-[14px] text-fg placeholder:text-fg-muted focus:outline-none focus:border-accent transition-colors"
+          />
+        </div>
+        <div className="space-y-1.5">
+          <label htmlFor="lead-phone" className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted block">
+            {t("phone")}
+          </label>
+          <input
+            id="lead-phone"
+            type="tel"
+            placeholder={t("phone")}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full bg-bg border border-line rounded-xl px-4 py-3 text-[14px] text-fg placeholder:text-fg-muted focus:outline-none focus:border-accent transition-colors"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-accent text-accent-fg rounded-full px-5 py-2.5 text-sm font-semibold hover:scale-[1.02] transition-transform"
+        >
           {t("submit")}
-        </Button>
+        </button>
       </form>
     </motion.div>
   );

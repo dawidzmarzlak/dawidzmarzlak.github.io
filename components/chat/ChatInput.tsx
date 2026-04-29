@@ -3,8 +3,6 @@
 import { useState, KeyboardEvent } from "react";
 import { Send } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
@@ -30,26 +28,25 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
   };
 
   return (
-    <div className="p-4 border-t bg-background">
-      <div className="flex gap-2">
-        <Textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder={t("placeholder")}
-          disabled={disabled}
-          className="min-h-[44px] max-h-[120px] resize-none"
-          rows={1}
-        />
-        <Button
-          onClick={handleSend}
-          disabled={disabled || !input.trim()}
-          size="icon"
-          className="flex-shrink-0"
-        >
-          <Send className="w-4 h-4" />
-        </Button>
-      </div>
+    <div className="border-t border-line p-3 flex gap-2 bg-bg-card">
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder={t("placeholder")}
+        disabled={disabled}
+        rows={1}
+        className="flex-1 bg-bg border border-line rounded-3xl px-5 py-3 text-[14px] text-fg placeholder:text-fg-muted resize-none focus:outline-none focus:border-accent transition-colors min-h-[44px] max-h-[120px] disabled:opacity-50"
+      />
+      <button
+        type="button"
+        onClick={handleSend}
+        disabled={disabled || !input.trim()}
+        aria-label="Send message"
+        className="w-11 h-11 bg-accent text-accent-fg rounded-full grid place-items-center flex-shrink-0 hover:scale-105 transition-transform disabled:opacity-40 disabled:hover:scale-100"
+      >
+        <Send className="w-4 h-4" />
+      </button>
     </div>
   );
 }

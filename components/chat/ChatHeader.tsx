@@ -2,8 +2,6 @@
 
 import { X, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ChatHeaderProps {
   onClose: () => void;
@@ -14,38 +12,41 @@ export function ChatHeader({ onClose, onClear }: ChatHeaderProps) {
   const t = useTranslations("chat");
 
   return (
-    <CardHeader className="p-4 pb-3 border-b bg-primary text-primary-foreground">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          <CardTitle className="text-base font-medium">
+    <div className="bg-accent text-accent-fg rounded-t-[24px] p-5 flex items-center justify-between">
+      <div className="flex items-center gap-3 min-w-0">
+        <div className="w-2 h-2 bg-black/60 rounded-full animate-pulse flex-shrink-0" />
+        <div className="min-w-0">
+          <h3 className="font-semibold text-[16px] leading-tight truncate">
             {t("title")}
-          </CardTitle>
-        </div>
-        <div className="flex items-center gap-1">
-          {onClear && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={onClear}
-              className="h-8 w-8 text-primary-foreground hover:bg-primary-foreground/20"
-            >
-              <Trash2 className="w-4 h-4" />
-            </Button>
-          )}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="h-8 w-8 text-primary-foreground hover:bg-primary-foreground/20"
-          >
-            <X className="w-4 h-4" />
-          </Button>
+          </h3>
+          <p className="text-[12px] text-accent-fg/70 mt-0.5 truncate">
+            {t("subtitle")}
+          </p>
         </div>
       </div>
-      <p className="text-xs text-primary-foreground/70 mt-1">
-        {t("subtitle")}
-      </p>
-    </CardHeader>
+      <div className="flex items-center gap-2">
+        <span className="font-mono text-[11px] bg-black/[0.10] rounded-full px-2 py-0.5">
+          ONLINE
+        </span>
+        {onClear && (
+          <button
+            type="button"
+            onClick={onClear}
+            aria-label="Clear chat"
+            className="h-8 w-8 grid place-items-center rounded-full text-accent-fg hover:bg-black/[0.10] transition-colors"
+          >
+            <Trash2 className="w-4 h-4" />
+          </button>
+        )}
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close chat"
+          className="h-8 w-8 grid place-items-center rounded-full text-accent-fg hover:bg-black/[0.10] transition-colors"
+        >
+          <X className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
   );
 }

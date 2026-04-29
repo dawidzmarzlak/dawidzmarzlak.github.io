@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ChatWindow } from "./ChatWindow";
 
 export function ChatWidget() {
@@ -18,10 +17,11 @@ export function ChatWidget() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 2, type: "spring", stiffness: 200 }}
       >
-        <Button
+        <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90 hover:scale-105 transition-transform"
-          size="icon"
+          aria-label={isOpen ? "Close chat" : "Open chat"}
+          className="w-14 h-14 bg-accent text-accent-fg rounded-full grid place-items-center shadow-[0_8px_36px_rgb(var(--accent)/0.45)] hover:scale-105 transition-transform"
         >
           <AnimatePresence mode="wait">
             {isOpen ? (
@@ -46,14 +46,14 @@ export function ChatWidget() {
               </motion.div>
             )}
           </AnimatePresence>
-        </Button>
+        </button>
 
         {/* Pulsing indicator when closed */}
         {!isOpen && (
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 h-4 w-4 bg-green-500 rounded-full border-2 border-background"
+            className="absolute -top-1 -right-1 h-4 w-4 bg-green-500 rounded-full border-2 border-bg pointer-events-none"
           >
             <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75" />
           </motion.span>
