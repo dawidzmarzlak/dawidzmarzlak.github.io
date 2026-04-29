@@ -74,10 +74,10 @@
     "bigLabel": "// flexibility",
     "big": ["I tailor the solution to ", "your needs", " — not the other way around."],
     "stats": [
-      { "label": "// experience", "num": "5+", "foot": "years of commercial experience, including with large companies" },
-      { "label": "// scale", "num": "1k+", "foot": "active users using my solutions every single day" },
-      { "label": "// stack", "num": "8+", "foot": "frontend, backend, CMS and e-commerce technologies in active use" },
-      { "label": "// rating", "num": "5★", "foot": "average client rating. 100% of projects shipped to production" }
+      { "label": "// experience", "num": "5+", "foot": "Years on production since the first deploy in 2020." },
+      { "label": "// stacks",     "num": "5",  "foot": "Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot." },
+      { "label": "// quote SLA",  "num": "48h", "foot": "From brief to quote. No pitch decks, no sales rep loop." },
+      { "label": "// support",    "num": "6 mo.", "foot": "Post-launch support included — free bug fixes." }
     ],
     "quote": {
       "label": "// client · 2024",
@@ -2322,8 +2322,7 @@
     "cms": "CMS editing",
     "out": "Estimated from",
     "currency": "PLN",
-    "scale": "Thousands of daily users in production",
-    "scaleLabel": "+/day",
+    "heroStat": "Years on production since the first deploy in 2020.",
     "types": {
       "next": "Next",
       "wp": "WP",

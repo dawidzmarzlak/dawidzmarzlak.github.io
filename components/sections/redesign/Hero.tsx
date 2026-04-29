@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { MagneticCTA } from "@/components/animations/MagneticCTA";
-import { CountUp } from "@/components/animations/CountUp";
 import { useParallax } from "@/components/animations/useParallax";
 import { ItalicAccent } from "./ItalicAccent";
 import { QuoteCalculator } from "./QuoteCalculator";
@@ -54,12 +53,11 @@ export function Hero() {
           <QuoteCalculator />
           <div className="vc-stat-card bg-accent text-accent-fg rounded-[24px] p-6 flex flex-col justify-between min-h-[200px]">
             <div>
-              <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70">// scale</div>
-              <div className="text-[18px] font-medium leading-[1.2] mt-2 tracking-[-0.01em]">{tCalc("scale")}</div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70">// experience</div>
+              <div className="text-[18px] font-medium leading-[1.2] mt-2 tracking-[-0.01em]">{tCalc("heroStat")}</div>
             </div>
             <div className="font-display italic text-[64px] font-normal leading-none tracking-[-0.04em]">
-              <CountUp to={1000} duration={1800} format={(n) => (n >= 1000 ? Math.floor(n / 100) / 10 + "k" : n)} />
-              <span className="font-sans not-italic text-[0.35em] align-super opacity-60 ml-1">{tCalc("scaleLabel")}</span>
+              5<span className="font-sans not-italic text-[0.35em] align-super opacity-60 ml-1">+ lat</span>
             </div>
           </div>
         </div>
