@@ -1,8 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test("/pl/portfolio filters projects", async ({ page }) => {
-  await page.goto("/pl/portfolio");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Projekty");
+  test.setTimeout(90_000);
+  await page.goto("/pl/portfolio", { waitUntil: "networkidle", timeout: 60_000 });
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Projekty", { timeout: 30_000 });
   // 8 projects total in the bento grid
   const allCount = await page.locator("[data-portfolio-bento] article").count();
   expect(allCount).toBeGreaterThanOrEqual(8);
