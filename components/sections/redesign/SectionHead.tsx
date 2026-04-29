@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { Link } from "@/i18n/routing";
 import { MonoLabel } from "./MonoLabel";
 
 interface Props {
@@ -18,12 +19,12 @@ export function SectionHead({ kicker, title, cta }: Props) {
         </h2>
       </div>
       {cta && (
-        <a
+        <Link
           href={cta.href}
           className="self-start lg:self-end inline-flex items-center gap-2 rounded-full border border-line text-fg-muted px-4 py-2.5 text-sm hover:text-fg hover:border-fg-muted transition"
         >
           {cta.label}
-        </a>
+        </Link>
       )}
     </div>
   );
