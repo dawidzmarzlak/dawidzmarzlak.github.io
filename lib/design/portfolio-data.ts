@@ -1,32 +1,69 @@
 export type Tone = "dark" | "light" | "accent";
 export type Size = "big" | "med" | "small";
 export type Tag = "next" | "wp" | "ecom" | "app";
+export type ClientSize = "small" | "large";
 
-export interface Project {
+export interface PublicProject {
+  kind: "public";
   name: string;
+  url: string;           // pusty string = brak publicznego linku
   cat: string;
   tags: Tag[];
   year: string;
-  metric: string;
-  desc: string;
   size: Size;
   tone: Tone;
   color?: string;
 }
 
-export const PROJECTS: Project[] = [
-  { name: "FashionHub",   cat: "E-commerce",   tags: ["next", "ecom"], year: "2024", metric: "+187%",            desc: "Re-platforming z Magento na Next.js Commerce. Konwersja +187%, LCP z 4.2s do 1.2s.", size: "big",   tone: "dark",   color: "#0e0d0c" },
-  { name: "TechCorp",     cat: "Korporacyjny", tags: ["wp"],           year: "2024", metric: "LCP 1.2s",         desc: "Strona korporacyjna IT z multilang. Custom WP theme bez page-builderów.",            size: "med",   tone: "light" },
-  { name: "MediClinic",   cat: "Aplikacja",    tags: ["app"],          year: "2023", metric: "12k pacjentów",    desc: "Portal pacjenta z systemem rezerwacji + płatności online. Spring Boot + Next.",      size: "med",   tone: "accent" },
-  { name: "HomeDesign",   cat: "WooCommerce",  tags: ["ecom"],         year: "2023", metric: "2400 SKU",         desc: "Sklep z meblami + konfigurator 3D. WooCommerce 8 + Three.js.",                       size: "small", tone: "light" },
-  { name: "EduPlatform",  cat: "EdTech",       tags: ["next", "app"],  year: "2023", metric: "8k studentów",     desc: "Platforma do nauki online — wideo, quizy, certyfikaty. Next.js + Mux + Sanity.",      size: "small", tone: "dark" },
-  { name: "FoodDelivery", cat: "Marketplace",  tags: ["ecom"],         year: "2022", metric: "150+ restauracji", desc: "Marketplace z jedzeniem — multistore na PrestaShop, integracja kurierów.",            size: "big",   tone: "accent", color: "#d4ff52" },
-  { name: "LocalLaw",     cat: "Korporacyjny", tags: ["wp"],           year: "2022", metric: "230 leadów/mc",    desc: "Strona kancelarii z lokalnym SEO. WordPress + zaawansowane formularze.",              size: "small", tone: "light" },
-  { name: "BookingPro",   cat: "Aplikacja",    tags: ["app"],          year: "2024", metric: "+412% rezerwacji", desc: "System rezerwacji dla hoteli — multi-property, dynamic pricing.",                     size: "med",   tone: "dark" },
+export interface PrivateCase {
+  kind: "private";
+  clientSize: ClientSize;
+  tags: Tag[];           // jakie technologie pokazać (np. ["app"])
+  year: string;
+  size: Size;
+  tone: Tone;
+}
+
+export type Project = PublicProject | PrivateCase;
+
+// <<USER_INPUT>> — wypełnić 2 realnymi publicznymi projektami później:
+export const PUBLIC_PROJECTS: PublicProject[] = [
+  {
+    kind: "public",
+    name: "<<USER_INPUT: nazwa #1>>",
+    url:  "<<USER_INPUT: https://... lub ''>>",
+    cat:  "<<USER_INPUT: kategoria, np. E-commerce>>",
+    tags: ["next"],
+    year: "2024",
+    size: "big",
+    tone: "dark",
+  },
+  {
+    kind: "public",
+    name: "<<USER_INPUT: nazwa #2>>",
+    url:  "<<USER_INPUT>>",
+    cat:  "<<USER_INPUT>>",
+    tags: ["wp"],
+    year: "2024",
+    size: "med",
+    tone: "light",
+  },
 ];
 
-export type FilterKey = "all" | Tag;
+// Anonimowe case'y — tylko clientSize + rok + tagi stacku, bez branży i metryk.
+export const PRIVATE_CASES: PrivateCase[] = [
+  { kind: "private", clientSize: "large", tags: ["app"],  year: "2024", size: "med",   tone: "accent" },
+  { kind: "private", clientSize: "large", tags: ["ecom"], year: "2023", size: "small", tone: "dark"   },
+  { kind: "private", clientSize: "small", tags: ["wp"],   year: "2024", size: "small", tone: "light"  },
+  { kind: "private", clientSize: "small", tags: ["next"], year: "2023", size: "med",   tone: "dark"   },
+];
 
+export const PROJECTS: Project[] = [...PUBLIC_PROJECTS, ...PRIVATE_CASES];
+
+export function getPublicProjects(): PublicProject[] { return PUBLIC_PROJECTS; }
+export function getPrivateProjects(): PrivateCase[] { return PRIVATE_CASES; }
+
+export type FilterKey = "all" | Tag;
 export const FILTERS: Array<[FilterKey, string]> = [
   ["all", "Wszystkie"],
   ["next", "Next.js"],
