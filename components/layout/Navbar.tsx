@@ -1,201 +1,175 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Moon, Sun, Menu, X } from "lucide-react";
-import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
-import { LanguageSwitcher } from "./LanguageSwitcher";
-import { SettingsToggle } from "@/components/ui/settings-toggle";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+
+const NAV_ITEMS: Array<{ href: string; key: "services" | "portfolio" | "contact"; }> = [
+  { href: "/services", key: "services" },
+  { href: "/portfolio", key: "portfolio" },
+  { href: "/contact", key: "contact" },
+];
+
+const ANCHOR_ITEMS: Array<{ href: string; key: "process" | "faq" }> = [
+  { href: "/#process", key: "process" },
+  { href: "/#faq", key: "faq" },
+];
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const t = useTranslations('nav');
+  const t = useTranslations("nav");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const { theme, setTheme } = useTheme();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const { scrollY } = useScroll();
-  const backgroundColor = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.9)"]
-  );
-
-  const backgroundColorDark = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.9)"]
-  );
-
-  const translateY = useTransform(
-    scrollY,
-    [0, 50],
-    ["-100%", "0%"]
-  );
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const navItems = [
-    { href: '/', label: t('home') },
-    { href: '/about', label: t('about') },
-    { href: '/services', label: t('services') },
-    { href: '/portfolio', label: t('portfolio') },
-    { href: '/blog', label: t('blog') },
-    { href: '/pricing', label: t('pricing') },
-  ];
+  const switchLocale = (next: "pl" | "en") => {
+    if (next !== locale) router.push(pathname, { locale: next });
+  };
 
   return (
-    <motion.nav
-      style={{
-        backgroundColor: theme === 'dark' ? backgroundColorDark : backgroundColor,
-        translateY
-      }}
-      className="fixed top-0 w-full z-50 backdrop-blur-md border-b border-border/40"
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="text-2xl font-bold">
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              IT Solutions
-            </span>
+    <>
+      <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur border-b border-line">
+        <div className="max-w-[1400px] mx-auto px-9 py-4 flex items-center gap-9">
+          <Link href="/" className="flex items-center gap-3 text-fg no-underline">
+            <span className="w-9 h-9 rounded-full bg-accent text-accent-fg grid place-items-center font-extrabold text-[18px]">i</span>
+            <span className="font-semibold text-[18px] tracking-[-0.03em]">IT Solutions</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-foreground/80 hover:text-foreground transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+          <nav className="hidden md:flex gap-7 ml-auto text-[14px] font-medium" aria-label={t("menu")}>
+            {NAV_ITEMS.map((item) => (
+              <Link key={item.key} href={item.href} className="text-fg opacity-70 hover:opacity-100 transition-opacity no-underline">
+                {t(item.key)}
               </Link>
             ))}
-
-            {/* Theme Toggle */}
-            {mounted && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
-            )}
-
-            {/* Language Toggle */}
-            <LanguageSwitcher />
-
-            {/* CTA Button */}
-            <Button asChild>
-              <Link href="/contact">{t('contact')}</Link>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: isOpen ? 0 : "100%" }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`md:hidden fixed left-0 right-0 top-16 bg-white dark:bg-gray-950 z-40 ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
-        style={{ height: 'calc(100vh - 4rem)' }}
-      >
-        <div className="h-full flex flex-col justify-between px-6 py-8">
-          {/* Navigation Links */}
-          <nav className="space-y-6">
-            {navItems.map((item, index) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 20 }}
-                transition={{ delay: isOpen ? index * 0.1 : 0 }}
-              >
-                <Link
-                  href={item.href}
-                  className="block text-2xl font-medium text-foreground/80 hover:text-foreground transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </motion.div>
+            {ANCHOR_ITEMS.map((item) => (
+              <a key={item.key} href={item.href} className="text-fg opacity-70 hover:opacity-100 transition-opacity no-underline">
+                {t(item.key)}
+              </a>
             ))}
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 20 }}
-              transition={{ delay: isOpen ? navItems.length * 0.1 : 0 }}
-            >
-              <Button asChild className="w-full mt-4">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  {t('contact')}
-                </Link>
-              </Button>
-            </motion.div>
           </nav>
 
-          {/* Settings Section - Separated at bottom */}
-          <div className="space-y-6 border-t border-border/50 pt-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 20 }}
-              transition={{ delay: isOpen ? (navItems.length + 1) * 0.1 : 0 }}
-              className="space-y-4"
-            >
-              <div className="text-sm font-medium text-foreground/60 uppercase tracking-wider">
-                {t('settings')}
-              </div>
+          {/* Theme toggle (subtle, mono-styled) */}
+          <button
+            type="button"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme === "dark" ? t("lightMode") : t("darkMode")}
+            className="hidden md:inline-flex w-9 h-9 items-center justify-center rounded-full border border-line text-fg-muted hover:text-fg hover:border-fg-muted transition"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
 
-              {/* Theme Toggle */}
-              {mounted && (
-                <div className="space-y-2">
-                  <SettingsToggle
-                    checked={theme === "light"}
-                    onCheckedChange={(checked) => setTheme(checked ? "light" : "dark")}
-                    leftIcon={<Moon className="h-4 w-4" />}
-                    rightIcon={<Sun className="h-4 w-4" />}
-                    leftLabel="Dark"
-                    rightLabel="Light"
-                  />
-                </div>
-              )}
+          {/* Lang pill */}
+          <div className="hidden md:inline-flex items-center p-[3px] bg-white/[0.04] border border-line rounded-full font-mono">
+            {(["pl", "en"] as const).map((code) => (
+              <button
+                key={code}
+                type="button"
+                onClick={() => switchLocale(code)}
+                aria-pressed={locale === code}
+                className={`px-2.5 py-1 text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full transition ${
+                  locale === code ? "bg-accent text-accent-fg" : "text-fg-muted hover:text-fg"
+                }`}
+              >
+                {code}
+              </button>
+            ))}
+          </div>
 
-              {/* Language Toggle */}
-              <div className="space-y-2">
-                <SettingsToggle
-                  checked={locale === "en"}
-                  onCheckedChange={(checked) => {
-                    const newLocale = checked ? "en" : "pl";
-                    router.push(pathname, { locale: newLocale });
-                  }}
-                  leftLabel="PL"
-                  rightLabel="EN"
-                />
-              </div>
-            </motion.div>
+          <Link
+            href="/contact"
+            className="hidden md:inline-flex items-center px-[18px] py-2.5 bg-accent text-accent-fg rounded-full text-[13px] font-bold no-underline"
+          >
+            {t("cta")}
+          </Link>
+
+          {/* Hamburger */}
+          <button
+            type="button"
+            className={`md:hidden ml-auto w-10 h-10 border border-line rounded-[10px] grid place-items-center transition ${mobileOpen ? "bg-accent border-accent" : "bg-transparent"}`}
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label={mobileOpen ? t("close") : t("menu")}
+            aria-expanded={mobileOpen}
+          >
+            <span className="relative w-[18px] h-3 block">
+              <span className={`absolute left-0 right-0 h-[1.5px] bg-fg transition-transform ${mobileOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"}`} />
+              <span className={`absolute left-0 right-0 h-[1.5px] bg-fg transition-transform ${mobileOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-0"}`} />
+            </span>
+          </button>
+        </div>
+      </header>
+
+      {/* MOBILE SHEET */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 bg-bg pt-20 px-7 pb-8 overflow-y-auto transition-opacity ${
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <ul className="flex flex-col">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.key}>
+              <Link
+                href={item.href}
+                className="block py-4 text-[30px] font-semibold tracking-[-0.03em] text-fg no-underline border-b border-line"
+                onClick={() => setMobileOpen(false)}
+              >
+                {t(item.key)}
+              </Link>
+            </li>
+          ))}
+          {ANCHOR_ITEMS.map((item) => (
+            <li key={item.key}>
+              <a
+                href={item.href}
+                className="block py-4 text-[30px] font-semibold tracking-[-0.03em] text-fg no-underline border-b border-line"
+                onClick={() => setMobileOpen(false)}
+              >
+                {t(item.key)}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/contact"
+          onClick={() => setMobileOpen(false)}
+          className="inline-block mt-7 px-5 py-3.5 bg-accent text-accent-fg rounded-full font-bold no-underline"
+        >
+          {t("cta")}
+        </Link>
+        <div className="mt-8 flex flex-col gap-1.5 font-mono text-[12px] text-fg-muted">
+          <span>hello@itsolutions.com</span>
+          <span>+48 123 456 789</span>
+          <span>Warszawa, PL</span>
+        </div>
+        <div className="mt-6 flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme === "dark" ? t("lightMode") : t("darkMode")}
+            className="w-10 h-10 grid place-items-center rounded-full border border-line text-fg-muted"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+          <div className="inline-flex items-center p-[3px] bg-white/[0.04] border border-line rounded-full font-mono">
+            {(["pl", "en"] as const).map((code) => (
+              <button
+                key={code}
+                type="button"
+                onClick={() => switchLocale(code)}
+                aria-pressed={locale === code}
+                className={`px-3 py-1 text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full transition ${
+                  locale === code ? "bg-accent text-accent-fg" : "text-fg-muted hover:text-fg"
+                }`}
+              >
+                {code}
+              </button>
+            ))}
           </div>
         </div>
-      </motion.div>
-    </motion.nav>
+      </div>
+    </>
   );
 }
