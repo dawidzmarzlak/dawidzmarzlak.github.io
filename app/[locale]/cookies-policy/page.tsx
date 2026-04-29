@@ -7,6 +7,8 @@ import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 import { MagneticCTA } from "@/components/animations/MagneticCTA";
 import { useCookieConsent } from "@/components/cookies/CookieConsentProvider";
 
+export const dynamic = "force-static";
+
 export default function CookiesPolicyPage() {
   const t = useTranslations("legal.cookies");
   const { openSettings } = useCookieConsent();

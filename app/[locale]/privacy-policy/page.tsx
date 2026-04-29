@@ -5,6 +5,8 @@ import { Shield, Mail, MapPin, Lock, Clock, FileText, UserCheck } from "lucide-r
 import { Link } from "@/i18n/routing";
 import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata({
   params,
 }: {

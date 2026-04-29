@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@/i18n/routing";
 import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 import { CountUp } from "@/components/animations/CountUp";
