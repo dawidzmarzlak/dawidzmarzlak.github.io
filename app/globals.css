@@ -96,3 +96,8 @@ html {
 .cine-img { transition: transform .7s cubic-bezier(.2,.8,.2,1); }
 .cine:hover .cine-img { transform: scale(1.06); }
 .anim-reveal-text.in .anim-rt-char { transform: translateY(0); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
