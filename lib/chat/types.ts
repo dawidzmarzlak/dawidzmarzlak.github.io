@@ -41,6 +41,8 @@ export interface OllamaRequest {
     temperature?: number;
     top_p?: number;
     num_predict?: number;
+    repeat_penalty?: number;
+    stop?: string[];
   };
 }
 
