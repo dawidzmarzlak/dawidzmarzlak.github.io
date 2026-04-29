@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>IT Solutions — Tworzę strony, które potrafią zarabiać | Next.js, WordPress, E-commerce</title>
+  <meta name="title" content="IT Solutions — Tworzę strony, które potrafią zarabiać | Next.js, WordPress, E-commerce" />
+  <meta name="description" content="Pracownia stron, sklepów i aplikacji webowych z 5+ lat doświadczenia. Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot. Rozwiązania dla dużych firm i mniejszych biznesów. Tysiące codziennych użytkowników na produkcji." />
+  <meta name="keywords" content="strony internetowe, Next.js, WordPress, WooCommerce, PrestaShop, aplikacje webowe, Spring Boot, tworzenie stron Warszawa, sklep internetowy, Core Web Vitals, SEO" />
+  <meta name="author" content="IT Solutions" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://dawidzmarzlak.github.io/pl/" />
+  <meta name="theme-color" content="#0e0d0c" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:url" content="https://dawidzmarzlak.github.io/pl/" />
+  <meta property="og:title" content="IT Solutions — Tworzę strony, które potrafią zarabiać" />
+  <meta property="og:description" content="Pracownia stron, sklepów i aplikacji webowych. Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot. 5+ lat doświadczenia." />
+  <meta property="og:image" content="https://dawidzmarzlak.github.io/pl/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="IT Solutions" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IT Solutions — Tworzę strony, które potrafią zarabiać" />
+  <meta name="twitter:description" content="Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot. 5+ lat doświadczenia, tysiące codziennych użytkowników." />
+  <meta name="twitter:image" content="https://dawidzmarzlak.github.io/pl/og-image.png" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://dawidzmarzlak.github.io/pl/#org",
+        "name": "IT Solutions",
+        "description": "Pracownia stron, sklepów i aplikacji webowych. Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot.",
+        "url": "https://dawidzmarzlak.github.io/pl/",
+        "email": "hello@itsolutions.com",
+        "telephone": "+48-123-456-789",
+        "priceRange": "5500-50000 PLN",
+        "address": { "@type": "PostalAddress", "addressLocality": "Warszawa", "addressCountry": "PL" },
+        "areaServed": ["PL", "EU"],
+        "foundingDate": "2020",
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "47" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dawidzmarzlak.github.io/pl/#website",
+        "url": "https://dawidzmarzlak.github.io/pl/",
+        "name": "IT Solutions",
+        "publisher": { "@id": "https://dawidzmarzlak.github.io/pl/#org" },
+        "inLanguage": "pl-PL"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Ile trwa realizacja projektu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Strona wizytówka 3–4 tygodnie, sklep 6–10 tygodni, aplikacja od 12 tygodni. Każdy projekt dostaje dokładny harmonogram tygodniowy." } },
+          { "@type": "Question", "name": "Ile kosztuje strona internetowa?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Wizytówka od 5 500 PLN, sklep od 9 500 PLN, aplikacja od 18 000 PLN. Dokładna wycena w 48 godzin od briefu." } },
+          { "@type": "Question", "name": "Czy oferujecie hosting?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu." } },
+          { "@type": "Question", "name": "Czy mogę edytować stronę samodzielnie?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie i dostarczam dokumentację." } },
+          { "@type": "Question", "name": "Co z SEO?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Schema.org, meta tagi, Open Graph, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect / DNS-prefetch — Core Web Vitals -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+
+  <!-- Fonts: Inter Tight (sans), Instrument Serif (display), JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #f0eee9; font-family: 'Inter Tight', system-ui, sans-serif; height: 100%; }
+    #root { height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React 18.3.1 + Babel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="design-canvas.jsx"></script>
+  <script type="text/babel" src="animations.jsx"></script>
+  <script type="text/babel" src="variant-a.jsx"></script>
+  <script type="text/babel" src="variant-b.jsx"></script>
+  <script type="text/babel" src="variant-c-v2.jsx"></script>
+  <script type="text/babel" src="page-services.jsx"></script>
+  <script type="text/babel" src="page-portfolio.jsx"></script>
+  <script type="text/babel" src="page-contact.jsx"></script>
+
+  <script type="text/babel">
+    const App = () => (
+      <DesignCanvas>
+        <DCSection id="final" title="Wybrany kierunek — strona główna" subtitle="Bento z C, działający kalkulator z A, smaczki typograficzne (Instrument Serif italic), animacje (parallax, ticker, magnetyczne CTA, tilt na projektach). Otwórz pełnoekranowo ikoną ⤢.">
+          <DCArtboard id="vc2" label="Strona główna · / (index)" width={1400} height={900}>
+            <VariantC />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="pages" title="Podstrony" subtitle="Tym samym językiem: bento + italic + kalkulator gdzie pasuje. Działające — zakładki w Usługach, filtry i case study w Portfolio, 3-stopniowy formularz briefu w Kontakcie. Każda otwiera się też jako osobny plik HTML.">
+          <DCArtboard id="page-services" label="Usługi · /services (deep dive)" width={1400} height={900}>
+            <PageServices />
+          </DCArtboard>
+          <DCArtboard id="page-portfolio" label="Portfolio · /portfolio (siatka + case study)" width={1400} height={900}>
+            <PagePortfolio />
+          </DCArtboard>
+          <DCArtboard id="page-contact" label="Kontakt · /contact (brief + sloty + kalkulator)" width={1400} height={900}>
+            <PageContact />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="redesign" title="Wcześniejsze kierunki (referencja)" subtitle="Dla porównania — A i B oraz oryginalne C bez kalkulatora.">
+          <DCArtboard id="va" label="A · Studio Editorial" width={1320} height={900}>
+            <VariantA />
+          </DCArtboard>
+          <DCArtboard id="vb" label="B · Live Workspace" width={1320} height={900}>
+            <VariantB />
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="notes" title="Założenia projektowe" subtitle="Co osiągamy w każdym wariancie">
+          <DCArtboard id="notes-a" label="Decyzje projektowe" width={520} height={620}>
+            <div style={{padding: 36, fontFamily: 'Inter Tight, system-ui, sans-serif', fontSize: 14, lineHeight: 1.55, color: '#2a251f', background: '#fdfcf8', height: '100%', overflow: 'auto'}}>
+              <h3 style={{margin: '0 0 12px', fontSize: 22, letterSpacing: '-0.02em'}}>Co naprawiam w obecnej wersji</h3>
+              <p style={{color: '#6b6b73', margin: '0 0 24px'}}>Twoje główne bóle: kafelkowe usługi, stockowe testimoniale, nudne FAQ, generyczny brand. Każdy wariant atakuje to inaczej.</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>Hero</h4>
+              <p style={{margin: '0 0 20px'}}>Pusta przestrzeń → mocny typograficzny statement <em>"Tworzę strony, które potrafią zarabiać"</em> + <strong>interaktywny kalkulator wyceny</strong> w prawej kolumnie (wariant A).</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>Usługi</h4>
+              <p style={{margin: '0 0 20px'}}>Kafelki z ikonami → <strong>numerowana lista editorial</strong> (A), <strong>tab-selector z kartą detali</strong> (B), <strong>bento o asymetrycznych rozmiarach</strong> (C).</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>Liczby (zamiast „0+")</h4>
+              <p style={{margin: '0 0 20px'}}>5+ lat · tysiące codziennych użytkowników · 5★ · 100% wdrożeń. Bez wymyślonych liczb.</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>Testimoniale</h4>
+              <p style={{margin: '0 0 20px'}}>Stockowe karty → <strong>jeden duży cytat</strong> typograficzny (A), <strong>karty terminal-like</strong> (B), <strong>asymetryczne bento</strong> (C).</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>FAQ</h4>
+              <p style={{margin: '0 0 20px'}}>Standardowy accordion → numerowany editorial (A), karty terminal (B), bento expanding (C).</p>
+
+              <h4 style={{margin: '0 0 8px', fontSize: 14, fontFamily: 'JetBrains Mono, monospace', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#888'}}>SEO (we wszystkich)</h4>
+              <p style={{margin: 0}}>Schema.org JSON-LD (ProfessionalService, FAQPage, AggregateRating), meta + OG + Twitter cards, semantyczny HTML (header, nav, section, article, footer), preconnect dla fontów, lazy load, alt teksty, hierarchia h1-h4.</p>
+            </div>
+          </DCArtboard>
+
+          <DCArtboard id="notes-b" label="Co dalej" width={520} height={620}>
+            <div style={{padding: 36, fontFamily: 'Inter Tight, system-ui, sans-serif', fontSize: 14, lineHeight: 1.55, color: '#2a251f', background: '#fdfcf8', height: '100%', overflow: 'auto'}}>
+              <h3 style={{margin: '0 0 12px', fontSize: 22, letterSpacing: '-0.02em'}}>Następne kroki</h3>
+              <p style={{color: '#6b6b73', margin: '0 0 24px'}}>Wybierz kierunek, a dograżymy szczegóły.</p>
+
+              <ol style={{margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 14}}>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>01</span>
+                  <div>
+                    <strong>Wybór wariantu (A / B / C lub mix).</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Możemy zmiksować — np. hero z C + sekcje z A.</div>
+                  </div>
+                </li>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>02</span>
+                  <div>
+                    <strong>Realne dane.</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Konkretne metryki z 2–3 największych projektów (LCP, konwersja, ruch). Logosy klientów, jeśli mogą się pojawić.</div>
+                  </div>
+                </li>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>03</span>
+                  <div>
+                    <strong>Podstrony.</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Usługi (rozszerzona), Portfolio (case study), O nas, Cennik, Blog, Kontakt z formularzem.</div>
+                  </div>
+                </li>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>04</span>
+                  <div>
+                    <strong>Tryb jasny.</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Każdy wariant skompilujemy w wersji jasnej + przełącznik z prefers-color-scheme.</div>
+                  </div>
+                </li>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>05</span>
+                  <div>
+                    <strong>Animacje.</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Subtelny scroll-reveal jest już w środku. Można dodać Lenis (smooth scroll) i parallax na hero — bez przesady, żeby nie zabić CLS.</div>
+                  </div>
+                </li>
+                <li style={{display: 'flex', gap: 16}}>
+                  <span style={{fontFamily: 'JetBrains Mono, monospace', fontSize: 12, background: '#0e0d0c', color: '#d4ff52', padding: '4px 8px', borderRadius: 6, height: 'fit-content', flexShrink: 0}}>06</span>
+                  <div>
+                    <strong>Implementacja.</strong>
+                    <div style={{color: '#6b6b73', fontSize: 13, marginTop: 4}}>Następnie rekomenduję Next.js 14 + Sanity / MDX dla bloga + Vercel. To, co sam sprzedajesz — daje ci wiarygodność.</div>
+                  </div>
+                </li>
+              </ol>
+
+              <div style={{marginTop: 28, padding: 20, background: '#0e0d0c', color: '#f4ede0', borderRadius: 12, fontSize: 13, lineHeight: 1.55}}>
+                <strong style={{color: '#d4ff52', display: 'block', marginBottom: 6, fontFamily: 'JetBrains Mono, monospace', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.1em'}}>Tip</strong>
+                Każdy artboard można otworzyć pełnoekranowo (ikona ⤢ przy najechaniu) i przewijać jak prawdziwą stronę. Hero w A ma działający kalkulator, w B działa selector technologii, w C — działający accordion FAQ.
+              </div>
+            </div>
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+    );
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

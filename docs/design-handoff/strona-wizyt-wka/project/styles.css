@@ -1,0 +1,94 @@
+/* === Tokens shared across variants === */
+
+:root {
+  --font-display: 'Instrument Serif', 'Times New Roman', serif;
+  --font-sans: 'Inter Tight', -apple-system, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Menlo', monospace;
+}
+
+/* === Variant A — Studio Editorial (dark, warm) === */
+.va {
+  --bg: #0e0d0c;
+  --bg-alt: #18171530;
+  --bg-card: #1a1815;
+  --fg: #f4ede0;
+  --fg-muted: #8a8378;
+  --line: #2a2723;
+  --accent: #d4ff52;       /* electric lime */
+  --accent-soft: #d4ff5215;
+  --accent-fg: #0e0d0c;
+  --warm: #f3a27a;
+}
+
+/* === Variant B — Live Workspace (deep navy + magenta) === */
+.vb {
+  --bg: #0a0a14;
+  --bg-alt: #11111e;
+  --bg-card: #15152330;
+  --fg: #e6e6f2;
+  --fg-muted: #7e7e95;
+  --line: rgba(255,255,255,0.08);
+  --accent: #ff3d8b;
+  --accent-2: #4dffd4;
+  --accent-soft: rgba(255,61,139,0.12);
+  --accent-fg: #0a0a14;
+  --grid: rgba(255,255,255,0.03);
+}
+
+/* === Variant C — Bento Maximalist (high-contrast + lime) === */
+.vc {
+  --bg: #050505;
+  --bg-alt: #0e0e0e;
+  --bg-card: #131313;
+  --bg-light: #f3efe7;
+  --fg: #f7f7f5;
+  --fg-muted: #888884;
+  --fg-on-light: #0a0a0a;
+  --line: rgba(255,255,255,0.08);
+  --line-light: rgba(0,0,0,0.1);
+  --accent: #c4ff3a;
+  --accent-fg: #050505;
+}
+
+/* === Frame reset for artboards === */
+.site-frame {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.site-frame * { box-sizing: border-box; }
+.site-frame img, .site-frame svg { display: block; max-width: 100%; }
+
+.site-frame::-webkit-scrollbar { width: 10px; }
+.site-frame::-webkit-scrollbar-track { background: transparent; }
+.site-frame::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 8px; }
+.site-frame::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.16); }
+
+/* === Animation keyframes === */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* === Common: smooth scroll-reveal helper === */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
