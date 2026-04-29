@@ -13,6 +13,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { ChatWidget } from "@/components/chat";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { interTight, instrumentSerif, jetbrainsMono } from "@/lib/design/fonts";
 import "../globals.css";
 
 const baseUrl = "https://itsolutions.pl";
@@ -185,7 +186,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable} ${interTight.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
