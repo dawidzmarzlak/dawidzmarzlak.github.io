@@ -5,6 +5,11 @@ import {
   SpaHero,
   SpaAbout,
   SpaTreatments,
+  SpaTeam,
+  SpaGallery,
+  SpaWellnessTips,
+  SpaBooking,
+  SpaTestimonials,
 } from "@/components/showcase/spa-wellness";
 import { routing } from "@/i18n/routing";
 
@@ -21,6 +26,11 @@ export default function SpaWellnessPage() {
       <SpaHero />
       <SpaAbout />
       <SpaTreatments />
+      <SpaTeam />
+      <SpaGallery />
+      <SpaWellnessTips />
+      <SpaTestimonials />
+      <SpaBooking />
       <ShowcaseCTA
         theme="light"
         accentColor="#9CAF88"

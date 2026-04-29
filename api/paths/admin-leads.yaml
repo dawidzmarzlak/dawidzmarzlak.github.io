@@ -1,0 +1,221 @@
+# Admin Leads API paths
+
+leads:
+  get:
+    tags:
+      - admin-leads
+    operationId: getAdminLeads
+    summary: List all leads
+    description: Returns paginated list of leads with filtering options
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/page'
+      - $ref: '../components/parameters.yaml#/parameters/size'
+      - $ref: '../components/parameters.yaml#/parameters/sortBy'
+      - $ref: '../components/parameters.yaml#/parameters/sortDir'
+      - $ref: '../components/parameters.yaml#/parameters/search'
+      - $ref: '../components/parameters.yaml#/parameters/dateFrom'
+      - $ref: '../components/parameters.yaml#/parameters/dateTo'
+      - name: status
+        in: query
+        description: Filter by lead status
+        schema:
+          type: string
+          enum:
+            - new
+            - contacted
+            - qualified
+            - converted
+            - lost
+      - name: source
+        in: query
+        description: Filter by lead source
+        schema:
+          type: string
+          enum:
+            - chat
+            - contact
+            - quote
+    responses:
+      '200':
+        description: List of leads
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/lead.yaml#/LeadListResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+lead:
+  get:
+    tags:
+      - admin-leads
+    operationId: getAdminLeadById
+    summary: Get lead details
+    description: Returns lead details including related entities
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/leadId'
+    responses:
+      '200':
+        description: Lead details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/lead.yaml#/Lead'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Lead not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+  delete:
+    tags:
+      - admin-leads
+    operationId: deleteLead
+    summary: Delete a lead
+    description: Permanently deletes a lead
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/leadId'
+    responses:
+      '204':
+        description: Lead deleted
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Lead not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+leadStatus:
+  put:
+    tags:
+      - admin-leads
+    operationId: updateLeadStatus
+    summary: Update lead status
+    description: Updates the status of a lead in the sales pipeline
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/leadId'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/lead.yaml#/UpdateLeadStatusRequest'
+    responses:
+      '200':
+        description: Lead status updated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/lead.yaml#/Lead'
+      '400':
+        description: Invalid status transition
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Lead not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+leadNotes:
+  post:
+    tags:
+      - admin-leads
+    operationId: addLeadNote
+    summary: Add a note to a lead
+    description: Adds an internal note to a lead
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/leadId'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/lead.yaml#/AddLeadNoteRequest'
+    responses:
+      '201':
+        description: Note added
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/lead.yaml#/LeadNote'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Lead not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+  get:
+    tags:
+      - admin-leads
+    operationId: getLeadNotes
+    summary: Get notes for a lead
+    description: Returns all notes for a lead
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/leadId'
+    responses:
+      '200':
+        description: List of notes
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../schemas/lead.yaml#/LeadNote'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Lead not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

@@ -1,0 +1,167 @@
+openapi: 3.1.0
+info:
+  title: IT Solutions API
+  description: |
+    Backend API for IT Solutions website.
+
+    ## Features
+    - Chat with AI (Ollama/Gemini proxy)
+    - Contact form submissions
+    - Quote requests
+    - Lead management
+    - Email notifications
+
+    ## Authentication
+    Public endpoints require Turnstile verification.
+    Admin endpoints require JWT Bearer token.
+  version: 1.0.0
+  contact:
+    name: IT Solutions
+    email: contact@itsolutions.pl
+
+servers:
+  - url: http://localhost:8080
+    description: Development server
+  - url: https://api.itsolutions.pl
+    description: Production server
+
+tags:
+  - name: chat
+    description: AI Chat operations (public)
+  - name: contact
+    description: Contact form operations (public)
+  - name: quote
+    description: Quote request operations (public)
+  - name: leads
+    description: Lead operations (public)
+  - name: admin-chats
+    description: Chat management (admin)
+  - name: admin-leads
+    description: Lead management (admin)
+  - name: admin-contacts
+    description: Contact management (admin)
+  - name: admin-quotes
+    description: Quote management (admin)
+  - name: admin-emails
+    description: Email management (admin)
+  - name: admin-analytics
+    description: Analytics dashboard (admin)
+  - name: auth
+    description: Authentication operations
+
+paths:
+  # Public API
+  /api/v1/chat/messages:
+    $ref: './paths/chat.yaml#/messages'
+  /api/v1/chat/sessions/{sessionId}:
+    $ref: './paths/chat.yaml#/session'
+  /api/v1/contact:
+    $ref: './paths/contact.yaml#/contact'
+  /api/v1/quote:
+    $ref: './paths/quote.yaml#/quote'
+  /api/v1/leads:
+    $ref: './paths/leads.yaml#/leads'
+
+  # Auth API
+  /api/v1/auth/login:
+    $ref: './paths/auth.yaml#/login'
+  /api/v1/auth/refresh:
+    $ref: './paths/auth.yaml#/refresh'
+  /api/v1/auth/me:
+    $ref: './paths/auth.yaml#/me'
+
+  # Admin API - Chats
+  /api/v1/admin/chats:
+    $ref: './paths/admin-chats.yaml#/chats'
+  /api/v1/admin/chats/{chatId}:
+    $ref: './paths/admin-chats.yaml#/chat'
+
+  # Admin API - Leads
+  /api/v1/admin/leads:
+    $ref: './paths/admin-leads.yaml#/leads'
+  /api/v1/admin/leads/{leadId}:
+    $ref: './paths/admin-leads.yaml#/lead'
+  /api/v1/admin/leads/{leadId}/status:
+    $ref: './paths/admin-leads.yaml#/leadStatus'
+  /api/v1/admin/leads/{leadId}/notes:
+    $ref: './paths/admin-leads.yaml#/leadNotes'
+
+  # Admin API - Contacts
+  /api/v1/admin/contacts:
+    $ref: './paths/admin-contacts.yaml#/contacts'
+  /api/v1/admin/contacts/{contactId}:
+    $ref: './paths/admin-contacts.yaml#/contact'
+  /api/v1/admin/contacts/{contactId}/reply:
+    $ref: './paths/admin-contacts.yaml#/contactReply'
+
+  # Admin API - Quotes
+  /api/v1/admin/quotes:
+    $ref: './paths/admin-quotes.yaml#/quotes'
+  /api/v1/admin/quotes/{quoteId}:
+    $ref: './paths/admin-quotes.yaml#/quote'
+  /api/v1/admin/quotes/{quoteId}/status:
+    $ref: './paths/admin-quotes.yaml#/quoteStatus'
+
+  # Admin API - Emails
+  /api/v1/admin/emails/logs:
+    $ref: './paths/admin-emails.yaml#/emailLogs'
+  /api/v1/admin/emails/templates:
+    $ref: './paths/admin-emails.yaml#/emailTemplates'
+  /api/v1/admin/emails/templates/{templateId}:
+    $ref: './paths/admin-emails.yaml#/emailTemplate'
+
+  # Admin API - Analytics
+  /api/v1/admin/analytics/dashboard:
+    $ref: './paths/admin-analytics.yaml#/dashboard'
+
+components:
+  securitySchemes:
+    $ref: './components/security.yaml#/securitySchemes'
+
+  parameters:
+    $ref: './components/parameters.yaml#/parameters'
+
+  schemas:
+    # Common
+    Error:
+      $ref: './schemas/common.yaml#/Error'
+    PaginationMeta:
+      $ref: './schemas/common.yaml#/PaginationMeta'
+
+    # Chat
+    ChatMessage:
+      $ref: './schemas/chat.yaml#/ChatMessage'
+    ChatSession:
+      $ref: './schemas/chat.yaml#/ChatSession'
+    SendMessageRequest:
+      $ref: './schemas/chat.yaml#/SendMessageRequest'
+    SendMessageResponse:
+      $ref: './schemas/chat.yaml#/SendMessageResponse'
+
+    # Lead
+    Lead:
+      $ref: './schemas/lead.yaml#/Lead'
+    LeadStatus:
+      $ref: './schemas/lead.yaml#/LeadStatus'
+    CreateLeadRequest:
+      $ref: './schemas/lead.yaml#/CreateLeadRequest'
+
+    # Contact
+    ContactRequest:
+      $ref: './schemas/contact.yaml#/ContactRequest'
+    CreateContactRequest:
+      $ref: './schemas/contact.yaml#/CreateContactRequest'
+
+    # Quote
+    QuoteRequest:
+      $ref: './schemas/quote.yaml#/QuoteRequest'
+    CreateQuoteRequest:
+      $ref: './schemas/quote.yaml#/CreateQuoteRequest'
+
+    # Email
+    EmailTemplate:
+      $ref: './schemas/email.yaml#/EmailTemplate'
+    EmailLog:
+      $ref: './schemas/email.yaml#/EmailLog'
+
+security: []

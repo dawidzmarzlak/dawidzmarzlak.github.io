@@ -1,0 +1,217 @@
+# Chat module schemas
+
+ChatMessage:
+  type: object
+  required:
+    - id
+    - role
+    - content
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique message identifier
+      example: "550e8400-e29b-41d4-a716-446655440000"
+    sessionId:
+      type: string
+      format: uuid
+      description: Chat session identifier
+      example: "550e8400-e29b-41d4-a716-446655440001"
+    role:
+      $ref: '#/ChatRole'
+    content:
+      type: string
+      description: Message content
+      example: "Cześć, chciałbym zapytać o cenę strony internetowej"
+    tokensUsed:
+      type: integer
+      format: int32
+      description: Number of tokens used for this message (LLM responses only)
+      example: 150
+    responseTimeMs:
+      type: integer
+      format: int32
+      description: Response time in milliseconds (LLM responses only)
+      example: 2500
+    createdAt:
+      type: string
+      format: date-time
+      description: When the message was created
+      example: "2024-01-15T10:30:00Z"
+
+ChatRole:
+  type: string
+  enum:
+    - user
+    - assistant
+    - system
+  description: Role of the message sender
+
+ChatSession:
+  type: object
+  required:
+    - id
+    - locale
+    - status
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique session identifier
+      example: "550e8400-e29b-41d4-a716-446655440001"
+    visitorId:
+      type: string
+      description: Browser fingerprint or cookie ID
+      example: "fp_abc123xyz"
+    locale:
+      type: string
+      enum:
+        - pl
+        - en
+      description: Session language
+      example: "pl"
+    status:
+      $ref: '#/ChatSessionStatus'
+    llmProvider:
+      type: string
+      enum:
+        - ollama
+        - gemini
+      description: LLM provider used for this session
+      example: "ollama"
+    llmModel:
+      type: string
+      description: LLM model used
+      example: "llama3.2"
+    totalTokens:
+      type: integer
+      format: int32
+      description: Total tokens consumed in this session
+      example: 1500
+    messages:
+      type: array
+      items:
+        $ref: '#/ChatMessage'
+      description: List of messages in this session
+    leadId:
+      type: string
+      format: uuid
+      description: Associated lead ID (if lead was collected)
+    createdAt:
+      type: string
+      format: date-time
+      description: When the session was created
+      example: "2024-01-15T10:00:00Z"
+    updatedAt:
+      type: string
+      format: date-time
+      description: When the session was last updated
+      example: "2024-01-15T10:35:00Z"
+    archivedAt:
+      type: string
+      format: date-time
+      description: When the session was archived (if applicable)
+
+ChatSessionStatus:
+  type: string
+  enum:
+    - active
+    - archived
+    - spam
+  default: active
+  description: Status of the chat session
+
+ChatAction:
+  type: string
+  enum:
+    - collect_lead
+    - redirect_contact
+    - redirect_quote
+  description: Suggested action based on conversation context
+
+SendMessageRequest:
+  type: object
+  required:
+    - messages
+    - locale
+  properties:
+    sessionId:
+      type: string
+      format: uuid
+      description: Existing session ID (optional, creates new session if not provided)
+    messages:
+      type: array
+      items:
+        type: object
+        required:
+          - role
+          - content
+        properties:
+          role:
+            type: string
+            enum:
+              - user
+              - assistant
+          content:
+            type: string
+      description: Conversation history
+      minItems: 1
+    locale:
+      type: string
+      enum:
+        - pl
+        - en
+      description: Language for the response
+      example: "pl"
+    leadData:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Jan Kowalski"
+        email:
+          type: string
+          format: email
+          example: "jan@example.com"
+        phone:
+          type: string
+          example: "+48 123 456 789"
+      description: Lead information collected from user
+    turnstileToken:
+      type: string
+      description: Cloudflare Turnstile verification token
+
+SendMessageResponse:
+  type: object
+  required:
+    - message
+    - sessionId
+  properties:
+    message:
+      type: string
+      description: AI response message
+      example: "Cześć! Chętnie pomogę z wyceną. Jaki typ strony Cię interesuje?"
+    sessionId:
+      type: string
+      format: uuid
+      description: Chat session ID
+    action:
+      $ref: '#/ChatAction'
+    error:
+      type: string
+      description: Error message if something went wrong
+
+ChatSessionListResponse:
+  type: object
+  required:
+    - data
+    - meta
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/ChatSession'
+    meta:
+      $ref: './common.yaml#/PaginationMeta'

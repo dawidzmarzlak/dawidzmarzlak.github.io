@@ -1,0 +1,246 @@
+# Quote module schemas
+
+QuoteRequest:
+  type: object
+  required:
+    - id
+    - referenceNumber
+    - service
+    - projectSize
+    - name
+    - email
+    - status
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique quote request identifier
+      example: "550e8400-e29b-41d4-a716-446655440004"
+    referenceNumber:
+      type: string
+      description: Human-readable reference number
+      example: "QUO-2024-0042"
+    service:
+      $ref: '#/ServiceType'
+    projectSize:
+      $ref: '#/ProjectSize'
+    name:
+      type: string
+      description: Client's name
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      description: Client's email address
+      example: "jan@example.com"
+    phone:
+      type: string
+      description: Client's phone number
+      example: "+48 123 456 789"
+    company:
+      type: string
+      description: Client's company name
+      example: "Acme Corp"
+    description:
+      type: string
+      description: Project description
+      example: "Potrzebuję sklepu internetowego z integracją z hurtownią..."
+    budget:
+      type: string
+      description: Client's budget range
+      example: "10000-20000 PLN"
+    deadline:
+      type: string
+      description: Desired project deadline
+      example: "Q2 2024"
+    status:
+      $ref: '#/QuoteRequestStatus'
+    quotedAmount:
+      type: number
+      format: double
+      description: Quoted price (set by admin)
+      example: 15000.00
+    quotedCurrency:
+      type: string
+      default: PLN
+      example: "PLN"
+    quoteNotes:
+      type: string
+      description: Internal notes about the quote
+    ipAddress:
+      type: string
+      description: IP address of the sender
+    turnstileVerified:
+      type: boolean
+      description: Whether Turnstile verification passed
+      default: false
+    leadId:
+      type: string
+      format: uuid
+      description: Associated lead ID
+    createdAt:
+      type: string
+      format: date-time
+      description: When the request was created
+      example: "2024-01-15T10:00:00Z"
+    quotedAt:
+      type: string
+      format: date-time
+      description: When the quote was provided
+    acceptedAt:
+      type: string
+      format: date-time
+      description: When the quote was accepted
+
+ServiceType:
+  type: string
+  enum:
+    - nextjs
+    - wordpress
+    - woocommerce
+    - prestashop
+    - webapp
+  description: |
+    Type of service requested:
+    - nextjs: Next.js / React application
+    - wordpress: WordPress website
+    - woocommerce: WooCommerce e-commerce
+    - prestashop: PrestaShop e-commerce
+    - webapp: Custom web application
+
+ProjectSize:
+  type: string
+  enum:
+    - small
+    - medium
+    - large
+    - enterprise
+  description: |
+    Project size/complexity:
+    - small: Simple website (5-10 pages)
+    - medium: Medium website with CMS
+    - large: Complex website or small e-commerce
+    - enterprise: Large e-commerce or custom solution
+
+QuoteRequestStatus:
+  type: string
+  enum:
+    - pending
+    - quoted
+    - accepted
+    - rejected
+    - expired
+  default: pending
+  description: |
+    Quote request status:
+    - pending: Waiting for quote
+    - quoted: Quote provided
+    - accepted: Quote accepted by client
+    - rejected: Quote rejected by client
+    - expired: Quote expired
+
+CreateQuoteRequest:
+  type: object
+  required:
+    - service
+    - projectSize
+    - name
+    - email
+  properties:
+    service:
+      $ref: '#/ServiceType'
+    projectSize:
+      $ref: '#/ProjectSize'
+    name:
+      type: string
+      minLength: 2
+      maxLength: 255
+      description: Client's name
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      maxLength: 255
+      description: Client's email address
+      example: "jan@example.com"
+    phone:
+      type: string
+      maxLength: 50
+      description: Client's phone number
+      example: "+48 123 456 789"
+    company:
+      type: string
+      maxLength: 255
+      description: Client's company name
+      example: "Acme Corp"
+    description:
+      type: string
+      maxLength: 5000
+      description: Project description
+      example: "Potrzebuję sklepu internetowego..."
+    budget:
+      type: string
+      maxLength: 100
+      description: Budget range
+      example: "10000-20000 PLN"
+    deadline:
+      type: string
+      maxLength: 100
+      description: Desired deadline
+      example: "Q2 2024"
+    turnstileToken:
+      type: string
+      description: Cloudflare Turnstile verification token
+
+CreateQuoteResponse:
+  type: object
+  required:
+    - success
+    - message
+    - quoteReference
+  properties:
+    success:
+      type: boolean
+      example: true
+    message:
+      type: string
+      example: "Dziękujemy! Przygotujemy wycenę w ciągu 48 godzin."
+    quoteReference:
+      type: string
+      description: Reference number for tracking
+      example: "QUO-2024-0042"
+    quoteId:
+      type: string
+      format: uuid
+      description: Created quote request ID
+
+UpdateQuoteStatusRequest:
+  type: object
+  required:
+    - status
+  properties:
+    status:
+      $ref: '#/QuoteRequestStatus'
+    quotedAmount:
+      type: number
+      format: double
+      description: Quoted price (required when status is 'quoted')
+      example: 15000.00
+    notes:
+      type: string
+      maxLength: 5000
+      description: Internal notes
+
+QuoteRequestListResponse:
+  type: object
+  required:
+    - data
+    - meta
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/QuoteRequest'
+    meta:
+      $ref: './common.yaml#/PaginationMeta'

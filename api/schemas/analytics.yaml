@@ -1,0 +1,197 @@
+# Analytics module schemas
+
+DashboardResponse:
+  type: object
+  required:
+    - stats
+    - recentActivity
+    - charts
+  properties:
+    stats:
+      $ref: '#/DashboardStats'
+    recentActivity:
+      type: array
+      items:
+        $ref: '#/ActivityItem'
+      maxItems: 10
+    charts:
+      $ref: '#/DashboardCharts'
+
+DashboardStats:
+  type: object
+  required:
+    - totalChats
+    - totalLeads
+    - totalContacts
+    - totalQuotes
+    - conversionRate
+  properties:
+    totalChats:
+      type: integer
+      format: int64
+      description: Total number of chat sessions
+      example: 1250
+    totalChatMessages:
+      type: integer
+      format: int64
+      description: Total number of chat messages
+      example: 8500
+    totalTokensUsed:
+      type: integer
+      format: int64
+      description: Total LLM tokens consumed
+      example: 2500000
+    totalLeads:
+      type: integer
+      format: int64
+      description: Total number of leads
+      example: 450
+    newLeadsToday:
+      type: integer
+      format: int32
+      description: New leads today
+      example: 12
+    newLeadsThisWeek:
+      type: integer
+      format: int32
+      description: New leads this week
+      example: 45
+    totalContacts:
+      type: integer
+      format: int64
+      description: Total contact requests
+      example: 320
+    pendingContacts:
+      type: integer
+      format: int32
+      description: Unread contact requests
+      example: 5
+    totalQuotes:
+      type: integer
+      format: int64
+      description: Total quote requests
+      example: 180
+    pendingQuotes:
+      type: integer
+      format: int32
+      description: Pending quotes
+      example: 8
+    conversionRate:
+      type: number
+      format: double
+      description: Lead to customer conversion rate (0-100)
+      example: 12.5
+    avgResponseTime:
+      type: integer
+      format: int32
+      description: Average chat response time in milliseconds
+      example: 2500
+    totalEmailsSent:
+      type: integer
+      format: int64
+      description: Total emails sent
+      example: 890
+
+ActivityItem:
+  type: object
+  required:
+    - id
+    - type
+    - description
+    - timestamp
+  properties:
+    id:
+      type: string
+      format: uuid
+    type:
+      $ref: '#/ActivityType'
+    description:
+      type: string
+      description: Human-readable activity description
+      example: "Nowy lead: jan@example.com"
+    entityId:
+      type: string
+      format: uuid
+      description: Related entity ID
+    entityType:
+      type: string
+      enum:
+        - chat
+        - lead
+        - contact
+        - quote
+        - email
+    timestamp:
+      type: string
+      format: date-time
+
+ActivityType:
+  type: string
+  enum:
+    - new_chat
+    - chat_completed
+    - new_lead
+    - lead_converted
+    - new_contact
+    - contact_replied
+    - new_quote
+    - quote_sent
+    - email_sent
+    - email_failed
+
+DashboardCharts:
+  type: object
+  properties:
+    leadsOverTime:
+      type: array
+      items:
+        $ref: '#/TimeSeriesDataPoint'
+      description: Leads per day for the last 30 days
+    chatsByLocale:
+      type: array
+      items:
+        $ref: '#/PieChartDataPoint'
+      description: Chat sessions by language
+    leadsBySource:
+      type: array
+      items:
+        $ref: '#/PieChartDataPoint'
+      description: Leads by source (chat/contact/quote)
+    leadsByStatus:
+      type: array
+      items:
+        $ref: '#/PieChartDataPoint'
+      description: Leads by status
+
+TimeSeriesDataPoint:
+  type: object
+  required:
+    - date
+    - value
+  properties:
+    date:
+      type: string
+      format: date
+      example: "2024-01-15"
+    value:
+      type: integer
+      format: int32
+      example: 25
+
+PieChartDataPoint:
+  type: object
+  required:
+    - label
+    - value
+  properties:
+    label:
+      type: string
+      example: "chat"
+    value:
+      type: integer
+      format: int32
+      example: 150
+    percentage:
+      type: number
+      format: double
+      example: 33.5

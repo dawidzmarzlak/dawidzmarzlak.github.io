@@ -2,17 +2,20 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCookieConsent } from "@/components/cookies/CookieConsentProvider";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tLegal = useTranslations("legal");
+  const { openSettings } = useCookieConsent();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="font-bold text-lg mb-4">
@@ -90,6 +93,38 @@ export function Footer() {
                 {t("subscribe")}
               </Button>
             </form>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">{tLegal("title")}</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-foreground transition-colors"
+                >
+                  {tLegal("privacyPolicy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookies-policy"
+                  className="hover:text-foreground transition-colors"
+                >
+                  {tLegal("cookiesPolicy")}
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={openSettings}
+                  className="hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  <Settings2 className="h-3 w-3" />
+                  {tLegal("cookieSettings")}
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 

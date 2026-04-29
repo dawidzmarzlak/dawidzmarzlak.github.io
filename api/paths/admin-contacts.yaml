@@ -1,0 +1,148 @@
+# Admin Contacts API paths
+
+contacts:
+  get:
+    tags:
+      - admin-contacts
+    operationId: getAdminContacts
+    summary: List all contact requests
+    description: Returns paginated list of contact requests
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/page'
+      - $ref: '../components/parameters.yaml#/parameters/size'
+      - $ref: '../components/parameters.yaml#/parameters/sortBy'
+      - $ref: '../components/parameters.yaml#/parameters/sortDir'
+      - $ref: '../components/parameters.yaml#/parameters/search'
+      - $ref: '../components/parameters.yaml#/parameters/dateFrom'
+      - $ref: '../components/parameters.yaml#/parameters/dateTo'
+      - name: status
+        in: query
+        description: Filter by status
+        schema:
+          type: string
+          enum:
+            - new
+            - read
+            - replied
+            - archived
+    responses:
+      '200':
+        description: List of contact requests
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/contact.yaml#/ContactRequestListResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+contact:
+  get:
+    tags:
+      - admin-contacts
+    operationId: getAdminContactById
+    summary: Get contact request details
+    description: Returns contact request details and marks it as read
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/contactId'
+    responses:
+      '200':
+        description: Contact request details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/contact.yaml#/ContactRequest'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Contact request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+  delete:
+    tags:
+      - admin-contacts
+    operationId: archiveContact
+    summary: Archive a contact request
+    description: Archives a contact request
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/contactId'
+    responses:
+      '204':
+        description: Contact request archived
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Contact request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+contactReply:
+  post:
+    tags:
+      - admin-contacts
+    operationId: replyToContact
+    summary: Reply to a contact request
+    description: Sends a reply email to the contact and updates status
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/contactId'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/contact.yaml#/ReplyToContactRequest'
+    responses:
+      '200':
+        description: Reply sent successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/contact.yaml#/ContactRequest'
+      '400':
+        description: Invalid request
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Contact request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '503':
+        description: Email service unavailable
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

@@ -19,25 +19,14 @@ export function HotelHero() {
         className="absolute inset-0"
         style={{ y }}
       >
-        {/* Video element */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/showcase/luxury-hotel/hero.jpg"
-        >
-          <source src="/showcase/luxury-hotel/hero-video.mp4" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
-          <Image
-            src="/showcase/luxury-hotel/hero.jpg"
-            alt="Grand Riviera Hotel"
-            fill
-            className="object-cover"
-            priority
-          />
-        </video>
+        {/* Hero image */}
+        <Image
+          src="/showcase/luxury-hotel/hero.jpg"
+          alt="Grand Riviera Hotel"
+          fill
+          className="object-cover"
+          priority
+        />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#1A2A4A]/60" />
         {/* Decorative elements */}

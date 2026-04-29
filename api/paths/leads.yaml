@@ -1,0 +1,42 @@
+# Leads API paths (public)
+
+leads:
+  post:
+    tags:
+      - leads
+    operationId: createLead
+    summary: Create a lead
+    description: |
+      Creates a lead from chat or other sources.
+      Used when collecting lead data from the chatbot.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/lead.yaml#/CreateLeadRequest'
+    responses:
+      '201':
+        description: Lead created successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/lead.yaml#/Lead'
+      '400':
+        description: Validation error
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '403':
+        description: Bot detected (Turnstile verification failed)
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '409':
+        description: Lead with this email already exists
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

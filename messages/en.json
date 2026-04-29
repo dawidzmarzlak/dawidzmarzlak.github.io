@@ -346,6 +346,59 @@
         "title": "Opening Hours",
         "dinner": "Dinner: 6:00 PM - 11:00 PM",
         "closed": "Closed: Mondays"
+      },
+      "gallery": {
+        "title": "Gallery",
+        "subtitle": "A visual journey through our culinary artistry",
+        "filters": {
+          "all": "All",
+          "dishes": "Cuisine",
+          "interior": "Ambiance"
+        }
+      },
+      "wine": {
+        "title": "Wine Cellar",
+        "subtitle": "An exceptional collection curated by our sommelier",
+        "stats": {
+          "bottles": "Bottles",
+          "regions": "Regions",
+          "vintages": "Vintages",
+          "rare": "Rare Labels"
+        },
+        "sommelierNote": "Each wine in our collection has been personally selected to complement our seasonal menu and enhance the dining experience.",
+        "sommelierName": "Jean-Pierre Laurent, Head Sommelier"
+      },
+      "press": {
+        "title": "Awards & Recognition",
+        "subtitle": "Excellence celebrated by the world's most prestigious culinary guides",
+        "publications": {
+          "michelin": "Michelin Guide",
+          "nytimes": "The New York Times",
+          "zagat": "Zagat",
+          "forbes": "Forbes Travel"
+        },
+        "featuredQuote": "A transcendent dining experience that redefines the boundaries of contemporary French cuisine. Every dish tells a story of precision, passion, and pure artistry.",
+        "featuredSource": "The New York Times",
+        "awardsTitle": "Accolades",
+        "awards": {
+          "award1": {
+            "name": "Two Michelin Stars",
+            "organization": "Michelin Guide"
+          },
+          "award2": {
+            "name": "Best Fine Dining",
+            "organization": "James Beard Awards"
+          },
+          "award3": {
+            "name": "Restaurant of the Year",
+            "organization": "Wine Spectator"
+          },
+          "award4": {
+            "name": "Five Star Award",
+            "organization": "Forbes Travel Guide"
+          }
+        },
+        "featuredIn": "Featured In"
       }
     },
 
@@ -378,19 +431,119 @@
         "book": "Book"
       },
       "team": {
-        "title": "Our Team",
-        "subtitle": "Certified specialists with years of experience"
+        "title": "Our Therapists",
+        "subtitle": "Certified specialists dedicated to your wellbeing",
+        "yearsExperience": "years experience",
+        "therapists": {
+          "elena": {
+            "name": "Elena Rossi",
+            "role": "Senior Massage Therapist",
+            "bio": "Specializing in Swedish and deep tissue massage with aromatherapy expertise."
+          },
+          "maya": {
+            "name": "Maya Johnson",
+            "role": "Skincare Specialist",
+            "bio": "Expert in facial treatments and holistic skincare routines."
+          },
+          "sophia": {
+            "name": "Sophia Chen",
+            "role": "Yoga & Meditation Guide",
+            "bio": "Certified yoga instructor with focus on mindfulness and stress relief."
+          },
+          "lily": {
+            "name": "Lily Adams",
+            "role": "Wellness Consultant",
+            "bio": "Holistic body treatment expert and wellness coach."
+          }
+        }
       },
-      "wellness": {
-        "title": "Wellness Tips",
-        "subtitle": "Inspiration for healthy living"
+      "gallery": {
+        "title": "Our Sanctuary",
+        "subtitle": "A glimpse into our tranquil spaces"
+      },
+      "tips": {
+        "title": "Wellness Journal",
+        "subtitle": "Tips and inspiration for mindful living",
+        "minRead": "min read",
+        "readMore": "Read More",
+        "categories": {
+          "mindfulness": "Mindfulness",
+          "beauty": "Beauty",
+          "wellness": "Wellness"
+        },
+        "articles": {
+          "meditation": {
+            "title": "5 Minutes to Calm: Daily Meditation Practice",
+            "excerpt": "Discover simple meditation techniques that can transform your day and reduce stress levels."
+          },
+          "skincare": {
+            "title": "The Art of Natural Skincare",
+            "excerpt": "Learn how to create an effective skincare routine using natural ingredients."
+          },
+          "aromatherapy": {
+            "title": "Essential Oils for Better Sleep",
+            "excerpt": "Explore the calming power of aromatherapy and improve your sleep quality naturally."
+          }
+        }
+      },
+      "testimonials": {
+        "title": "Guest Experiences",
+        "subtitle": "What our visitors say about their journey with us",
+        "reviews": {
+          "guest1": {
+            "name": "Sarah M.",
+            "quote": "The most relaxing experience I've ever had. The therapists are incredibly skilled and the atmosphere is pure bliss.",
+            "treatment": "Deep Tissue Massage"
+          },
+          "guest2": {
+            "name": "Emma T.",
+            "quote": "I've tried many spas, but Serenity Springs is truly special. The attention to detail and personalized care is outstanding.",
+            "treatment": "Rejuvenating Facial"
+          },
+          "guest3": {
+            "name": "Jennifer L.",
+            "quote": "The yoga classes here changed my life. Sophia is an amazing instructor who truly cares about each student.",
+            "treatment": "Yoga & Meditation"
+          },
+          "guest4": {
+            "name": "Amanda R.",
+            "quote": "Every visit feels like a mini vacation. The team remembers your preferences and makes you feel so welcome.",
+            "treatment": "Spa Day Package"
+          }
+        }
       },
       "booking": {
-        "title": "Book an Appointment",
-        "selectTreatment": "Select treatment",
-        "selectDate": "Select date",
-        "selectTime": "Select time",
-        "submit": "Confirm booking"
+        "title": "Book Your Experience",
+        "subtitle": "Begin your journey to relaxation",
+        "step1": {
+          "title": "Choose Your Treatment"
+        },
+        "step2": {
+          "title": "Select Date & Time",
+          "date": "Select Date",
+          "time": "Choose Time"
+        },
+        "step3": {
+          "title": "Your Details",
+          "name": "Full Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "notes": "Special Requests (optional)"
+        },
+        "treatments": {
+          "massage": { "name": "Relaxing Massage", "duration": "60-90 min" },
+          "facial": { "name": "Rejuvenating Facial", "duration": "45-60 min" },
+          "body": { "name": "Body Treatment", "duration": "75 min" },
+          "package": { "name": "Spa Day Package", "duration": "3 hours" }
+        },
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Confirm Booking",
+        "success": {
+          "title": "Booking Confirmed!",
+          "message": "We've sent a confirmation email with all the details. We look forward to welcoming you.",
+          "newBooking": "Book Another Treatment"
+        }
       }
     },
 
@@ -441,13 +594,94 @@
       },
       "team": {
         "title": "Team",
-        "subtitle": "Architects and designers with passion"
+        "subtitle": "Architects and designers with passion",
+        "members": {
+          "sarah": {
+            "name": "Sarah Mitchell",
+            "role": "Principal Architect",
+            "bio": "Award-winning architect with 15+ years experience in residential and commercial design. Passionate about sustainable architecture and innovative spatial solutions."
+          },
+          "michael": {
+            "name": "Michael Chen",
+            "role": "Lead Designer",
+            "bio": "Specializes in modern minimalist design. Former lead designer at Herzog & de Meuron. Focuses on the relationship between architecture and nature."
+          },
+          "elena": {
+            "name": "Elena Rodriguez",
+            "role": "Interior Architect",
+            "bio": "Expert in luxury residential interiors and high-end commercial spaces. Combines functionality with artistic vision to create timeless environments."
+          },
+          "david": {
+            "name": "David Park",
+            "role": "Project Manager",
+            "bio": "Ensures seamless project execution from concept to completion. 12 years of experience managing complex architectural projects across multiple continents."
+          }
+        }
+      },
+      "awards": {
+        "title": "Awards & Recognition",
+        "subtitle": "Excellence acknowledged by the industry",
+        "pressMentions": "Featured In",
+        "items": {
+          "award1": {
+            "name": "Best Residential Project",
+            "organization": "AIA Design Awards",
+            "project": "Skyline Residence"
+          },
+          "award2": {
+            "name": "Innovation in Architecture",
+            "organization": "World Architecture Festival",
+            "project": "Void Pavilion"
+          },
+          "award3": {
+            "name": "Sustainable Design Award",
+            "organization": "Green Building Council",
+            "project": "Eco Tower"
+          },
+          "award4": {
+            "name": "Emerging Architecture Firm",
+            "organization": "Architect Magazine",
+            "project": "Studio Portfolio"
+          }
+        },
+        "stats": {
+          "awards": "International Awards",
+          "features": "Press Features",
+          "countries": "Countries"
+        }
       },
       "contact": {
         "title": "Contact",
-        "email": "Email",
-        "phone": "Phone",
-        "address": "Address"
+        "subtitle": "Let's discuss your project",
+        "addressLabel": "Studio Address",
+        "address": "432 Park Avenue, New York, NY 10022",
+        "phoneLabel": "Phone",
+        "phone": "+1 (212) 555-0198",
+        "emailLabel": "Email",
+        "email": "hello@formandvoid.studio",
+        "hoursLabel": "Office Hours",
+        "hours": "Mon-Fri: 9:00 AM - 6:00 PM",
+        "coordinates": "Our Location",
+        "viewMap": "View on Google Maps",
+        "form": {
+          "name": "Full Name",
+          "namePlaceholder": "John Doe",
+          "email": "Email Address",
+          "emailPlaceholder": "john@example.com",
+          "phone": "Phone Number",
+          "phonePlaceholder": "+1 (555) 000-0000",
+          "projectType": "Project Type",
+          "projectTypePlaceholder": "Select project type",
+          "projectTypes": {
+            "residential": "Residential",
+            "commercial": "Commercial",
+            "renovation": "Renovation",
+            "consultation": "Consultation"
+          },
+          "message": "Project Details",
+          "messagePlaceholder": "Tell us about your project...",
+          "submit": "Send Message"
+        }
       }
     },
 
@@ -500,6 +734,1504 @@
         "hours": "Mon-Fri: 7:00-20:00 | Sat-Sun: 8:00-18:00",
         "directions": "Get Directions"
       }
+    },
+
+    "saas-dashboard": {
+      "name": "SaaS Dashboard",
+      "brandName": "Pulse Analytics",
+      "tagline": "Real-Time Data Insights",
+      "industry": "Technology",
+      "hero": {
+        "title": "Next-Generation Analytics",
+        "subtitle": "Powerful data analysis tools that help you make better business decisions. AI-powered insights and real-time visualizations.",
+        "cta": "Start for Free",
+        "ctaSecondary": "Watch Demo"
+      },
+      "features": {
+        "title": "Features",
+        "subtitle": "Everything you need for data analysis",
+        "realtime": {
+          "title": "Real-Time Data",
+          "description": "Track metrics live and react instantly to changes."
+        },
+        "ai": {
+          "title": "AI-Powered",
+          "description": "Automatic anomaly detection and ML-based predictions."
+        },
+        "integrations": {
+          "title": "100+ Integrations",
+          "description": "Connect all your data sources in one place."
+        },
+        "security": {
+          "title": "Enterprise Security",
+          "description": "End-to-end encryption and SOC2, GDPR certified."
+        }
+      },
+      "pricing": {
+        "title": "Pricing",
+        "subtitle": "Choose the plan that fits your needs",
+        "monthly": "Monthly",
+        "annually": "Annually",
+        "starter": {
+          "name": "Starter",
+          "price": "$29",
+          "description": "For small teams",
+          "features": ["5 users", "10 dashboards", "7-day history", "Email support"]
+        },
+        "pro": {
+          "name": "Professional",
+          "price": "$79",
+          "description": "For growing companies",
+          "features": ["25 users", "Unlimited dashboards", "1-year history", "Priority support"]
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "Contact Us",
+          "description": "For large organizations",
+          "features": ["Unlimited users", "Dedicated infrastructure", "Unlimited history", "24/7 support"]
+        },
+        "cta": "Choose Plan"
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Get started in minutes with our simple three-step process",
+        "connect": {
+          "title": "Connect Your Data",
+          "description": "Link your existing tools and data sources with one-click integrations."
+        },
+        "analyze": {
+          "title": "Analyze Automatically",
+          "description": "Our AI processes your data and identifies patterns and insights."
+        },
+        "insights": {
+          "title": "Get Actionable Insights",
+          "description": "Receive real-time recommendations to improve your business."
+        },
+        "bottomText": "Setup takes less than 5 minutes. No credit card required."
+      },
+      "integrations": {
+        "badge": "200+ Integrations",
+        "title": "Connect Everything",
+        "subtitle": "Seamlessly integrate with all your favorite tools and platforms",
+        "moreText": "And many more.",
+        "viewAll": "View all integrations"
+      },
+      "testimonials": {
+        "title": "Loved by Teams Everywhere",
+        "subtitle": "See what our customers have to say about Pulse Analytics",
+        "reviews": {
+          "customer1": {
+            "name": "Jessica Chen",
+            "role": "VP of Analytics at TechCorp",
+            "quote": "Pulse Analytics transformed how we understand our data. The AI insights saved us countless hours and helped us identify opportunities we would have missed."
+          },
+          "customer2": {
+            "name": "Marcus Thompson",
+            "role": "CTO at StartupFlow",
+            "quote": "The real-time dashboards and integrations are game-changers. We've increased our data-driven decisions by 300% since switching to Pulse."
+          },
+          "customer3": {
+            "name": "Sarah Williams",
+            "role": "Head of Growth at ScaleUp",
+            "quote": "Finally, an analytics platform that actually delivers on its promises. The ROI we've seen in just 3 months is incredible."
+          }
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about Pulse Analytics",
+        "contactPrompt": "Still have questions? Our team is here to help.",
+        "contactButton": "Contact Support",
+        "items": {
+          "faq1": {
+            "question": "How does the free trial work?",
+            "answer": "Start with a 14-day free trial with full access to all Pro features. No credit card required. At the end of your trial, choose the plan that best fits your needs."
+          },
+          "faq2": {
+            "question": "Can I upgrade or downgrade my plan?",
+            "answer": "Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any differences."
+          },
+          "faq3": {
+            "question": "What data sources do you support?",
+            "answer": "We support 200+ integrations including Salesforce, HubSpot, Google Analytics, Stripe, and all major databases. Can't find what you need? Our API allows custom connections."
+          },
+          "faq4": {
+            "question": "Is my data secure?",
+            "answer": "Security is our top priority. We're SOC2 Type II and GDPR compliant, with end-to-end encryption, regular audits, and enterprise-grade infrastructure."
+          },
+          "faq5": {
+            "question": "Do you offer onboarding support?",
+            "answer": "Yes! All plans include onboarding support. Pro and Enterprise plans get dedicated account managers and custom training sessions."
+          },
+          "faq6": {
+            "question": "What's the difference between Pro and Enterprise?",
+            "answer": "Enterprise includes unlimited users, dedicated infrastructure, custom SLAs, advanced security features, and 24/7 priority support with a dedicated success manager."
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "description": "Join thousands of companies already using Pulse Analytics.",
+        "button": "Start 14-Day Free Trial"
+      }
+    },
+
+    "fashion-store": {
+      "name": "Fashion Boutique",
+      "brandName": "MAISON ÉLISE",
+      "tagline": "Timeless Elegance",
+      "industry": "Fashion",
+      "hero": {
+        "title": "New Collection",
+        "subtitle": "Discover sophisticated designs that define modern luxury. Handcrafted with the finest materials.",
+        "cta": "Discover Collection",
+        "ctaSecondary": "Lookbook"
+      },
+      "collections": {
+        "title": "Collections",
+        "subtitle": "Seasonal inspirations",
+        "spring": "Spring/Summer 2025",
+        "autumn": "Autumn/Winter 2024",
+        "essentials": "Essentials",
+        "viewCollection": "View Collection"
+      },
+      "products": {
+        "title": "Bestsellers",
+        "subtitle": "Our most popular products",
+        "addToCart": "Add to Cart",
+        "viewDetails": "Details",
+        "newArrival": "New Arrival",
+        "soldOut": "Sold Out"
+      },
+      "lookbook": {
+        "title": "Lookbook",
+        "subtitle": "Style inspiration for every occasion"
+      },
+      "about": {
+        "title": "About the Brand",
+        "description": "MAISON ÉLISE is a Parisian brand founded in 2015. We blend French elegance with modern minimalism, creating timeless designs for discerning clients.",
+        "craftsmanship": "Handcrafted",
+        "sustainable": "Sustainable Fashion",
+        "exclusive": "Exclusive Materials"
+      },
+      "newsletter": {
+        "title": "Stay Updated",
+        "description": "Subscribe and get 10% off your first order",
+        "placeholder": "Your email",
+        "button": "Subscribe"
+      }
+    },
+
+    "fitness-studio": {
+      "name": "Fitness Studio",
+      "brandName": "APEX PERFORMANCE",
+      "tagline": "Push Your Limits",
+      "industry": "Fitness",
+      "hero": {
+        "title": "BUILD THE BEST VERSION OF YOURSELF",
+        "subtitle": "Elite workouts led by certified trainers. Modern equipment and an atmosphere that motivates.",
+        "cta": "Join Now",
+        "ctaSecondary": "View Classes"
+      },
+      "classes": {
+        "title": "OUR CLASSES",
+        "subtitle": "From HIIT to Yoga - find your perfect workout",
+        "hiit": {
+          "name": "HIIT EXTREME",
+          "description": "High-intensity interval training",
+          "duration": "45 min",
+          "level": "Advanced"
+        },
+        "strength": {
+          "name": "PURE STRENGTH",
+          "description": "Free weight strength training",
+          "duration": "60 min",
+          "level": "All Levels"
+        },
+        "yoga": {
+          "name": "POWER YOGA",
+          "description": "Dynamic strengthening yoga",
+          "duration": "60 min",
+          "level": "Intermediate"
+        },
+        "cycling": {
+          "name": "APEX CYCLING",
+          "description": "Intense spinning with music",
+          "duration": "45 min",
+          "level": "All Levels"
+        },
+        "bookClass": "Book"
+      },
+      "trainers": {
+        "title": "OUR TRAINERS",
+        "subtitle": "Experts with international certifications",
+        "experience": "years",
+        "specialization": "Specialization",
+        "items": {
+          "marcus": {
+            "name": "Marcus Johnson",
+            "role": "Head Trainer & HIIT Specialist"
+          },
+          "sarah": {
+            "name": "Sarah Chen",
+            "role": "Yoga & Pilates Instructor"
+          },
+          "jake": {
+            "name": "Jake Williams",
+            "role": "Cycling & CrossFit Coach"
+          },
+          "emma": {
+            "name": "Emma Davis",
+            "role": "Nutrition & Weight Loss Expert"
+          }
+        }
+      },
+      "schedule": {
+        "title": "CLASS SCHEDULE",
+        "subtitle": "Find your perfect workout time",
+        "all": "All Classes",
+        "noClasses": "No classes scheduled for this day with selected filter.",
+        "days": {
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "saturday": "Saturday",
+          "sunday": "Sunday"
+        }
+      },
+      "results": {
+        "title": "TRANSFORMATIONS",
+        "subtitle": "Real results from our members",
+        "before": "Before",
+        "after": "After",
+        "weightLost": "Weight Lost",
+        "duration": "Duration",
+        "stories": {
+          "john": {
+            "name": "John Smith",
+            "quote": "APEX completely changed my life. The trainers pushed me to limits I never knew I had. In just 6 months, I lost 25kg and gained confidence I never had before.",
+            "program": "HIIT + Strength Program"
+          },
+          "lisa": {
+            "name": "Lisa Anderson",
+            "quote": "After having two kids, I thought I'd never get my body back. The team at APEX proved me wrong. They understood my limitations and helped me achieve my goals.",
+            "program": "Yoga + Nutrition Program"
+          },
+          "mike": {
+            "name": "Mike Thompson",
+            "quote": "I was skeptical at first, but the results speak for themselves. The combination of cycling and strength training was exactly what I needed.",
+            "program": "Cycling + Strength Program"
+          }
+        }
+      },
+      "testimonials": {
+        "title": "MEMBER REVIEWS",
+        "subtitle": "What our community says about us",
+        "reviews": {
+          "member1": {
+            "name": "David R.",
+            "quote": "Best gym I've ever been to. The equipment is top-notch, trainers are incredibly knowledgeable, and the community is super supportive.",
+            "membership": "Elite Member - 2 years"
+          },
+          "member2": {
+            "name": "Jennifer K.",
+            "quote": "The group classes are amazing! I especially love the HIIT sessions with Marcus. They're tough but so rewarding.",
+            "membership": "Pro Member - 1 year"
+          },
+          "member3": {
+            "name": "Robert M.",
+            "quote": "24/7 access was a game-changer for my schedule. I can workout at 5am before work or at midnight - whatever fits my day.",
+            "membership": "Basic Member - 6 months"
+          },
+          "member4": {
+            "name": "Amanda L.",
+            "quote": "The yoga classes with Sarah are incredible. Such a peaceful atmosphere and great instruction for all levels.",
+            "membership": "Pro Member - 8 months"
+          }
+        }
+      },
+      "faq": {
+        "title": "FREQUENTLY ASKED QUESTIONS",
+        "subtitle": "Everything you need to know",
+        "moreQuestions": "Still have questions?",
+        "contactUs": "Contact Us",
+        "items": {
+          "membership": {
+            "question": "How do I sign up for a membership?",
+            "answer": "You can sign up online through our website or visit us in person. We offer a free trial day so you can experience our facilities before committing. Our team will help you choose the right membership plan for your goals."
+          },
+          "classes": {
+            "question": "Do I need to book classes in advance?",
+            "answer": "Yes, we recommend booking classes through our mobile app at least 24 hours in advance. Popular classes like HIIT tend to fill up quickly. You can cancel up to 2 hours before the class starts."
+          },
+          "trainers": {
+            "question": "How do personal training sessions work?",
+            "answer": "Personal training sessions are 60 minutes and can be scheduled based on your trainer's availability. Pro members get 1 session per month included, Elite members get 4. Additional sessions can be purchased separately."
+          },
+          "schedule": {
+            "question": "What are your operating hours?",
+            "answer": "Our gym is open 24/7 for all members. Group classes run from 6 AM to 9 PM Monday through Friday, and 8 AM to 2 PM on weekends. Reception is staffed from 6 AM to 10 PM daily."
+          },
+          "equipment": {
+            "question": "What equipment do you have?",
+            "answer": "We have a full range of cardio machines, free weights from 1kg to 50kg, cable machines, power racks, and specialized equipment for functional training. We also have a dedicated cycling studio and yoga room."
+          },
+          "parking": {
+            "question": "Is parking available?",
+            "answer": "Yes, we have a private underground parking lot with 50 spaces. Parking is free for the first 2 hours and $2/hour after that. Elite members get unlimited free parking."
+          }
+        }
+      },
+      "membership": {
+        "title": "MEMBERSHIP",
+        "subtitle": "Choose the plan that fits your lifestyle",
+        "basic": {
+          "name": "BASIC",
+          "price": "$49/mo",
+          "features": ["24/7 Gym access", "Premium locker rooms", "Mobile app", "Free parking (2 hours)"]
+        },
+        "pro": {
+          "name": "PRO",
+          "price": "$79/mo",
+          "popular": "Most Popular",
+          "features": ["Everything in BASIC", "Unlimited group classes", "1 personal training/mo", "Nutrition consultation"]
+        },
+        "elite": {
+          "name": "ELITE",
+          "price": "$149/mo",
+          "features": ["Everything in PRO", "4 personal trainings/mo", "Custom nutrition plan", "VIP locker", "Unlimited parking"]
+        },
+        "cta": "Choose Plan"
+      }
+    },
+
+    "creative-agency": {
+      "name": "Creative Agency",
+      "brandName": "NOVA CREATIVE",
+      "tagline": "Building Brands of Tomorrow",
+      "industry": "Marketing",
+      "hero": {
+        "title": "We Create Digital Experiences",
+        "subtitle": "Strategy, design and technology combined. We help brands stand out in the digital world.",
+        "cta": "Start a Project",
+        "ctaSecondary": "View Work"
+      },
+      "work": {
+        "title": "Selected Projects",
+        "subtitle": "Our latest work",
+        "viewProject": "View Project",
+        "category": "Category",
+        "client": "Client"
+      },
+      "services": {
+        "title": "What We Do",
+        "subtitle": "Comprehensive creative services",
+        "branding": {
+          "name": "Branding",
+          "description": "Brand strategy, visual identity, design systems"
+        },
+        "web": {
+          "name": "Web Design",
+          "description": "Websites, e-commerce, web applications"
+        },
+        "motion": {
+          "name": "Motion Design",
+          "description": "Animations, video, interactive content"
+        },
+        "marketing": {
+          "name": "Digital Marketing",
+          "description": "Social media, content, advertising campaigns"
+        }
+      },
+      "team": {
+        "title": "Our Team",
+        "subtitle": "Creative minds pushing boundaries every day",
+        "members": {
+          "maya": {
+            "name": "Maya Rodriguez",
+            "role": "Creative Director",
+            "quote": "Design is not just what it looks like, it's how it makes you feel."
+          },
+          "alex": {
+            "name": "Alex Chen",
+            "role": "Lead Developer",
+            "quote": "Code is poetry written for machines to read."
+          },
+          "jordan": {
+            "name": "Jordan Williams",
+            "role": "Brand Strategist",
+            "quote": "Great brands tell stories that people want to be part of."
+          },
+          "sam": {
+            "name": "Sam Taylor",
+            "role": "Motion Designer",
+            "quote": "Animation brings ideas to life in ways words cannot."
+          }
+        }
+      },
+      "clients": {
+        "title": "Brands We've Worked With",
+        "subtitle": "Trusted by innovative companies around the world",
+        "stats": {
+          "projects": "Projects Completed",
+          "clients": "Happy Clients",
+          "awards": "Industry Awards",
+          "satisfaction": "Satisfaction Rate"
+        }
+      },
+      "testimonials": {
+        "title": "What Clients Say",
+        "subtitle": "Don't just take our word for it",
+        "reviews": {
+          "client1": {
+            "name": "Sarah Mitchell",
+            "company": "TechVentures Inc.",
+            "quote": "Nova Creative transformed our brand completely. Their creative approach and attention to detail exceeded all our expectations."
+          },
+          "client2": {
+            "name": "Michael Park",
+            "company": "Bloom Wellness",
+            "quote": "Working with this team was an absolute pleasure. They understood our vision instantly and delivered something truly remarkable."
+          },
+          "client3": {
+            "name": "Emily Foster",
+            "company": "Urban Eats Co.",
+            "quote": "The best decision we made was partnering with Nova. Our new brand identity has generated incredible customer engagement."
+          }
+        }
+      },
+      "process": {
+        "title": "How We Work",
+        "steps": {
+          "discover": {
+            "title": "Discover",
+            "description": "We learn about your brand and goals"
+          },
+          "create": {
+            "title": "Create",
+            "description": "We design solutions"
+          },
+          "launch": {
+            "title": "Launch",
+            "description": "We implement and optimize"
+          }
+        }
+      },
+      "contact": {
+        "title": "Let's Talk",
+        "description": "Have a project idea? We'd love to hear it.",
+        "cta": "Get in Touch"
+      }
+    },
+
+    "real-estate": {
+      "name": "Premium Real Estate",
+      "brandName": "Skyline Estates",
+      "tagline": "Prestigious Properties",
+      "industry": "Real Estate",
+      "hero": {
+        "title": "Find Your Dream Home",
+        "subtitle": "Exclusive apartments and residences in prime locations. Luxury and comfort at the highest level.",
+        "cta": "Browse Listings",
+        "ctaSecondary": "Contact an Agent"
+      },
+      "properties": {
+        "title": "Featured Properties",
+        "subtitle": "Carefully curated premium listings",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "area": "Area",
+        "price": "Price",
+        "viewDetails": "View Details",
+        "featured": "Featured",
+        "new": "New"
+      },
+      "search": {
+        "title": "Search Properties",
+        "location": "Location",
+        "type": "Type",
+        "priceRange": "Price Range",
+        "bedrooms": "Bedrooms",
+        "search": "Search",
+        "types": {
+          "apartment": "Apartment",
+          "house": "House",
+          "penthouse": "Penthouse",
+          "villa": "Villa"
+        }
+      },
+      "services": {
+        "title": "Our Services",
+        "buying": {
+          "title": "Buying",
+          "description": "Professional guidance on property purchases"
+        },
+        "selling": {
+          "title": "Selling",
+          "description": "Effective sale of your property"
+        },
+        "investment": {
+          "title": "Investment",
+          "description": "Property investment consulting"
+        }
+      },
+      "about": {
+        "title": "About Skyline Estates",
+        "description": "For 15 years, we've been helping clients find their dream properties. We specialize in premium and luxury segments.",
+        "experience": "15+ years of experience",
+        "properties": "500+ properties sold",
+        "clients": "1000+ satisfied clients"
+      },
+      "agents": {
+        "title": "Our Expert Agents",
+        "subtitle": "Experienced professionals dedicated to finding your perfect property",
+        "sendMessage": "Send Message",
+        "propertiesSold": "properties sold",
+        "sarah": {
+          "name": "Sarah Miller",
+          "role": "Senior Real Estate Agent"
+        },
+        "michael": {
+          "name": "Michael Chen",
+          "role": "Luxury Property Specialist"
+        },
+        "emma": {
+          "name": "Emma Rodriguez",
+          "role": "Investment Consultant"
+        },
+        "james": {
+          "name": "James Wilson",
+          "role": "Commercial Real Estate"
+        }
+      },
+      "testimonials": {
+        "label": "Client Reviews",
+        "title": "What Our Clients Say",
+        "subtitle": "Trusted by hundreds of satisfied homeowners and investors",
+        "reviews": {
+          "client1": {
+            "name": "Robert & Susan Thompson",
+            "property": "Purchased Penthouse - Downtown",
+            "quote": "Skyline Estates made our dream of owning a luxury penthouse a reality. Their attention to detail and market knowledge is unmatched."
+          },
+          "client2": {
+            "name": "Jennifer Adams",
+            "property": "Sold Townhouse - West End",
+            "quote": "The team helped us sell our property above asking price in just two weeks. Their marketing strategy was exceptional."
+          },
+          "client3": {
+            "name": "David & Maria Santos",
+            "property": "Investment Portfolio - Multiple Properties",
+            "quote": "As investors, we appreciate their deep understanding of market trends. They've helped us build a profitable real estate portfolio."
+          },
+          "client4": {
+            "name": "Alexandra Wright",
+            "property": "First-time Buyer - Modern Apartment",
+            "quote": "Even as a first-time buyer, I felt completely supported throughout the entire process. They made it seamless and stress-free."
+          }
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions about buying, selling, and investing in real estate",
+        "contactPrompt": "Still have questions? Our team is here to help.",
+        "contactButton": "Contact an Agent",
+        "items": {
+          "faq1": {
+            "question": "How do I start the home buying process?",
+            "answer": "Start by getting pre-approved for a mortgage to understand your budget. Then, work with one of our agents to identify properties that match your criteria. We'll guide you through property viewings, negotiations, and closing."
+          },
+          "faq2": {
+            "question": "What are the typical closing costs?",
+            "answer": "Closing costs typically range from 2-5% of the purchase price and include fees for appraisal, title insurance, attorney fees, and taxes. We provide a detailed breakdown early in the process so there are no surprises."
+          },
+          "faq3": {
+            "question": "How long does it take to sell a property?",
+            "answer": "The timeline varies based on market conditions, pricing, and property condition. On average, our listings sell within 30-60 days. Premium properties with competitive pricing often sell faster."
+          },
+          "faq4": {
+            "question": "Do you help with property investment?",
+            "answer": "Yes! We have dedicated investment consultants who can help you identify profitable opportunities, analyze market trends, and build a diversified real estate portfolio tailored to your goals."
+          },
+          "faq5": {
+            "question": "What makes Skyline Estates different?",
+            "answer": "We combine local expertise with global reach, personalized service with cutting-edge technology. Our agents are specialists in their markets, and we maintain exclusive access to off-market listings."
+          },
+          "faq6": {
+            "question": "Can you help with relocation?",
+            "answer": "Absolutely. We offer comprehensive relocation services including area tours, school information, community insights, and connections to local services to make your transition seamless."
+          }
+        }
+      },
+      "contact": {
+        "title": "Get in Touch",
+        "description": "Our agents are ready to help",
+        "phone": "Phone",
+        "email": "Email",
+        "office": "Office",
+        "cta": "Schedule a Meeting"
+      }
+    },
+
+    "music-store": {
+      "name": "Vinyl Records Shop",
+      "brandName": "Analog Alley",
+      "tagline": "Rediscover the Warmth of Vinyl",
+      "industry": "Music Retail",
+      "hero": {
+        "title": "The Sound of Authenticity",
+        "subtitle": "Curated vinyl collection for true music lovers. From rare pressings to new releases, experience music the way it was meant to be heard.",
+        "cta": "Browse Collection",
+        "ctaSecondary": "Now Playing"
+      },
+      "featured": {
+        "title": "Staff Picks",
+        "subtitle": "Handpicked by our team of vinyl enthusiasts",
+        "nowPlaying": "Now Playing",
+        "addToCart": "Add to Cart",
+        "outOfStock": "Out of Stock"
+      },
+      "releases": {
+        "title": "New Arrivals",
+        "subtitle": "Fresh vinyl just hit the shelves",
+        "viewAll": "View All New Releases"
+      },
+      "genres": {
+        "title": "Browse by Genre",
+        "subtitle": "Find your sound",
+        "albums": "albums",
+        "rock": "Rock",
+        "jazz": "Jazz",
+        "electronic": "Electronic",
+        "classical": "Classical",
+        "hiphop": "Hip-Hop",
+        "soul": "Soul & R&B"
+      }
+    },
+
+    "crypto-platform": {
+      "name": "Web3 Platform",
+      "brandName": "NexChain",
+      "tagline": "The Future of Finance",
+      "industry": "Cryptocurrency",
+      "hero": {
+        "badge": "Next-Gen Trading Platform",
+        "titlePart1": "Trade Smarter.",
+        "titleHighlight": "Grow Faster.",
+        "subtitle": "Next-generation cryptocurrency platform with advanced trading tools, real-time analytics, and institutional-grade security.",
+        "cta": "Start Trading",
+        "ctaSecondary": "View Markets",
+        "stats": {
+          "volume": "24h Volume",
+          "users": "Active Users",
+          "fees": "Trading Fees"
+        }
+      },
+      "ticker": {
+        "title": "Live Market",
+        "change24h": "24h Change",
+        "volume": "Volume",
+        "marketCap": "Market Cap"
+      },
+      "features": {
+        "title": "Why NexChain",
+        "subtitle": "Built for traders who demand more",
+        "items": {
+          "0": { "title": "Bank-Grade Security", "description": "Multi-signature wallets, cold storage, and 24/7 monitoring" },
+          "1": { "title": "Lightning Fast", "description": "Execute trades in milliseconds with our optimized engine" },
+          "2": { "title": "Global Access", "description": "Trade from anywhere with support for 150+ countries" },
+          "3": { "title": "Secure Storage", "description": "Your assets protected with military-grade encryption" },
+          "4": { "title": "Low Fees", "description": "Industry-leading rates starting at 0.1% per trade" },
+          "5": { "title": "Advanced Analytics", "description": "Real-time charts and market insights at your fingertips" }
+        }
+      },
+      "roadmap": {
+        "title": "Roadmap",
+        "subtitle": "Our journey to revolutionize finance",
+        "phases": {
+          "0": { "quarter": "Q1 2024", "title": "Foundation", "description": "Platform Launch, Mobile App Beta, 100+ Trading Pairs" },
+          "1": { "quarter": "Q2 2024", "title": "Expansion", "description": "Staking Launch, NFT Marketplace, API v2.0" },
+          "2": { "quarter": "Q3 2024", "title": "Integration", "description": "DeFi Integration, Institutional Tools, Global Expansion" },
+          "3": { "quarter": "Q4 2024", "title": "Decentralization", "description": "NexChain Token, DAO Governance, Cross-chain Bridge" }
+        }
+      },
+      "stats": {
+        "users": "Active Users",
+        "volume": "Trading Volume",
+        "countries": "Countries",
+        "uptime": "Uptime"
+      }
+    },
+
+    "law-firm": {
+      "name": "Law Firm",
+      "brandName": "Sterling & Associates",
+      "tagline": "Excellence in Legal Counsel",
+      "industry": "Legal Services",
+      "hero": {
+        "badge": "Over 25 Years of Experience",
+        "title": "Justice. Integrity. Results.",
+        "subtitle": "Over 30 years of legal excellence. Our team of accomplished attorneys is committed to achieving the best outcomes for our clients.",
+        "cta": "Free Consultation",
+        "ctaSecondary": "Our Practice Areas",
+        "stats": {
+          "years": "Years Experience",
+          "cases": "Cases Won",
+          "success": "Success Rate"
+        },
+        "consultation": "Free Consultation",
+        "consultationSub": "Schedule a meeting with our attorney"
+      },
+      "areas": {
+        "title": "Practice Areas",
+        "subtitle": "Comprehensive legal services for individuals and businesses",
+        "learnMore": "Learn More",
+        "items": {
+          "0": { "title": "Corporate Law", "description": "Mergers, acquisitions, and business formation" },
+          "1": { "title": "Litigation", "description": "Civil and commercial dispute resolution" },
+          "2": { "title": "Real Estate", "description": "Property transactions and development" },
+          "3": { "title": "Family Law", "description": "Divorce, custody, and estate planning" },
+          "4": { "title": "Employment", "description": "Workplace rights and employer defense" },
+          "5": { "title": "Intellectual Property", "description": "Patents, trademarks, and copyrights" }
+        }
+      },
+      "caseStudies": {
+        "title": "Notable Cases",
+        "subtitle": "A track record of success",
+        "viewDetails": "View Case Study",
+        "outcome": "Outcome",
+        "recovered": "Recovered for Clients",
+        "cases": {
+          "0": {
+            "title": "Tech Corp Merger",
+            "category": "Corporate Law",
+            "result": "$2.5B acquisition successfully closed",
+            "description": "Represented acquiring company in complex cross-border merger.",
+            "outcomes": { "0": "Transaction closed in 6 months", "1": "$50M tax savings", "2": "Full team integration" },
+            "quote": "Sterling & Associates guided us through the most complex transaction in our company's history.",
+            "client": "CEO, Tech Corp"
+          },
+          "1": {
+            "title": "Landmark IP Victory",
+            "category": "Intellectual Property",
+            "result": "Patent rights upheld, $50M damages awarded",
+            "description": "Defended client against patent infringement claims.",
+            "outcomes": { "0": "Full patent retention", "1": "$50M damages awarded", "2": "Legal precedent set" },
+            "quote": "Their strategy and preparation were key to our victory.",
+            "client": "CTO, Innovation Labs"
+          },
+          "2": {
+            "title": "Class Action Defense",
+            "category": "Litigation",
+            "result": "Case dismissed with prejudice",
+            "description": "Successfully defended Fortune 500 company in consumer class action.",
+            "outcomes": { "0": "Case dismissed", "1": "Zero damages paid", "2": "Reputation protected" },
+            "quote": "The team's professionalism and determination saved our company.",
+            "client": "General Counsel, Fortune 500"
+          }
+        }
+      },
+      "team": {
+        "title": "Our Attorneys",
+        "subtitle": "Distinguished legal professionals",
+        "viewProfile": "View Profile",
+        "members": {
+          "0": { "name": "Robert Sterling", "role": "Managing Partner", "specialty": "Corporate Law", "education": "Harvard Law School" },
+          "1": { "name": "Elizabeth Warren", "role": "Senior Partner", "specialty": "Litigation", "education": "Yale Law School" },
+          "2": { "name": "James Mitchell", "role": "Partner", "specialty": "Real Estate", "education": "Stanford Law School" },
+          "3": { "name": "Sarah Chen", "role": "Associate", "specialty": "Intellectual Property", "education": "Columbia Law School" }
+        }
+      },
+      "contact": {
+        "title": "Schedule a Consultation",
+        "subtitle": "Let us help you navigate your legal challenges",
+        "form": {
+          "name": "Full Name",
+          "email": "Email",
+          "phone": "Phone",
+          "caseType": "Case Type",
+          "message": "Brief Description",
+          "submit": "Request Consultation"
+        }
+      }
+    },
+
+    "podcast-studio": {
+      "name": "Podcast Studio",
+      "brandName": "SoundWave",
+      "tagline": "Stories That Resonate",
+      "industry": "Media & Entertainment",
+      "hero": {
+        "badge": "Award-Winning Podcasts",
+        "title": "Listen to What Matters",
+        "subtitle": "Award-winning podcasts that inform, inspire, and entertain. Join millions of listeners discovering their next favorite show.",
+        "cta": "Start Listening",
+        "ctaSecondary": "Browse Shows",
+        "availableOn": "Available on all major platforms"
+      },
+      "episodes": {
+        "title": "Latest Episodes",
+        "subtitle": "Fresh content every week",
+        "playNow": "Play Now",
+        "duration": "Duration",
+        "transcript": "View Transcript",
+        "viewAll": "View All Episodes",
+        "items": {
+          "0": {
+            "title": "The Future of AI",
+            "show": "Tech Tomorrow",
+            "duration": "45:32",
+            "date": "Dec 18, 2024",
+            "description": "Exploring how artificial intelligence is reshaping industries and what it means for the future of work.",
+            "transcript": { "0": "Welcome to Tech Tomorrow. Today we're diving deep into AI...", "1": "Let's talk about the practical applications we're seeing...", "2": "Looking forward, the implications are enormous..." }
+          },
+          "1": {
+            "title": "Building Resilience",
+            "show": "Mind Matters",
+            "duration": "38:15",
+            "date": "Dec 16, 2024",
+            "description": "Strategies for developing mental resilience and navigating life's challenges with grace.",
+            "transcript": { "0": "Mental resilience is something we can all develop...", "1": "The key is understanding our thought patterns...", "2": "Practice these techniques daily for best results..." }
+          },
+          "2": {
+            "title": "Startup Stories: From Zero to IPO",
+            "show": "Founder Files",
+            "duration": "52:48",
+            "date": "Dec 14, 2024",
+            "description": "Hear the incredible journey of founders who built billion-dollar companies from scratch.",
+            "transcript": { "0": "Every startup begins with an idea...", "1": "The funding rounds were challenging but necessary...", "2": "Going public was both exciting and terrifying..." }
+          },
+          "3": {
+            "title": "True Crime: The Missing Heiress",
+            "show": "Cold Case Files",
+            "duration": "61:22",
+            "date": "Dec 12, 2024",
+            "description": "Investigating the mysterious disappearance of a wealthy socialite in 1985.",
+            "transcript": { "0": "The night of November 15th, 1985 changed everything...", "1": "Investigators found several crucial clues...", "2": "The case remains unsolved to this day..." }
+          }
+        }
+      },
+      "hosts": {
+        "title": "Meet Our Hosts",
+        "subtitle": "The voices behind your favorite shows",
+        "episodes": "Episodes",
+        "followers": "Followers",
+        "members": {
+          "0": { "name": "Alex Rivers", "role": "Tech Tomorrow Host", "bio": "Former Silicon Valley exec turned tech journalist" },
+          "1": { "name": "Dr. Maya Thompson", "role": "Mind Matters Host", "bio": "Clinical psychologist and bestselling author" },
+          "2": { "name": "Jordan Blake", "role": "Founder Files Host", "bio": "Serial entrepreneur and investor" },
+          "3": { "name": "Sarah Mitchell", "role": "Cold Case Files Host", "bio": "Investigative journalist and true crime expert" }
+        }
+      },
+      "subscribe": {
+        "title": "Never Miss an Episode",
+        "subtitle": "Subscribe on your favorite platform",
+        "newsletter": "Or join our newsletter",
+        "emailPlaceholder": "Your email address",
+        "button": "Subscribe"
+      }
+    },
+
+    "wedding-planner": {
+      "name": "Wedding Planner",
+      "brandName": "Forever & Always",
+      "tagline": "Creating Unforgettable Moments",
+      "industry": "Event Planning",
+      "countdown": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+      },
+      "hero": {
+        "coupleNames": "Sarah & Michael",
+        "title": "Your Dream Wedding Awaits",
+        "date": "June 15, 2025",
+        "venue": "Villa Toscana, Italy",
+        "subtitle": "From intimate ceremonies to grand celebrations, we bring your vision to life with elegance and attention to every detail.",
+        "cta": "Plan Your Day",
+        "ctaSecondary": "View Gallery"
+      },
+      "gallery": {
+        "title": "Our Weddings",
+        "subtitle": "Moments of love captured forever",
+        "viewMore": "View Full Gallery",
+        "categories": {
+          "all": "All",
+          "ceremony": "Ceremonies",
+          "reception": "Receptions",
+          "details": "Details"
+        }
+      },
+      "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive wedding planning",
+        "fullPlanning": { "title": "Full Planning", "description": "Complete wedding coordination from engagement to honeymoon" },
+        "partialPlanning": { "title": "Partial Planning", "description": "Support for specific aspects of your celebration" },
+        "dayOf": { "title": "Day-Of Coordination", "description": "Seamless execution on your special day" },
+        "destination": { "title": "Destination Weddings", "description": "Dream celebrations in breathtaking locations" }
+      },
+      "timeline": {
+        "title": "Our Love Stories",
+        "subtitle": "Real couples, real moments",
+        "events": {
+          "0": { "title": "First Meeting", "description": "We met at a mutual friend's party and felt an instant connection" },
+          "1": { "title": "First Date", "description": "A magical evening that turned into the start of forever" },
+          "2": { "title": "The Proposal", "description": "He asked, she said yes, and our journey began" },
+          "3": { "title": "The Wedding", "description": "The day we become one, surrounded by those we love" }
+        }
+      },
+      "packages": {
+        "title": "Packages",
+        "subtitle": "Tailored to your needs and budget",
+        "starting": "Starting at",
+        "inquire": "Inquire Now",
+        "essential": { "name": "Essential", "price": "$5,000", "features": ["Day-of coordination", "Vendor recommendations", "Timeline creation", "Rehearsal management"] },
+        "premium": { "name": "Premium", "price": "$12,000", "features": ["Full planning services", "Budget management", "Vendor negotiations", "Design & decor", "Guest management"] },
+        "luxury": { "name": "Luxury", "price": "$25,000", "features": ["Everything in Premium", "Destination planning", "Luxury vendor access", "Concierge services", "Multi-day event coordination"] }
+      }
+    },
+
+    "vet-clinic": {
+      "name": "Veterinary Clinic",
+      "brandName": "Happy Paws",
+      "tagline": "Compassionate Care for Your Companions",
+      "industry": "Pet Healthcare",
+      "hero": {
+        "badge": "Trusted Pet Care Since 2005",
+        "title": "Where Pets Are",
+        "titleHighlight": "Family",
+        "subtitle": "State-of-the-art veterinary care with a gentle touch. Our experienced team treats every pet like their own.",
+        "cta": "Book Appointment",
+        "ctaSecondary": "Our Services",
+        "features": {
+          "0": "24/7 Emergency Care",
+          "1": "Certified Specialists",
+          "2": "State-of-the-Art Equipment"
+        },
+        "stats": {
+          "pets": "Happy Pets",
+          "rating": "Star Rating"
+        }
+      },
+      "emergency": {
+        "title": "24/7 Emergency Care",
+        "description": "Always here when your pet needs us most",
+        "button": "Emergency Hotline",
+        "callNow": "Call Emergency Line",
+        "phone": "(555) 911-PETS",
+        "available": "Available around the clock",
+        "warningTitle": "Emergency Signs",
+        "warnings": {
+          "0": "Difficulty breathing",
+          "1": "Severe bleeding",
+          "2": "Inability to walk",
+          "3": "Loss of consciousness",
+          "4": "Seizures"
+        }
+      },
+      "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive care for all your pet's needs",
+        "tabs": {
+          "dogs": "Dogs",
+          "cats": "Cats",
+          "exotic": "Exotic Pets"
+        },
+        "items": {
+          "0": { "title": "Wellness Exams", "description": "Regular checkups to keep your pet healthy", "price": "From $75" },
+          "1": { "title": "Vaccinations", "description": "Core and lifestyle vaccines for protection", "price": "From $45" },
+          "2": { "title": "Surgery", "description": "From routine procedures to complex operations", "price": "Contact us" },
+          "3": { "title": "Dental Care", "description": "Professional cleanings and oral health", "price": "From $150" },
+          "4": { "title": "Grooming", "description": "Baths, haircuts, and nail trims", "price": "From $35" },
+          "5": { "title": "Boarding", "description": "Safe, comfortable overnight stays", "price": "From $50/night" }
+        }
+      },
+      "team": {
+        "title": "Meet Our Team",
+        "subtitle": "Dedicated professionals who love animals",
+        "members": {
+          "0": { "name": "Dr. Sarah Williams", "role": "Chief Veterinarian", "specialty": "Small Animal Medicine", "experience": "15 years" },
+          "1": { "name": "Dr. Michael Chen", "role": "Surgeon", "specialty": "Orthopedic Surgery", "experience": "12 years" },
+          "2": { "name": "Dr. Emily Rodriguez", "role": "Veterinarian", "specialty": "Exotic Animals", "experience": "8 years" },
+          "3": { "name": "Jessica Thompson", "role": "Vet Technician", "specialty": "Emergency Care", "experience": "10 years" }
+        }
+      },
+      "testimonials": {
+        "title": "Happy Pet Parents",
+        "subtitle": "What our clients say about us",
+        "reviews": {
+          "0": { "name": "Jennifer M.", "pet": "Max (Golden Retriever)", "quote": "Dr. Williams saved Max's life during an emergency. Forever grateful!" },
+          "1": { "name": "David K.", "pet": "Luna (Persian Cat)", "quote": "The entire staff treats Luna like royalty. Wouldn't go anywhere else." },
+          "2": { "name": "Maria S.", "pet": "Coco (Parrot)", "quote": "Finally found a vet who understands exotic birds. Amazing care!" }
+        }
+      }
+    },
+
+    "coworking-space": {
+      "name": "Coworking Space",
+      "brandName": "The Hub",
+      "tagline": "Where Work Meets Community",
+      "industry": "Real Estate",
+      "hero": {
+        "badge": "Premium Workspace",
+        "title": "Your Office, Reimagined",
+        "subtitle": "Flexible workspaces designed for productivity, collaboration, and growth. Join a community of innovators and creators.",
+        "cta": "Book a Tour",
+        "ctaSecondary": "View Spaces",
+        "features": {
+          "0": "High-Speed WiFi",
+          "1": "Free Coffee",
+          "2": "24/7 Access"
+        },
+        "available": "Spaces Available",
+        "availableDesc": "Reserve your spot today"
+      },
+      "floorplan": {
+        "title": "Explore Our Space",
+        "subtitle": "Interactive floor plan - click to explore different areas",
+        "clickToSelect": "Click on an area to view details",
+        "areas": {
+          "hotdesk": "Hot Desks",
+          "private": "Private Offices",
+          "meeting": "Meeting Rooms",
+          "lounge": "Members Lounge"
+        },
+        "spaces": {
+          "hotdesk": { "title": "Hot Desks", "description": "Flexible seating for $25/day - 12 spots available" },
+          "private": { "title": "Private Offices", "description": "Lockable offices from $1,200/month - 3 available" },
+          "meeting": { "title": "Meeting Rooms", "description": "Bookable by hour at $50/hour - 6 rooms" },
+          "lounge": { "title": "Members Lounge", "description": "Relax and network with coffee bar and snacks" }
+        }
+      },
+      "amenities": {
+        "title": "Amenities",
+        "subtitle": "Everything you need to do your best work",
+        "wifi": "High-Speed WiFi",
+        "coffee": "Unlimited Coffee",
+        "printing": "Printing Services",
+        "mail": "Mail Handling",
+        "parking": "Parking Available",
+        "bike": "Bike Storage",
+        "shower": "Showers",
+        "events": "Community Events"
+      },
+      "pricing": {
+        "title": "Membership Plans",
+        "subtitle": "Flexible options for every work style",
+        "perMonth": "month",
+        "perDay": "/day",
+        "choosePlan": "Choose Plan",
+        "popular": "Most Popular",
+        "cta": "Get Started",
+        "plans": {
+          "0": { "name": "Day Pass", "description": "Perfect for occasional visits", "price": "$35", "features": { "0": "Hot desk access", "1": "WiFi & amenities", "2": "Coffee & tea", "3": "Valid for one day" } },
+          "1": { "name": "Flex Desk", "description": "Ideal for part-time workers", "price": "$299", "features": { "0": "10 days/month", "1": "Any available desk", "2": "Meeting room credits", "3": "Community events" } },
+          "2": { "name": "Dedicated Desk", "description": "Your personal workspace", "price": "$499", "features": { "0": "Your own desk 24/7", "1": "Storage locker", "2": "Mail handling", "3": "Unlimited meeting rooms" } },
+          "3": { "name": "Private Office", "description": "For teams who need privacy", "price": "$1,200", "features": { "0": "Lockable office", "1": "24/7 access", "2": "Custom branding", "3": "Priority support" } }
+        }
+      },
+      "community": {
+        "title": "Join Our Community",
+        "subtitle": "Connect with entrepreneurs, freelancers, and teams",
+        "stats": {
+          "members": "Active Members",
+          "companies": "Companies",
+          "events": "Monthly Events",
+          "countries": "Countries Represented"
+        }
+      }
+    },
+
+    "photo-portfolio": {
+      "name": "Photography Portfolio",
+      "brandName": "Lens & Light",
+      "tagline": "Capturing Life's Finest Moments",
+      "industry": "Photography",
+      "hero": {
+        "name": "Marcus Chen",
+        "tagline": "Visual Storytelling Through Light",
+        "title": "Visual Storytelling",
+        "subtitle": "Award-winning photographer specializing in portraits, weddings, and commercial photography. Every frame tells a story.",
+        "cta": "View Portfolio",
+        "ctaSecondary": "Book a Session",
+        "instagram": "@lensandlight",
+        "email": "hello@lensandlight.com"
+      },
+      "beforeAfter": {
+        "title": "The Art of Retouching",
+        "subtitle": "See the transformation from raw capture to final masterpiece",
+        "before": "Before",
+        "after": "After",
+        "drag": "Drag to compare"
+      },
+      "gallery": {
+        "title": "Featured Work"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Selected works from recent projects",
+        "categories": {
+          "all": "All Work",
+          "portraits": "Portraits",
+          "weddings": "Weddings",
+          "commercial": "Commercial",
+          "nature": "Nature"
+        },
+        "viewProject": "View Project"
+      },
+      "services": {
+        "title": "Services",
+        "subtitle": "Professional photography for every occasion",
+        "portrait": { "title": "Portrait Sessions", "price": "From $350", "description": "Individual and family portraits in studio or on location" },
+        "wedding": { "title": "Wedding Photography", "price": "From $3,500", "description": "Full day coverage with edited digital gallery" },
+        "commercial": { "title": "Commercial", "price": "Custom Quote", "description": "Product, corporate, and brand photography" },
+        "events": { "title": "Event Coverage", "price": "From $500", "description": "Corporate events, parties, and celebrations" }
+      },
+      "about": {
+        "title": "About the Artist",
+        "description": "With over 15 years behind the lens, I've had the privilege of capturing thousands of moments that matter. My approach combines technical precision with artistic vision to create images that resonate.",
+        "awards": "International Photography Awards",
+        "experience": "Years of Experience",
+        "clients": "Happy Clients"
+      },
+      "booking": {
+        "title": "Book Your Session",
+        "subtitle": "Let's create something beautiful together",
+        "form": {
+          "name": "Your Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "service": "Service Type",
+          "date": "Preferred Date",
+          "message": "Tell me about your vision",
+          "submit": "Request Quote"
+        }
+      }
+    },
+
+    "esports-team": {
+      "name": "Esports Team",
+      "brandName": "PHANTOM ESPORTS",
+      "tagline": "Rise Above. Dominate.",
+      "industry": "Gaming & Esports",
+      "hero": {
+        "name": "PHANTOM",
+        "tagline": "Rise Above. Dominate.",
+        "title": "LEGENDS ARE MADE HERE",
+        "subtitle": "Professional esports organization competing at the highest level. Multiple world championships across major titles.",
+        "cta": "Meet the Team",
+        "ctaSecondary": "Watch Live",
+        "stats": {
+          "wins": "Tournament Wins",
+          "championships": "World Championships",
+          "followers": "Followers"
+        }
+      },
+      "roster": {
+        "title": "Active Roster",
+        "subtitle": "The best players in the game",
+        "role": "Role",
+        "country": "Country",
+        "earnings": "Career Earnings",
+        "achievements": "Achievements",
+        "players": {
+          "0": { "name": "ShadowStrike", "realName": "Alex Chen", "role": "Team Captain", "game": "Valorant", "country": "USA" },
+          "1": { "name": "NightHawk", "realName": "Kim Min-jun", "role": "Entry Fragger", "game": "Valorant", "country": "South Korea" },
+          "2": { "name": "PhantomX", "realName": "Lucas Silva", "role": "Support", "game": "Valorant", "country": "Brazil" },
+          "3": { "name": "BladeRunner", "realName": "Emma Williams", "role": "Sentinel", "game": "Valorant", "country": "UK" },
+          "4": { "name": "VoidWalker", "realName": "Yuki Tanaka", "role": "Controller", "game": "Valorant", "country": "Japan" }
+        }
+      },
+      "schedule": {
+        "title": "Upcoming Matches",
+        "subtitle": "Catch us live",
+        "live": "LIVE",
+        "upcoming": "UPCOMING",
+        "watchStream": "Watch Stream",
+        "setReminder": "Set Reminder",
+        "matches": {
+          "0": { "opponent": "Team Liquid", "tournament": "VCT Masters", "date": "Dec 22", "time": "3:00 PM EST" },
+          "1": { "opponent": "Cloud9", "tournament": "VCT Masters", "date": "Dec 24", "time": "5:00 PM EST" },
+          "2": { "opponent": "Fnatic", "tournament": "VCT Masters Finals", "date": "Dec 28", "time": "2:00 PM EST" }
+        }
+      },
+      "achievements": {
+        "title": "Trophy Case",
+        "subtitle": "Our path to glory",
+        "championships": "World Championships",
+        "prizeMoney": "Total Prize Money",
+        "tournaments": "Tournament Wins",
+        "topPlacements": "Top 3 Placements"
+      },
+      "partners": {
+        "title": "Our Partners",
+        "subtitle": "Powered by industry leaders",
+        "becomePartner": "Become a Partner"
+      },
+      "store": {
+        "title": "Official Merch",
+        "subtitle": "Rep the Phantom",
+        "shopNow": "Shop Now",
+        "viewAll": "View All Products"
+      }
+    },
+
+    "eco-brand": {
+      "name": "Eco-Friendly Brand",
+      "brandName": "Terra Collective",
+      "tagline": "Sustainable Living, Beautiful Design",
+      "industry": "Sustainable Products",
+      "hero": {
+        "badge": "Certified B Corporation",
+        "title": "Good for You. Better for",
+        "titleHighlight": "Earth.",
+        "subtitle": "Thoughtfully designed products that don't compromise on style or sustainability. Join the movement for a greener future.",
+        "cta": "Shop Now",
+        "ctaSecondary": "Our Mission",
+        "productName": "Bestseller: Bamboo Essentials",
+        "productDesc": "Our signature zero-waste bathroom kit",
+        "features": {
+          "0": "100% Organic Materials",
+          "1": "Carbon Neutral Shipping",
+          "2": "Zero Waste Packaging"
+        }
+      },
+      "impact": {
+        "title": "Our Impact",
+        "subtitle": "Every purchase makes a difference",
+        "metrics": {
+          "0": "Trees Planted",
+          "1": "Liters of Water Saved",
+          "2": "Carbon Footprint Reduced",
+          "3": "Recyclable Materials"
+        },
+        "carbonTitle": "Carbon Footprint vs Industry Average",
+        "carbonReduction": "reduction achieved",
+        "carbonIndustry": "Industry Average",
+        "carbonUs": "Terra Collective"
+      },
+      "products": {
+        "title": "Our Products",
+        "subtitle": "Sustainable essentials for everyday life",
+        "viewAll": "View All Products",
+        "items": {
+          "0": { "name": "Bamboo Essentials Kit", "description": "Complete bathroom set", "price": "$45.00" },
+          "1": { "name": "Organic Cotton Tote", "description": "Reusable shopping bag", "price": "$28.00" },
+          "2": { "name": "Beeswax Wrap Set", "description": "Plastic-free food storage", "price": "$24.00" },
+          "3": { "name": "Natural Cleaning Bundle", "description": "Eco-friendly home care", "price": "$52.00" }
+        }
+      },
+      "timeline": {
+        "title": "Our Journey",
+        "subtitle": "Building a sustainable future, one step at a time",
+        "milestones": {
+          "0": { "title": "Founded with Purpose", "description": "Started with a mission to reduce plastic waste" },
+          "1": { "title": "Zero Waste Achieved", "description": "Became first fully zero-waste certified brand in our category" },
+          "2": { "title": "B Corp Certified", "description": "Recognized for meeting highest standards of social and environmental performance" },
+          "3": { "title": "Global Impact", "description": "Expanded to 50+ countries while staying true to our values" }
+        }
+      },
+      "values": {
+        "title": "Our Values",
+        "transparency": { "title": "Radical Transparency", "description": "We share every detail of our supply chain" },
+        "quality": { "title": "Uncompromising Quality", "description": "Sustainable doesn't mean settling for less" },
+        "community": { "title": "Community First", "description": "Supporting local artisans and fair wages" }
+      }
+    }
+  },
+  "cookies": {
+    "banner": {
+      "title": "This website uses cookies",
+      "description": "We use cookies to ensure the best quality of service, analyze site traffic, and personalize content.",
+      "learnMore": "Learn more",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject all",
+      "settings": "Settings"
+    },
+    "settings": {
+      "title": "Cookie settings",
+      "description": "Choose which cookie categories you want to accept. You can change these settings at any time.",
+      "required": "Required",
+      "save": "Save preferences"
+    },
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "These cookies are essential for the proper functioning of the website. They cannot be disabled."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Help us understand how visitors use the site, allowing us to improve it."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Used to display personalized ads and track their effectiveness."
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "Allow remembering your settings, such as language or site theme."
+      }
+    }
+  },
+  "legal": {
+    "title": "Legal Information",
+    "privacyPolicy": "Privacy Policy",
+    "cookiesPolicy": "Cookies Policy",
+    "cookieSettings": "Cookie Settings",
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated",
+      "sections": {
+        "intro": {
+          "title": "Introduction",
+          "content": "This Privacy Policy describes the rules for processing and protecting personal data provided by Users in connection with using the IT Solutions website."
+        },
+        "administrator": {
+          "title": "Data Administrator",
+          "content": "The administrator of your personal data is IT Solutions based in Warsaw. For matters related to personal data protection, you can contact us at: hello@itsolutions.com"
+        },
+        "dataCollection": {
+          "title": "What data we collect",
+          "content": "We collect the following categories of data:",
+          "items": {
+            "contact": "Contact data (name, email, phone) - when you fill out contact forms",
+            "technical": "Technical data (IP address, browser type, operating system) - automatically while browsing the site",
+            "usage": "Site usage data (pages visited, time spent on site) - through cookies",
+            "communication": "Communication content - when you contact us"
+          }
+        },
+        "purposes": {
+          "title": "Purposes of data processing",
+          "content": "We process your data for the following purposes:",
+          "items": {
+            "contact": "Responding to inquiries and correspondence",
+            "quote": "Preparing quotes and offers",
+            "analytics": "Analyzing site traffic and improving functionality",
+            "marketing": "Marketing our services (with your consent)",
+            "legal": "Fulfilling legal obligations"
+          }
+        },
+        "legalBasis": {
+          "title": "Legal basis",
+          "content": "We process your data based on:",
+          "items": {
+            "consent": "Your consent (Article 6(1)(a) GDPR)",
+            "contract": "Necessity to perform a contract (Article 6(1)(b) GDPR)",
+            "legal": "Legal obligation (Article 6(1)(c) GDPR)",
+            "legitimate": "Legitimate interest of the administrator (Article 6(1)(f) GDPR)"
+          }
+        },
+        "rights": {
+          "title": "Your rights",
+          "content": "Under GDPR, you have the following rights:",
+          "items": {
+            "access": "Right to access your data",
+            "rectification": "Right to rectification of data",
+            "erasure": "Right to erasure (right to be forgotten)",
+            "restriction": "Right to restriction of processing",
+            "portability": "Right to data portability",
+            "objection": "Right to object to processing",
+            "withdraw": "Right to withdraw consent at any time"
+          }
+        },
+        "retention": {
+          "title": "Data retention period",
+          "content": "We store your data for the period necessary to achieve the processing purposes, and after that for the period required by law or until the expiration of any claims."
+        },
+        "security": {
+          "title": "Data security",
+          "content": "We apply appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, or destruction."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For matters related to personal data protection, you can contact us:",
+          "email": "Email: hello@itsolutions.com",
+          "address": "Address: Warsaw, Poland"
+        }
+      }
+    },
+    "cookies": {
+      "title": "Cookies Policy",
+      "lastUpdated": "Last updated",
+      "sections": {
+        "intro": {
+          "title": "What are cookies?",
+          "content": "Cookies are small text files stored on your device when browsing websites. They are used to remember preferences, analyze traffic, and personalize content."
+        },
+        "types": {
+          "title": "Types of cookies we use",
+          "necessary": {
+            "title": "Necessary",
+            "description": "Required for the proper functioning of the site. Includes session and security cookies.",
+            "examples": "Examples: cookie-consent (stores your cookie preferences)"
+          },
+          "analytics": {
+            "title": "Analytics",
+            "description": "Help us understand how users interact with the site.",
+            "examples": "Examples: Google Analytics (_ga, _gid) - anonymous visit statistics"
+          },
+          "marketing": {
+            "title": "Marketing",
+            "description": "Used to track users for advertising purposes.",
+            "examples": "Examples: We currently do not use marketing cookies"
+          },
+          "preferences": {
+            "title": "Preferences",
+            "description": "Remember your settings and preferences.",
+            "examples": "Examples: theme (light/dark mode), locale (language)"
+          }
+        },
+        "manage": {
+          "title": "How to manage cookies",
+          "content": "You can manage cookies in several ways:",
+          "items": {
+            "settings": "Click the \"Cookie Settings\" button in the footer to change your preferences",
+            "browser": "Configure your browser settings to block or delete cookies",
+            "delete": "Delete cookies stored on your device"
+          }
+        },
+        "thirdParty": {
+          "title": "Third-party cookies",
+          "content": "We use third-party services that may set their own cookies:",
+          "items": {
+            "ga": "Google Analytics - site traffic analysis (Google Privacy Policy)"
+          }
+        },
+        "changes": {
+          "title": "Policy changes",
+          "content": "We reserve the right to make changes to this Cookies Policy. We will inform you of significant changes on the site."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "Questions about cookies can be directed to: hello@itsolutions.com"
+        }
+      }
+    }
+  },
+  "chat": {
+    "title": "IT Solutions Assistant",
+    "subtitle": "I'll answer your questions",
+    "welcome": "Hi! I'm the IT Solutions assistant. How can I help you? Ask about services, prices, or the collaboration process.",
+    "typing": "Typing...",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "offline": "Assistant is unavailable. Please use the contact form.",
+    "error": "An error occurred. Please try again.",
+    "rateLimit": "Too many messages. Please wait a moment.",
+    "actions": {
+      "goToQuote": "Get a quote",
+      "goToContact": "Contact form"
+    },
+    "leadForm": {
+      "title": "Leave your contact",
+      "name": "Your name",
+      "email": "Email address",
+      "phone": "Phone (optional)",
+      "submit": "Submit",
+      "success": "Thank you! We'll contact you soon."
     }
   }
 }

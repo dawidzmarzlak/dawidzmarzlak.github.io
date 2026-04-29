@@ -1,0 +1,203 @@
+# Email module schemas
+
+EmailTemplate:
+  type: object
+  required:
+    - id
+    - name
+    - active
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique template identifier
+      example: "550e8400-e29b-41d4-a716-446655440005"
+    name:
+      type: string
+      description: Template name (unique identifier)
+      example: "contact_confirmation"
+    subjectPl:
+      type: string
+      description: Email subject in Polish
+      example: "Potwierdzenie otrzymania wiadomości"
+    subjectEn:
+      type: string
+      description: Email subject in English
+      example: "Message received confirmation"
+    bodyPl:
+      type: string
+      description: Email body in Polish (HTML supported)
+      example: "<p>Dziękujemy za kontakt, {{name}}!</p>"
+    bodyEn:
+      type: string
+      description: Email body in English (HTML supported)
+      example: "<p>Thank you for contacting us, {{name}}!</p>"
+    variables:
+      type: array
+      items:
+        type: string
+      description: List of template variables
+      example: ["name", "email", "company"]
+    active:
+      type: boolean
+      description: Whether the template is active
+      default: true
+    createdAt:
+      type: string
+      format: date-time
+    updatedAt:
+      type: string
+      format: date-time
+
+EmailLog:
+  type: object
+  required:
+    - id
+    - recipient
+    - subject
+    - status
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique log entry identifier
+    templateId:
+      type: string
+      format: uuid
+      description: Template used (if any)
+    templateName:
+      type: string
+      description: Template name for display
+      example: "contact_confirmation"
+    recipient:
+      type: string
+      format: email
+      description: Email recipient
+      example: "jan@example.com"
+    subject:
+      type: string
+      description: Email subject
+      example: "Potwierdzenie otrzymania wiadomości"
+    status:
+      $ref: '#/EmailStatus'
+    providerMessageId:
+      type: string
+      description: Message ID from email provider
+      example: "msg_abc123"
+    errorMessage:
+      type: string
+      description: Error message if sending failed
+    relatedEntityType:
+      type: string
+      enum:
+        - contact
+        - quote
+        - lead
+      description: Type of related entity
+    relatedEntityId:
+      type: string
+      format: uuid
+      description: ID of related entity
+    createdAt:
+      type: string
+      format: date-time
+
+EmailStatus:
+  type: string
+  enum:
+    - pending
+    - sent
+    - delivered
+    - bounced
+    - failed
+  description: |
+    Email delivery status:
+    - pending: Queued for sending
+    - sent: Sent to email provider
+    - delivered: Confirmed delivered
+    - bounced: Email bounced
+    - failed: Sending failed
+
+CreateEmailTemplateRequest:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string
+      minLength: 2
+      maxLength: 100
+      pattern: "^[a-z_]+$"
+      description: Template name (lowercase with underscores)
+      example: "quote_notification"
+    subjectPl:
+      type: string
+      maxLength: 255
+      example: "Nowe zapytanie o wycenę"
+    subjectEn:
+      type: string
+      maxLength: 255
+      example: "New quote request"
+    bodyPl:
+      type: string
+      maxLength: 50000
+      example: "<p>Otrzymaliśmy nowe zapytanie od {{name}}</p>"
+    bodyEn:
+      type: string
+      maxLength: 50000
+      example: "<p>We received a new request from {{name}}</p>"
+    variables:
+      type: array
+      items:
+        type: string
+      example: ["name", "email", "service"]
+    active:
+      type: boolean
+      default: true
+
+UpdateEmailTemplateRequest:
+  type: object
+  properties:
+    subjectPl:
+      type: string
+      maxLength: 255
+    subjectEn:
+      type: string
+      maxLength: 255
+    bodyPl:
+      type: string
+      maxLength: 50000
+    bodyEn:
+      type: string
+      maxLength: 50000
+    variables:
+      type: array
+      items:
+        type: string
+    active:
+      type: boolean
+
+EmailLogListResponse:
+  type: object
+  required:
+    - data
+    - meta
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/EmailLog'
+    meta:
+      $ref: './common.yaml#/PaginationMeta'
+
+EmailTemplateListResponse:
+  type: object
+  required:
+    - data
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/EmailTemplate'

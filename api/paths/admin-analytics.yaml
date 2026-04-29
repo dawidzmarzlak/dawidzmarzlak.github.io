@@ -1,0 +1,42 @@
+# Admin Analytics API paths
+
+dashboard:
+  get:
+    tags:
+      - admin-analytics
+    operationId: getDashboard
+    summary: Get dashboard analytics
+    description: |
+      Returns dashboard analytics including:
+      - Key statistics (totals, counts)
+      - Recent activity feed
+      - Charts data (leads over time, by source, by status)
+    security:
+      - bearerAuth: []
+    parameters:
+      - name: period
+        in: query
+        description: Time period for statistics
+        schema:
+          type: string
+          enum:
+            - today
+            - week
+            - month
+            - quarter
+            - year
+            - all
+          default: month
+    responses:
+      '200':
+        description: Dashboard analytics data
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/analytics.yaml#/DashboardResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

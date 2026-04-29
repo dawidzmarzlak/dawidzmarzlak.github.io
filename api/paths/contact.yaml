@@ -1,0 +1,44 @@
+# Contact API paths (public)
+
+contact:
+  post:
+    tags:
+      - contact
+    operationId: submitContactForm
+    summary: Submit a contact form
+    description: |
+      Submits a contact form request.
+      Sends confirmation email to the user.
+      Sends notification email to admin.
+      Creates a lead automatically.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/contact.yaml#/CreateContactRequest'
+    responses:
+      '201':
+        description: Contact request submitted successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/contact.yaml#/CreateContactResponse'
+      '400':
+        description: Validation error
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '403':
+        description: Bot detected (Turnstile verification failed)
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '429':
+        description: Rate limit exceeded
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

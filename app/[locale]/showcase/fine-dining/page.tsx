@@ -5,6 +5,9 @@ import {
   RestaurantHero,
   RestaurantMenu,
   RestaurantChef,
+  RestaurantGallery,
+  RestaurantWine,
+  RestaurantPress,
   RestaurantReservation,
 } from "@/components/showcase/fine-dining";
 import { routing } from "@/i18n/routing";
@@ -22,6 +25,9 @@ export default function FineDiningPage() {
       <RestaurantHero />
       <RestaurantMenu />
       <RestaurantChef />
+      <RestaurantGallery />
+      <RestaurantWine />
+      <RestaurantPress />
       <RestaurantReservation />
       <ShowcaseCTA
         theme="dark"

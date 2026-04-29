@@ -346,6 +346,59 @@
         "title": "Godziny Otwarcia",
         "dinner": "Kolacja: 18:00 - 23:00",
         "closed": "Zamknięte: Poniedziałki"
+      },
+      "gallery": {
+        "title": "Galeria",
+        "subtitle": "Wizualna podróż przez naszą sztukę kulinarną",
+        "filters": {
+          "all": "Wszystko",
+          "dishes": "Kuchnia",
+          "interior": "Wnętrze"
+        }
+      },
+      "wine": {
+        "title": "Piwnica Win",
+        "subtitle": "Wyjątkowa kolekcja wyselekcjonowana przez naszego sommeliera",
+        "stats": {
+          "bottles": "Butelek",
+          "regions": "Regionów",
+          "vintages": "Roczniki",
+          "rare": "Rzadkie Etykiety"
+        },
+        "sommelierNote": "Każde wino w naszej kolekcji zostało osobiście wyselekcjonowane, aby dopełnić nasze sezonowe menu i wzbogacić doświadczenie kulinarne.",
+        "sommelierName": "Jean-Pierre Laurent, Główny Sommelier"
+      },
+      "press": {
+        "title": "Nagrody i Wyróżnienia",
+        "subtitle": "Doskonałość doceniona przez najbardziej prestiżowe przewodniki kulinarne",
+        "publications": {
+          "michelin": "Przewodnik Michelin",
+          "nytimes": "The New York Times",
+          "zagat": "Zagat",
+          "forbes": "Forbes Travel"
+        },
+        "featuredQuote": "Transcendentne doświadczenie kulinarne, które na nowo definiuje granice współczesnej kuchni francuskiej. Każde danie opowiada historię precyzji, pasji i czystej artystyczności.",
+        "featuredSource": "The New York Times",
+        "awardsTitle": "Wyróżnienia",
+        "awards": {
+          "award1": {
+            "name": "Dwie Gwiazdki Michelin",
+            "organization": "Przewodnik Michelin"
+          },
+          "award2": {
+            "name": "Najlepsza Restauracja Fine Dining",
+            "organization": "James Beard Awards"
+          },
+          "award3": {
+            "name": "Restauracja Roku",
+            "organization": "Wine Spectator"
+          },
+          "award4": {
+            "name": "Nagroda Pięciu Gwiazdek",
+            "organization": "Forbes Travel Guide"
+          }
+        },
+        "featuredIn": "Pisali o nas"
       }
     },
 
@@ -378,19 +431,119 @@
         "book": "Zarezerwuj"
       },
       "team": {
-        "title": "Nasz Zespół",
-        "subtitle": "Certyfikowani specjaliści z wieloletnim doświadczeniem"
+        "title": "Nasi Terapeuci",
+        "subtitle": "Certyfikowani specjaliści oddani Twojemu dobrostanowi",
+        "yearsExperience": "lat doświadczenia",
+        "therapists": {
+          "elena": {
+            "name": "Elena Rossi",
+            "role": "Starszy Terapeuta Masażu",
+            "bio": "Specjalizuje się w masażu szwedzkim i głębokim z ekspertyzą w aromaterapii."
+          },
+          "maya": {
+            "name": "Maya Johnson",
+            "role": "Specjalistka Pielęgnacji Skóry",
+            "bio": "Ekspertka w zabiegach na twarz i holistycznych rutynach pielęgnacyjnych."
+          },
+          "sophia": {
+            "name": "Sophia Chen",
+            "role": "Przewodniczka Jogi i Medytacji",
+            "bio": "Certyfikowana instruktorka jogi z naciskiem na uważność i redukcję stresu."
+          },
+          "lily": {
+            "name": "Lily Adams",
+            "role": "Konsultantka Wellness",
+            "bio": "Ekspertka holistycznych zabiegów na ciało i coach wellness."
+          }
+        }
       },
-      "wellness": {
-        "title": "Porady Wellness",
-        "subtitle": "Inspiracje do zdrowego życia"
+      "gallery": {
+        "title": "Nasza Oaza",
+        "subtitle": "Spojrzenie na nasze spokojne przestrzenie"
+      },
+      "tips": {
+        "title": "Dziennik Wellness",
+        "subtitle": "Porady i inspiracje do uważnego życia",
+        "minRead": "min czytania",
+        "readMore": "Czytaj Więcej",
+        "categories": {
+          "mindfulness": "Uważność",
+          "beauty": "Uroda",
+          "wellness": "Wellness"
+        },
+        "articles": {
+          "meditation": {
+            "title": "5 Minut do Spokoju: Codzienna Praktyka Medytacji",
+            "excerpt": "Odkryj proste techniki medytacji, które mogą zmienić Twój dzień i zmniejszyć poziom stresu."
+          },
+          "skincare": {
+            "title": "Sztuka Naturalnej Pielęgnacji Skóry",
+            "excerpt": "Naucz się tworzyć skuteczną rutynę pielęgnacyjną z wykorzystaniem naturalnych składników."
+          },
+          "aromatherapy": {
+            "title": "Olejki Eteryczne dla Lepszego Snu",
+            "excerpt": "Odkryj uspokajającą moc aromaterapii i popraw jakość snu w naturalny sposób."
+          }
+        }
+      },
+      "testimonials": {
+        "title": "Doświadczenia Gości",
+        "subtitle": "Co mówią nasi goście o swojej podróży z nami",
+        "reviews": {
+          "guest1": {
+            "name": "Sara M.",
+            "quote": "Najbardziej relaksujące doświadczenie w moim życiu. Terapeuci są niesamowicie utalentowani, a atmosfera to czysta błogość.",
+            "treatment": "Masaż Głęboki"
+          },
+          "guest2": {
+            "name": "Ewa T.",
+            "quote": "Próbowałam wielu spa, ale Serenity Springs jest naprawdę wyjątkowe. Dbałość o szczegóły i spersonalizowana opieka są znakomite.",
+            "treatment": "Zabieg Odmładzający na Twarz"
+          },
+          "guest3": {
+            "name": "Joanna L.",
+            "quote": "Zajęcia jogi tutaj zmieniły moje życie. Sophia jest niesamowitą instruktorką, która naprawdę dba o każdego ucznia.",
+            "treatment": "Joga i Medytacja"
+          },
+          "guest4": {
+            "name": "Amelia R.",
+            "quote": "Każda wizyta to jak mini wakacje. Zespół pamięta Twoje preferencje i sprawia, że czujesz się bardzo mile widziany.",
+            "treatment": "Pakiet Spa Day"
+          }
+        }
       },
       "booking": {
-        "title": "Zarezerwuj Wizytę",
-        "selectTreatment": "Wybierz zabieg",
-        "selectDate": "Wybierz datę",
-        "selectTime": "Wybierz godzinę",
-        "submit": "Potwierdź rezerwację"
+        "title": "Zarezerwuj Swoje Doświadczenie",
+        "subtitle": "Rozpocznij podróż ku relaksowi",
+        "step1": {
+          "title": "Wybierz Zabieg"
+        },
+        "step2": {
+          "title": "Wybierz Datę i Godzinę",
+          "date": "Wybierz Datę",
+          "time": "Wybierz Godzinę"
+        },
+        "step3": {
+          "title": "Twoje Dane",
+          "name": "Imię i Nazwisko",
+          "email": "Adres Email",
+          "phone": "Numer Telefonu",
+          "notes": "Specjalne Życzenia (opcjonalnie)"
+        },
+        "treatments": {
+          "massage": { "name": "Masaż Relaksacyjny", "duration": "60-90 min" },
+          "facial": { "name": "Zabieg Odmładzający", "duration": "45-60 min" },
+          "body": { "name": "Zabieg na Ciało", "duration": "75 min" },
+          "package": { "name": "Pakiet Spa Day", "duration": "3 godziny" }
+        },
+        "back": "Wstecz",
+        "next": "Dalej",
+        "submit": "Potwierdź Rezerwację",
+        "success": {
+          "title": "Rezerwacja Potwierdzona!",
+          "message": "Wysłaliśmy email z potwierdzeniem ze wszystkimi szczegółami. Nie możemy się doczekać Twojej wizyty.",
+          "newBooking": "Zarezerwuj Kolejny Zabieg"
+        }
       }
     },
 
@@ -441,13 +594,94 @@
       },
       "team": {
         "title": "Zespół",
-        "subtitle": "Architekci i projektanci z pasją"
+        "subtitle": "Architekci i projektanci z pasją",
+        "members": {
+          "sarah": {
+            "name": "Sarah Mitchell",
+            "role": "Główny Architekt",
+            "bio": "Wielokrotnie nagradzana architektka z ponad 15-letnim doświadczeniem w projektowaniu budynków mieszkalnych i komercyjnych. Pasjonatka zrównoważonej architektury i innowacyjnych rozwiązań przestrzennych."
+          },
+          "michael": {
+            "name": "Michael Chen",
+            "role": "Główny Projektant",
+            "bio": "Specjalizuje się w nowoczesnym minimalistycznym designie. Były główny projektant w Herzog & de Meuron. Skupia się na relacji między architekturą a naturą."
+          },
+          "elena": {
+            "name": "Elena Rodriguez",
+            "role": "Architekt Wnętrz",
+            "bio": "Ekspertka w dziedzinie luksusowych wnętrz mieszkalnych i wysokiej klasy przestrzeni komercyjnych. Łączy funkcjonalność z artystyczną wizją, tworząc ponadczasowe środowiska."
+          },
+          "david": {
+            "name": "David Park",
+            "role": "Kierownik Projektu",
+            "bio": "Zapewnia płynną realizację projektów od koncepcji do ukończenia. 12 lat doświadczenia w zarządzaniu złożonymi projektami architektonicznymi na wielu kontynentach."
+          }
+        }
+      },
+      "awards": {
+        "title": "Nagrody i Wyróżnienia",
+        "subtitle": "Doskonałość doceniona przez branżę",
+        "pressMentions": "Publikacje w",
+        "items": {
+          "award1": {
+            "name": "Najlepszy Projekt Mieszkalny",
+            "organization": "AIA Design Awards",
+            "project": "Skyline Residence"
+          },
+          "award2": {
+            "name": "Innowacja w Architekturze",
+            "organization": "World Architecture Festival",
+            "project": "Void Pavilion"
+          },
+          "award3": {
+            "name": "Nagroda za Zrównoważony Design",
+            "organization": "Green Building Council",
+            "project": "Eco Tower"
+          },
+          "award4": {
+            "name": "Wschodzące Studio Architektoniczne",
+            "organization": "Architect Magazine",
+            "project": "Portfolio Studia"
+          }
+        },
+        "stats": {
+          "awards": "Nagrody Międzynarodowe",
+          "features": "Publikacje Prasowe",
+          "countries": "Kraje"
+        }
       },
       "contact": {
         "title": "Kontakt",
-        "email": "Email",
-        "phone": "Telefon",
-        "address": "Adres"
+        "subtitle": "Porozmawiajmy o Twoim projekcie",
+        "addressLabel": "Adres Studia",
+        "address": "432 Park Avenue, Nowy Jork, NY 10022",
+        "phoneLabel": "Telefon",
+        "phone": "+1 (212) 555-0198",
+        "emailLabel": "Email",
+        "email": "hello@formandvoid.studio",
+        "hoursLabel": "Godziny Otwarcia",
+        "hours": "Pon-Pt: 9:00 - 18:00",
+        "coordinates": "Nasza Lokalizacja",
+        "viewMap": "Zobacz w Google Maps",
+        "form": {
+          "name": "Imię i Nazwisko",
+          "namePlaceholder": "Jan Kowalski",
+          "email": "Adres Email",
+          "emailPlaceholder": "jan@example.com",
+          "phone": "Numer Telefonu",
+          "phonePlaceholder": "+48 555 000 000",
+          "projectType": "Typ Projektu",
+          "projectTypePlaceholder": "Wybierz typ projektu",
+          "projectTypes": {
+            "residential": "Mieszkalny",
+            "commercial": "Komercyjny",
+            "renovation": "Renowacja",
+            "consultation": "Konsultacja"
+          },
+          "message": "Szczegóły Projektu",
+          "messagePlaceholder": "Opowiedz nam o swoim projekcie...",
+          "submit": "Wyślij Wiadomość"
+        }
       }
     },
 
@@ -500,6 +734,1510 @@
         "hours": "Pon-Pt: 7:00-20:00 | Sob-Nd: 8:00-18:00",
         "directions": "Jak dojechać"
       }
+    },
+
+    "saas-dashboard": {
+      "name": "Dashboard SaaS",
+      "brandName": "Pulse Analytics",
+      "tagline": "Dane w Czasie Rzeczywistym",
+      "industry": "Technologia",
+      "hero": {
+        "title": "Analityka Następnej Generacji",
+        "subtitle": "Potężne narzędzia do analizy danych, które pomagają podejmować lepsze decyzje biznesowe. Sztuczna inteligencja i wizualizacje w czasie rzeczywistym.",
+        "cta": "Rozpocznij za Darmo",
+        "ctaSecondary": "Zobacz Demo"
+      },
+      "features": {
+        "title": "Funkcje",
+        "subtitle": "Wszystko czego potrzebujesz do analizy danych",
+        "realtime": {
+          "title": "Dane w Czasie Rzeczywistym",
+          "description": "Śledź metryki na żywo i reaguj natychmiast na zmiany."
+        },
+        "ai": {
+          "title": "Napędzane AI",
+          "description": "Automatyczne wykrywanie anomalii i predykcje oparte na ML."
+        },
+        "integrations": {
+          "title": "100+ Integracji",
+          "description": "Połącz wszystkie swoje źródła danych w jednym miejscu."
+        },
+        "security": {
+          "title": "Bezpieczeństwo Enterprise",
+          "description": "Szyfrowanie end-to-end i certyfikaty SOC2, GDPR."
+        }
+      },
+      "pricing": {
+        "title": "Cennik",
+        "subtitle": "Wybierz plan dopasowany do Twoich potrzeb",
+        "monthly": "Miesięcznie",
+        "annually": "Rocznie",
+        "starter": {
+          "name": "Starter",
+          "price": "99 zł",
+          "description": "Dla małych zespołów",
+          "features": ["5 użytkowników", "10 dashboardów", "7 dni historii", "Email wsparcie"]
+        },
+        "pro": {
+          "name": "Professional",
+          "price": "299 zł",
+          "description": "Dla rozwijających się firm",
+          "features": ["25 użytkowników", "Nielimitowane dashboardy", "1 rok historii", "Priorytetowe wsparcie"]
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "price": "Kontakt",
+          "description": "Dla dużych organizacji",
+          "features": ["Nielimitowani użytkownicy", "Dedykowana infrastruktura", "Nielimitowana historia", "24/7 wsparcie"]
+        },
+        "cta": "Wybierz Plan"
+      },
+      "howItWorks": {
+        "title": "Jak to działa",
+        "subtitle": "Zacznij w kilka minut dzięki naszemu prostemu procesowi trzech kroków",
+        "connect": {
+          "title": "Połącz dane",
+          "description": "Zintegruj swoje istniejące narzędzia i źródła danych jednym kliknięciem."
+        },
+        "analyze": {
+          "title": "Automatyczna analiza",
+          "description": "Nasza AI przetwarza Twoje dane i identyfikuje wzorce oraz wglądy."
+        },
+        "insights": {
+          "title": "Uzyskaj praktyczne wglądy",
+          "description": "Otrzymuj rekomendacje w czasie rzeczywistym, aby usprawnić swój biznes."
+        },
+        "bottomText": "Konfiguracja zajmuje mniej niż 5 minut. Karta kredytowa nie jest wymagana."
+      },
+      "integrations": {
+        "badge": "50+ Integracji",
+        "title": "Połącz wszystkie swoje narzędzia",
+        "subtitle": "Bezproblemowa integracja z popularnymi platformami i usługami, których już używasz",
+        "moreText": "+30 więcej integracji",
+        "viewAll": "Zobacz wszystkie integracje"
+      },
+      "testimonials": {
+        "title": "Zaufali Nam",
+        "subtitle": "Ponad 10,000 firm korzysta z Pulse Analytics",
+        "reviews": {
+          "customer1": {
+            "name": "Sarah Chen",
+            "role": "CTO w TechFlow",
+            "quote": "Pulse Analytics zrewolucjonizowało sposób w jaki podejmujemy decyzje oparte na danych. Wgląd w czasie rzeczywistym zaoszczędził nam niezliczone godziny."
+          },
+          "customer2": {
+            "name": "Marcus Rodriguez",
+            "role": "Dyrektor Marketingu w GrowthLabs",
+            "quote": "Wreszcie dashboard który naprawdę rozumie nasze potrzeby. Możliwości AI są niesamowite - to jak posiadanie analityka danych 24/7."
+          },
+          "customer3": {
+            "name": "Emily Thompson",
+            "role": "VP Operations w ScaleUp Inc",
+            "quote": "Wdrożyliśmy Pulse w całym naszym dziale w tydzień. Prostota użycia połączona z potężnymi funkcjami jest niezrównana."
+          }
+        }
+      },
+      "faq": {
+        "title": "Często zadawane pytania",
+        "subtitle": "Wszystko co musisz wiedzieć o Pulse Analytics",
+        "contactPrompt": "Nadal masz pytania? Chętnie pomożemy.",
+        "contactButton": "Skontaktuj się z pomocą",
+        "items": {
+          "faq1": {
+            "question": "Jak rozpocząć korzystanie z Pulse Analytics?",
+            "answer": "Pierwsze kroki są proste! Zarejestruj się na bezpłatny 14-dniowy trial, połącz swoje źródła danych za pomocą naszych jednoklkowych integracji i zacznij budować dashboardy od razu. Nasz kreator onboardingu przeprowadzi Cię przez każdy krok."
+          },
+          "faq2": {
+            "question": "Jakie źródła danych obsługujecie?",
+            "answer": "Wspieramy ponad 50 popularnych platform włącznie z Google Analytics, Stripe, Salesforce, HubSpot, PostgreSQL, MySQL, MongoDB i wieloma innymi. Mamy też elastyczne API do niestandardowych integracji."
+          },
+          "faq3": {
+            "question": "Czy moje dane są bezpieczne?",
+            "answer": "Bezwzględnie. Używamy szyfrowania na poziomie banku (AES-256), jesteśmy certyfikowani SOC 2 Type II i spełniamy wymagania GDPR. Twoje dane nigdy nie są sprzedawane ani udostępniane podmiotom trzecim."
+          },
+          "faq4": {
+            "question": "Czy mogę anulować subskrypcję w dowolnym momencie?",
+            "answer": "Tak, możesz anulować lub zmienić plan w dowolnym momencie. Nie ma długoterminowych umów. Jeśli anulujesz, zachowasz dostęp do końca okresu rozliczeniowego."
+          },
+          "faq5": {
+            "question": "Jak działa funkcja AI insights?",
+            "answer": "Nasz silnik AI stale analizuje Twoje dane w poszukiwaniu wzorców, anomalii i trendów. Automatycznie generuje przystępne spostrzeżenia i rekomendacje, pomagając Ci podejmować decyzje na podstawie danych bez konieczności bycia analitykiem."
+          },
+          "faq6": {
+            "question": "Czy oferujecie niestandardowe rozwiązania enterprise?",
+            "answer": "Tak! Nasz plan Enterprise zawiera dedykowaną infrastrukturę, niestandardowe integracje, SSO/SAML, szkolenia onboardingowe i dedykowanego account managera. Skontaktuj się z naszym zespołem sprzedaży po spersonalizowaną ofertę."
+          }
+        }
+      },
+      "cta": {
+        "title": "Gotowy na Start?",
+        "description": "Dołącz do tysięcy firm, które już korzystają z Pulse Analytics.",
+        "button": "Rozpocznij 14-dniowy Trial"
+      }
+    },
+
+    "fashion-store": {
+      "name": "Butik Mody",
+      "brandName": "MAISON ÉLISE",
+      "tagline": "Ponadczasowa Elegancja",
+      "industry": "Moda",
+      "hero": {
+        "title": "Nowa Kolekcja",
+        "subtitle": "Odkryj wyrafinowane projekty, które definiują nowoczesny luksus. Ręcznie wykonane z najlepszych materiałów.",
+        "cta": "Odkryj Kolekcję",
+        "ctaSecondary": "Lookbook"
+      },
+      "collections": {
+        "title": "Kolekcje",
+        "subtitle": "Sezonowe inspiracje",
+        "spring": "Wiosna/Lato 2025",
+        "autumn": "Jesień/Zima 2024",
+        "essentials": "Essentials",
+        "viewCollection": "Zobacz Kolekcję"
+      },
+      "products": {
+        "title": "Bestsellery",
+        "subtitle": "Nasze najpopularniejsze produkty",
+        "addToCart": "Dodaj do Koszyka",
+        "viewDetails": "Szczegóły",
+        "newArrival": "Nowość",
+        "soldOut": "Wyprzedane"
+      },
+      "lookbook": {
+        "title": "Lookbook",
+        "subtitle": "Inspiracje stylizacji na każdą okazję"
+      },
+      "about": {
+        "title": "O Marce",
+        "description": "MAISON ÉLISE to paryska marka założona w 2015 roku. Łączymy francuską elegancję z nowoczesnym minimalizmem, tworząc ponadczasowe projekty dla wymagających klientów.",
+        "craftsmanship": "Ręczne wykonanie",
+        "sustainable": "Zrównoważona moda",
+        "exclusive": "Ekskluzywne materiały"
+      },
+      "newsletter": {
+        "title": "Bądź na Bieżąco",
+        "description": "Zapisz się i otrzymaj 10% zniżki na pierwsze zamówienie",
+        "placeholder": "Twój email",
+        "button": "Subskrybuj"
+      }
+    },
+
+    "fitness-studio": {
+      "name": "Studio Fitness",
+      "brandName": "APEX PERFORMANCE",
+      "tagline": "Przekrocz Swoje Limity",
+      "industry": "Fitness",
+      "hero": {
+        "title": "ZBUDUJ NAJLEPSZĄ WERSJĘ SIEBIE",
+        "subtitle": "Elitarne treningi prowadzone przez certyfikowanych trenerów. Nowoczesny sprzęt i atmosfera, która motywuje.",
+        "cta": "Dołącz Teraz",
+        "ctaSecondary": "Zobacz Zajęcia"
+      },
+      "classes": {
+        "title": "NASZE ZAJĘCIA",
+        "subtitle": "Od HIIT po Jogę - znajdź swój idealny trening",
+        "hiit": {
+          "name": "HIIT EXTREME",
+          "description": "Intensywny trening interwałowy",
+          "duration": "45 min",
+          "level": "Zaawansowany"
+        },
+        "strength": {
+          "name": "PURE STRENGTH",
+          "description": "Trening siłowy z wolnymi ciężarami",
+          "duration": "60 min",
+          "level": "Wszystkie poziomy"
+        },
+        "yoga": {
+          "name": "POWER YOGA",
+          "description": "Dynamiczna joga wzmacniająca",
+          "duration": "60 min",
+          "level": "Średniozaawansowany"
+        },
+        "cycling": {
+          "name": "APEX CYCLING",
+          "description": "Intensywny spinning z muzyką",
+          "duration": "45 min",
+          "level": "Wszystkie poziomy"
+        },
+        "bookClass": "Zarezerwuj"
+      },
+      "trainers": {
+        "title": "NASI TRENERZY",
+        "subtitle": "Eksperci z międzynarodowymi certyfikacjami",
+        "experience": "lat",
+        "specialization": "Specjalizacja",
+        "items": {
+          "marcus": {
+            "name": "Marcus Johnson",
+            "role": "Główny Trener & Specjalista HIIT"
+          },
+          "sarah": {
+            "name": "Sarah Chen",
+            "role": "Instruktorka Jogi & Pilatesu"
+          },
+          "jake": {
+            "name": "Jake Williams",
+            "role": "Trener Cycling & CrossFit"
+          },
+          "emma": {
+            "name": "Emma Davis",
+            "role": "Ekspertka Żywienia & Odchudzania"
+          }
+        }
+      },
+      "schedule": {
+        "title": "PLAN ZAJĘĆ",
+        "subtitle": "Znajdź idealny czas na trening",
+        "all": "Wszystkie Zajęcia",
+        "noClasses": "Brak zajęć w tym dniu z wybranym filtrem.",
+        "days": {
+          "monday": "Poniedziałek",
+          "tuesday": "Wtorek",
+          "wednesday": "Środa",
+          "thursday": "Czwartek",
+          "friday": "Piątek",
+          "saturday": "Sobota",
+          "sunday": "Niedziela"
+        }
+      },
+      "results": {
+        "title": "TRANSFORMACJE",
+        "subtitle": "Realne rezultaty naszych członków",
+        "before": "Przed",
+        "after": "Po",
+        "weightLost": "Utracona Waga",
+        "duration": "Czas",
+        "stories": {
+          "john": {
+            "name": "Jan Kowalski",
+            "quote": "APEX całkowicie zmienił moje życie. Trenerzy popychali mnie do granic, o których nie wiedziałem, że istnieją. W zaledwie 6 miesięcy schudłem 25kg i zyskałem pewność siebie, której nigdy wcześniej nie miałem.",
+            "program": "Program HIIT + Siłowy"
+          },
+          "lisa": {
+            "name": "Anna Nowak",
+            "quote": "Po urodzeniu dwójki dzieci myślałam, że nigdy nie odzyskam formy. Zespół APEX udowodnił mi, że się myliłam. Zrozumieli moje ograniczenia i pomogli mi osiągnąć cele.",
+            "program": "Program Joga + Żywienie"
+          },
+          "mike": {
+            "name": "Michał Wiśniewski",
+            "quote": "Początkowo byłem sceptyczny, ale wyniki mówią same za siebie. Połączenie cyclingu i treningu siłowego było dokładnie tym, czego potrzebowałem.",
+            "program": "Program Cycling + Siłowy"
+          }
+        }
+      },
+      "testimonials": {
+        "title": "OPINIE CZŁONKÓW",
+        "subtitle": "Co mówi o nas nasza społeczność",
+        "reviews": {
+          "member1": {
+            "name": "Dawid R.",
+            "quote": "Najlepsza siłownia, w jakiej byłem. Sprzęt jest na najwyższym poziomie, trenerzy niesamowicie kompetentni, a społeczność bardzo wspierająca.",
+            "membership": "Członek Elite - 2 lata"
+          },
+          "member2": {
+            "name": "Katarzyna K.",
+            "quote": "Zajęcia grupowe są niesamowite! Szczególnie uwielbiam sesje HIIT z Marcusem. Są wymagające, ale bardzo satysfakcjonujące.",
+            "membership": "Członkini Pro - 1 rok"
+          },
+          "member3": {
+            "name": "Robert M.",
+            "quote": "Dostęp 24/7 zmienił zasady gry dla mojego grafiku. Mogę ćwiczyć o 5 rano przed pracą lub o północy - jak mi pasuje.",
+            "membership": "Członek Basic - 6 miesięcy"
+          },
+          "member4": {
+            "name": "Amanda L.",
+            "quote": "Zajęcia jogi z Sarah są niesamowite. Taka spokojna atmosfera i świetne instrukcje dla wszystkich poziomów.",
+            "membership": "Członkini Pro - 8 miesięcy"
+          }
+        }
+      },
+      "faq": {
+        "title": "CZĘSTO ZADAWANE PYTANIA",
+        "subtitle": "Wszystko, co musisz wiedzieć",
+        "moreQuestions": "Masz więcej pytań?",
+        "contactUs": "Skontaktuj się z nami",
+        "items": {
+          "membership": {
+            "question": "Jak mogę zapisać się na członkostwo?",
+            "answer": "Możesz zapisać się online przez naszą stronę lub odwiedzić nas osobiście. Oferujemy darmowy dzień próbny, abyś mógł doświadczyć naszych obiektów przed zobowiązaniem. Nasz zespół pomoże Ci wybrać odpowiedni plan członkostwa dla Twoich celów."
+          },
+          "classes": {
+            "question": "Czy muszę rezerwować zajęcia z wyprzedzeniem?",
+            "answer": "Tak, zalecamy rezerwację zajęć przez naszą aplikację mobilną co najmniej 24 godziny wcześniej. Popularne zajęcia jak HIIT szybko się zapełniają. Możesz anulować do 2 godzin przed rozpoczęciem zajęć."
+          },
+          "trainers": {
+            "question": "Jak działają sesje treningu personalnego?",
+            "answer": "Sesje treningu personalnego trwają 60 minut i mogą być zaplanowane w zależności od dostępności trenera. Członkowie Pro mają 1 sesję miesięcznie w pakiecie, członkowie Elite - 4. Dodatkowe sesje można dokupić osobno."
+          },
+          "schedule": {
+            "question": "Jakie są godziny otwarcia?",
+            "answer": "Nasza siłownia jest otwarta 24/7 dla wszystkich członków. Zajęcia grupowe odbywają się od 6:00 do 21:00 od poniedziałku do piątku i od 8:00 do 14:00 w weekendy. Recepcja jest czynna od 6:00 do 22:00 codziennie."
+          },
+          "equipment": {
+            "question": "Jaki sprzęt macie?",
+            "answer": "Mamy pełen zakres maszyn cardio, wolne ciężary od 1kg do 50kg, maszyny kablowe, klatki do squatu i specjalistyczny sprzęt do treningu funkcjonalnego. Mamy również dedykowane studio cycling i salę do jogi."
+          },
+          "parking": {
+            "question": "Czy jest dostępny parking?",
+            "answer": "Tak, mamy prywatny podziemny parking z 50 miejscami. Parking jest bezpłatny przez pierwsze 2 godziny, a potem 5 zł/godzinę. Członkowie Elite mają nielimitowany darmowy parking."
+          }
+        }
+      },
+      "membership": {
+        "title": "CZŁONKOSTWO",
+        "subtitle": "Wybierz plan dopasowany do Twojego stylu życia",
+        "basic": {
+          "name": "BASIC",
+          "price": "149 zł/mies.",
+          "features": ["Dostęp do siłowni 24/7", "Szatnie premium", "Aplikacja mobilna", "Darmowy parking (2 godz.)"]
+        },
+        "pro": {
+          "name": "PRO",
+          "price": "249 zł/mies.",
+          "popular": "Najpopularniejszy",
+          "features": ["Wszystko z BASIC", "Nielimitowane zajęcia grupowe", "1 trening personalny/mies.", "Konsultacja żywieniowa"]
+        },
+        "elite": {
+          "name": "ELITE",
+          "price": "449 zł/mies.",
+          "features": ["Wszystko z PRO", "4 treningi personalne/mies.", "Indywidualny plan żywieniowy", "Szafka VIP", "Nielimitowany parking"]
+        },
+        "cta": "Wybierz Plan"
+      }
+    },
+
+    "creative-agency": {
+      "name": "Agencja Kreatywna",
+      "brandName": "NOVA CREATIVE",
+      "tagline": "Tworzymy Marki Przyszłości",
+      "industry": "Marketing",
+      "hero": {
+        "title": "Kreujemy Doświadczenia Cyfrowe",
+        "subtitle": "Strategia, design i technologia w jednym. Pomagamy markom wyróżnić się w cyfrowym świecie.",
+        "cta": "Rozpocznij Projekt",
+        "ctaSecondary": "Zobacz Prace"
+      },
+      "work": {
+        "title": "Wybrane Projekty",
+        "subtitle": "Nasze najnowsze realizacje",
+        "viewProject": "Zobacz Projekt",
+        "category": "Kategoria",
+        "client": "Klient"
+      },
+      "services": {
+        "title": "Co Robimy",
+        "subtitle": "Kompleksowe usługi kreatywne",
+        "branding": {
+          "name": "Branding",
+          "description": "Strategia marki, identyfikacja wizualna, systemy designu"
+        },
+        "web": {
+          "name": "Web Design",
+          "description": "Strony www, e-commerce, aplikacje webowe"
+        },
+        "motion": {
+          "name": "Motion Design",
+          "description": "Animacje, video, treści interaktywne"
+        },
+        "marketing": {
+          "name": "Marketing Cyfrowy",
+          "description": "Social media, content, kampanie reklamowe"
+        }
+      },
+      "team": {
+        "title": "Nasz Zespół",
+        "subtitle": "Kreatywne umysły przesuwające granice każdego dnia",
+        "members": {
+          "maya": {
+            "name": "Maja Kowalczyk",
+            "role": "Dyrektor Kreatywna",
+            "quote": "Design to nie tylko wygląd, to jak sprawia że się czujesz."
+          },
+          "alex": {
+            "name": "Aleksander Wiśniewski",
+            "role": "Lead Developer",
+            "quote": "Kod to poezja pisana dla maszyn."
+          },
+          "jordan": {
+            "name": "Julia Nowak",
+            "role": "Strateg Marki",
+            "quote": "Wielkie marki opowiadają historie, których ludzie chcą być częścią."
+          },
+          "sam": {
+            "name": "Szymon Kamiński",
+            "role": "Motion Designer",
+            "quote": "Animacja ożywia pomysły w sposób, jakiego słowa nie potrafią."
+          }
+        }
+      },
+      "clients": {
+        "title": "Marki, z Którymi Pracowaliśmy",
+        "subtitle": "Zaufały nam innowacyjne firmy z całego świata",
+        "stats": {
+          "projects": "Ukończonych Projektów",
+          "clients": "Zadowolonych Klientów",
+          "awards": "Nagród Branżowych",
+          "satisfaction": "Wskaźnik Satysfakcji"
+        }
+      },
+      "testimonials": {
+        "title": "Co Mówią Klienci",
+        "subtitle": "Nie tylko nasze słowa",
+        "reviews": {
+          "client1": {
+            "name": "Anna Kowalska",
+            "company": "TechVentures Sp. z o.o.",
+            "quote": "Nova Creative całkowicie przemieniło naszą markę. Ich kreatywne podejście i dbałość o szczegóły przekroczyły wszystkie nasze oczekiwania."
+          },
+          "client2": {
+            "name": "Michał Nowicki",
+            "company": "Bloom Wellness",
+            "quote": "Praca z tym zespołem była absolutną przyjemnością. Natychmiast zrozumieli naszą wizję i dostarczyli coś naprawdę wyjątkowego."
+          },
+          "client3": {
+            "name": "Emilia Mazur",
+            "company": "Urban Eats Co.",
+            "quote": "Najlepszą decyzją jaką podjęliśmy było partnerstwo z Nova. Nasza nowa tożsamość marki wygenerowała niesamowite zaangażowanie klientów."
+          }
+        }
+      },
+      "process": {
+        "title": "Jak Pracujemy",
+        "steps": {
+          "discover": {
+            "title": "Odkrywanie",
+            "description": "Poznajemy Twoją markę i cele"
+          },
+          "create": {
+            "title": "Tworzenie",
+            "description": "Projektujemy rozwiązania"
+          },
+          "launch": {
+            "title": "Wdrożenie",
+            "description": "Realizujemy i optymalizujemy"
+          }
+        }
+      },
+      "contact": {
+        "title": "Porozmawiajmy",
+        "description": "Masz pomysł na projekt? Chętnie go usłyszymy.",
+        "cta": "Napisz do Nas"
+      }
+    },
+
+    "real-estate": {
+      "name": "Nieruchomości Premium",
+      "brandName": "Skyline Estates",
+      "tagline": "Prestiżowe Nieruchomości",
+      "industry": "Nieruchomości",
+      "hero": {
+        "title": "Znajdź Dom Swoich Marzeń",
+        "subtitle": "Ekskluzywne apartamenty i rezydencje w najlepszych lokalizacjach. Luksus i komfort na najwyższym poziomie.",
+        "cta": "Przeglądaj Oferty",
+        "ctaSecondary": "Kontakt z Agentem"
+      },
+      "properties": {
+        "title": "Wyróżnione Nieruchomości",
+        "subtitle": "Starannie wyselekcjonowane oferty premium",
+        "bedrooms": "Sypialnie",
+        "bathrooms": "Łazienki",
+        "area": "Powierzchnia",
+        "price": "Cena",
+        "viewDetails": "Zobacz Szczegóły",
+        "featured": "Wyróżnione",
+        "new": "Nowość"
+      },
+      "search": {
+        "title": "Szukaj Nieruchomości",
+        "location": "Lokalizacja",
+        "type": "Typ",
+        "priceRange": "Zakres cenowy",
+        "bedrooms": "Sypialnie",
+        "search": "Szukaj",
+        "types": {
+          "apartment": "Apartament",
+          "house": "Dom",
+          "penthouse": "Penthouse",
+          "villa": "Willa"
+        }
+      },
+      "services": {
+        "title": "Nasze Usługi",
+        "buying": {
+          "title": "Kupno",
+          "description": "Profesjonalne doradztwo przy zakupie nieruchomości"
+        },
+        "selling": {
+          "title": "Sprzedaż",
+          "description": "Skuteczna sprzedaż Twojej nieruchomości"
+        },
+        "investment": {
+          "title": "Inwestycje",
+          "description": "Doradztwo inwestycyjne w nieruchomości"
+        }
+      },
+      "about": {
+        "title": "O Skyline Estates",
+        "description": "Od 15 lat pomagamy klientom znajdować wymarzone nieruchomości. Specjalizujemy się w segmencie premium i luksusowym.",
+        "experience": "15+ lat doświadczenia",
+        "properties": "500+ sprzedanych nieruchomości",
+        "clients": "1000+ zadowolonych klientów"
+      },
+      "agents": {
+        "title": "Nasi Eksperci",
+        "subtitle": "Doświadczeni profesjonaliści poświęceni znajdowaniu idealnej nieruchomości",
+        "sendMessage": "Wyślij Wiadomość",
+        "propertiesSold": "sprzedanych nieruchomości",
+        "sarah": {
+          "name": "Anna Kowalska",
+          "role": "Starszy Agent Nieruchomości"
+        },
+        "michael": {
+          "name": "Michał Wiśniewski",
+          "role": "Specjalista Luksusowych Nieruchomości"
+        },
+        "emma": {
+          "name": "Ewa Nowak",
+          "role": "Konsultant Inwestycyjny"
+        },
+        "james": {
+          "name": "Jakub Kowalczyk",
+          "role": "Nieruchomości Komercyjne"
+        }
+      },
+      "testimonials": {
+        "label": "Opinie Klientów",
+        "title": "Co Mówią Nasi Klienci",
+        "subtitle": "Zaufało nam setki zadowolonych właścicieli i inwestorów",
+        "reviews": {
+          "client1": {
+            "name": "Robert i Monika Nowakowscy",
+            "property": "Zakup Penthouse - Centrum",
+            "quote": "Skyline Estates spełniło nasze marzenie o luksusowym penthouse. Ich dbałość o szczegóły i znajomość rynku jest niezrównana."
+          },
+          "client2": {
+            "name": "Joanna Wiśniewska",
+            "property": "Sprzedaż Kamienicy - Stare Miasto",
+            "quote": "Zespół pomógł nam sprzedać nieruchomość powyżej ceny wywoławczej w zaledwie dwa tygodnie. Ich strategia marketingowa była wyjątkowa."
+          },
+          "client3": {
+            "name": "Dawid i Maria Kamińscy",
+            "property": "Portfel Inwestycyjny - Wiele Nieruchomości",
+            "quote": "Jako inwestorzy doceniamy ich głębokie zrozumienie trendów rynkowych. Pomogli nam zbudować rentowne portfolio nieruchomości."
+          },
+          "client4": {
+            "name": "Aleksandra Mazur",
+            "property": "Pierwszy Zakup - Nowoczesny Apartament",
+            "quote": "Nawet jako kupująca po raz pierwszy czułam się całkowicie wspierana przez cały proces. Uczynili go bezproblemowym i bez stresu."
+          }
+        }
+      },
+      "faq": {
+        "title": "Często Zadawane Pytania",
+        "subtitle": "Znajdź odpowiedzi na najczęstsze pytania dotyczące kupna, sprzedaży i inwestowania w nieruchomości",
+        "contactPrompt": "Masz więcej pytań? Nasz zespół jest tutaj, aby pomóc.",
+        "contactButton": "Skontaktuj się z Agentem",
+        "items": {
+          "faq1": {
+            "question": "Jak rozpocząć proces zakupu nieruchomości?",
+            "answer": "Zacznij od uzyskania wstępnej zgody na kredyt hipoteczny, aby poznać swój budżet. Następnie współpracuj z jednym z naszych agentów, aby zidentyfikować nieruchomości odpowiadające Twoim kryteriom. Poprowadzimy Cię przez oglądanie nieruchomości, negocjacje i finalizację."
+          },
+          "faq2": {
+            "question": "Jakie są typowe koszty zamknięcia transakcji?",
+            "answer": "Koszty zamknięcia zwykle wynoszą 2-5% ceny zakupu i obejmują opłaty za wycenę, ubezpieczenie tytułu własności, honoraria prawników i podatki. Przekazujemy szczegółowy kosztorys na wczesnym etapie procesu, aby nie było niespodzianek."
+          },
+          "faq3": {
+            "question": "Jak długo trwa sprzedaż nieruchomości?",
+            "answer": "Czas sprzedaży zależy od warunków rynkowych, wyceny i stanu nieruchomości. Średnio nasze oferty sprzedają się w ciągu 30-60 dni. Nieruchomości premium z konkurencyjnymi cenami często sprzedają się szybciej."
+          },
+          "faq4": {
+            "question": "Czy pomagacie w inwestycjach w nieruchomości?",
+            "answer": "Tak! Mamy dedykowanych konsultantów inwestycyjnych, którzy mogą pomóc zidentyfikować rentowne okazje, analizować trendy rynkowe i budować zdywersyfikowane portfolio nieruchomości dostosowane do Twoich celów."
+          },
+          "faq5": {
+            "question": "Co wyróżnia Skyline Estates?",
+            "answer": "Łączymy lokalną wiedzę z globalnym zasięgiem, spersonalizowaną obsługę z najnowocześniejszą technologią. Nasi agenci są specjalistami na swoich rynkach i mamy wyłączny dostęp do ofert niepublicznych."
+          },
+          "faq6": {
+            "question": "Czy pomagacie przy relokacji?",
+            "answer": "Oczywiście. Oferujemy kompleksowe usługi relokacyjne, w tym wycieczki po okolicy, informacje o szkołach, wgląd w społeczność i kontakty z lokalnymi usługami, aby Twoja przeprowadzka była bezproblemowa."
+          }
+        }
+      },
+      "contact": {
+        "title": "Skontaktuj Się",
+        "description": "Nasi agenci są gotowi pomóc",
+        "phone": "Telefon",
+        "email": "Email",
+        "office": "Biuro",
+        "cta": "Umów Spotkanie"
+      }
+    },
+
+    "music-store": {
+      "name": "Sklep z Płytami Winylowymi",
+      "brandName": "Analog Alley",
+      "tagline": "Odkryj Ciepło Winyla",
+      "industry": "Muzyka",
+      "hero": {
+        "title": "Brzmienie Autentyczności",
+        "subtitle": "Wyselekcjonowana kolekcja winyli dla prawdziwych miłośników muzyki. Od rzadkich wydań po nowości - doświadcz muzyki tak, jak powinna brzmieć.",
+        "cta": "Przeglądaj Kolekcję",
+        "ctaSecondary": "Teraz Gramy"
+      },
+      "featured": {
+        "title": "Wybór Personelu",
+        "subtitle": "Wyselekcjonowane przez nasz zespół entuzjastów winyli",
+        "nowPlaying": "Teraz Gramy",
+        "addToCart": "Dodaj do Koszyka",
+        "outOfStock": "Wyprzedane",
+        "items": {
+          "0": { "artist": "Pink Floyd", "album": "The Dark Side of the Moon", "price": "149,99 zł", "genre": "Rock Progresywny" },
+          "1": { "artist": "Miles Davis", "album": "Kind of Blue", "price": "129,99 zł", "genre": "Jazz" },
+          "2": { "artist": "Fleetwood Mac", "album": "Rumours", "price": "139,99 zł", "genre": "Rock" },
+          "3": { "artist": "Daft Punk", "album": "Random Access Memories", "price": "189,99 zł", "genre": "Elektronika" }
+        }
+      },
+      "releases": {
+        "title": "Nowości",
+        "subtitle": "Świeże winyle właśnie trafiły na półki",
+        "viewAll": "Zobacz Wszystkie Nowości"
+      },
+      "genres": {
+        "title": "Przeglądaj Gatunki",
+        "subtitle": "Znajdź swoje brzmienie",
+        "albums": "albumów",
+        "rock": "Rock",
+        "jazz": "Jazz",
+        "electronic": "Elektronika",
+        "classical": "Klasyczna",
+        "hiphop": "Hip-Hop",
+        "soul": "Soul & R&B"
+      }
+    },
+
+    "crypto-platform": {
+      "name": "Platforma Web3",
+      "brandName": "NexChain",
+      "tagline": "Przyszłość Finansów",
+      "industry": "Kryptowaluty",
+      "hero": {
+        "badge": "Platforma Tradingowa Nowej Generacji",
+        "titlePart1": "Handluj Mądrzej.",
+        "titleHighlight": "Rozwijaj Szybciej.",
+        "subtitle": "Platforma kryptowalut nowej generacji z zaawansowanymi narzędziami tradingowymi, analizą w czasie rzeczywistym i bezpieczeństwem na poziomie instytucjonalnym.",
+        "cta": "Zacznij Handlować",
+        "ctaSecondary": "Zobacz Rynki",
+        "stats": {
+          "volume": "Wolumen 24h",
+          "users": "Aktywni Użytkownicy",
+          "fees": "Opłaty Tradingowe"
+        }
+      },
+      "ticker": {
+        "title": "Rynek Na Żywo",
+        "change24h": "Zmiana 24h",
+        "volume": "Wolumen",
+        "marketCap": "Kapitalizacja"
+      },
+      "features": {
+        "title": "Dlaczego NexChain",
+        "subtitle": "Stworzone dla traderów, którzy wymagają więcej",
+        "items": {
+          "0": { "title": "Bezpieczeństwo Bankowe", "description": "Portfele multi-signature, cold storage i monitoring 24/7" },
+          "1": { "title": "Błyskawiczna Szybkość", "description": "Wykonuj transakcje w milisekundach dzięki naszemu silnikowi" },
+          "2": { "title": "Globalny Dostęp", "description": "Handluj z dowolnego miejsca z obsługą 150+ krajów" },
+          "3": { "title": "Bezpieczne Przechowywanie", "description": "Twoje aktywa chronione wojskowym szyfrowaniem" },
+          "4": { "title": "Niskie Opłaty", "description": "Wiodące w branży stawki od 0,1% za transakcję" },
+          "5": { "title": "Zaawansowana Analityka", "description": "Wykresy w czasie rzeczywistym i wgląd w rynek na wyciągnięcie ręki" }
+        }
+      },
+      "roadmap": {
+        "title": "Mapa Rozwoju",
+        "subtitle": "Nasza droga do rewolucji w finansach",
+        "phases": {
+          "0": { "quarter": "Q1 2024", "title": "Fundament", "description": "Uruchomienie Platformy, Beta Aplikacji Mobilnej, 100+ Par Handlowych" },
+          "1": { "quarter": "Q2 2024", "title": "Ekspansja", "description": "Start Stakingu, Marketplace NFT, API v2.0" },
+          "2": { "quarter": "Q3 2024", "title": "Integracja", "description": "Integracja DeFi, Narzędzia Instytucjonalne, Ekspansja Globalna" },
+          "3": { "quarter": "Q4 2024", "title": "Decentralizacja", "description": "Token NexChain, Governance DAO, Most Cross-chain" }
+        }
+      },
+      "stats": {
+        "users": "Aktywni Użytkownicy",
+        "volume": "Wolumen Handlu",
+        "countries": "Kraje",
+        "uptime": "Dostępność"
+      }
+    },
+
+    "law-firm": {
+      "name": "Kancelaria Prawna",
+      "brandName": "Sterling & Associates",
+      "tagline": "Doskonałość w Doradztwie Prawnym",
+      "industry": "Usługi Prawne",
+      "hero": {
+        "badge": "Ponad 25 lat doświadczenia",
+        "title": "Sprawiedliwość. Uczciwość. Rezultaty.",
+        "subtitle": "Ponad 30 lat doskonałości prawnej. Nasz zespół doświadczonych prawników jest zaangażowany w osiąganie najlepszych wyników dla klientów.",
+        "cta": "Bezpłatna Konsultacja",
+        "ctaSecondary": "Obszary Praktyki",
+        "stats": {
+          "years": "Lat Doświadczenia",
+          "cases": "Wygranych Spraw",
+          "success": "Skuteczność"
+        },
+        "consultation": "Bezpłatna Konsultacja",
+        "consultationSub": "Umów się na spotkanie z naszym prawnikiem"
+      },
+      "areas": {
+        "title": "Obszary Praktyki",
+        "subtitle": "Kompleksowe usługi prawne dla osób prywatnych i firm",
+        "learnMore": "Dowiedz się więcej",
+        "items": {
+          "0": { "title": "Prawo Korporacyjne", "description": "Fuzje, przejęcia i zakładanie firm" },
+          "1": { "title": "Spory Sądowe", "description": "Rozstrzyganie sporów cywilnych i handlowych" },
+          "2": { "title": "Nieruchomości", "description": "Transakcje i inwestycje w nieruchomości" },
+          "3": { "title": "Prawo Rodzinne", "description": "Rozwody, opieka nad dziećmi i planowanie majątku" },
+          "4": { "title": "Prawo Pracy", "description": "Prawa pracowników i obrona pracodawców" },
+          "5": { "title": "Własność Intelektualna", "description": "Patenty, znaki towarowe i prawa autorskie" }
+        }
+      },
+      "caseStudies": {
+        "title": "Ważne Sprawy",
+        "subtitle": "Historia sukcesów",
+        "viewDetails": "Zobacz Szczegóły",
+        "outcome": "Wynik",
+        "recovered": "Odzyskano dla klientów",
+        "cases": {
+          "0": {
+            "title": "Fuzja Tech Corp",
+            "category": "Prawo Korporacyjne",
+            "result": "Pomyślnie zamknięta akwizycja za 2,5 mld $",
+            "description": "Reprezentowaliśmy firmę przejmującą w złożonej fuzji transgranicznej.",
+            "outcomes": { "0": "Zamknięcie transakcji w 6 miesięcy", "1": "Oszczędności podatkowe 50 mln $", "2": "Pełna integracja zespołów" },
+            "quote": "Sterling & Associates przeprowadzili nas przez najbardziej skomplikowaną transakcję w historii naszej firmy.",
+            "client": "CEO, Tech Corp"
+          },
+          "1": {
+            "title": "Przełomowe Zwycięstwo IP",
+            "category": "Własność Intelektualna",
+            "result": "Utrzymanie praw patentowych, 50 mln $ odszkodowania",
+            "description": "Broniliśmy klienta przed roszczeniami o naruszenie patentu.",
+            "outcomes": { "0": "Pełne utrzymanie patentu", "1": "50 mln $ odszkodowania", "2": "Precedens prawny" },
+            "quote": "Ich strategia i przygotowanie były kluczem do naszego zwycięstwa.",
+            "client": "CTO, Innovation Labs"
+          },
+          "2": {
+            "title": "Obrona Pozwu Zbiorowego",
+            "category": "Spory Sądowe",
+            "result": "Sprawa oddalona definitywnie",
+            "description": "Skutecznie broniliśmy firmę z Fortune 500 w pozwie zbiorowym.",
+            "outcomes": { "0": "Sprawa oddalona", "1": "Zero odszkodowań", "2": "Ochrona reputacji" },
+            "quote": "Profesjonalizm i determinacja zespołu uratowały naszą firmę.",
+            "client": "General Counsel, Fortune 500"
+          }
+        }
+      },
+      "team": {
+        "title": "Nasi Prawnicy",
+        "subtitle": "Wybitni profesjonaliści prawa",
+        "viewProfile": "Zobacz Profil",
+        "members": {
+          "0": { "name": "Robert Sterling", "role": "Partner Zarządzający", "specialty": "Prawo Korporacyjne", "education": "Harvard Law School" },
+          "1": { "name": "Elizabeth Warren", "role": "Starszy Partner", "specialty": "Spory Sądowe", "education": "Yale Law School" },
+          "2": { "name": "James Mitchell", "role": "Partner", "specialty": "Nieruchomości", "education": "Stanford Law School" },
+          "3": { "name": "Sarah Chen", "role": "Współpracownik", "specialty": "Własność Intelektualna", "education": "Columbia Law School" }
+        }
+      },
+      "contact": {
+        "title": "Umów Konsultację",
+        "subtitle": "Pomożemy Ci w wyzwaniach prawnych",
+        "form": {
+          "name": "Imię i Nazwisko",
+          "email": "Email",
+          "phone": "Telefon",
+          "caseType": "Typ Sprawy",
+          "message": "Krótki Opis",
+          "submit": "Poproś o Konsultację"
+        }
+      }
+    },
+
+    "podcast-studio": {
+      "name": "Studio Podcastowe",
+      "brandName": "SoundWave",
+      "tagline": "Historie, Które Rezonują",
+      "industry": "Media i Rozrywka",
+      "hero": {
+        "badge": "Nagradzane Podcasty",
+        "title": "Słuchaj Tego, Co Ważne",
+        "subtitle": "Nagradzane podcasty, które informują, inspirują i bawią. Dołącz do milionów słuchaczy odkrywających swój ulubiony program.",
+        "cta": "Zacznij Słuchać",
+        "ctaSecondary": "Przeglądaj Programy",
+        "availableOn": "Dostępne na wszystkich głównych platformach"
+      },
+      "episodes": {
+        "title": "Najnowsze Odcinki",
+        "subtitle": "Świeża treść co tydzień",
+        "playNow": "Odtwórz",
+        "duration": "Czas trwania",
+        "transcript": "Zobacz Transkrypcję",
+        "viewAll": "Zobacz Wszystkie Odcinki",
+        "items": {
+          "0": {
+            "title": "Przyszłość AI",
+            "show": "Tech Tomorrow",
+            "duration": "45:32",
+            "date": "18 Gru 2024",
+            "description": "Odkrywamy jak sztuczna inteligencja zmienia przemysł i co to oznacza dla przyszłości pracy.",
+            "transcript": { "0": "Witamy w Tech Tomorrow. Dziś zagłębiamy się w temat AI...", "1": "Porozmawiajmy o praktycznych zastosowaniach, które widzimy...", "2": "Patrząc w przyszłość, implikacje są ogromne..." }
+          },
+          "1": {
+            "title": "Budowanie Odporności",
+            "show": "Mind Matters",
+            "duration": "38:15",
+            "date": "16 Gru 2024",
+            "description": "Strategie rozwijania odporności psychicznej i radzenia sobie z wyzwaniami życiowymi.",
+            "transcript": { "0": "Odporność psychiczna to coś, co wszyscy możemy rozwinąć...", "1": "Kluczem jest zrozumienie naszych wzorców myślowych...", "2": "Ćwicz te techniki codziennie dla najlepszych rezultatów..." }
+          },
+          "2": {
+            "title": "Historie Startupów: Od Zera do IPO",
+            "show": "Founder Files",
+            "duration": "52:48",
+            "date": "14 Gru 2024",
+            "description": "Posłuchaj niesamowitej podróży założycieli, którzy zbudowali firmy warte miliardy od zera.",
+            "transcript": { "0": "Każdy startup zaczyna się od pomysłu...", "1": "Rundy finansowania były trudne, ale konieczne...", "2": "Wejście na giełdę było ekscytujące i przerażające zarazem..." }
+          },
+          "3": {
+            "title": "True Crime: Zaginiona Dziedziczka",
+            "show": "Cold Case Files",
+            "duration": "61:22",
+            "date": "12 Gru 2024",
+            "description": "Badamy tajemnicze zaginięcie zamożnej osoby towarzyskiej w 1985 roku.",
+            "transcript": { "0": "Noc 15 listopada 1985 zmieniła wszystko...", "1": "Śledczy znaleźli kilka kluczowych wskazówek...", "2": "Sprawa pozostaje nierozwiązana do dziś..." }
+          }
+        }
+      },
+      "hosts": {
+        "title": "Poznaj Naszych Prowadzących",
+        "subtitle": "Głosy za Twoimi ulubionymi programami",
+        "episodes": "Odcinków",
+        "followers": "Obserwujących",
+        "members": {
+          "0": { "name": "Alex Rivers", "role": "Prowadzący Tech Tomorrow", "bio": "Były dyrektor z Doliny Krzemowej, obecnie dziennikarz technologiczny" },
+          "1": { "name": "Dr. Maya Thompson", "role": "Prowadząca Mind Matters", "bio": "Psycholog kliniczny i autorka bestsellerów" },
+          "2": { "name": "Jordan Blake", "role": "Prowadzący Founder Files", "bio": "Seryjny przedsiębiorca i inwestor" },
+          "3": { "name": "Sarah Mitchell", "role": "Prowadząca Cold Case Files", "bio": "Dziennikarka śledcza i ekspertka true crime" }
+        }
+      },
+      "subscribe": {
+        "title": "Nie Przegap Żadnego Odcinka",
+        "subtitle": "Subskrybuj na ulubionej platformie",
+        "newsletter": "Lub dołącz do naszego newslettera",
+        "emailPlaceholder": "Twój adres email",
+        "button": "Subskrybuj"
+      }
+    },
+
+    "wedding-planner": {
+      "name": "Wedding Planner",
+      "brandName": "Forever & Always",
+      "tagline": "Tworzymy Niezapomniane Chwile",
+      "industry": "Organizacja Eventów",
+      "countdown": {
+        "days": "Dni",
+        "hours": "Godzin",
+        "minutes": "Minut",
+        "seconds": "Sekund"
+      },
+      "hero": {
+        "coupleNames": "Anna i Michał",
+        "title": "Twój Wymarzony Ślub Czeka",
+        "date": "15 Czerwca 2025",
+        "venue": "Villa Toscana, Włochy",
+        "subtitle": "Od kameralnych ceremonii po wielkie celebracje - ożywiamy Twoją wizję z elegancją i dbałością o każdy szczegół.",
+        "cta": "Zaplanuj Swój Dzień",
+        "ctaSecondary": "Zobacz Galerię"
+      },
+      "gallery": {
+        "title": "Nasze Śluby",
+        "subtitle": "Chwile miłości uchwycone na zawsze",
+        "viewMore": "Zobacz Pełną Galerię",
+        "categories": {
+          "all": "Wszystkie",
+          "ceremony": "Ceremonie",
+          "reception": "Wesela",
+          "details": "Detale"
+        }
+      },
+      "services": {
+        "title": "Nasze Usługi",
+        "subtitle": "Kompleksowe planowanie ślubu",
+        "fullPlanning": { "title": "Pełne Planowanie", "description": "Kompletna koordynacja od zaręczyn do miesiąca miodowego" },
+        "partialPlanning": { "title": "Częściowe Planowanie", "description": "Wsparcie w wybranych aspektach celebracji" },
+        "dayOf": { "title": "Koordynacja w Dniu Ślubu", "description": "Bezproblemowa realizacja w Twoim wyjątkowym dniu" },
+        "destination": { "title": "Śluby za Granicą", "description": "Wymarzone celebracje w zapierających dech lokalizacjach" }
+      },
+      "timeline": {
+        "title": "Nasze Historie Miłosne",
+        "subtitle": "Prawdziwe pary, prawdziwe chwile",
+        "events": {
+          "0": { "title": "Pierwsze Spotkanie", "description": "Poznaliśmy się na imprezie znajomych i poczuliśmy natychmiastową więź" },
+          "1": { "title": "Pierwsza Randka", "description": "Magiczny wieczór, który stał się początkiem wieczności" },
+          "2": { "title": "Zaręczyny", "description": "On zapytał, ona powiedziała tak, i nasza podróż się rozpoczęła" },
+          "3": { "title": "Ślub", "description": "Dzień, w którym stajemy się jednym, otoczeni tymi, których kochamy" }
+        }
+      },
+      "packages": {
+        "title": "Pakiety",
+        "subtitle": "Dopasowane do Twoich potrzeb i budżetu",
+        "starting": "Od",
+        "inquire": "Zapytaj",
+        "essential": { "name": "Essential", "price": "20 000 zł", "features": ["Koordynacja w dniu ślubu", "Rekomendacje dostawców", "Stworzenie harmonogramu", "Zarządzanie próbą"] },
+        "premium": { "name": "Premium", "price": "50 000 zł", "features": ["Pełne usługi planowania", "Zarządzanie budżetem", "Negocjacje z dostawcami", "Design i dekoracje", "Zarządzanie gośćmi"] },
+        "luxury": { "name": "Luxury", "price": "100 000 zł", "features": ["Wszystko z Premium", "Planowanie destynacji", "Dostęp do luksusowych dostawców", "Usługi concierge", "Koordynacja wielodniowa"] }
+      }
+    },
+
+    "vet-clinic": {
+      "name": "Klinika Weterynaryjna",
+      "brandName": "Happy Paws",
+      "tagline": "Pełna Troski Opieka dla Twoich Pupili",
+      "industry": "Zdrowie Zwierząt",
+      "hero": {
+        "badge": "Zaufana Opieka od 2005",
+        "title": "Gdzie Zwierzęta Są",
+        "titleHighlight": "Rodziną",
+        "subtitle": "Najnowocześniejsza opieka weterynaryjna z delikatnym podejściem. Nasz doświadczony zespół traktuje każde zwierzę jak własne.",
+        "cta": "Umów Wizytę",
+        "ctaSecondary": "Nasze Usługi",
+        "features": {
+          "0": "Pogotowie 24/7",
+          "1": "Certyfikowani Specjaliści",
+          "2": "Nowoczesny Sprzęt"
+        },
+        "stats": {
+          "pets": "Szczęśliwych Pupili",
+          "rating": "Ocena"
+        }
+      },
+      "emergency": {
+        "title": "Pogotowie 24/7",
+        "description": "Zawsze tu jesteśmy, gdy Twój pupil nas potrzebuje",
+        "button": "Pogotowie Weterynaryjne",
+        "callNow": "Zadzwoń na Pogotowie",
+        "phone": "+48 555 911 000",
+        "available": "Dostępni całą dobę",
+        "warningTitle": "Objawy Alarmowe",
+        "warnings": {
+          "0": "Trudności z oddychaniem",
+          "1": "Silne krwawienie",
+          "2": "Niemożność chodzenia",
+          "3": "Utrata przytomności",
+          "4": "Drgawki"
+        }
+      },
+      "services": {
+        "title": "Nasze Usługi",
+        "subtitle": "Kompleksowa opieka dla wszystkich potrzeb Twojego pupila",
+        "tabs": {
+          "dogs": "Psy",
+          "cats": "Koty",
+          "exotic": "Egzotyczne"
+        },
+        "items": {
+          "0": { "title": "Badania Profilaktyczne", "description": "Regularne kontrole dla zdrowia Twojego pupila", "price": "Od 150 zł" },
+          "1": { "title": "Szczepienia", "description": "Podstawowe i dodatkowe szczepionki ochronne", "price": "Od 80 zł" },
+          "2": { "title": "Chirurgia", "description": "Od rutynowych zabiegów po złożone operacje", "price": "Skontaktuj się" },
+          "3": { "title": "Stomatologia", "description": "Profesjonalne czyszczenie i zdrowie jamy ustnej", "price": "Od 300 zł" },
+          "4": { "title": "Pielęgnacja", "description": "Kąpiele, strzyżenie i obcinanie pazurów", "price": "Od 70 zł" },
+          "5": { "title": "Hotel", "description": "Bezpieczne, komfortowe noclegi", "price": "Od 100 zł/noc" }
+        }
+      },
+      "team": {
+        "title": "Poznaj Nasz Zespół",
+        "subtitle": "Oddani profesjonaliści, którzy kochają zwierzęta",
+        "members": {
+          "0": { "name": "Dr Sarah Williams", "role": "Główny Weterynarz", "specialty": "Małe Zwierzęta", "experience": "15 lat" },
+          "1": { "name": "Dr Michael Chen", "role": "Chirurg", "specialty": "Chirurgia Ortopedyczna", "experience": "12 lat" },
+          "2": { "name": "Dr Emily Rodriguez", "role": "Weterynarz", "specialty": "Zwierzęta Egzotyczne", "experience": "8 lat" },
+          "3": { "name": "Jessica Thompson", "role": "Technik Weterynarii", "specialty": "Nagłe Przypadki", "experience": "10 lat" }
+        }
+      },
+      "testimonials": {
+        "title": "Szczęśliwi Właściciele",
+        "subtitle": "Co mówią nasi klienci",
+        "reviews": {
+          "0": { "name": "Joanna M.", "pet": "Max (Golden Retriever)", "quote": "Dr Williams uratowała życie Maxa podczas nagłego przypadku. Na zawsze wdzięczna!" },
+          "1": { "name": "Dawid K.", "pet": "Luna (Kot Perski)", "quote": "Cały personel traktuje Lunę jak królową. Nie poszłabym nigdzie indziej." },
+          "2": { "name": "Maria S.", "pet": "Coco (Papuga)", "quote": "W końcu znalazłam weterynarza, który rozumie egzotyczne ptaki. Niesamowita opieka!" }
+        }
+      }
+    },
+
+    "coworking-space": {
+      "name": "Przestrzeń Coworkingowa",
+      "brandName": "The Hub",
+      "tagline": "Gdzie Praca Spotyka Społeczność",
+      "industry": "Nieruchomości",
+      "hero": {
+        "badge": "Premium Workspace",
+        "title": "Twoje Biuro Na Nowo",
+        "subtitle": "Elastyczne przestrzenie do pracy zaprojektowane dla produktywności, współpracy i rozwoju. Dołącz do społeczności innowatorów i twórców.",
+        "cta": "Umów Zwiedzanie",
+        "ctaSecondary": "Zobacz Przestrzenie",
+        "features": {
+          "0": "Szybkie WiFi",
+          "1": "Darmowa Kawa",
+          "2": "Dostęp 24/7"
+        },
+        "available": "Dostępne Miejsca",
+        "availableDesc": "Zarezerwuj swoje miejsce już dziś"
+      },
+      "floorplan": {
+        "title": "Odkryj Naszą Przestrzeń",
+        "subtitle": "Interaktywny plan - kliknij, aby zbadać różne obszary",
+        "clickToSelect": "Kliknij na obszar, aby zobaczyć szczegóły",
+        "areas": {
+          "hotdesk": "Hot Deski",
+          "private": "Prywatne Biura",
+          "meeting": "Sale Konferencyjne",
+          "lounge": "Strefa Relaksu"
+        },
+        "spaces": {
+          "hotdesk": { "title": "Hot Deski", "description": "Elastyczne miejsca za 100 zł/dzień - 12 dostępnych" },
+          "private": { "title": "Prywatne Biura", "description": "Zamykane biura od 5000 zł/mies. - 3 dostępne" },
+          "meeting": { "title": "Sale Konferencyjne", "description": "Rezerwacja godzinowa za 200 zł/godz. - 6 sal" },
+          "lounge": { "title": "Strefa Relaksu", "description": "Odpoczynek i networking z kawiarnią i przekąskami" }
+        }
+      },
+      "amenities": {
+        "title": "Udogodnienia",
+        "subtitle": "Wszystko czego potrzebujesz do najlepszej pracy",
+        "wifi": "Szybkie WiFi",
+        "coffee": "Nielimitowana Kawa",
+        "printing": "Usługi Druku",
+        "mail": "Obsługa Poczty",
+        "parking": "Parking",
+        "bike": "Przechowalnia Rowerów",
+        "shower": "Prysznice",
+        "events": "Wydarzenia Społeczności"
+      },
+      "pricing": {
+        "title": "Plany Członkostwa",
+        "subtitle": "Elastyczne opcje dla każdego stylu pracy",
+        "perMonth": "mies.",
+        "perDay": "/dzień",
+        "choosePlan": "Wybierz Plan",
+        "popular": "Najpopularniejszy",
+        "cta": "Rozpocznij",
+        "plans": {
+          "0": { "name": "Karnet Dzienny", "description": "Idealny na okazjonalne wizyty", "price": "150 zł", "features": { "0": "Dostęp do hot desków", "1": "WiFi i udogodnienia", "2": "Kawa i herbata", "3": "Ważny jeden dzień" } },
+          "1": { "name": "Flex Desk", "description": "Idealny dla pracujących na pół etatu", "price": "1199 zł", "features": { "0": "10 dni/miesiąc", "1": "Dowolne wolne biurko", "2": "Kredyty na sale", "3": "Wydarzenia społeczności" } },
+          "2": { "name": "Dedykowane Biurko", "description": "Twoja osobista przestrzeń", "price": "1999 zł", "features": { "0": "Twoje własne biurko 24/7", "1": "Szafka", "2": "Obsługa poczty", "3": "Nielimitowane sale" } },
+          "3": { "name": "Prywatne Biuro", "description": "Dla zespołów potrzebujących prywatności", "price": "5000 zł", "features": { "0": "Zamykane biuro", "1": "Dostęp 24/7", "2": "Własny branding", "3": "Priorytetowe wsparcie" } }
+        }
+      },
+      "community": {
+        "title": "Dołącz do Naszej Społeczności",
+        "subtitle": "Połącz się z przedsiębiorcami, freelancerami i zespołami",
+        "stats": {
+          "members": "Aktywni Członkowie",
+          "companies": "Firmy",
+          "events": "Wydarzeń Miesięcznie",
+          "countries": "Reprezentowanych Krajów"
+        }
+      }
+    },
+
+    "photo-portfolio": {
+      "name": "Portfolio Fotograficzne",
+      "brandName": "Lens & Light",
+      "tagline": "Uchwycić Najpiękniejsze Chwile Życia",
+      "industry": "Fotografia",
+      "hero": {
+        "name": "Marcin Chen",
+        "tagline": "Wizualne Opowieści Poprzez Światło",
+        "title": "Wizualne Opowieści",
+        "subtitle": "Nagradzany fotograf specjalizujący się w portretach, ślubach i fotografii komercyjnej. Każda klatka opowiada historię.",
+        "cta": "Zobacz Portfolio",
+        "ctaSecondary": "Umów Sesję",
+        "instagram": "@lensandlight",
+        "email": "kontakt@lensandlight.pl"
+      },
+      "beforeAfter": {
+        "title": "Sztuka Retuszu",
+        "subtitle": "Zobacz transformację od surowego ujęcia do końcowego arcydzieła",
+        "before": "Przed",
+        "after": "Po",
+        "drag": "Przeciągnij, aby porównać"
+      },
+      "gallery": {
+        "title": "Wyróżnione Prace"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "subtitle": "Wybrane prace z ostatnich projektów",
+        "categories": {
+          "all": "Wszystkie Prace",
+          "portraits": "Portrety",
+          "weddings": "Śluby",
+          "commercial": "Komercyjne",
+          "nature": "Natura"
+        },
+        "viewProject": "Zobacz Projekt"
+      },
+      "services": {
+        "title": "Usługi",
+        "subtitle": "Profesjonalna fotografia na każdą okazję",
+        "portrait": { "title": "Sesje Portretowe", "price": "Od 1500 zł", "description": "Portrety indywidualne i rodzinne w studio lub plenerze" },
+        "wedding": { "title": "Fotografia Ślubna", "price": "Od 8000 zł", "description": "Całodzienna obecność z obrobioną galerią cyfrową" },
+        "commercial": { "title": "Komercyjna", "price": "Wycena Indywidualna", "description": "Fotografia produktowa, korporacyjna i brandowa" },
+        "events": { "title": "Eventy", "price": "Od 2000 zł", "description": "Imprezy firmowe, przyjęcia i celebracje" }
+      },
+      "about": {
+        "title": "O Artyście",
+        "description": "Z ponad 15-letnim doświadczeniem za obiektywem, miałem przywilej uchwycić tysiące chwil, które mają znaczenie. Moje podejście łączy precyzję techniczną z artystyczną wizją, tworząc obrazy, które rezonują.",
+        "awards": "Międzynarodowe Nagrody Fotograficzne",
+        "experience": "Lat Doświadczenia",
+        "clients": "Zadowolonych Klientów"
+      },
+      "booking": {
+        "title": "Umów Sesję",
+        "subtitle": "Stwórzmy razem coś pięknego",
+        "form": {
+          "name": "Twoje Imię",
+          "email": "Adres Email",
+          "phone": "Numer Telefonu",
+          "service": "Typ Usługi",
+          "date": "Preferowana Data",
+          "message": "Opowiedz o swojej wizji",
+          "submit": "Poproś o Wycenę"
+        }
+      }
+    },
+
+    "esports-team": {
+      "name": "Drużyna Esportowa",
+      "brandName": "PHANTOM ESPORTS",
+      "tagline": "Wznieś Się. Dominuj.",
+      "industry": "Gaming i Esport",
+      "hero": {
+        "name": "PHANTOM",
+        "tagline": "Wznieś Się. Dominuj.",
+        "title": "LEGENDY RODZĄ SIĘ TUTAJ",
+        "subtitle": "Profesjonalna organizacja esportowa rywalizująca na najwyższym poziomie. Wielokrotni mistrzowie świata w głównych tytułach.",
+        "cta": "Poznaj Drużynę",
+        "ctaSecondary": "Oglądaj Na Żywo",
+        "stats": {
+          "wins": "Wygrane Turnieje",
+          "championships": "Mistrzostwa Świata",
+          "followers": "Obserwujących"
+        }
+      },
+      "roster": {
+        "title": "Aktywny Skład",
+        "subtitle": "Najlepsi gracze w grze",
+        "role": "Rola",
+        "country": "Kraj",
+        "earnings": "Zarobki Kariery",
+        "achievements": "Osiągnięcia",
+        "players": {
+          "0": { "name": "ShadowStrike", "realName": "Alex Chen", "role": "Kapitan Drużyny", "game": "Valorant", "country": "USA" },
+          "1": { "name": "NightHawk", "realName": "Kim Min-jun", "role": "Entry Fragger", "game": "Valorant", "country": "Korea Płd." },
+          "2": { "name": "PhantomX", "realName": "Lucas Silva", "role": "Support", "game": "Valorant", "country": "Brazylia" },
+          "3": { "name": "BladeRunner", "realName": "Emma Williams", "role": "Sentinel", "game": "Valorant", "country": "UK" },
+          "4": { "name": "VoidWalker", "realName": "Yuki Tanaka", "role": "Controller", "game": "Valorant", "country": "Japonia" }
+        }
+      },
+      "schedule": {
+        "title": "Nadchodzące Mecze",
+        "subtitle": "Oglądaj nas na żywo",
+        "live": "NA ŻYWO",
+        "upcoming": "WKRÓTCE",
+        "watchStream": "Oglądaj Stream",
+        "setReminder": "Ustaw Przypomnienie",
+        "matches": {
+          "0": { "opponent": "Team Liquid", "tournament": "VCT Masters", "date": "22 Gru", "time": "21:00 CET" },
+          "1": { "opponent": "Cloud9", "tournament": "VCT Masters", "date": "24 Gru", "time": "23:00 CET" },
+          "2": { "opponent": "Fnatic", "tournament": "VCT Masters Finals", "date": "28 Gru", "time": "20:00 CET" }
+        }
+      },
+      "achievements": {
+        "title": "Gablota Trofeów",
+        "subtitle": "Nasza droga do chwały",
+        "championships": "Mistrzostwa Świata",
+        "prizeMoney": "Łączna Pula Nagród",
+        "tournaments": "Wygrane Turnieje",
+        "topPlacements": "Top 3 Miejsc"
+      },
+      "partners": {
+        "title": "Nasi Partnerzy",
+        "subtitle": "Wspierani przez liderów branży",
+        "becomePartner": "Zostań Partnerem"
+      },
+      "store": {
+        "title": "Oficjalny Merch",
+        "subtitle": "Reprezentuj Phantom",
+        "shopNow": "Kup Teraz",
+        "viewAll": "Zobacz Wszystkie Produkty"
+      }
+    },
+
+    "eco-brand": {
+      "name": "Ekologiczna Marka",
+      "brandName": "Terra Collective",
+      "tagline": "Zrównoważone Życie, Piękny Design",
+      "industry": "Produkty Ekologiczne",
+      "hero": {
+        "badge": "Certyfikowany B Corp",
+        "title": "Dobre dla Ciebie. Lepsze dla",
+        "titleHighlight": "Ziemi.",
+        "subtitle": "Przemyślane produkty, które nie idą na kompromis ze stylem ani zrównoważonym rozwojem. Dołącz do ruchu na rzecz zielonej przyszłości.",
+        "cta": "Kup Teraz",
+        "ctaSecondary": "Nasza Misja",
+        "productName": "Bestseller: Zestaw Bambusowy",
+        "productDesc": "Nasz firmowy zestaw łazienkowy zero-waste",
+        "features": {
+          "0": "100% Organiczne Materiały",
+          "1": "Neutralna Węglowo Wysyłka",
+          "2": "Opakowania Zero Waste"
+        }
+      },
+      "impact": {
+        "title": "Nasz Wpływ",
+        "subtitle": "Każdy zakup ma znaczenie",
+        "metrics": {
+          "0": "Posadzonych Drzew",
+          "1": "Litrów Zaoszczędzonej Wody",
+          "2": "Redukcja Śladu Węglowego",
+          "3": "Materiały do Recyklingu"
+        },
+        "carbonTitle": "Ślad Węglowy vs Średnia Branżowa",
+        "carbonReduction": "osiągnięta redukcja",
+        "carbonIndustry": "Średnia Branżowa",
+        "carbonUs": "Terra Collective"
+      },
+      "products": {
+        "title": "Nasze Produkty",
+        "subtitle": "Ekologiczne niezbędniki na co dzień",
+        "viewAll": "Zobacz Wszystkie Produkty",
+        "items": {
+          "0": { "name": "Zestaw Bambusowy", "description": "Komplet do łazienki", "price": "189,00 zł" },
+          "1": { "name": "Torba z Bawełny Organicznej", "description": "Wielorazowa torba na zakupy", "price": "119,00 zł" },
+          "2": { "name": "Zestaw Wosku Pszczelego", "description": "Przechowywanie bez plastiku", "price": "99,00 zł" },
+          "3": { "name": "Naturalne Środki Czystości", "description": "Ekologiczna pielęgnacja domu", "price": "219,00 zł" }
+        }
+      },
+      "timeline": {
+        "title": "Nasza Podróż",
+        "subtitle": "Budowanie zrównoważonej przyszłości, krok po kroku",
+        "milestones": {
+          "0": { "title": "Założeni z Celem", "description": "Rozpoczęliśmy z misją redukcji odpadów plastikowych" },
+          "1": { "title": "Osiągnięte Zero Waste", "description": "Pierwsza w pełni certyfikowana marka zero-waste w naszej kategorii" },
+          "2": { "title": "Certyfikat B Corp", "description": "Uznani za spełnianie najwyższych standardów społecznych i środowiskowych" },
+          "3": { "title": "Globalny Wpływ", "description": "Ekspansja do 50+ krajów z zachowaniem naszych wartości" }
+        }
+      },
+      "values": {
+        "title": "Nasze Wartości",
+        "transparency": { "title": "Radykalna Transparentność", "description": "Dzielimy się każdym szczegółem łańcucha dostaw" },
+        "quality": { "title": "Bezkompromisowa Jakość", "description": "Zrównoważony rozwój nie oznacza godzenia się na mniej" },
+        "community": { "title": "Społeczność Przede Wszystkim", "description": "Wspieranie lokalnych rzemieślników i uczciwe płace" }
+      }
+    }
+  },
+  "cookies": {
+    "banner": {
+      "title": "Ta strona używa plików cookies",
+      "description": "Używamy plików cookies, aby zapewnić najlepszą jakość usług, analizować ruch na stronie i personalizować treści.",
+      "learnMore": "Dowiedz się więcej",
+      "acceptAll": "Akceptuj wszystkie",
+      "rejectAll": "Odrzuć wszystkie",
+      "settings": "Ustawienia"
+    },
+    "settings": {
+      "title": "Ustawienia cookies",
+      "description": "Wybierz, które kategorie plików cookies chcesz zaakceptować. Możesz zmienić te ustawienia w dowolnym momencie.",
+      "required": "Wymagane",
+      "save": "Zapisz preferencje"
+    },
+    "categories": {
+      "necessary": {
+        "title": "Niezbędne",
+        "description": "Te pliki cookies są niezbędne do prawidłowego działania strony. Nie można ich wyłączyć."
+      },
+      "analytics": {
+        "title": "Analityczne",
+        "description": "Pomagają nam zrozumieć, jak odwiedzający korzystają ze strony, co pozwala ją ulepszać."
+      },
+      "marketing": {
+        "title": "Marketingowe",
+        "description": "Używane do wyświetlania spersonalizowanych reklam i śledzenia ich skuteczności."
+      },
+      "preferences": {
+        "title": "Preferencje",
+        "description": "Pozwalają zapamiętać Twoje ustawienia, takie jak język czy motyw strony."
+      }
+    }
+  },
+  "legal": {
+    "title": "Informacje prawne",
+    "privacyPolicy": "Polityka prywatności",
+    "cookiesPolicy": "Polityka cookies",
+    "cookieSettings": "Ustawienia cookies",
+    "privacy": {
+      "title": "Polityka Prywatności",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "sections": {
+        "intro": {
+          "title": "Wprowadzenie",
+          "content": "Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem ze strony internetowej IT Solutions."
+        },
+        "administrator": {
+          "title": "Administrator danych",
+          "content": "Administratorem Twoich danych osobowych jest IT Solutions z siedzibą w Warszawie. W sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami pod adresem: hello@itsolutions.com"
+        },
+        "dataCollection": {
+          "title": "Jakie dane zbieramy",
+          "content": "Zbieramy następujące kategorie danych:",
+          "items": {
+            "contact": "Dane kontaktowe (imię, email, telefon) - gdy wypełniasz formularze kontaktowe",
+            "technical": "Dane techniczne (adres IP, typ przeglądarki, system operacyjny) - automatycznie podczas przeglądania strony",
+            "usage": "Dane o korzystaniu ze strony (odwiedzane podstrony, czas spędzony na stronie) - za pomocą plików cookies",
+            "communication": "Treść korespondencji - gdy kontaktujesz się z nami"
+          }
+        },
+        "purposes": {
+          "title": "Cele przetwarzania danych",
+          "content": "Twoje dane przetwarzamy w następujących celach:",
+          "items": {
+            "contact": "Odpowiadanie na zapytania i prowadzenie korespondencji",
+            "quote": "Przygotowanie wycen i ofert",
+            "analytics": "Analiza ruchu na stronie i poprawa jej funkcjonalności",
+            "marketing": "Marketing własnych usług (za Twoją zgodą)",
+            "legal": "Wypełnianie obowiązków prawnych"
+          }
+        },
+        "legalBasis": {
+          "title": "Podstawa prawna",
+          "content": "Przetwarzamy Twoje dane na podstawie:",
+          "items": {
+            "consent": "Twojej zgody (art. 6 ust. 1 lit. a RODO)",
+            "contract": "Niezbędności do wykonania umowy (art. 6 ust. 1 lit. b RODO)",
+            "legal": "Obowiązku prawnego (art. 6 ust. 1 lit. c RODO)",
+            "legitimate": "Prawnie uzasadnionego interesu administratora (art. 6 ust. 1 lit. f RODO)"
+          }
+        },
+        "rights": {
+          "title": "Twoje prawa",
+          "content": "Zgodnie z RODO przysługują Ci następujące prawa:",
+          "items": {
+            "access": "Prawo dostępu do swoich danych",
+            "rectification": "Prawo do sprostowania danych",
+            "erasure": "Prawo do usunięcia danych (prawo do bycia zapomnianym)",
+            "restriction": "Prawo do ograniczenia przetwarzania",
+            "portability": "Prawo do przenoszenia danych",
+            "objection": "Prawo do sprzeciwu wobec przetwarzania",
+            "withdraw": "Prawo do cofnięcia zgody w dowolnym momencie"
+          }
+        },
+        "retention": {
+          "title": "Okres przechowywania danych",
+          "content": "Twoje dane przechowujemy przez okres niezbędny do realizacji celów przetwarzania, a po tym czasie przez okres wymagany przepisami prawa lub do czasu przedawnienia ewentualnych roszczeń."
+        },
+        "security": {
+          "title": "Bezpieczeństwo danych",
+          "content": "Stosujemy odpowiednie środki techniczne i organizacyjne w celu ochrony Twoich danych osobowych przed nieuprawnionym dostępem, utratą lub zniszczeniem."
+        },
+        "contact": {
+          "title": "Kontakt",
+          "content": "W sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami:",
+          "email": "Email: hello@itsolutions.com",
+          "address": "Adres: Warszawa, Polska"
+        }
+      }
+    },
+    "cookies": {
+      "title": "Polityka Cookies",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "sections": {
+        "intro": {
+          "title": "Czym są pliki cookies?",
+          "content": "Pliki cookies (ciasteczka) to małe pliki tekstowe zapisywane na Twoim urządzeniu podczas przeglądania stron internetowych. Służą do zapamiętywania preferencji, analizy ruchu i personalizacji treści."
+        },
+        "types": {
+          "title": "Rodzaje używanych cookies",
+          "necessary": {
+            "title": "Niezbędne",
+            "description": "Wymagane do prawidłowego działania strony. Obejmują cookies sesyjne i związane z bezpieczeństwem.",
+            "examples": "Przykłady: cookie-consent (przechowuje Twoje preferencje dotyczące cookies)"
+          },
+          "analytics": {
+            "title": "Analityczne",
+            "description": "Pomagają nam zrozumieć, jak użytkownicy korzystają ze strony.",
+            "examples": "Przykłady: Google Analytics (_ga, _gid) - anonimowe statystyki odwiedzin"
+          },
+          "marketing": {
+            "title": "Marketingowe",
+            "description": "Używane do śledzenia użytkowników w celach reklamowych.",
+            "examples": "Przykłady: Obecnie nie używamy cookies marketingowych"
+          },
+          "preferences": {
+            "title": "Preferencje",
+            "description": "Zapamiętują Twoje ustawienia i preferencje.",
+            "examples": "Przykłady: theme (motyw jasny/ciemny), locale (język)"
+          }
+        },
+        "manage": {
+          "title": "Jak zarządzać cookies",
+          "content": "Możesz zarządzać plikami cookies na kilka sposobów:",
+          "items": {
+            "settings": "Kliknij przycisk \"Ustawienia cookies\" w stopce strony, aby zmienić swoje preferencje",
+            "browser": "Skonfiguruj ustawienia swojej przeglądarki, aby blokować lub usuwać cookies",
+            "delete": "Usuń pliki cookies zapisane na swoim urządzeniu"
+          }
+        },
+        "thirdParty": {
+          "title": "Cookies podmiotów trzecich",
+          "content": "Używamy usług podmiotów trzecich, które mogą zapisywać własne cookies:",
+          "items": {
+            "ga": "Google Analytics - analiza ruchu na stronie (polityka prywatności Google)"
+          }
+        },
+        "changes": {
+          "title": "Zmiany w polityce",
+          "content": "Zastrzegamy sobie prawo do wprowadzania zmian w niniejszej Polityce Cookies. O istotnych zmianach poinformujemy na stronie."
+        },
+        "contact": {
+          "title": "Kontakt",
+          "content": "Pytania dotyczące plików cookies możesz kierować na adres: hello@itsolutions.com"
+        }
+      }
+    }
+  },
+  "chat": {
+    "title": "Asystent IT Solutions",
+    "subtitle": "Odpowiem na Twoje pytania",
+    "welcome": "Czesc! Jestem asystentem IT Solutions. W czym moge Ci pomoc? Zapytaj o uslugi, ceny lub proces wspolpracy.",
+    "typing": "Pisze...",
+    "placeholder": "Napisz wiadomosc...",
+    "send": "Wyslij",
+    "offline": "Asystent jest niedostepny. Skorzystaj z formularza kontaktowego.",
+    "error": "Wystapil blad. Sprobuj ponownie.",
+    "rateLimit": "Zbyt wiele wiadomosci. Poczekaj chwile.",
+    "actions": {
+      "goToQuote": "Formularz wyceny",
+      "goToContact": "Formularz kontaktowy"
+    },
+    "leadForm": {
+      "title": "Zostaw kontakt",
+      "name": "Twoje imie",
+      "email": "Adres email",
+      "phone": "Telefon (opcjonalnie)",
+      "submit": "Wyslij",
+      "success": "Dziekuje! Skontaktujemy sie wkrotce."
     }
   }
 }

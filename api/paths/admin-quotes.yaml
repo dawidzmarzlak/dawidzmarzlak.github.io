@@ -1,0 +1,157 @@
+# Admin Quotes API paths
+
+quotes:
+  get:
+    tags:
+      - admin-quotes
+    operationId: getAdminQuotes
+    summary: List all quote requests
+    description: Returns paginated list of quote requests
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/page'
+      - $ref: '../components/parameters.yaml#/parameters/size'
+      - $ref: '../components/parameters.yaml#/parameters/sortBy'
+      - $ref: '../components/parameters.yaml#/parameters/sortDir'
+      - $ref: '../components/parameters.yaml#/parameters/search'
+      - $ref: '../components/parameters.yaml#/parameters/dateFrom'
+      - $ref: '../components/parameters.yaml#/parameters/dateTo'
+      - name: status
+        in: query
+        description: Filter by status
+        schema:
+          type: string
+          enum:
+            - pending
+            - quoted
+            - accepted
+            - rejected
+            - expired
+      - name: service
+        in: query
+        description: Filter by service type
+        schema:
+          type: string
+          enum:
+            - nextjs
+            - wordpress
+            - woocommerce
+            - prestashop
+            - webapp
+    responses:
+      '200':
+        description: List of quote requests
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/quote.yaml#/QuoteRequestListResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+quote:
+  get:
+    tags:
+      - admin-quotes
+    operationId: getAdminQuoteById
+    summary: Get quote request details
+    description: Returns quote request details
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/quoteId'
+    responses:
+      '200':
+        description: Quote request details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/quote.yaml#/QuoteRequest'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Quote request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+  delete:
+    tags:
+      - admin-quotes
+    operationId: deleteQuote
+    summary: Delete a quote request
+    description: Permanently deletes a quote request
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/quoteId'
+    responses:
+      '204':
+        description: Quote request deleted
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Quote request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+quoteStatus:
+  put:
+    tags:
+      - admin-quotes
+    operationId: updateQuoteStatus
+    summary: Update quote status
+    description: |
+      Updates the status of a quote request.
+      When setting status to 'quoted', quotedAmount is required.
+      Sends notification email to client when quote is ready.
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/quoteId'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/quote.yaml#/UpdateQuoteStatusRequest'
+    responses:
+      '200':
+        description: Quote status updated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/quote.yaml#/QuoteRequest'
+      '400':
+        description: Invalid request (e.g., missing quotedAmount for 'quoted' status)
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Quote request not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

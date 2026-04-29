@@ -1,0 +1,45 @@
+# Quote API paths (public)
+
+quote:
+  post:
+    tags:
+      - quote
+    operationId: submitQuoteRequest
+    summary: Submit a quote request
+    description: |
+      Submits a quote request for a service.
+      Generates a unique reference number.
+      Sends confirmation email to the user.
+      Sends notification email to admin.
+      Creates a lead automatically.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/quote.yaml#/CreateQuoteRequest'
+    responses:
+      '201':
+        description: Quote request submitted successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/quote.yaml#/CreateQuoteResponse'
+      '400':
+        description: Validation error
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '403':
+        description: Bot detected (Turnstile verification failed)
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '429':
+        description: Rate limit exceeded
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

@@ -1,0 +1,72 @@
+# Chat API paths (public)
+
+messages:
+  post:
+    tags:
+      - chat
+    operationId: sendChatMessage
+    summary: Send a message to the AI chatbot
+    description: |
+      Sends a message to the AI chatbot and receives a response.
+      Creates a new session if sessionId is not provided.
+      Requires Turnstile verification in production.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/chat.yaml#/SendMessageRequest'
+    responses:
+      '200':
+        description: Message sent successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/chat.yaml#/SendMessageResponse'
+      '400':
+        description: Invalid request
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '403':
+        description: Bot detected (Turnstile verification failed)
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '429':
+        description: Rate limit exceeded
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '503':
+        description: LLM service unavailable
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+session:
+  get:
+    tags:
+      - chat
+    operationId: getChatSession
+    summary: Get chat session with messages
+    description: Retrieves a chat session by ID including all messages
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/sessionId'
+    responses:
+      '200':
+        description: Session found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/chat.yaml#/ChatSession'
+      '404':
+        description: Session not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

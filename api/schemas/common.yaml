@@ -1,0 +1,75 @@
+# Common schemas used across the API
+
+Error:
+  type: object
+  required:
+    - code
+    - message
+  properties:
+    code:
+      type: string
+      description: Error code for programmatic handling
+      example: "VALIDATION_ERROR"
+    message:
+      type: string
+      description: Human-readable error message
+      example: "Email is required"
+    details:
+      type: object
+      additionalProperties: true
+      description: Additional error details
+      example:
+        field: "email"
+        reason: "must not be blank"
+
+PaginationMeta:
+  type: object
+  required:
+    - page
+    - size
+    - totalElements
+    - totalPages
+  properties:
+    page:
+      type: integer
+      format: int32
+      description: Current page number (0-indexed)
+      example: 0
+    size:
+      type: integer
+      format: int32
+      description: Number of items per page
+      example: 20
+    totalElements:
+      type: integer
+      format: int64
+      description: Total number of items
+      example: 150
+    totalPages:
+      type: integer
+      format: int32
+      description: Total number of pages
+      example: 8
+    hasNext:
+      type: boolean
+      description: Whether there is a next page
+      example: true
+    hasPrevious:
+      type: boolean
+      description: Whether there is a previous page
+      example: false
+
+SortDirection:
+  type: string
+  enum:
+    - ASC
+    - DESC
+  default: DESC
+
+Locale:
+  type: string
+  enum:
+    - pl
+    - en
+  default: pl
+  description: Language locale

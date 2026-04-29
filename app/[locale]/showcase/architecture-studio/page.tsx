@@ -6,6 +6,9 @@ import {
   ArchitectureProjects,
   ArchitecturePhilosophy,
   ArchitectureProcess,
+  ArchitectureTeam,
+  ArchitectureAwards,
+  ArchitectureContact,
 } from "@/components/showcase/architecture-studio";
 import { routing } from "@/i18n/routing";
 
@@ -23,6 +26,9 @@ export default function ArchitectureStudioPage() {
       <ArchitectureProjects />
       <ArchitecturePhilosophy />
       <ArchitectureProcess />
+      <ArchitectureTeam />
+      <ArchitectureAwards />
+      <ArchitectureContact />
       <ShowcaseCTA
         theme="light"
         accentColor="#FF4D00"

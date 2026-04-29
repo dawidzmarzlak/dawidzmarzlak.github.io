@@ -1,0 +1,99 @@
+# Admin Chat API paths
+
+chats:
+  get:
+    tags:
+      - admin-chats
+    operationId: getAdminChats
+    summary: List all chat sessions
+    description: Returns paginated list of chat sessions with filtering options
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/page'
+      - $ref: '../components/parameters.yaml#/parameters/size'
+      - $ref: '../components/parameters.yaml#/parameters/sortBy'
+      - $ref: '../components/parameters.yaml#/parameters/sortDir'
+      - $ref: '../components/parameters.yaml#/parameters/search'
+      - $ref: '../components/parameters.yaml#/parameters/dateFrom'
+      - $ref: '../components/parameters.yaml#/parameters/dateTo'
+      - $ref: '../components/parameters.yaml#/parameters/locale'
+      - name: status
+        in: query
+        description: Filter by session status
+        schema:
+          type: string
+          enum:
+            - active
+            - archived
+            - spam
+    responses:
+      '200':
+        description: List of chat sessions
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/chat.yaml#/ChatSessionListResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+chat:
+  get:
+    tags:
+      - admin-chats
+    operationId: getAdminChatById
+    summary: Get chat session details
+    description: Returns a chat session with all messages
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/chatId'
+    responses:
+      '200':
+        description: Chat session details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/chat.yaml#/ChatSession'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Chat session not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+  delete:
+    tags:
+      - admin-chats
+    operationId: archiveChat
+    summary: Archive a chat session
+    description: Archives a chat session (soft delete)
+    security:
+      - bearerAuth: []
+    parameters:
+      - $ref: '../components/parameters.yaml#/parameters/chatId'
+    responses:
+      '204':
+        description: Chat session archived
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '404':
+        description: Chat session not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

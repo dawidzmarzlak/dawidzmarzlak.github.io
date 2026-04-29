@@ -1,0 +1,159 @@
+# Contact module schemas
+
+ContactRequest:
+  type: object
+  required:
+    - id
+    - name
+    - email
+    - message
+    - status
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique contact request identifier
+      example: "550e8400-e29b-41d4-a716-446655440003"
+    name:
+      type: string
+      description: Sender's name
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      description: Sender's email address
+      example: "jan@example.com"
+    phone:
+      type: string
+      description: Sender's phone number (optional)
+      example: "+48 123 456 789"
+    message:
+      type: string
+      description: Contact message content
+      example: "Dzień dobry, chciałbym zapytać o możliwość współpracy..."
+    status:
+      $ref: '#/ContactRequestStatus'
+    ipAddress:
+      type: string
+      description: IP address of the sender
+      example: "192.168.1.100"
+    userAgent:
+      type: string
+      description: User agent string
+      example: "Mozilla/5.0..."
+    turnstileVerified:
+      type: boolean
+      description: Whether Turnstile verification passed
+      default: false
+    leadId:
+      type: string
+      format: uuid
+      description: Associated lead ID
+    replyMessage:
+      type: string
+      description: Admin's reply message
+    repliedBy:
+      type: string
+      description: Admin who replied
+      example: "admin@itsolutions.pl"
+    createdAt:
+      type: string
+      format: date-time
+      description: When the request was created
+      example: "2024-01-15T10:00:00Z"
+    repliedAt:
+      type: string
+      format: date-time
+      description: When the request was replied to
+
+ContactRequestStatus:
+  type: string
+  enum:
+    - new
+    - read
+    - replied
+    - archived
+  default: new
+  description: |
+    Contact request status:
+    - new: Not yet viewed
+    - read: Viewed by admin
+    - replied: Reply sent
+    - archived: Archived
+
+CreateContactRequest:
+  type: object
+  required:
+    - name
+    - email
+    - message
+  properties:
+    name:
+      type: string
+      minLength: 2
+      maxLength: 255
+      description: Sender's name
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      maxLength: 255
+      description: Sender's email address
+      example: "jan@example.com"
+    phone:
+      type: string
+      maxLength: 50
+      description: Sender's phone number (optional)
+      example: "+48 123 456 789"
+    message:
+      type: string
+      minLength: 10
+      maxLength: 5000
+      description: Contact message content
+      example: "Dzień dobry, chciałbym zapytać o możliwość współpracy..."
+    turnstileToken:
+      type: string
+      description: Cloudflare Turnstile verification token
+
+CreateContactResponse:
+  type: object
+  required:
+    - success
+    - message
+  properties:
+    success:
+      type: boolean
+      example: true
+    message:
+      type: string
+      example: "Dziękujemy za wiadomość. Odpowiemy w ciągu 24 godzin."
+    contactId:
+      type: string
+      format: uuid
+      description: Created contact request ID
+
+ReplyToContactRequest:
+  type: object
+  required:
+    - message
+  properties:
+    message:
+      type: string
+      minLength: 10
+      maxLength: 10000
+      description: Reply message content
+      example: "Dziękuję za kontakt. Chętnie umówię się na rozmowę..."
+
+ContactRequestListResponse:
+  type: object
+  required:
+    - data
+    - meta
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/ContactRequest'
+    meta:
+      $ref: './common.yaml#/PaginationMeta'

@@ -1,0 +1,100 @@
+spring:
+  application:
+    name: itsolutions-backend
+
+  # Database
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:itsolutions}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  # Flyway
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+  # Email (SMTP)
+  mail:
+    host: ${SMTP_HOST:localhost}
+    port: ${SMTP_PORT:587}
+    username: ${SMTP_USER:}
+    password: ${SMTP_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    from: ${MAIL_FROM:noreply@itsolutions.pl}
+
+# Server
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:your-256-bit-secret-key-for-development-only-change-in-production}
+  access-token-expiration: ${JWT_ACCESS_EXPIRATION:86400000}   # 24 hours in ms
+  refresh-token-expiration: ${JWT_REFRESH_EXPIRATION:604800000} # 7 days in ms
+
+# LLM Configuration
+llm:
+  provider: ${LLM_PROVIDER:ollama}
+  ollama:
+    url: ${OLLAMA_URL:http://localhost:11434}
+    model: ${OLLAMA_MODEL:llama3.2}
+    api-key: ${OLLAMA_API_KEY:}
+  gemini:
+    api-key: ${GEMINI_API_KEY:}
+    model: ${GEMINI_MODEL:gemini-1.5-flash}
+
+# Turnstile (Bot Protection)
+turnstile:
+  secret-key: ${TURNSTILE_SECRET_KEY:1x0000000000000000000000000000000AA}
+  verify-url: https://challenges.cloudflare.com/turnstile/v0/siteverify
+
+# CORS
+cors:
+  allowed-origins: ${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: "*"
+  allow-credentials: true
+  max-age: 3600
+
+# Rate Limiting
+rate-limit:
+  enabled: true
+  requests-per-minute: ${RATE_LIMIT:60}
+
+# OpenAPI / Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
+    enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+  default-produces-media-type: application/json
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.itsolutions: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

@@ -1,0 +1,189 @@
+# Lead module schemas
+
+Lead:
+  type: object
+  required:
+    - id
+    - email
+    - source
+    - status
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+      description: Unique lead identifier
+      example: "550e8400-e29b-41d4-a716-446655440002"
+    name:
+      type: string
+      description: Lead's name
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      description: Lead's email address
+      example: "jan@example.com"
+    phone:
+      type: string
+      description: Lead's phone number
+      example: "+48 123 456 789"
+    company:
+      type: string
+      description: Lead's company name
+      example: "Acme Corp"
+    source:
+      $ref: '#/LeadSource'
+    status:
+      $ref: '#/LeadStatus'
+    score:
+      type: integer
+      format: int32
+      description: Lead score (0-100)
+      minimum: 0
+      maximum: 100
+      example: 65
+    notes:
+      type: string
+      description: Internal notes about the lead
+      example: "Zainteresowany stroną e-commerce, budżet 10-15k"
+    chatSessionId:
+      type: string
+      format: uuid
+      description: Associated chat session ID (if lead came from chat)
+    contactRequestId:
+      type: string
+      format: uuid
+      description: Associated contact request ID (if lead came from contact form)
+    quoteRequestId:
+      type: string
+      format: uuid
+      description: Associated quote request ID (if lead came from quote form)
+    createdAt:
+      type: string
+      format: date-time
+      description: When the lead was created
+      example: "2024-01-15T10:00:00Z"
+    updatedAt:
+      type: string
+      format: date-time
+      description: When the lead was last updated
+      example: "2024-01-15T12:00:00Z"
+    convertedAt:
+      type: string
+      format: date-time
+      description: When the lead was converted to a customer
+
+LeadStatus:
+  type: string
+  enum:
+    - new
+    - contacted
+    - qualified
+    - converted
+    - lost
+  default: new
+  description: |
+    Lead status in the sales pipeline:
+    - new: Fresh lead, not yet contacted
+    - contacted: Initial contact made
+    - qualified: Lead qualified as a potential customer
+    - converted: Lead became a paying customer
+    - lost: Lead did not convert
+
+LeadSource:
+  type: string
+  enum:
+    - chat
+    - contact
+    - quote
+  description: |
+    Where the lead originated from:
+    - chat: AI chatbot conversation
+    - contact: Contact form submission
+    - quote: Quote request form
+
+CreateLeadRequest:
+  type: object
+  required:
+    - email
+    - source
+  properties:
+    name:
+      type: string
+      maxLength: 255
+      example: "Jan Kowalski"
+    email:
+      type: string
+      format: email
+      maxLength: 255
+      example: "jan@example.com"
+    phone:
+      type: string
+      maxLength: 50
+      example: "+48 123 456 789"
+    company:
+      type: string
+      maxLength: 255
+      example: "Acme Corp"
+    source:
+      $ref: '#/LeadSource'
+    chatSessionId:
+      type: string
+      format: uuid
+      description: Link to chat session (if source is chat)
+    turnstileToken:
+      type: string
+      description: Cloudflare Turnstile verification token
+
+UpdateLeadStatusRequest:
+  type: object
+  required:
+    - status
+  properties:
+    status:
+      $ref: '#/LeadStatus'
+
+AddLeadNoteRequest:
+  type: object
+  required:
+    - note
+  properties:
+    note:
+      type: string
+      maxLength: 5000
+      description: Note content
+      example: "Rozmowa telefoniczna - zainteresowany stroną WordPress"
+
+LeadNote:
+  type: object
+  required:
+    - id
+    - content
+    - createdAt
+  properties:
+    id:
+      type: string
+      format: uuid
+    content:
+      type: string
+      example: "Rozmowa telefoniczna - zainteresowany stroną WordPress"
+    createdBy:
+      type: string
+      description: Admin user who created the note
+      example: "admin@itsolutions.pl"
+    createdAt:
+      type: string
+      format: date-time
+
+LeadListResponse:
+  type: object
+  required:
+    - data
+    - meta
+  properties:
+    data:
+      type: array
+      items:
+        $ref: '#/Lead'
+    meta:
+      $ref: './common.yaml#/PaginationMeta'

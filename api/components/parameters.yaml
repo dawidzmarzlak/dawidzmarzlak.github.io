@@ -1,0 +1,141 @@
+# Common parameters
+
+parameters:
+  # Path parameters
+  sessionId:
+    name: sessionId
+    in: path
+    required: true
+    description: Chat session UUID
+    schema:
+      type: string
+      format: uuid
+
+  chatId:
+    name: chatId
+    in: path
+    required: true
+    description: Chat session UUID
+    schema:
+      type: string
+      format: uuid
+
+  leadId:
+    name: leadId
+    in: path
+    required: true
+    description: Lead UUID
+    schema:
+      type: string
+      format: uuid
+
+  contactId:
+    name: contactId
+    in: path
+    required: true
+    description: Contact request UUID
+    schema:
+      type: string
+      format: uuid
+
+  quoteId:
+    name: quoteId
+    in: path
+    required: true
+    description: Quote request UUID
+    schema:
+      type: string
+      format: uuid
+
+  templateId:
+    name: templateId
+    in: path
+    required: true
+    description: Email template UUID
+    schema:
+      type: string
+      format: uuid
+
+  # Query parameters - Pagination
+  page:
+    name: page
+    in: query
+    description: Page number (0-indexed)
+    schema:
+      type: integer
+      format: int32
+      minimum: 0
+      default: 0
+
+  size:
+    name: size
+    in: query
+    description: Number of items per page
+    schema:
+      type: integer
+      format: int32
+      minimum: 1
+      maximum: 100
+      default: 20
+
+  # Query parameters - Sorting
+  sortBy:
+    name: sortBy
+    in: query
+    description: Field to sort by
+    schema:
+      type: string
+      default: createdAt
+
+  sortDir:
+    name: sortDir
+    in: query
+    description: Sort direction
+    schema:
+      type: string
+      enum:
+        - ASC
+        - DESC
+      default: DESC
+
+  # Query parameters - Filtering
+  status:
+    name: status
+    in: query
+    description: Filter by status
+    schema:
+      type: string
+
+  search:
+    name: search
+    in: query
+    description: Search query (searches in relevant text fields)
+    schema:
+      type: string
+      maxLength: 100
+
+  dateFrom:
+    name: dateFrom
+    in: query
+    description: Filter by date (from)
+    schema:
+      type: string
+      format: date
+
+  dateTo:
+    name: dateTo
+    in: query
+    description: Filter by date (to)
+    schema:
+      type: string
+      format: date
+
+  locale:
+    name: locale
+    in: query
+    description: Filter by locale
+    schema:
+      type: string
+      enum:
+        - pl
+        - en

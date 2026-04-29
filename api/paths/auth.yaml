@@ -1,0 +1,95 @@
+# Auth API paths
+
+login:
+  post:
+    tags:
+      - auth
+    operationId: login
+    summary: Authenticate admin user
+    description: |
+      Authenticates an admin user and returns JWT tokens.
+      Access token should be used for subsequent API calls.
+      Refresh token can be used to obtain new access tokens.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/auth.yaml#/LoginRequest'
+    responses:
+      '200':
+        description: Login successful
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/auth.yaml#/LoginResponse'
+      '400':
+        description: Invalid request
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '401':
+        description: Invalid credentials
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+      '429':
+        description: Too many login attempts
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+refresh:
+  post:
+    tags:
+      - auth
+    operationId: refreshToken
+    summary: Refresh access token
+    description: |
+      Exchanges a refresh token for a new access token.
+      May also return a new refresh token (token rotation).
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/auth.yaml#/RefreshTokenRequest'
+    responses:
+      '200':
+        description: Token refreshed successfully
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/auth.yaml#/RefreshTokenResponse'
+      '401':
+        description: Invalid or expired refresh token
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'
+
+me:
+  get:
+    tags:
+      - auth
+    operationId: getCurrentUser
+    summary: Get current user info
+    description: Returns information about the currently authenticated user
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Current user info
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/auth.yaml#/CurrentUserResponse'
+      '401':
+        description: Not authenticated
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yaml#/Error'

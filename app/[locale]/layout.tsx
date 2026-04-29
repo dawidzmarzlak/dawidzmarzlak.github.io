@@ -6,6 +6,11 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CookieConsentProvider } from "@/components/cookies/CookieConsentProvider";
+import { CookieBanner } from "@/components/cookies/CookieBanner";
+import { CookieSettingsModal } from "@/components/cookies/CookieSettingsModal";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { ChatWidget } from "@/components/chat";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "../globals.css";
@@ -193,20 +198,26 @@ export default async function RootLayout({
       </head>
       <body className="antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange={false}
-          >
-            <div className="relative min-h-screen flex flex-col overflow-x-hidden">
-              <Navbar />
-              <main className="flex-1">
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </ThemeProvider>
+          <CookieConsentProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange={false}
+            >
+              <GoogleAnalytics />
+              <div className="relative min-h-screen flex flex-col overflow-x-hidden">
+                <Navbar />
+                <main className="flex-1">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+              <ChatWidget />
+              <CookieBanner />
+              <CookieSettingsModal />
+            </ThemeProvider>
+          </CookieConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>
