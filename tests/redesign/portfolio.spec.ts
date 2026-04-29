@@ -8,7 +8,8 @@ test("/pl/portfolio filters projects", async ({ page }) => {
   const allCount = await page.locator("[data-portfolio-bento] article").count();
   expect(allCount).toBeGreaterThanOrEqual(8);
   // Filter to Next.js — only 2 projects have "next" tag (FashionHub, EduPlatform)
-  await page.getByRole("button", { name: /Next\.js/i }).click();
+  // Scope to the filter nav so we don't accidentally hit the Next.js dev-tools button.
+  await page.getByRole("navigation", { name: /Filtr projektów/i }).getByRole("button", { name: /Next\.js/i }).click();
   const nextCount = await page.locator("[data-portfolio-bento] article").count();
   expect(nextCount).toBeLessThan(allCount);
   // Verify a known-Next.js project is still visible
