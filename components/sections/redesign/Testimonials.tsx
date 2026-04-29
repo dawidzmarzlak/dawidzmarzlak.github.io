@@ -38,7 +38,7 @@ export function Testimonials() {
   const t = useTranslations("redesign.sections.testi");
   const tT = useTranslations("testimonials");
   const titleParts = t.raw("title") as [string, string, string];
-  const items = tT.raw("items") as Testi[];
+  const items = (tT.raw("items") as Testi[]).filter((it) => !it.q.startsWith("<<USER_INPUT"));
 
   return (
     <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20">

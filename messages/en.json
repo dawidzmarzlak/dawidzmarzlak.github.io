@@ -137,13 +137,13 @@
     }
   },
   "testimonials": {
-    "title": "What My Clients Say",
-    "subtitle": "Reviews from satisfied clients I work with",
+    "title": "What you get working with me",
+    "subtitle": "Values that hold — regardless of the project",
     "items": [
-      { "q": "The site exceeded our expectations. Load time dropped from 4.2s to 1.1s, sales grew 187% in the first quarter after launch.", "name": "Anna Kowalska", "role": "CEO, FashionHub", "avatar": "AK", "size": "big" },
-      { "q": "Migration from monolith to headless. LCP from 5s to 1.2s — editors work 3× faster.", "name": "Piotr Nowak", "role": "Head of Marketing, TechCorp", "avatar": "PN", "size": "med" },
-      { "q": "12,000 patients / month. Zero downtime for 14 months. Documentation we actually use.", "name": "Dr K. Wiśniewska", "role": "Medical Director, MediClinic", "avatar": "KW", "size": "med" },
-      { "q": "3D furniture configurator + WooCommerce. 2,400 SKUs, multi-currency, VAT invoices — all from one panel.", "name": "Michał Zieliński", "role": "Founder, HomeDesign", "avatar": "MZ", "size": "lite" }
+      { "q": "The code you get after launch is yours — no vendor lock-in, no hidden paid licenses in the stack.", "name": "Code ownership", "role": "Every project", "avatar": "→", "size": "big" },
+      { "q": "6 months of support included in the launch fee. Free bug fixes. Paid only for new features.", "name": "Support", "role": "Post-launch", "avatar": "→", "size": "med" },
+      { "q": "Docs in your language, README with runbook, video walkthrough of the panel. Come back a year later — you still know how to edit.", "name": "Documentation", "role": "Standard", "avatar": "→", "size": "med" },
+      { "q": "<<USER_INPUT: authorized client quote — fill in later>>", "name": "<<USER_INPUT: name>>", "role": "<<USER_INPUT: role, company>>", "avatar": "<<USER_INPUT: initials>>", "size": "lite" }
     ]
   },
   "blog": {

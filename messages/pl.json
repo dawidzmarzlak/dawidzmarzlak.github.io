@@ -137,13 +137,13 @@
     }
   },
   "testimonials": {
-    "title": "Co mówią moi klienci",
-    "subtitle": "Opinie zadowolonych klientów, z którymi współpracuję",
+    "title": "Co dostajesz, pracując ze mną",
+    "subtitle": "Wartości, które działają — niezależnie od projektu",
     "items": [
-      { "q": "Strona przekroczyła nasze oczekiwania. Czas ładowania spadł z 4,2 s do 1,1 s, sprzedaż w pierwszym kwartale po wdrożeniu wzrosła o 187%.", "name": "Anna Kowalska", "role": "CEO, FashionHub", "avatar": "AK", "size": "big" },
-      { "q": "Migracja z monolitu na headless. LCP z 5 s na 1,2 s — redaktorzy pracują 3× szybciej.", "name": "Piotr Nowak", "role": "Head of Marketing, TechCorp", "avatar": "PN", "size": "med" },
-      { "q": "12 000 pacjentów / mc. Zero downtime od 14 miesięcy. Dokumentacja, której naprawdę używamy.", "name": "Dr K. Wiśniewska", "role": "Dyrektor Med., MediClinic", "avatar": "KW", "size": "med" },
-      { "q": "Konfigurator 3D mebli + WooCommerce. 2 400 SKU, multi-currency, faktury VAT — wszystko działa z poziomu jednego panelu.", "name": "Michał Zieliński", "role": "Founder, HomeDesign", "avatar": "MZ", "size": "lite" }
+      { "q": "Kod, który dostajesz po wdrożeniu, jest twoją własnością — bez vendor lock-inu, bez płatnych licencji ukrytych w stacku.", "name": "Własność kodu", "role": "Każdy projekt", "avatar": "→", "size": "big" },
+      { "q": "6 miesięcy wsparcia w cenie wdrożenia. Bezpłatne poprawki bug'ów. Płatne tylko nowe funkcje.", "name": "Wsparcie", "role": "Po wdrożeniu", "avatar": "→", "size": "med" },
+      { "q": "Dokumentacja po polsku, README z runbook'iem, video-walkthrough panelu. Wracasz po roku — wciąż wiesz jak edytować.", "name": "Dokumentacja", "role": "Standard", "avatar": "→", "size": "med" },
+      { "q": "<<USER_INPUT: autoryzowany cytat klienta — wstawić później>>", "name": "<<USER_INPUT: imię>>", "role": "<<USER_INPUT: rola, firma>>", "avatar": "<<USER_INPUT: inicjały>>", "size": "lite" }
     ]
   },
   "blog": {
