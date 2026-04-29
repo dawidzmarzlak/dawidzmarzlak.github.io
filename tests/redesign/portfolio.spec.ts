@@ -8,7 +8,7 @@ test("/pl/portfolio filters projects", async ({ page }) => {
   expect(allCount).toBeGreaterThan(0);
   await page.getByRole("navigation", { name: /Filtr projektów/i }).getByRole("button", { name: /Next\.js/i }).click();
   const nextCount = await page.locator("[data-portfolio-bento] article").count();
-  expect(nextCount).toBeLessThanOrEqual(allCount);
+  expect(nextCount).toBeLessThan(allCount);
 });
 
 test("/pl/portfolio shows public + private cards with size labels and NDA badge", async ({ page }) => {
