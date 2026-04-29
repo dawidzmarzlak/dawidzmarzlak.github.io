@@ -10,14 +10,26 @@
     "settings": "Settings",
     "language": "Language",
     "lightMode": "Light mode",
-    "darkMode": "Dark mode"
+    "darkMode": "Dark mode",
+    "process": "Process",
+    "faq": "FAQ",
+    "cta": "Get a quote →",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "badge": "Over 50 completed projects since 2020",
     "title": "I Build Websites That Sell",
     "subtitle": "I specialize in Next.js, WordPress, WooCommerce, PrestaShop, and web applications built on Spring Boot. I transform your ideas into working digital solutions.",
-    "cta": "Get a Free Quote",
-    "cta_secondary": "View My Portfolio"
+    "cta": "Get a quote →",
+    "cta_secondary": "View My Portfolio",
+    "tag": "Available · 5+ years of experience",
+    "h1a": "I build",
+    "h1b": "websites",
+    "h1c": "that actually",
+    "h1d": "earn.",
+    "leadStrong": "IT Solutions",
+    "leadRest": " — a studio for websites, shops and web apps. Solutions used daily by thousands of users. Stack tailored to the problem — not the other way around."
   },
   "stats": {
     "projects": {
@@ -58,6 +70,20 @@
         "title": "Transparency",
         "description": "I keep you updated at every stage of the project. You know exactly what's happening and what you're paying for."
       }
+    },
+    "bigLabel": "// flexibility",
+    "big": ["I tailor the solution to ", "your needs", " — not the other way around."],
+    "stats": [
+      { "label": "// experience", "num": "5+", "foot": "years of commercial experience, including with large companies" },
+      { "label": "// scale", "num": "1k+", "foot": "active users using my solutions every single day" },
+      { "label": "// stack", "num": "8+", "foot": "frontend, backend, CMS and e-commerce technologies in active use" },
+      { "label": "// rating", "num": "5★", "foot": "average client rating. 100% of projects shipped to production" }
+    ],
+    "quote": {
+      "label": "// client · 2024",
+      "text": "Load time dropped 4×, sales grew 187% in the first quarter.",
+      "name": "Anna Kowalska",
+      "role": "CEO, FashionHub"
     }
   },
   "services": {
@@ -82,7 +108,14 @@
     "webapp": {
       "title": "Web Applications",
       "description": "Spring Boot backend + React/Next.js/Angular frontend"
-    }
+    },
+    "items": [
+      { "num": "[01]", "title": "Next.js sites", "desc": "React apps with SSR, ISR and edge runtime. Lighthouse 95+, TTI under 2s. Ideal for SaaS, marketing, dashboards." },
+      { "num": "[02]", "title": "WordPress", "desc": "Headless or classic. Editing your team will actually use." },
+      { "num": "[03]", "title": "WooCommerce", "desc": "Shops up to 50k SKUs, integrations with warehouse, couriers, Allegro." },
+      { "num": "[04]", "title": "Presta\nShop", "desc": "" },
+      { "num": "[05]", "title": "Web apps", "desc": "Spring Boot + React/Angular. SSO, RBAC, audit — ready for enterprise production." }
+    ]
   },
   "portfolio": {
     "title": "My Work",
@@ -96,7 +129,13 @@
   },
   "testimonials": {
     "title": "What My Clients Say",
-    "subtitle": "Reviews from satisfied clients I work with"
+    "subtitle": "Reviews from satisfied clients I work with",
+    "items": [
+      { "q": "The site exceeded our expectations. Load time dropped from 4.2s to 1.1s, sales grew 187% in the first quarter after launch.", "name": "Anna Kowalska", "role": "CEO, FashionHub", "avatar": "AK", "size": "big" },
+      { "q": "Migration from monolith to headless. LCP from 5s to 1.2s — editors work 3× faster.", "name": "Piotr Nowak", "role": "Head of Marketing, TechCorp", "avatar": "PN", "size": "med" },
+      { "q": "12,000 patients / month. Zero downtime for 14 months. Documentation we actually use.", "name": "Dr K. Wiśniewska", "role": "Medical Director, MediClinic", "avatar": "KW", "size": "med" },
+      { "q": "3D furniture configurator + WooCommerce. 2,400 SKUs, multi-currency, VAT invoices — all from one panel.", "name": "Michał Zieliński", "role": "Founder, HomeDesign", "avatar": "MZ", "size": "lite" }
+    ]
   },
   "blog": {
     "title": "Blog",
@@ -136,7 +175,18 @@
         "title": "Support",
         "description": "Full technical support and help in project development."
       }
-    }
+    },
+    "label": "// pipeline",
+    "h": ["Seven steps. ", "No surprises", "."],
+    "stepsList": [
+      ["Consultation", "Free 30 min. Brief, goals, KPIs."],
+      ["Quote", "Fixed price or T&M. Timeline."],
+      ["UX/UI", "Wireframe → Figma hi-fi."],
+      ["Development", "2-week sprints. Demo every Friday."],
+      ["Testing", "E2E, perf, a11y, security."],
+      ["Deployment", "CI/CD, SSL, monitoring."],
+      ["Support", "6 months included. Optional SLA."]
+    ]
   },
   "technologies": {
     "title": "Technologies I Use",
@@ -177,16 +227,27 @@
         "question": "Do you create responsive websites?",
         "answer": "Yes, all my websites are fully responsive and adapted to mobile devices, tablets and desktops."
       }
-    }
+    },
+    "side": ["Didn't find your question? ", "Write to me →"],
+    "itemsList": [
+      ["How long does a project take?", "Brochure site: 3–4 weeks. Shop: 6–10 weeks. App: from 12 weeks. Every project gets a precise weekly timeline."],
+      ["How much does a website cost?", "Brochure from 5,500 PLN, shop from 9,500 PLN, app from 18,000 PLN. Detailed quote in 48h from the brief."],
+      ["Do you offer hosting?", "Yes — Vercel, AWS, OVH or your own VPS. I recommend the best option for your stack and budget."],
+      ["Can I edit the site myself?", "Every project has a CMS (WordPress, Sanity, Strapi) or admin panel. After launch I run training + documentation."],
+      ["What about SEO?", "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. All by default. Plus a post-launch audit."]
+    ]
   },
   "cta": {
     "title": "Ready for a New Project?",
     "description": "Contact me today and get a free quote and consultation. Let's talk about your project and find the best solution.",
     "button": "Contact Me",
-    "quote": "Quote Form"
+    "quote": "Quote Form",
+    "h": "Let's talk.",
+    "p": "Free 30-minute consultation. Quote back in 48h. No slide decks, no sales loop.",
+    "primary": "Book a call →"
   },
   "footer": {
-    "tagline": "I create modern web solutions for companies across Poland and Europe",
+    "tagline": "Studio for websites, shops and web apps. Warsaw, working remotely across the EU.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "newsletter": "Newsletter",
@@ -207,7 +268,17 @@
       "woocommerce": "WooCommerce",
       "prestashop": "PrestaShop",
       "webapp": "Web Applications"
-    }
+    },
+    "brand": "IT Solutions",
+    "colServices": "Services",
+    "colStudio": "Studio",
+    "colContact": "Contact",
+    "linksList": {
+      "studio": ["About", "Portfolio", "Blog", "Pricing"],
+      "services": ["Next.js", "WordPress", "E-commerce", "Web apps"]
+    },
+    "copy": "© 2026 IT Solutions. All rights reserved.",
+    "legal": "VAT: 000-000-00-00 · Privacy policy"
   },
   "quote": {
     "title": "Quote Form",
@@ -2233,5 +2304,61 @@
       "submit": "Submit",
       "success": "Thank you! We'll contact you soon."
     }
-  }
+  },
+  "calculator": {
+    "title": "// Quote calculator",
+    "live": "live",
+    "type": "Project type",
+    "pages": "Number of pages",
+    "cms": "CMS editing",
+    "out": "Estimated from",
+    "currency": "PLN",
+    "scale": "Thousands of daily users in production",
+    "scaleLabel": "+/day",
+    "types": {
+      "next": "Next",
+      "wp": "WP",
+      "woo": "Woo",
+      "presta": "Presta",
+      "app": "App"
+    }
+  },
+  "redesign": {
+    "sections": {
+      "services": {
+        "kicker": "[01] Services",
+        "title": ["Five stacks. ", "One senior", ". Your project."],
+        "cta": "All services →"
+      },
+      "about": {
+        "kicker": "[02] About",
+        "title": ["Five years. ", "Thousands", " of users. Zero ghosting."]
+      },
+      "portfolio": {
+        "kicker": "[03] Portfolio",
+        "title": ["Six projects that ", "shipped", " to production."],
+        "cta": "All work →"
+      },
+      "testi": {
+        "kicker": "[04] Testimonials",
+        "title": ["What ", "clients", " say."]
+      },
+      "process": {
+        "kicker": "[05] Process",
+        "title": ["From brief to ", "live", "."]
+      },
+      "faq": {
+        "kicker": "[06] FAQ",
+        "title": ["Questions ", "I hear most often", "."]
+      }
+    }
+  },
+  "projects": [
+    { "name": "FashionHub", "cat": "E-commerce", "year": "2024", "metric": "+187%", "tone": "dark" },
+    { "name": "TechCorp", "cat": "Corporate", "year": "2024", "metric": "LCP 1.2s", "tone": "light" },
+    { "name": "MediClinic", "cat": "Web app", "year": "2023", "metric": "12k patients", "tone": "accent" },
+    { "name": "HomeDesign", "cat": "WooCommerce", "year": "2023", "metric": "2400 SKU", "tone": "light" },
+    { "name": "EduPlatform", "cat": "EdTech", "year": "2023", "metric": "8k students", "tone": "dark" },
+    { "name": "FoodDelivery", "cat": "Marketplace", "year": "2022", "metric": "150+ restaurants", "tone": "accent" }
+  ]
 }

@@ -10,14 +10,26 @@
     "settings": "Ustawienia",
     "language": "Język",
     "lightMode": "Jasny motyw",
-    "darkMode": "Ciemny motyw"
+    "darkMode": "Ciemny motyw",
+    "process": "Proces",
+    "faq": "FAQ",
+    "cta": "Wycena →",
+    "menu": "Menu",
+    "close": "Zamknij"
   },
   "hero": {
     "badge": "Ponad 50 zrealizowanych projektów od 2020 roku",
     "title": "Tworzę Strony, Które Sprzedają",
     "subtitle": "Specjalizuję się w Next.js, WordPress, WooCommerce, PrestaShop i aplikacjach webowych opartych na Spring Boot. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
-    "cta": "Zamów bezpłatną wycenę",
-    "cta_secondary": "Zobacz moje portfolio"
+    "cta": "Wycena →",
+    "cta_secondary": "Zobacz moje portfolio",
+    "tag": "Available · 5+ lat doświadczenia",
+    "h1a": "Tworzę",
+    "h1b": "strony",
+    "h1c": "które potrafią",
+    "h1d": "zarabiać.",
+    "leadStrong": "IT Solutions",
+    "leadRest": " — pracownia stron, sklepów i aplikacji. Rozwiązania, z których codziennie korzystają tysiące użytkowników. Stack dopasowany do problemu — nie odwrotnie."
   },
   "stats": {
     "projects": {
@@ -58,6 +70,20 @@
         "title": "Transparentność",
         "description": "Trzymam Cię na bieżąco na każdym etapie projektu. Wiesz dokładnie, co się dzieje i za co płacisz."
       }
+    },
+    "bigLabel": "// elastyczność",
+    "big": ["Dopasowuję rozwiązanie do ", "Twoich potrzeb", " — nie odwrotnie."],
+    "stats": [
+      { "label": "// experience", "num": "5+", "foot": "lat doświadczenia komercyjnego, w tym z dużymi firmami" },
+      { "label": "// scale", "num": "1k+", "foot": "aktywnych użytkowników korzystających z moich rozwiązań co dzień" },
+      { "label": "// stack", "num": "8+", "foot": "technologii frontend, backend, CMS i e-commerce w aktywnym użyciu" },
+      { "label": "// rating", "num": "5★", "foot": "średnia ocena klientów. 100% projektów wdrożonych na produkcję" }
+    ],
+    "quote": {
+      "label": "// klient · 2024",
+      "text": "Czas ładowania spadł 4×, sprzedaż wzrosła o 187% w pierwszym kwartale.",
+      "name": "Anna Kowalska",
+      "role": "CEO, FashionHub"
     }
   },
   "services": {
@@ -82,7 +108,14 @@
     "webapp": {
       "title": "Aplikacje Webowe",
       "description": "Spring Boot backend + React/Next.js/Angular frontend"
-    }
+    },
+    "items": [
+      { "num": "[01]", "title": "Strony Next.js", "desc": "Aplikacje React z SSR, ISR i edge runtime. Lighthouse 95+, TTI poniżej 2 s. Idealne dla SaaS, marketingu, dashboardów." },
+      { "num": "[02]", "title": "WordPress", "desc": "Headless lub klasyczny. Edycja, której zespół faktycznie używa." },
+      { "num": "[03]", "title": "WooCommerce", "desc": "Sklepy do 50k SKU, integracje z magazynem, kurierami, Allegro." },
+      { "num": "[04]", "title": "Presta\nShop", "desc": "" },
+      { "num": "[05]", "title": "Aplikacje webowe", "desc": "Spring Boot + React/Angular. SSO, RBAC, audyt — gotowe na produkcję enterprise." }
+    ]
   },
   "portfolio": {
     "title": "Moje Realizacje",
@@ -96,7 +129,13 @@
   },
   "testimonials": {
     "title": "Co mówią moi klienci",
-    "subtitle": "Opinie zadowolonych klientów, z którymi współpracuję"
+    "subtitle": "Opinie zadowolonych klientów, z którymi współpracuję",
+    "items": [
+      { "q": "Strona przekroczyła nasze oczekiwania. Czas ładowania spadł z 4,2 s do 1,1 s, sprzedaż w pierwszym kwartale po wdrożeniu wzrosła o 187%.", "name": "Anna Kowalska", "role": "CEO, FashionHub", "avatar": "AK", "size": "big" },
+      { "q": "Migracja z monolitu na headless. LCP z 5 s na 1,2 s — redaktorzy pracują 3× szybciej.", "name": "Piotr Nowak", "role": "Head of Marketing, TechCorp", "avatar": "PN", "size": "med" },
+      { "q": "12 000 pacjentów / mc. Zero downtime od 14 miesięcy. Dokumentacja, której naprawdę używamy.", "name": "Dr K. Wiśniewska", "role": "Dyrektor Med., MediClinic", "avatar": "KW", "size": "med" },
+      { "q": "Konfigurator 3D mebli + WooCommerce. 2 400 SKU, multi-currency, faktury VAT — wszystko działa z poziomu jednego panelu.", "name": "Michał Zieliński", "role": "Founder, HomeDesign", "avatar": "MZ", "size": "lite" }
+    ]
   },
   "blog": {
     "title": "Blog",
@@ -136,7 +175,18 @@
         "title": "Wsparcie",
         "description": "Pełne wsparcie techniczne i pomoc w rozwoju projektu."
       }
-    }
+    },
+    "label": "// pipeline",
+    "h": ["Siedem kroków. ", "Bez niespodzianek", "."],
+    "stepsList": [
+      ["Konsultacja", "Bezpłatne 30 min. Brief, cele, KPI."],
+      ["Wycena", "Stała cena lub T&M. Harmonogram."],
+      ["UX/UI", "Wireframe → Figma hi-fi."],
+      ["Development", "Sprinty 2-tyg. Demo co piątek."],
+      ["Testy", "E2E, perf, a11y, security."],
+      ["Wdrożenie", "CI/CD, SSL, monitoring."],
+      ["Wsparcie", "6 mies. w cenie. SLA opcjonalne."]
+    ]
   },
   "technologies": {
     "title": "Technologie, z których korzystam",
@@ -177,16 +227,27 @@
         "question": "Czy tworzysz strony responsywne?",
         "answer": "Tak, wszystkie moje strony są w pełni responsywne i dostosowane do urządzeń mobilnych, tabletów i desktopów."
       }
-    }
+    },
+    "side": ["Nie znalazłeś swojego pytania? ", "Napisz do mnie →"],
+    "itemsList": [
+      ["Ile trwa realizacja projektu?", "Wizytówka: 3–4 tyg. Sklep: 6–10 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje dokładny harmonogram tygodniowy."],
+      ["Ile kosztuje strona internetowa?", "Wizytówka od 5 500 PLN, sklep od 9 500 PLN, aplikacja od 18 000 PLN. Dokładna wycena w 48h od briefu."],
+      ["Czy oferujecie hosting?", "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."],
+      ["Czy mogę edytować stronę samodzielnie?", "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja."],
+      ["Co z SEO?", "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu."]
+    ]
   },
   "cta": {
     "title": "Gotowy na nowy projekt?",
     "description": "Skontaktuj się ze mną już dziś i otrzymaj bezpłatną wycenę oraz konsultację. Porozmawiajmy o Twoim projekcie i znajdźmy najlepsze rozwiązanie.",
     "button": "Skontaktuj się ze mną",
-    "quote": "Formularz wyceny"
+    "quote": "Formularz wyceny",
+    "h": "Porozmawiajmy.",
+    "p": "Bezpłatna 30-minutowa konsultacja. Wracam z wyceną w 48h. Bez prezentacji, bez handlowca w pętli.",
+    "primary": "Umów konsultację →"
   },
   "footer": {
-    "tagline": "Tworzę nowoczesne rozwiązania webowe dla firm z całej Polski i Europy",
+    "tagline": "Pracownia stron, sklepów i aplikacji webowych. Warszawa, działam zdalnie w całej UE.",
     "quickLinks": "Szybkie linki",
     "services": "Usługi",
     "newsletter": "Newsletter",
@@ -207,7 +268,17 @@
       "woocommerce": "WooCommerce",
       "prestashop": "PrestaShop",
       "webapp": "Aplikacje Webowe"
-    }
+    },
+    "brand": "IT Solutions",
+    "colServices": "Usługi",
+    "colStudio": "Pracownia",
+    "colContact": "Kontakt",
+    "linksList": {
+      "studio": ["O nas", "Portfolio", "Blog", "Cennik"],
+      "services": ["Next.js", "WordPress", "E-commerce", "Aplikacje"]
+    },
+    "copy": "© 2026 IT Solutions. Wszystkie prawa zastrzeżone.",
+    "legal": "NIP: 000-000-00-00 · Polityka prywatności"
   },
   "quote": {
     "title": "Formularz Wyceny",
@@ -2239,5 +2310,61 @@
       "submit": "Wyslij",
       "success": "Dziekuje! Skontaktujemy sie wkrotce."
     }
-  }
+  },
+  "calculator": {
+    "title": "// Kalkulator wyceny",
+    "live": "live",
+    "type": "Typ projektu",
+    "pages": "Liczba podstron",
+    "cms": "Edycja przez CMS",
+    "out": "Szacunkowo od",
+    "currency": "PLN",
+    "scale": "Tysiące codziennych użytkowników na produkcji",
+    "scaleLabel": "+/dzień",
+    "types": {
+      "next": "Next",
+      "wp": "WP",
+      "woo": "Woo",
+      "presta": "Presta",
+      "app": "App"
+    }
+  },
+  "redesign": {
+    "sections": {
+      "services": {
+        "kicker": "[01] Usługi",
+        "title": ["Pięć stosów. ", "Jeden senior", ". Twój projekt."],
+        "cta": "Wszystkie usługi →"
+      },
+      "about": {
+        "kicker": "[02] O pracowni",
+        "title": ["Pięć lat. ", "Tysiące", " użytkowników. Zero zniknięć."]
+      },
+      "portfolio": {
+        "kicker": "[03] Portfolio",
+        "title": ["Sześć projektów, które ", "poszły", " na produkcję."],
+        "cta": "Wszystkie realizacje →"
+      },
+      "testi": {
+        "kicker": "[04] Opinie",
+        "title": ["Co mówią ", "klienci", "."]
+      },
+      "process": {
+        "kicker": "[05] Proces",
+        "title": ["Od briefu do ", "live", "."]
+      },
+      "faq": {
+        "kicker": "[06] FAQ",
+        "title": ["Pytania, które ", "najczęściej słyszę", "."]
+      }
+    }
+  },
+  "projects": [
+    { "name": "FashionHub", "cat": "E-commerce", "year": "2024", "metric": "+187%", "tone": "dark" },
+    { "name": "TechCorp", "cat": "Korporacyjny", "year": "2024", "metric": "LCP 1.2s", "tone": "light" },
+    { "name": "MediClinic", "cat": "Aplikacja", "year": "2023", "metric": "12k pacjentów", "tone": "accent" },
+    { "name": "HomeDesign", "cat": "WooCommerce", "year": "2023", "metric": "2400 SKU", "tone": "light" },
+    { "name": "EduPlatform", "cat": "EdTech", "year": "2023", "metric": "8k studentów", "tone": "dark" },
+    { "name": "FoodDelivery", "cat": "Marketplace", "year": "2022", "metric": "150+ restauracji", "tone": "accent" }
+  ]
 }
