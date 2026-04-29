@@ -21,7 +21,8 @@ for (const route of ROUTES) {
       if (m.type() === "error") errors.push(`console: ${m.text()}`);
     });
     // Dev-mode first compile can take 7–10s per route; goto allows up to 60s.
-    await page.goto(route, { waitUntil: "networkidle", timeout: 60_000 });
+    // domcontentloaded is more reliable than networkidle for the home page (which has many components + a chat widget that keeps the network warm).
+    await page.goto(route, { waitUntil: "domcontentloaded", timeout: 60_000 });
     await expect(page.locator("header").first()).toBeVisible({ timeout: 30_000 });
     await expect(page.locator("footer").first()).toBeVisible({ timeout: 30_000 });
     // Filter out noisy expected warnings (cookies banner, hydration mismatches in dev that don't break)
