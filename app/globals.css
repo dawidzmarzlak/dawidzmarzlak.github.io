@@ -4,17 +4,18 @@
 
 @layer base {
   :root {
-    /* Surfaces */
-    --bg: 248 246 240;            /* warm cream — light mode bg */
-    --bg-alt: 240 237 228;
-    --bg-card: 255 253 247;
-    --bg-light: 14 13 12;          /* inverse — dark insets on light bg */
+    /* Light mode — warm beige page (not white); cream cards visible against it;
+       darker lime accent for readable contrast on the lighter surfaces. */
+    --bg: 232 222 200;            /* warm tan #e8dec8 — page background, distinctly not white */
+    --bg-alt: 218 207 184;        /* deeper warm tan for alt surfaces */
+    --bg-card: 252 248 238;       /* off-cream cards — visibly lighter than bg */
+    --bg-light: 14 13 12;          /* dark inverse for occasional insets */
     --fg: 14 13 12;
-    --fg-muted: 99 95 86;
-    --fg-on-light: 247 247 245;
-    --line: 0 0 0 / 0.10;
-    /* Accent (lime stays the same in both modes) */
-    --accent: 196 255 58;
+    --fg-muted: 78 71 58;          /* darker warm gray for better contrast (was 99 95 86) */
+    --fg-on-light: 247 247 245;   /* light text inside the dark inverse insets */
+    --line: 0 0 0 / 0.14;
+    /* Accent: darker olive-lime in light mode for readable contrast on cream/cards */
+    --accent: 132 204 22;          /* lime-600 #84cc16 — passes AA Large on cream */
     --accent-fg: 5 5 5;
     /* Type stacks (next/font sets --font-inter-tight / --font-instrument-serif / --font-jetbrains-mono on <html>) */
     --font-sans: var(--font-inter-tight), "Inter Tight", -apple-system, system-ui, sans-serif;
@@ -38,6 +39,8 @@
     --fg-muted: 136 136 132;
     --fg-on-light: 10 10 10;
     --line: 255 255 255 / 0.08;
+    /* Bright neon lime in dark mode — high contrast against the dark surfaces */
+    --accent: 196 255 58;
   }
 }
 
