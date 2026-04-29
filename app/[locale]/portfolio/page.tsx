@@ -1,38 +1,29 @@
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { CTA } from "@/components/sections/CTA";
 import type { Metadata } from "next";
+import { PortfolioHero } from "@/components/sections/portfolio/PortfolioHero";
+import { PortfolioPageClient } from "@/components/sections/portfolio/PortfolioPageClient";
+import { CaseStudy } from "@/components/sections/portfolio/CaseStudy";
+import { CtaCard } from "@/components/sections/redesign/CtaCard";
+import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Poznaj nasze realizacje - ponad 150 projektów dla zadowolonych klientów.",
+  description: "Poznaj nasze realizacje - ponad 50 projektów dla zadowolonych klientów.",
 };
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
-export default async function PortfolioPage({
-  params
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  await params;
-
+export default function PortfolioPage() {
   return (
     <>
-      <section className="py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Nasze Realizacje
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Poznaj projekty, które stworzyliśmy dla naszych klientów. Od prostych wizytówek po zaawansowane platformy.
-          </p>
-        </div>
-      </section>
-
-      <Portfolio />
-      <Testimonials />
-      <CTA />
+      <PortfolioHero />
+      <PortfolioPageClient />
+      <CaseStudy />
+      <CtaCard
+        heading={<>Twój projekt może być <ItalicAccent>następny</ItalicAccent>.</>}
+        sub="30 minut konsultacji. 48h na wycenę. Zero zobowiązań."
+        primaryHref="/contact"
+        primaryLabel="Umów konsultację →"
+      />
     </>
   );
 }
