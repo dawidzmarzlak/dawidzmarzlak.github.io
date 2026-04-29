@@ -13,7 +13,7 @@ export function Faq() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20" id="faq">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20" id="faq">
       <SectionHead
         kicker={t("kicker")}
         title={

@@ -13,7 +13,7 @@ export function AboutBento() {
   const quote = tA.raw("quote") as { label: string; text: string; name: string; role: string };
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20">
       <SectionHead
         kicker={t("kicker")}
         title={<>{titleParts[0]}<ItalicAccent>{titleParts[1]}</ItalicAccent>{titleParts[2]}</>}
@@ -35,7 +35,7 @@ export function AboutBento() {
       `}</style>
       <div className="ab-bento">
         {/* Cell 1 — big lime card */}
-        <div className="ab-big bg-accent text-accent-fg rounded-[24px] p-9 flex flex-col">
+        <div className="ab-big bg-accent text-accent-fg rounded-[24px] p-6 lg:p-9 flex flex-col">
           <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70">{tA("bigLabel")}</div>
           <div className="text-[clamp(32px,4vw,56px)] font-semibold leading-[1.05] tracking-[-0.03em] mt-auto">
             {bigParts[0]}<em className="italic font-medium">{bigParts[1]}</em>{bigParts[2]}

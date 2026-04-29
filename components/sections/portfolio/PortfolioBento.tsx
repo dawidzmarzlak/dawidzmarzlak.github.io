@@ -28,13 +28,13 @@ export function PortfolioBento({ projects }: Props) {
   return (
     <section
       data-portfolio-bento
-      className="max-w-[1400px] mx-auto px-9 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4"
+      className="max-w-[1400px] mx-auto px-5 lg:px-9 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4"
       style={{ gridAutoRows: "320px" }}
     >
       {projects.map((p) => (
         <Tilt key={p.name} max={3} className={SIZE_CLASS[p.size]}>
           <article
-            className={`group relative overflow-hidden rounded-[24px] p-9 cursor-pointer flex flex-col h-full transition-transform duration-[400ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1 ${TONE_CLASS[p.tone]}`}
+            className={`group relative overflow-hidden rounded-[24px] p-6 lg:p-9 cursor-pointer flex flex-col h-full transition-transform duration-[400ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1 ${TONE_CLASS[p.tone]}`}
             style={p.color ? { background: p.color } : undefined}
           >
             <div

@@ -17,8 +17,8 @@ interface Props {
 
 export function CtaCard({ heading, sub, primaryHref, primaryLabel, secondaryHref, secondaryLabel, id = "contact" }: Props) {
   return (
-    <section id={id} className="max-w-[1400px] mx-auto px-9 mb-9">
-      <div className="relative overflow-hidden bg-accent text-accent-fg rounded-[32px] py-20 px-[60px] text-center">
+    <section id={id} className="max-w-[1400px] mx-auto px-5 lg:px-9 mb-9">
+      <div className="relative overflow-hidden bg-accent text-accent-fg rounded-[32px] py-12 px-6 sm:py-16 sm:px-10 lg:py-20 lg:px-[60px] text-center">
         <span aria-hidden="true" className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-black/[0.06] pointer-events-none" />
         <span aria-hidden="true" className="absolute -bottom-24 -right-24 w-56 h-56 rounded-full bg-black/[0.06] pointer-events-none" />
         <h2 className="relative text-[clamp(56px,7vw,112px)] m-0 mb-6 leading-[0.95] tracking-[-0.045em] font-semibold">

@@ -7,8 +7,8 @@ export function Footer() {
   const serviceLinks = t.raw("linksList.services") as string[];
 
   return (
-    <footer className="max-w-[1400px] mx-auto px-9 py-10">
-      <div className="bg-bg-card rounded-[32px] p-14">
+    <footer className="max-w-[1400px] mx-auto px-5 lg:px-9 py-10">
+      <div className="bg-bg-card rounded-[32px] p-7 lg:p-14">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 pb-9 border-b border-line">
           <div>
             <h3 className="text-[32px] m-0 mb-4 font-semibold tracking-[-0.02em] text-fg">

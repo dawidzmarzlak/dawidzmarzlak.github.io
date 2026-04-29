@@ -67,7 +67,7 @@ const pricingPlans: Plan[] = [
 export default function PricingPage() {
   return (
     <>
-      <section className="max-w-[1400px] mx-auto px-9 pt-8 pb-6">
+      <section className="max-w-[1400px] mx-auto px-5 lg:px-9 pt-8 pb-6">
         <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-7 flex gap-3">
           <Link href="/" className="text-fg-muted no-underline hover:text-accent">Start</Link>
           <span>/</span>
@@ -81,7 +81,7 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section className="max-w-[1400px] mx-auto px-9 mt-12 mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <section className="max-w-[1400px] mx-auto px-5 lg:px-9 mt-12 mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {pricingPlans.map((plan, i) => {
           const featured = !!plan.badge;
           return (

@@ -17,7 +17,7 @@ const PILLS: Array<[string, string, boolean?]> = [
 
 export function StackTicker() {
   return (
-    <section className="max-w-[1400px] mx-auto px-9 pt-2 pb-8" aria-label="Tech stack">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 pt-2 pb-8" aria-label="Tech stack">
       <div className="bg-bg-card rounded-[24px] py-8 relative overflow-hidden">
         <Ticker speed={45} gap={14}>
           {PILLS.map(([a, b, hot], i) => (

@@ -1,9 +1,8 @@
 import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
-import { MagneticCTA } from "@/components/animations/MagneticCTA";
 
 export function CaseStudy() {
   return (
-    <section className="max-w-[1400px] mx-auto px-9 mt-16">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 mt-16">
       <div className="flex justify-between items-end mb-6 flex-wrap gap-4">
         <div>
           <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-3">[Case Study] · 2024</div>
@@ -17,7 +16,7 @@ export function CaseStudy() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[4fr_3fr] gap-4">
-        <div className="relative overflow-hidden bg-bg-card rounded-[32px] p-12 min-h-[480px] flex flex-col justify-between">
+        <div className="relative overflow-hidden bg-bg-card rounded-[32px] p-6 lg:p-12 min-h-[480px] flex flex-col justify-between">
           <span
             aria-hidden="true"
             className="absolute -bottom-52 -right-52 w-[500px] h-[500px] rounded-full pointer-events-none"
@@ -44,13 +43,13 @@ export function CaseStudy() {
         </div>
 
         <div className="grid grid-rows-2 gap-4">
-          <div className="bg-accent text-accent-fg rounded-[32px] p-9 flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-accent text-accent-fg rounded-[32px] p-6 lg:p-9 flex flex-col justify-between relative overflow-hidden">
             <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70">[Konwersja]</div>
             <div className="font-display italic text-[clamp(72px,8vw,120px)] leading-[0.9] tracking-[-0.045em]">
               +187<span className="font-sans not-italic text-[0.3em] align-super opacity-60">%</span>
             </div>
           </div>
-          <div className="bg-bg-light text-fg-on-light rounded-[32px] p-9 flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-bg-light text-fg-on-light rounded-[32px] p-6 lg:p-9 flex flex-col justify-between relative overflow-hidden">
             <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70">[LCP]</div>
             <div className="font-display italic text-[clamp(72px,8vw,120px)] leading-[0.9] tracking-[-0.045em] text-accent">
               1.2<span className="font-sans not-italic text-[0.3em] align-super opacity-60">s</span>
@@ -59,7 +58,7 @@ export function CaseStudy() {
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-12 p-12 bg-bg-card rounded-[32px]">
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-6 lg:gap-12 p-6 lg:p-12 bg-bg-card rounded-[32px]">
         <div>
           <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">[Klient]</div>
           <div className="font-mono text-[12px] text-fg-muted mt-3">
@@ -82,17 +81,6 @@ export function CaseStudy() {
         </div>
       </div>
 
-      <div className="mt-12 text-center p-16 bg-accent text-accent-fg rounded-[32px]">
-        <h3 className="text-[48px] m-0 mb-4 leading-none tracking-[-0.03em] font-semibold">
-          Twój projekt może być <ItalicAccent>następny</ItalicAccent>.
-        </h3>
-        <p className="max-w-[50ch] mx-auto m-0 mb-8 opacity-85 text-[17px]">
-          30 minut konsultacji. 48h na wycenę. Zero zobowiązań.
-        </p>
-        <MagneticCTA href="/contact" variant="primary" className="!bg-accent-fg !text-accent">
-          Umów konsultację →
-        </MagneticCTA>
-      </div>
     </section>
   );
 }

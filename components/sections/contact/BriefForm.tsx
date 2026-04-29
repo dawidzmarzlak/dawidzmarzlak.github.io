@@ -30,7 +30,7 @@ export function BriefForm() {
   const canSubmit = form.desc.length > 20;
 
   return (
-    <div className="bg-bg-card rounded-[32px] p-12">
+    <div className="bg-bg-card rounded-[32px] p-6 lg:p-12">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-[36px] font-semibold leading-none tracking-[-0.025em] m-0">
           {step === 3 ? "Wysłane!" : <>Brief w <ItalicAccent>3 krokach</ItalicAccent></>}

@@ -10,7 +10,7 @@ export function ShowcaseList() {
   const themes = getAllThemes();
 
   return (
-    <div className="max-w-[1400px] mx-auto px-9 my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="max-w-[1400px] mx-auto px-5 lg:px-9 my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {themes.map((theme) => (
         <Link
           key={theme.slug}

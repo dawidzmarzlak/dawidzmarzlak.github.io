@@ -41,7 +41,7 @@ export function Testimonials() {
   const items = tT.raw("items") as Testi[];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20">
       <SectionHead
         kicker={t("kicker")}
         title={

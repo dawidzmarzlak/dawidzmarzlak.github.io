@@ -14,10 +14,10 @@ export function Hero() {
   useParallax(blobRef, 0.18);
 
   return (
-    <section className="vc-hero max-w-[1400px] mx-auto px-9 pt-12 pb-12">
+    <section className="vc-hero max-w-[1400px] mx-auto px-5 lg:px-9 pt-6 pb-8 lg:pt-12 lg:pb-12">
       <div className="grid grid-cols-1 lg:grid-cols-[6fr_4fr] gap-4">
         {/* LEFT — main */}
-        <div className="vc-hero-main relative overflow-hidden bg-bg-card rounded-[24px] p-10 min-h-[620px] flex flex-col">
+        <div className="vc-hero-main relative overflow-hidden bg-bg-card rounded-[24px] p-6 sm:p-8 lg:p-10 min-h-[480px] sm:min-h-[560px] lg:min-h-[620px] flex flex-col">
           <div
             ref={blobRef}
             aria-hidden="true"
@@ -38,7 +38,7 @@ export function Hero() {
             <br />
             <ItalicAccent>{t("h1d")}</ItalicAccent>
           </h1>
-          <div className="flex items-end justify-between gap-6 mt-14 max-lg:flex-col max-lg:items-stretch">
+          <div className="flex items-end justify-between gap-6 mt-8 lg:mt-14 max-lg:flex-col max-lg:items-stretch">
             <p className="text-[17px] text-fg-muted leading-[1.5] max-w-[44ch] m-0">
               <strong className="text-fg font-medium">{t("leadStrong")}</strong>
               {t("leadRest")}

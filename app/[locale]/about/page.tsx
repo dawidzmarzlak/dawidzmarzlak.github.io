@@ -16,7 +16,7 @@ export const dynamic = "force-static";
 
 function AboutHero() {
   return (
-    <section className="max-w-[1400px] mx-auto px-9 pt-8 pb-6">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 pt-8 pb-6">
       <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-7 flex gap-3">
         <Link href="/" className="text-fg-muted no-underline hover:text-accent">Start</Link>
         <span>/</span>

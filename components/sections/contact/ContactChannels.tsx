@@ -1,6 +1,6 @@
 export function ContactChannels() {
   return (
-    <section className="max-w-[1400px] mx-auto px-9 my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 my-6 grid grid-cols-1 md:grid-cols-3 gap-4">
       <a href="mailto:hello@itsolutions.com" className="bg-bg-card rounded-[24px] p-7 flex flex-col gap-3 transition-transform hover:-translate-y-0.5 no-underline">
         <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">[01] · Email</span>
         <span className="text-[24px] font-medium tracking-[-0.02em] text-fg">hello@itsolutions.com</span>

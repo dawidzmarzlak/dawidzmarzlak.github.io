@@ -31,7 +31,7 @@ export function PortfolioGrid() {
   const projects = tRoot.raw("projects") as Project[];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20" id="portfolio">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20" id="portfolio">
       <SectionHead
         kicker={t("kicker")}
         title={

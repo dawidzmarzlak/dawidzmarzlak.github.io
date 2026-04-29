@@ -21,7 +21,7 @@ export function ServicesBento() {
   const titleParts = t.raw("title") as [string, string, string];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20" id="services">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20" id="services">
       <SectionHead
         kicker={t("kicker")}
         title={<>{titleParts[0]}<ItalicAccent>{titleParts[1]}</ItalicAccent>{titleParts[2]}</>}

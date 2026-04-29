@@ -9,7 +9,7 @@ interface Props {
 export function PortfolioFilters({ filter, onChange }: Props) {
   return (
     <nav
-      className="max-w-[1400px] mx-auto px-9 py-4 flex gap-1.5 flex-wrap sticky top-[70px] z-30 bg-bg"
+      className="max-w-[1400px] mx-auto px-5 lg:px-9 py-4 flex gap-1.5 flex-wrap sticky top-[70px] z-30 bg-bg"
       aria-label="Filtr projektów"
     >
       {FILTERS.map(([key, label]) => {

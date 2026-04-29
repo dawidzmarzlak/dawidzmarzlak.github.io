@@ -10,7 +10,7 @@ export function Process() {
   const steps = tP.raw("stepsList") as Array<[string, string]>;
 
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-20" id="process">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-20" id="process">
       <SectionHead
         kicker={t("kicker")}
         title={
@@ -22,7 +22,7 @@ export function Process() {
         }
       />
       <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-4">
-        <div className="bg-bg-card rounded-[24px] p-9 flex flex-col">
+        <div className="bg-bg-card rounded-[24px] p-6 lg:p-9 flex flex-col">
           <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">
             {tP("label")}
           </div>

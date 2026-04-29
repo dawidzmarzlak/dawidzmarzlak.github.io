@@ -5,8 +5,8 @@ interface Props { stack: Stack; }
 
 export function StackDetailCard({ stack: s }: Props) {
   return (
-    <section className="max-w-[1400px] mx-auto px-9 py-6" data-stack-detail>
-      <div className="bg-bg-card rounded-[32px] p-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12">
+    <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-6" data-stack-detail>
+      <div className="bg-bg-card rounded-[32px] p-6 lg:p-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12">
         <div>
           <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-accent mb-4 flex items-center gap-2 before:content-[''] before:w-6 before:h-px before:bg-accent">
             [{s.tag}] · {s.kicker}

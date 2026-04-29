@@ -9,7 +9,7 @@ interface Props {
 export function StackTabs({ active, onChange }: Props) {
   return (
     <nav
-      className="max-w-[1400px] mx-auto px-9 pt-8 pb-4 flex gap-1.5 flex-wrap sticky top-[70px] z-30 bg-bg"
+      className="max-w-[1400px] mx-auto px-5 lg:px-9 pt-8 pb-4 flex gap-1.5 flex-wrap sticky top-[70px] z-30 bg-bg"
       aria-label="Wybór stacku"
     >
       {(Object.entries(STACKS) as Array<[StackKey, typeof STACKS[StackKey]]>).map(([key, s]) => {

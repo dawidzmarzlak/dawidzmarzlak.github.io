@@ -24,7 +24,7 @@ export function CookiesPolicyClient() {
   return (
     <main className="min-h-screen pb-24">
       {/* Hero */}
-      <section className="max-w-[1400px] mx-auto px-9 pt-8 pb-12">
+      <section className="max-w-[1400px] mx-auto px-5 lg:px-9 pt-8 pb-12">
         <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-7 flex gap-3">
           <Link href="/" className="text-fg-muted no-underline hover:text-accent">
             Start
@@ -40,7 +40,7 @@ export function CookiesPolicyClient() {
         </div>
       </section>
 
-      <div className="max-w-[860px] mx-auto px-9 flex flex-col gap-6">
+      <div className="max-w-[860px] mx-auto px-5 lg:px-9 flex flex-col gap-6">
         {/* Intro */}
         <section className="bg-bg-card rounded-[24px] p-7">
           <h2 className="text-2xl font-semibold tracking-[-0.01em] mb-4 text-fg">

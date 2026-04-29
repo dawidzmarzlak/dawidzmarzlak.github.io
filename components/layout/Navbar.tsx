@@ -12,9 +12,9 @@ const NAV_ITEMS: Array<{ href: string; key: "services" | "portfolio" | "contact"
   { href: "/contact", key: "contact" },
 ];
 
-const ANCHOR_ITEMS: Array<{ href: string; key: "process" | "faq" }> = [
-  { href: "/#process", key: "process" },
-  { href: "/#faq", key: "faq" },
+const ANCHOR_ITEMS: Array<{ id: "process" | "faq"; key: "process" | "faq" }> = [
+  { id: "process", key: "process" },
+  { id: "faq", key: "faq" },
 ];
 
 export function Navbar() {
@@ -29,10 +29,27 @@ export function Navbar() {
     if (next !== locale) router.push(pathname, { locale: next });
   };
 
+  // Smart in-page-or-cross-page anchor navigation. Sections live on the home page (id="process", id="faq").
+  // If we're already on home, scroll smoothly. Otherwise, route to home and let the post-navigation scroll
+  // be handled by the browser via the URL hash (which Next.js preserves on push when set explicitly).
+  const goToAnchor = (id: "process" | "faq") => (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    if (pathname === "/") {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", `#${id}`);
+      }
+    } else {
+      router.push(`/#${id}`);
+    }
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur border-b border-line">
-        <div className="max-w-[1400px] mx-auto px-9 py-4 flex items-center gap-9">
+        <div className="max-w-[1400px] mx-auto px-5 lg:px-9 py-4 flex items-center gap-9">
           <Link href="/" className="flex items-center gap-3 text-fg no-underline">
             <span className="w-9 h-9 rounded-full bg-accent text-accent-fg grid place-items-center font-extrabold text-[18px]">i</span>
             <span className="font-semibold text-[18px] tracking-[-0.03em]">IT Solutions</span>
@@ -45,7 +62,7 @@ export function Navbar() {
               </Link>
             ))}
             {ANCHOR_ITEMS.map((item) => (
-              <a key={item.key} href={item.href} className="text-fg opacity-70 hover:opacity-100 transition-opacity no-underline">
+              <a key={item.key} href={`#${item.id}`} onClick={goToAnchor(item.id)} className="text-fg opacity-70 hover:opacity-100 transition-opacity no-underline">
                 {t(item.key)}
               </a>
             ))}
@@ -123,9 +140,9 @@ export function Navbar() {
           {ANCHOR_ITEMS.map((item) => (
             <li key={item.key}>
               <a
-                href={item.href}
+                href={`#${item.id}`}
+                onClick={goToAnchor(item.id)}
                 className="block py-4 text-[30px] font-semibold tracking-[-0.03em] text-fg no-underline border-b border-line"
-                onClick={() => setMobileOpen(false)}
               >
                 {t(item.key)}
               </a>
