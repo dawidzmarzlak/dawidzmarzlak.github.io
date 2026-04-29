@@ -15,3 +15,13 @@ test("/pl/portfolio filters projects", async ({ page }) => {
   // Verify a known-Next.js project is still visible
   await expect(page.getByText(/FashionHub/i).first()).toBeVisible();
 });
+
+test("/pl/portfolio shows public + private cards with size labels and NDA badge", async ({ page }) => {
+  test.setTimeout(90_000);
+  await page.goto("/pl/portfolio", { waitUntil: "domcontentloaded", timeout: 60_000 });
+  await expect(page.locator("[data-portfolio-bento] [data-kind='public']").first()).toBeVisible({ timeout: 30_000 });
+  await expect(page.locator("[data-portfolio-bento] [data-kind='private']").first()).toBeVisible({ timeout: 30_000 });
+  const privateCard = page.locator("[data-portfolio-bento] [data-kind='private']").first();
+  await expect(privateCard.getByText("NDA")).toBeVisible();
+  await expect(privateCard.getByText(/Duży klient|Mały klient/i)).toBeVisible();
+});
