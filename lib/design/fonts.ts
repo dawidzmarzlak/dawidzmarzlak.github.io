@@ -4,7 +4,7 @@ import { Inter_Tight, Instrument_Serif, JetBrains_Mono } from "next/font/google"
 export const interTight = Inter_Tight({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
+  variable: "--font-inter-tight",
   display: "swap",
 });
 
@@ -12,13 +12,13 @@ export const instrumentSerif = Instrument_Serif({
   subsets: ["latin", "latin-ext"],
   weight: "400",
   style: ["normal", "italic"],
-  variable: "--font-display",
+  variable: "--font-instrument-serif",
   display: "swap",
 });
 
 export const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
-  variable: "--font-mono",
+  variable: "--font-jetbrains-mono",
   display: "swap",
 });

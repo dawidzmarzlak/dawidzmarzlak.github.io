@@ -16,10 +16,10 @@
     /* Accent (lime stays the same in both modes) */
     --accent: 196 255 58;
     --accent-fg: 5 5 5;
-    /* Type stacks */
-    --font-sans: var(--font-sans), -apple-system, system-ui, sans-serif;
-    --font-display: var(--font-display), "Times New Roman", serif;
-    --font-mono: var(--font-mono), ui-monospace, "Menlo", monospace;
+    /* Type stacks (next/font sets --font-inter-tight / --font-instrument-serif / --font-jetbrains-mono on <html>) */
+    --font-sans: var(--font-inter-tight), "Inter Tight", -apple-system, system-ui, sans-serif;
+    --font-display: var(--font-instrument-serif), "Instrument Serif", "Times New Roman", serif;
+    --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, "Menlo", monospace;
     /* Radii */
     --radius: 24px;
     --radius-sm: 18px;
