@@ -1,15 +1,25 @@
-import { QuoteForm } from "@/components/forms/QuoteForm";
-import { Check } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/routing";
+import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
+import { CtaCard } from "@/components/sections/redesign/CtaCard";
+import { MagneticCTA } from "@/components/animations/MagneticCTA";
 
 export const metadata: Metadata = {
   title: "Cennik",
   description: "Sprawdź nasze ceny i zamów darmową wycenę projektu.",
 };
 
-const pricingPlans = [
+export const dynamic = "force-static";
+
+interface Plan {
+  name: string;
+  price: string;
+  description: string;
+  features: string[];
+  badge: string | null;
+}
+
+const pricingPlans: Plan[] = [
   {
     name: "Landing Page",
     price: "od 3000 PLN",
@@ -54,110 +64,75 @@ const pricingPlans = [
   },
 ];
 
-export const dynamic = 'force-static';
-
-export default async function PricingPage({
-  params
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  await params;
-
+export default function PricingPage() {
   return (
     <>
-      <section className="py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Cennik
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transparentne ceny bez ukrytych kosztów. Wybierz pakiet lub zamów indywidualną wycenę.
-          </p>
+      <section className="max-w-[1400px] mx-auto px-9 pt-8 pb-6">
+        <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-7 flex gap-3">
+          <Link href="/" className="text-fg-muted no-underline hover:text-accent">Start</Link>
+          <span>/</span>
+          <span>Cennik</span>
         </div>
+        <h1 className="text-[clamp(56px,8vw,128px)] leading-[0.92] tracking-[-0.045em] m-0 mb-6 font-semibold text-fg max-w-[18ch]">
+          Cennik <ItalicAccent>jasny</ItalicAccent> jak rachunek.
+        </h1>
+        <p className="text-[19px] text-fg-muted max-w-[50ch] leading-[1.55] m-0">
+          Wszystkie widełki bez gwiazdek. Każdy pakiet zawiera hosting na pierwszy rok, szkolenie i 6 miesięcy wsparcia.
+        </p>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {pricingPlans.map((plan, index) => (
-              <Card
-                key={index}
-                className={`relative ${plan.badge ? 'border-primary shadow-lg scale-105' : ''}`}
-              >
-                {plan.badge && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    {plan.badge}
-                  </Badge>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <CardDescription>{plan.description}</CardDescription>
-                  <div className="text-4xl font-bold mt-4">{plan.price}</div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Custom Quote Form */}
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Potrzebujesz indywidualnej wyceny?
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Wypełnij formularz, a my przygotujemy dla Ciebie spersonalizowaną ofertę
-              </p>
-            </div>
-            <QuoteForm />
-          </div>
-        </div>
+      <section className="max-w-[1400px] mx-auto px-9 mt-12 mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {pricingPlans.map((plan, i) => {
+          const featured = !!plan.badge;
+          return (
+            <article
+              key={i}
+              className={`relative rounded-[24px] p-9 flex flex-col gap-5 ${
+                featured ? "bg-accent text-accent-fg" : "bg-bg-card text-fg border border-line"
+              }`}
+            >
+              {plan.badge && (
+                <span className="absolute -top-2.5 left-9 font-mono text-[11px] uppercase tracking-[0.1em] bg-bg-card text-accent px-3 py-1 rounded-full border border-accent">
+                  {plan.badge}
+                </span>
+              )}
+              <div>
+                <h3 className="text-[28px] font-semibold tracking-[-0.02em] m-0">{plan.name}</h3>
+                <p className={`text-[14px] mt-2 leading-[1.5] m-0 ${featured ? "opacity-80" : "text-fg-muted"}`}>
+                  {plan.description}
+                </p>
+              </div>
+              <div className={`font-display italic text-[clamp(40px,5vw,64px)] leading-none ${featured ? "text-accent-fg" : "text-accent"}`}>
+                {plan.price}
+              </div>
+              <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
+                {plan.features.map((f, j) => (
+                  <li key={j} className="flex gap-2.5 items-baseline text-[14px]">
+                    <span className={`font-mono ${featured ? "text-accent-fg" : "text-accent"}`}>→</span>
+                    <span className={featured ? "" : "text-fg"}>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-auto pt-4">
+                <MagneticCTA
+                  href="/contact"
+                  variant="primary"
+                  className={featured ? "!bg-accent-fg !text-accent" : ""}
+                >
+                  Wycena →
+                </MagneticCTA>
+              </div>
+            </article>
+          );
+        })}
       </section>
 
-      {/* Additional Info */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">Co wpływa na cenę projektu?</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-background p-6 rounded-lg">
-                <h4 className="font-semibold mb-2">Zakres funkcjonalności</h4>
-                <p className="text-sm text-muted-foreground">
-                  Liczba podstron, integracje z zewnętrznymi systemami, zaawansowane funkcje
-                </p>
-              </div>
-              <div className="bg-background p-6 rounded-lg">
-                <h4 className="font-semibold mb-2">Projekt graficzny</h4>
-                <p className="text-sm text-muted-foreground">
-                  Indywidualny design vs. szablon, liczba wersji, animacje i efekty
-                </p>
-              </div>
-              <div className="bg-background p-6 rounded-lg">
-                <h4 className="font-semibold mb-2">Termin realizacji</h4>
-                <p className="text-sm text-muted-foreground">
-                  Pilne projekty wymagają dodatkowych zasobów i mogą wpłynąć na cenę
-                </p>
-              </div>
-              <div className="bg-background p-6 rounded-lg">
-                <h4 className="font-semibold mb-2">Wsparcie i utrzymanie</h4>
-                <p className="text-sm text-muted-foreground">
-                  Długość okresu wsparcia, hosting, aktualizacje i rozbudowa
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CtaCard
+        heading={<>Niestandardowy projekt? <ItalicAccent>Porozmawiajmy</ItalicAccent>.</>}
+        sub="Każdy projekt jest inny — jeśli żaden z pakietów nie pasuje, wracam z indywidualną wyceną w 48h."
+        primaryHref="/contact"
+        primaryLabel="Wyślij brief →"
+      />
     </>
   );
 }
