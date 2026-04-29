@@ -34,6 +34,12 @@ const config: Config = {
         border: "rgb(var(--line))",
         muted: { DEFAULT: "rgb(var(--bg-alt) / <alpha-value>)", foreground: "rgb(var(--fg-muted) / <alpha-value>)" },
         card: { DEFAULT: "rgb(var(--bg-card) / <alpha-value>)", foreground: "rgb(var(--fg) / <alpha-value>)" },
+        // Additional shadcn back-compat aliases (kept until consumer components migrate)
+        secondary: { DEFAULT: "rgb(var(--bg-alt) / <alpha-value>)", foreground: "rgb(var(--fg) / <alpha-value>)" },
+        destructive: { DEFAULT: "rgb(220 38 38 / <alpha-value>)", foreground: "rgb(247 247 245 / <alpha-value>)" },
+        popover: { DEFAULT: "rgb(var(--bg-card) / <alpha-value>)", foreground: "rgb(var(--fg) / <alpha-value>)" },
+        input: "rgb(var(--line))",
+        ring: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
