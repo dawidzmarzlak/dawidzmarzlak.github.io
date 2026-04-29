@@ -41,7 +41,7 @@ export function QuoteCalculator() {
       </div>
 
       <div className="flex flex-col gap-2 mb-4">
-        <span className="text-[13px] text-fg-muted flex justify-between">
+        <span id="vc-calc-pages-label" className="text-[13px] text-fg-muted flex justify-between">
           {t("pages")} <strong className="text-fg font-medium font-mono">{pages}</strong>
         </span>
         <input
@@ -50,16 +50,19 @@ export function QuoteCalculator() {
           max={30}
           value={pages}
           onChange={(e) => setPages(+e.target.value)}
+          aria-labelledby="vc-calc-pages-label"
+          aria-valuetext={`${pages} ${t("pages")}`}
           className="w-full h-1 bg-line rounded outline-none accent-accent"
         />
       </div>
 
       <div className="flex items-center justify-between py-2">
-        <span className="text-[13px] text-fg-muted">{t("cms")}</span>
+        <span id="vc-calc-cms-label" className="text-[13px] text-fg-muted">{t("cms")}</span>
         <button
           type="button"
           role="switch"
           aria-checked={cms}
+          aria-labelledby="vc-calc-cms-label"
           onClick={() => setCms((v) => !v)}
           className={`w-9 h-5 rounded-full relative transition-colors ${cms ? "bg-accent" : "bg-line"}`}
         >
