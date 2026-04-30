@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { computeQuote, type ProjectType } from "@/lib/design/calculator";
+import { Link } from "@/i18n/routing";
 
 export function QuoteCalculator() {
   const t = useTranslations("calculator");
@@ -79,6 +80,10 @@ export function QuoteCalculator() {
           <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">{t("currency")}</span>
         </span>
       </div>
+
+      <Link href="/pricing" className="mt-3 inline-flex items-center gap-2 text-[12px] font-mono text-accent hover:underline">
+        {t("fullCalc")} →
+      </Link>
     </div>
   );
 }

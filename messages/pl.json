@@ -2332,6 +2332,7 @@
     "currency": "PLN",
     "heroStat": "Lat na produkcji od pierwszego deployu w 2020.",
     "heroUnit": "+ lat",
+    "fullCalc": "Pełny kalkulator (9 knobów)",
     "types": {
       "next": "Next",
       "wp": "WP",

@@ -2326,6 +2326,7 @@
     "currency": "PLN",
     "heroStat": "Years on production since the first deploy in 2020.",
     "heroUnit": "+ yr",
+    "fullCalc": "Full calculator (9 knobs)",
     "types": {
       "next": "Next",
       "wp": "WP",
