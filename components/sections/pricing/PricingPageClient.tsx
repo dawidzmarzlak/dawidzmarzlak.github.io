@@ -39,6 +39,7 @@ export function PricingPageClient() {
       const shared = {
         designTier: prev.designTier, languages: prev.languages,
         hosting: prev.hosting, supportTier: prev.supportTier, timeline: prev.timeline,
+        industry: prev.industry, audience: prev.audience, stage: prev.stage,
       };
       if (kindParam === "site") return { kind: "site", ...shared, site: { goal: "company", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
       if (kindParam === "shop") return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
