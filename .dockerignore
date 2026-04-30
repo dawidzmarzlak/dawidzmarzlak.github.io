@@ -1,0 +1,26 @@
+# Build / cache outputs
+node_modules
+.next
+out
+playwright-report
+test-results
+tsconfig.tsbuildinfo
+admin-frontend/node_modules
+admin-frontend/dist
+backend/target
+
+# Local
+.git
+.github
+.claude
+.idea
+.vscode
+.DS_Store
+*.log
+
+# Don't bake secrets into images
+.env
+.env.local
+.env.*.local
+deploy/htpasswd
+!.env.example
