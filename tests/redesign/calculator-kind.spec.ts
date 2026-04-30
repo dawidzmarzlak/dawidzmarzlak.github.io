@@ -12,6 +12,7 @@ const SITE_BASELINE: AdvancedQuoteInput = {
   kind: "site",
   designTier: "standard", languages: 1, hosting: "client",
   supportTier: "basic", timeline: "normal",
+  industry: "other", audience: "b2c", stage: "new",
   site: {
     goal: "company",
     pages: 8,
@@ -24,6 +25,7 @@ const SHOP_BASELINE: AdvancedQuoteInput = {
   kind: "shop",
   designTier: "standard", languages: 1, hosting: "client",
   supportTier: "basic", timeline: "normal",
+  industry: "other", audience: "b2c", stage: "new",
   shop: {
     platform: "woo",
     catalogSize: "md",
@@ -38,6 +40,7 @@ const APP_BASELINE: AdvancedQuoteInput = {
   kind: "app",
   designTier: "standard", languages: 1, hosting: "client",
   supportTier: "basic", timeline: "normal",
+  industry: "other", audience: "b2c", stage: "new",
   app: {
     appType: "saas",
     auth: "email",
