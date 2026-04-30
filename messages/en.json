@@ -284,7 +284,7 @@
     "colStudio": "Studio",
     "colContact": "Contact",
     "linksList": {
-      "studio": ["About", "Portfolio", "Showcase", "Blog", "Pricing"],
+      "studio": ["About", "Showcase", "Blog", "Pricing"],
       "services": ["Next.js", "WordPress", "E-commerce", "Web apps"]
     },
     "copy": "© 2026 IT Solutions. All rights reserved.",
