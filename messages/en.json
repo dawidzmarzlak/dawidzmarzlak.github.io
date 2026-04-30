@@ -2319,56 +2319,156 @@
   "calculator": {
     "title": "// Quote calculator",
     "live": "live",
-    "type": "Project type",
+    "kind": "Project type",
     "pages": "Number of pages",
     "cms": "CMS editing",
     "out": "Estimated from",
     "currency": "PLN",
     "heroStat": "Years on production since the first deploy in 2020.",
     "heroUnit": "+ yr",
-    "fullCalc": "Full calculator (9 knobs)",
-    "types": {
-      "next": "Next",
-      "wp": "WP",
-      "woo": "Woo",
-      "presta": "Presta",
-      "app": "App"
+    "fullCalc": "Full calculator",
+    "kinds": {
+      "site": {
+        "short": "Site",
+        "long":  "Marketing or company site",
+        "hint":  "A site that introduces a brand, offer or portfolio. Can include blog, forms, mailing integrations."
+      },
+      "shop": {
+        "short": "Shop",
+        "long":  "Online store with product catalog",
+        "hint":  "Full e-commerce: cart, payments, integrations with stock and couriers."
+      },
+      "app": {
+        "short": "App",
+        "long":  "Web app or SaaS",
+        "hint":  "A system with login, panels, user roles and custom business logic."
+      }
+    },
+    "siteGoals": {
+      "landing":  "Landing",
+      "company":  "Company",
+      "portfolio":"Portfolio",
+      "blog":     "Blog",
+      "showcase": "Showcase"
+    },
+    "shopPlatforms": {
+      "woo":     "WooCommerce",
+      "presta":  "PrestaShop",
+      "shopify": "Shopify",
+      "custom":  "Custom (Next)"
+    },
+    "catalogSizes": {
+      "sm": "up to 50",
+      "md": "50–500",
+      "lg": "500–5k",
+      "xl": "5k+"
+    },
+    "paymentGateways": {
+      "blik":   "BLIK",
+      "p24":    "Przelewy24",
+      "stripe": "Stripe",
+      "paypal": "PayPal",
+      "card":   "Card"
+    },
+    "erp": {
+      "none":    "None",
+      "subiekt": "Subiekt",
+      "wapro":   "WAPRO",
+      "comarch": "Comarch",
+      "custom":  "Other"
+    },
+    "appTypes": {
+      "saas":        "SaaS",
+      "internal":    "Internal",
+      "portal":      "Portal",
+      "dashboard":   "Dashboard",
+      "marketplace": "Marketplace",
+      "other":       "Other"
+    },
+    "appAuth": {
+      "none":  "None",
+      "email": "Email + password",
+      "oauth": "OAuth",
+      "sso":   "SSO + RBAC"
+    },
+    "appBackends": {
+      "spring":   "Spring Boot",
+      "node":     "Node",
+      "next-api": "Next.js API",
+      "other":    "Other"
+    },
+    "appStorage": {
+      "postgres": "PostgreSQL",
+      "mongo":    "MongoDB",
+      "redis":    "Redis",
+      "files":    "Files/S3",
+      "mixed":    "Mixed"
     }
   },
   "pricing": {
     "hero": {
       "crumb": "Pricing",
       "title": ["3 presets. ", "The rest", " — calculator."],
-      "intro": "Pick one of 3 popular configurations or build your own with the calculator below. Each knob is a concrete line item. Click — the price updates live."
+      "intro": "Pick one of 3 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click — the price updates live. When done, send the brief — quote context travels with it."
     },
     "presets": {
       "popular": "Most popular",
       "from": "from",
-      "landing":  { "name": "Landing Page",   "desc": "4 pages, standard design, Vercel hosting. For startups and small businesses." },
-      "company":  { "name": "Business site",  "desc": "10 pages, CMS, PL+EN, newsletter. Most-ordered configuration." },
-      "ecom":     { "name": "Online store",   "desc": "WooCommerce, 15 pages, premium design, payments + search." }
+      "landing":  { "name": "Landing Page",      "desc": "4 pages, standard design, Vercel hosting. For startups and campaigns." },
+      "company":  { "name": "Business site",     "desc": "10 pages, CMS, PL+EN, newsletter. Most-ordered configuration." },
+      "ecom":     { "name": "Online store",      "desc": "WooCommerce, catalog 50–500 SKUs, BLIK + Przelewy24, couriers." }
     },
     "knobs": {
-      "type": "Project type",
+      "kind": "Project type",
       "pages": "Number of pages",
+      "contentPages": "Content pages",
       "cms": "CMS editing",
       "designTier": "Design level",
       "languages": "Number of languages",
-      "integrations": "Integrations",
+      "siteGoal": "Site goal",
+      "siteIntegrations": "Integrations",
+      "shopPlatform": "Platform",
+      "catalogSize": "Catalog size",
+      "payments": "Payment gateways",
+      "shopIntegrations": "Shop integrations",
+      "erp": "ERP integration",
+      "appType": "App kind",
+      "appAuth": "Login / roles",
+      "appBackend": "Backend",
+      "appStorage": "Storage / DB",
+      "appIntegrations": "Integrations",
+      "appRoles": "Number of roles",
+      "appMobile": "Mobile companion",
       "support": "Post-launch support",
       "hosting": "Hosting",
       "timeline": "Timeline",
-      "tiers": { "lite": "Lite — template", "standard": "Standard — custom UI", "premium": "Premium — UX/UI from scratch" },
-      "supports": { "none": "None", "basic": "6 mo. (free)", "pro": "12 mo. + SLA" },
-      "hostings": { "client": "Client-hosted", "vercel": "Vercel", "vps": "VPS" },
+      "tiers":     { "lite": "Lite — template", "standard": "Standard — custom UI", "premium": "Premium — UX/UI from scratch" },
+      "supports":  { "none": "None", "basic": "6 mo. (free)", "pro": "12 mo. + SLA" },
+      "hostings":  { "client": "Client-hosted", "vercel": "Vercel", "vps": "VPS" },
       "timelines": { "normal": "Standard", "rush": "Rush (+25%)" },
-      "integr": {
-        "payments": "Payments",
-        "crm": "CRM",
+      "siteIntegr": {
+        "analytics":  "Analytics",
         "newsletter": "Newsletter",
-        "analytics": "Analytics",
-        "search": "Search",
-        "marketplace": "Marketplace"
+        "form":       "Form",
+        "chat":       "Chat",
+        "map":        "Map",
+        "booking":    "Booking"
+      },
+      "shopIntegr": {
+        "courier":      "Couriers",
+        "newsletter":   "Newsletter",
+        "crm":          "CRM",
+        "allegro":      "Allegro",
+        "marketplace":  "Marketplace",
+        "subscription": "Subscriptions"
+      },
+      "appIntegr": {
+        "payments":     "Payments",
+        "sms":          "SMS",
+        "email":        "Email",
+        "ai":           "AI",
+        "external-api": "External API",
+        "websockets":   "WebSockets"
       }
     },
     "breakdown": {
@@ -2378,13 +2478,80 @@
       "cms": "CMS",
       "design": "Design",
       "languages": "Translations",
-      "integrations": "Integrations",
+      "siteIntegrations": "Site integrations",
+      "catalog": "Catalog",
+      "payments": "Payment gateways",
+      "shopIntegrations": "Shop integrations",
+      "erp": "ERP",
+      "appAuth": "Login",
+      "appBackend": "Backend",
+      "appStorage": "Storage",
+      "appIntegrations": "App integrations",
+      "appRoles": "User roles",
+      "appMobile": "Mobile companion",
       "hosting": "Hosting (setup)",
       "rush": "Rush (+25%)",
       "total": "One-time total",
       "supportYearly": "Pro support",
       "year": "year",
       "cta": "Send brief →"
+    }
+  },
+  "brief": {
+    "title":  ["Brief in ", "2 steps", "."],
+    "kinds": {
+      "site": "Marketing site",
+      "shop": "Online store",
+      "app":  "Web application"
+    },
+    "summary": {
+      "kicker": "// Your quote",
+      "edit":   "Edit quote"
+    },
+    "gate": {
+      "kicker": "Step zero",
+      "title":  ["First a ", "short quote", ", then the brief."],
+      "body":   "Fill the quick calculator (3 min) so I know what we're building and at what budget. The brief sends together with your quote — no repeated questions.",
+      "cta":    "Open the calculator →"
+    },
+    "fields": {
+      "name":         "Full name",
+      "email":        "Email",
+      "company":      "Company",
+      "desc":         "Describe the project in 3–5 sentences",
+      "descMin":      "min. 20 chars",
+      "timelineNote": "Timeline (optional)"
+    },
+    "placeholders": {
+      "name":         "e.g. Anna Kowalska",
+      "email":        "anna@firma.pl",
+      "company":      "optional",
+      "timelineNote": "e.g. kickoff in 4 weeks",
+      "desc": {
+        "site": "What are we building? For whom? Most important sections? Got a benchmark — link?",
+        "shop": "What do you sell? Source of products (manual / wholesale / ERP)? Top integrations?",
+        "app":  "What does the app do? Main users and their roles? Critical flows?"
+      }
+    },
+    "nav": {
+      "next":   "Next",
+      "back":   "Back",
+      "submit": "Send brief"
+    },
+    "submitted": {
+      "title": ["Brief on its way, ", "."],
+      "body":  ["I'll reply to ", " within 48h."]
+    },
+    "aside": {
+      "slots": "Available slots · 30 min",
+      "summary": {
+        "kicker": "// Your quote",
+        "edit":   "Edit quote"
+      },
+      "picker": {
+        "kicker": "// Quick quote",
+        "body":   "Pick the project type — we'll take you to the calculator."
+      }
     }
   },
   "redesign": {

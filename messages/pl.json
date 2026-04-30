@@ -2325,56 +2325,156 @@
   "calculator": {
     "title": "// Kalkulator wyceny",
     "live": "live",
-    "type": "Typ projektu",
+    "kind": "Typ projektu",
     "pages": "Liczba podstron",
     "cms": "Edycja przez CMS",
     "out": "Szacunkowo od",
     "currency": "PLN",
     "heroStat": "Lat na produkcji od pierwszego deployu w 2020.",
     "heroUnit": "+ lat",
-    "fullCalc": "Pełny kalkulator (9 knobów)",
-    "types": {
-      "next": "Next",
-      "wp": "WP",
-      "woo": "Woo",
-      "presta": "Presta",
-      "app": "App"
+    "fullCalc": "Pełny kalkulator",
+    "kinds": {
+      "site": {
+        "short": "Wizytówka",
+        "long":  "Strona wizytówka, firmowa lub portfolio",
+        "hint":  "Strona prezentująca firmę, ofertę lub portfolio. Może mieć blog, formularze, integracje z mailingiem."
+      },
+      "shop": {
+        "short": "Sklep",
+        "long":  "Sklep internetowy z katalogiem produktów",
+        "hint":  "Pełnoprawny e-commerce: koszyk, płatności, integracje z magazynem i kurierami."
+      },
+      "app": {
+        "short": "Aplikacja",
+        "long":  "Aplikacja webowa lub SaaS",
+        "hint":  "System z logowaniem, panelami, rolami użytkowników i własną logiką biznesową."
+      }
+    },
+    "siteGoals": {
+      "landing":  "Landing",
+      "company":  "Firmowa",
+      "portfolio":"Portfolio",
+      "blog":     "Blog",
+      "showcase": "Showcase"
+    },
+    "shopPlatforms": {
+      "woo":     "WooCommerce",
+      "presta":  "PrestaShop",
+      "shopify": "Shopify",
+      "custom":  "Custom (Next)"
+    },
+    "catalogSizes": {
+      "sm": "do 50",
+      "md": "50–500",
+      "lg": "500–5k",
+      "xl": "5k+"
+    },
+    "paymentGateways": {
+      "blik":   "BLIK",
+      "p24":    "Przelewy24",
+      "stripe": "Stripe",
+      "paypal": "PayPal",
+      "card":   "Karta"
+    },
+    "erp": {
+      "none":    "Brak",
+      "subiekt": "Subiekt",
+      "wapro":   "WAPRO",
+      "comarch": "Comarch",
+      "custom":  "Inny"
+    },
+    "appTypes": {
+      "saas":        "SaaS",
+      "internal":    "Wewnętrzna",
+      "portal":      "Portal",
+      "dashboard":   "Dashboard",
+      "marketplace": "Marketplace",
+      "other":       "Inne"
+    },
+    "appAuth": {
+      "none":  "Brak",
+      "email": "Email + hasło",
+      "oauth": "OAuth",
+      "sso":   "SSO + RBAC"
+    },
+    "appBackends": {
+      "spring":   "Spring Boot",
+      "node":     "Node",
+      "next-api": "Next.js API",
+      "other":    "Inny"
+    },
+    "appStorage": {
+      "postgres": "PostgreSQL",
+      "mongo":    "MongoDB",
+      "redis":    "Redis",
+      "files":    "Pliki/S3",
+      "mixed":    "Mieszane"
     }
   },
   "pricing": {
     "hero": {
       "crumb": "Cennik",
       "title": ["3 presety. ", "Reszta", " — kalkulator."],
-      "intro": "Wybierz jeden z 3 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każdy knob to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo."
+      "intro": "Wybierz jeden z 3 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
       "popular": "Najpopularniejsze",
       "from": "od",
-      "landing":  { "name": "Landing Page",   "desc": "4 podstrony, design standard, hosting na Vercel. Dla startupów i małych firm." },
-      "company":  { "name": "Strona firmowa", "desc": "10 podstron, CMS, PL+EN, newsletter. Najczęściej zamawiana konfiguracja." },
-      "ecom":     { "name": "Sklep online",   "desc": "WooCommerce, 15 podstron, design premium, płatności + wyszukiwarka." }
+      "landing":  { "name": "Landing Page",      "desc": "4 podstrony, design standard, hosting na Vercel. Dla startupów i kampanii." },
+      "company":  { "name": "Strona firmowa",    "desc": "10 podstron, CMS, PL+EN, newsletter. Najczęściej zamawiana konfiguracja." },
+      "ecom":     { "name": "Sklep online",      "desc": "WooCommerce, katalog 50–500 produktów, BLIK + Przelewy24, kurierzy." }
     },
     "knobs": {
-      "type": "Typ projektu",
+      "kind": "Typ projektu",
       "pages": "Liczba podstron",
+      "contentPages": "Strony treściowe",
       "cms": "Edycja przez CMS",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
-      "integrations": "Integracje",
+      "siteGoal": "Cel strony",
+      "siteIntegrations": "Integracje",
+      "shopPlatform": "Platforma",
+      "catalogSize": "Wielkość katalogu",
+      "payments": "Bramki płatności",
+      "shopIntegrations": "Integracje sklepu",
+      "erp": "Integracja z ERP",
+      "appType": "Rodzaj aplikacji",
+      "appAuth": "Logowanie / role",
+      "appBackend": "Backend",
+      "appStorage": "Storage / DB",
+      "appIntegrations": "Integracje",
+      "appRoles": "Liczba ról",
+      "appMobile": "Aplikacja mobilna",
       "support": "Wsparcie po wdrożeniu",
       "hosting": "Hosting",
       "timeline": "Termin",
-      "tiers": { "lite": "Lite — szablon", "standard": "Standard — custom UI", "premium": "Premium — UX/UI od zera" },
-      "supports": { "none": "Brak", "basic": "6 mies. (gratis)", "pro": "12 mies. + SLA" },
-      "hostings": { "client": "U klienta", "vercel": "Vercel", "vps": "VPS" },
+      "tiers":     { "lite": "Lite — szablon", "standard": "Standard — custom UI", "premium": "Premium — UX/UI od zera" },
+      "supports":  { "none": "Brak", "basic": "6 mies. (gratis)", "pro": "12 mies. + SLA" },
+      "hostings":  { "client": "U klienta", "vercel": "Vercel", "vps": "VPS" },
       "timelines": { "normal": "Standard", "rush": "Rush (+25%)" },
-      "integr": {
-        "payments": "Płatności",
-        "crm": "CRM",
+      "siteIntegr": {
+        "analytics":  "Analytics",
         "newsletter": "Newsletter",
-        "analytics": "Analytics",
-        "search": "Wyszukiwarka",
-        "marketplace": "Marketplace"
+        "form":       "Formularz",
+        "chat":       "Czat",
+        "map":        "Mapa",
+        "booking":    "Rezerwacje"
+      },
+      "shopIntegr": {
+        "courier":      "Kurierzy",
+        "newsletter":   "Newsletter",
+        "crm":          "CRM",
+        "allegro":      "Allegro",
+        "marketplace":  "Marketplace",
+        "subscription": "Subskrypcje"
+      },
+      "appIntegr": {
+        "payments":     "Płatności",
+        "sms":          "SMS",
+        "email":        "Email",
+        "ai":           "AI",
+        "external-api": "API zewnętrzne",
+        "websockets":   "WebSockets"
       }
     },
     "breakdown": {
@@ -2384,13 +2484,80 @@
       "cms": "CMS",
       "design": "Design",
       "languages": "Tłumaczenia",
-      "integrations": "Integracje",
+      "siteIntegrations": "Integracje strony",
+      "catalog": "Katalog",
+      "payments": "Bramki płatności",
+      "shopIntegrations": "Integracje sklepu",
+      "erp": "ERP",
+      "appAuth": "Logowanie",
+      "appBackend": "Backend",
+      "appStorage": "Storage",
+      "appIntegrations": "Integracje aplikacji",
+      "appRoles": "Role użytkowników",
+      "appMobile": "Aplikacja mobilna",
       "hosting": "Hosting (setup)",
       "rush": "Rush (+25%)",
       "total": "Suma jednorazowa",
       "supportYearly": "Wsparcie pro",
       "year": "rok",
       "cta": "Wyślij brief →"
+    }
+  },
+  "brief": {
+    "title":  ["Brief w ", "2 krokach", "."],
+    "kinds": {
+      "site": "Strona wizytówka",
+      "shop": "Sklep online",
+      "app":  "Aplikacja webowa"
+    },
+    "summary": {
+      "kicker": "// Twoja wycena",
+      "edit":   "Edytuj wycenę"
+    },
+    "gate": {
+      "kicker": "Krok zerowy",
+      "title":  ["Najpierw ", "krótka wycena", ", potem brief."],
+      "body":   "Wypełnij szybki kalkulator (3 minuty), żebym wiedział co budujemy i z jakim budżetem. Brief wyśle się razem z wyceną — bez powtarzania pytań.",
+      "cta":    "Otwórz kalkulator →"
+    },
+    "fields": {
+      "name":         "Imię i nazwisko",
+      "email":        "Email",
+      "company":      "Firma",
+      "desc":         "Opisz projekt w 3–5 zdaniach",
+      "descMin":      "min. 20 znaków",
+      "timelineNote": "Termin (opcjonalnie)"
+    },
+    "placeholders": {
+      "name":         "np. Anna Kowalska",
+      "email":        "anna@firma.pl",
+      "company":      "opcjonalnie",
+      "timelineNote": "np. start za 4 tygodnie",
+      "desc": {
+        "site": "Co budujemy? Dla kogo? Najważniejsze sekcje? Czy masz benchmark — link?",
+        "shop": "Co sprzedajesz? Skąd produkty (ręcznie / hurtownia / ERP)? Najważniejsze integracje?",
+        "app":  "Co aplikacja ma robić? Główni użytkownicy i ich role? Najważniejsze przepływy?"
+      }
+    },
+    "nav": {
+      "next":   "Dalej",
+      "back":   "Wstecz",
+      "submit": "Wyślij brief"
+    },
+    "submitted": {
+      "title": ["Brief w drodze, ", "."],
+      "body":  ["Odpowiadam na adres ", " w ciągu 48h."]
+    },
+    "aside": {
+      "slots": "Dostępne sloty · 30 min",
+      "summary": {
+        "kicker": "// Twoja wycena",
+        "edit":   "Edytuj wycenę"
+      },
+      "picker": {
+        "kicker": "// Wycena szybka",
+        "body":   "Wybierz typ projektu — przeniesiemy Cię do kalkulatora."
+      }
     }
   },
   "redesign": {
