@@ -9,7 +9,6 @@ import {
   SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, ERP_OPTIONS,
   APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS,
   DESIGN_TIERS, SUPPORT_TIERS, HOSTINGS, TIMELINES,
-  INDUSTRIES, AUDIENCES, PROJECT_STAGES,
 } from "@/lib/design/project-kinds";
 
 interface Props {
@@ -25,13 +24,13 @@ export function AdvancedCalculator({ value, onChange }: Props) {
     if (kind === value.kind) return;
     onChange(emptyInput(kind, value));
   };
-  const setShared = <K extends "designTier" | "languages" | "hosting" | "supportTier" | "timeline" | "industry" | "audience" | "stage">(
+  const setShared = <K extends "designTier" | "languages" | "hosting" | "supportTier" | "timeline">(
     k: K, v: AdvancedQuoteInput[K]
   ) => onChange({ ...value, [k]: v });
 
   return (
     <div className="bg-bg-card rounded-[24px] p-7 border border-line flex flex-col gap-6">
-      {/* === BUSINESS CONTEXT (top) === */}
+      {/* === KIND === */}
       <Knob label={t("kind")}>
         <Pills
           options={PROJECT_KINDS}
@@ -43,21 +42,7 @@ export function AdvancedCalculator({ value, onChange }: Props) {
         <p className="text-[12px] text-fg-muted mt-1.5 leading-[1.5]">{tCalc(`kinds.${value.kind}.hint`)}</p>
       </Knob>
 
-      <Knob label={t("industry")}>
-        <Pills options={INDUSTRIES} value={value.industry} onChange={(v) => setShared("industry", v)} labelFn={(k) => tCalc(`industries.${k}`)} cols={4} />
-      </Knob>
-
-      <Knob label={t("audience")}>
-        <Pills options={AUDIENCES} value={value.audience} onChange={(v) => setShared("audience", v)} labelFn={(k) => tCalc(`audiences.${k}`)} cols={4} />
-      </Knob>
-
-      <Knob label={t("stage")}>
-        <Pills options={PROJECT_STAGES} value={value.stage} onChange={(v) => setShared("stage", v)} labelFn={(k) => tCalc(`stages.${k}`)} cols={3} />
-      </Knob>
-
-      <hr className="border-t border-line my-1" />
-
-      {/* === KIND-SPECIFIC BUSINESS KNOBS === */}
+      {/* === KIND-SPECIFIC PRICE KNOBS === */}
       {value.kind === "site" && (
         <SiteSection value={value.site} onChange={(site) => onChange({ ...value, site })} />
       )}
