@@ -128,4 +128,27 @@ class QuoteRepositoryIT {
         assertThat(a.getFileSize()).isEqualTo(12345L);
         assertThat(a.getStoragePath()).isEqualTo("uploads/abc/brief.pdf");
     }
+
+    @Test
+    void adds_attachment_to_already_saved_quote() {
+        QuoteRequest saved = repository.save(sampleQuote());
+
+        QuoteRequest loaded = repository.findById(saved.getId()).orElseThrow();
+        loaded.addAttachment(QuoteAttachment.create(
+                "scope.pdf",
+                "application/pdf",
+                67890L,
+                "uploads/def/scope.pdf"
+        ));
+        repository.save(loaded);
+
+        Optional<QuoteRequest> reloaded = repository.findById(saved.getId());
+        assertThat(reloaded).isPresent();
+        assertThat(reloaded.get().getAttachments()).hasSize(1);
+        QuoteAttachment a = reloaded.get().getAttachments().get(0);
+        assertThat(a.getFileName()).isEqualTo("scope.pdf");
+        assertThat(a.getContentType()).isEqualTo("application/pdf");
+        assertThat(a.getFileSize()).isEqualTo(67890L);
+        assertThat(a.getStoragePath()).isEqualTo("uploads/def/scope.pdf");
+    }
 }

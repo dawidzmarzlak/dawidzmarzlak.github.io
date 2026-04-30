@@ -124,7 +124,7 @@ public class QuoteJpaEntity {
      * lifecycle bound to the parent quote.
      */
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "quote_id")
+    @JoinColumn(name = "quote_id", nullable = false, updatable = false)
     @Builder.Default
     private List<QuoteAttachmentJpaEntity> attachments = new ArrayList<>();
 }
