@@ -13,3 +13,9 @@ dev-*.log
 
 # Maven build output
 backend/target/
+
+# Local secrets / overrides
+.env
+.env.local
+.env.*.local
+deploy/htpasswd

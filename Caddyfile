@@ -1,0 +1,50 @@
+# Production Caddyfile.
+# Routes traffic by host: public site / API / admin BO.
+# Auto-HTTPS via Let's Encrypt for all three.
+
+{
+    email {$ACME_EMAIL}
+}
+
+# ----- Public site -----
+{$DOMAIN_PUBLIC} {
+    encode zstd gzip
+    reverse_proxy frontend:80
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    }
+}
+
+# ----- Backend API -----
+{$DOMAIN_API} {
+    encode zstd gzip
+    reverse_proxy backend:8080
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # Block actuator (except health/info, which Spring Security itself permits) from outside.
+    # The backend already blocks at the Spring Security layer, but defense-in-depth.
+    @actuator path /actuator/* /actuator
+    handle @actuator {
+        @notlocal not remote_ip 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 127.0.0.1/32
+        respond @notlocal "Forbidden" 403
+    }
+}
+
+# ----- Admin BO -----
+# Defence-in-depth: Basic Auth (Caddy) + JWT (app). No public links.
+# Optional: add IP allowlist later if needed (see deploy/README.md).
+{$DOMAIN_ADMIN} {
+    basicauth {
+        import /etc/caddy/htpasswd
+    }
+
+    encode zstd gzip
+    reverse_proxy admin:80
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Robots-Tag "noindex, nofollow"
+    }
+}
