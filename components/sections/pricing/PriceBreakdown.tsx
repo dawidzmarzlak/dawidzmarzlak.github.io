@@ -10,14 +10,25 @@ export function PriceBreakdown({ quote }: Props) {
   const tCalc = useTranslations("calculator");
   const locale = useLocale();
   const fmt = (n: number) => n.toLocaleString(locale === "pl" ? "pl-PL" : "en-US");
+  const b = quote.breakdown;
   const allRows: Array<[string, number]> = [
-    [t("base"),         quote.breakdown.base],
-    [t("pages"),        quote.breakdown.pages],
-    [t("cms"),          quote.breakdown.cms],
-    [t("design"),       quote.breakdown.design],
-    [t("languages"),    quote.breakdown.languages],
-    [t("integrations"), quote.breakdown.integrations],
-    [t("hosting"),      quote.breakdown.hosting],
+    [t("base"),             b.base],
+    [t("pages"),            b.pages],
+    [t("cms"),              b.cms],
+    [t("design"),           b.design],
+    [t("languages"),        b.languages],
+    [t("siteIntegrations"), b.siteIntegrations],
+    [t("catalog"),          b.catalog],
+    [t("payments"),         b.payments],
+    [t("shopIntegrations"), b.shopIntegrations],
+    [t("erp"),              b.erp],
+    [t("appAuth"),          b.appAuth],
+    [t("appBackend"),       b.appBackend],
+    [t("appStorage"),       b.appStorage],
+    [t("appIntegrations"),  b.appIntegrations],
+    [t("appRoles"),         b.appRoles],
+    [t("appMobile"),        b.appMobile],
+    [t("hosting"),          b.hosting],
   ];
   const rows = allRows.filter(([, v]) => v > 0);
 
@@ -50,7 +61,7 @@ export function PriceBreakdown({ quote }: Props) {
           <span className="font-mono">+{fmt(quote.supportYearly)} / {t("year")}</span>
         </div>
       )}
-      <Link href="/contact" className="mt-6 block text-center bg-accent text-accent-fg rounded-full py-3 font-bold no-underline">
+      <Link href="/contact?from=quote#brief" className="mt-6 block text-center bg-accent text-accent-fg rounded-full py-3 font-bold no-underline">
         {t("cta")}
       </Link>
     </div>

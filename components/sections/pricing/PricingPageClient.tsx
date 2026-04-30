@@ -1,7 +1,8 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { computeAdvancedQuote, type AdvancedQuoteInput } from "@/lib/design/calculator";
 import { PRESETS, type PresetKey } from "@/lib/design/pricing-presets";
+import { saveQuote } from "@/lib/design/quote-store";
 import { PricingPresets } from "./PricingPresets";
 import { AdvancedCalculator } from "./AdvancedCalculator";
 import { PriceBreakdown } from "./PriceBreakdown";
@@ -27,6 +28,15 @@ export function PricingPageClient() {
   };
 
   const quote = useMemo(() => computeAdvancedQuote(input), [input]);
+
+  useEffect(() => {
+    saveQuote({
+      input,
+      total: quote.total,
+      supportYearly: quote.supportYearly,
+      timestamp: Date.now(),
+    });
+  }, [input, quote.total, quote.supportYearly]);
 
   return (
     <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-10">
