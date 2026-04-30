@@ -20,16 +20,23 @@ export const contactsService = {
     await api.patch(`/admin/contacts/${id}/status`, { status });
   },
 
-  async reply(id: string, subject: string, message: string): Promise<{ success: boolean; emailSent: boolean }> {
-    const response = await api.post(`/admin/contacts/${id}/reply`, { subject, message });
+  async reply(
+    id: string,
+    subject: string,
+    message: string
+  ): Promise<{ success: boolean; emailSent: boolean }> {
+    const response = await api.post<{ success: boolean; emailSent: boolean }>(
+      `/admin/contacts/${id}/reply`,
+      { subject, message }
+    );
     return response.data;
   },
 
   async archive(id: string): Promise<void> {
-    await api.post(`/admin/contacts/${id}/archive`);
+    await this.updateStatus(id, 'ARCHIVED');
   },
 
   async markAsSpam(id: string): Promise<void> {
-    await api.post(`/admin/contacts/${id}/spam`);
+    await this.updateStatus(id, 'SPAM');
   },
 };
