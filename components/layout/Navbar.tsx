@@ -6,10 +6,11 @@ import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-const NAV_ITEMS: Array<{ href: string; key: "services" | "portfolio" | "contact"; }> = [
-  { href: "/services", key: "services" },
+const NAV_ITEMS: Array<{ href: string; key: "services" | "portfolio" | "showcase" | "contact"; }> = [
+  { href: "/services",  key: "services" },
   { href: "/portfolio", key: "portfolio" },
-  { href: "/contact", key: "contact" },
+  { href: "/showcase",  key: "showcase" },
+  { href: "/contact",   key: "contact" },
 ];
 
 const ANCHOR_ITEMS: Array<{ id: "process" | "faq"; key: "process" | "faq" }> = [

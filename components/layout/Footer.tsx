@@ -41,11 +41,19 @@ export function Footer() {
             </h5>
             <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
               {studioLinks.map((label, i) => {
-                // [About, Portfolio, Blog, Pricing] — Portfolio (1) -> /portfolio,
-                // About (0) -> /about, Pricing (3) -> /pricing; Blog (2) stubs to "#"
-                // until that page lands.
+                // [About, Portfolio, Showcase, Blog, Pricing] — About (0) -> /about,
+                // Portfolio (1) -> /portfolio, Showcase (2) -> /showcase, Pricing (4) -> /pricing;
+                // Blog (3) stubs to "#" until that page lands.
                 const href =
-                  i === 1 ? "/portfolio" : i === 0 ? "/about" : i === 3 ? "/pricing" : "#";
+                  i === 0
+                    ? "/about"
+                    : i === 1
+                      ? "/portfolio"
+                      : i === 2
+                        ? "/showcase"
+                        : i === 4
+                          ? "/pricing"
+                          : "#";
                 return (
                   <li key={i}>
                     <Link

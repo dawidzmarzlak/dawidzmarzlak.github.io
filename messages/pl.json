@@ -4,6 +4,7 @@
     "about": "O mnie",
     "services": "Usługi",
     "portfolio": "Portfolio",
+    "showcase": "Showcase",
     "blog": "Blog",
     "pricing": "Cennik",
     "contact": "Kontakt",
@@ -283,7 +284,7 @@
     "colStudio": "Pracownia",
     "colContact": "Kontakt",
     "linksList": {
-      "studio": ["O nas", "Portfolio", "Blog", "Cennik"],
+      "studio": ["O nas", "Portfolio", "Showcase", "Blog", "Cennik"],
       "services": ["Next.js", "WordPress", "E-commerce", "Aplikacje"]
     },
     "copy": "© 2026 IT Solutions. Wszystkie prawa zastrzeżone.",
