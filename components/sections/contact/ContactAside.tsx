@@ -1,6 +1,8 @@
 "use client";
-import { useState } from "react";
-import { computeQuote, type ProjectType } from "@/lib/design/calculator";
+import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
+import { useStoredQuote } from "@/lib/design/quote-store";
+import { PROJECT_KINDS } from "@/lib/design/project-kinds";
 
 const SLOTS = [
   { day: "pon", date: "4 lis", time: "10:00", open: true },
@@ -13,22 +15,19 @@ const SLOTS = [
   { day: "czw", date: "7 lis", time: "16:00", open: true },
 ];
 
-const TYPES: Array<[ProjectType, string]> = [
-  ["next", "Next"], ["wp", "WP"], ["woo", "Woo"], ["presta", "Presta"], ["app", "App"],
-];
-
 export function ContactAside() {
-  const [type, setType] = useState<ProjectType>("next");
-  const [pages, setPages] = useState(8);
-  const [cms, setCms] = useState(true);
-  const price = computeQuote({ type, pages, cms });
+  const t = useTranslations("brief.aside");
+  const tCalc = useTranslations("calculator");
+  const locale = useLocale();
+  const fmt = (n: number) => n.toLocaleString(locale === "pl" ? "pl-PL" : "en-US");
+  const stored = useStoredQuote();
 
   return (
     <aside className="flex flex-col gap-4 lg:sticky lg:top-[90px]">
       <div className="bg-bg-card rounded-[24px] p-7">
         <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          Dostępne sloty · 30 min
+          {t("slots")}
         </div>
         <div className="grid grid-cols-2 gap-1.5">
           {SLOTS.map((s, i) => (
@@ -46,61 +45,37 @@ export function ContactAside() {
         </div>
       </div>
 
-      <div className="bg-bg-card rounded-[24px] p-7">
-        <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted mb-5">// Kalkulator wyceny</div>
-        <div className="flex flex-col gap-2 mb-3.5">
-          <span className="text-[12px] text-fg-muted">Typ projektu</span>
-          <div className="grid grid-cols-5 gap-1">
-            {TYPES.map(([k, l]) => (
-              <button
+      {stored ? (
+        <div className="bg-bg-card rounded-[24px] p-7 flex flex-col gap-4">
+          <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">{t("summary.kicker")}</div>
+          <div className="text-[15px] text-fg leading-[1.5]">
+            {tCalc(`kinds.${stored.input.kind}.long`)}
+          </div>
+          <div className="px-4 py-4 bg-bg rounded-xl flex items-baseline justify-between border border-line">
+            <span className="font-mono text-[11px] text-fg-muted uppercase">{tCalc("out")}</span>
+            <span className="font-display italic text-[28px] text-accent leading-none">
+              {fmt(stored.total)} <span className="font-mono not-italic text-[11px] text-fg-muted ml-1">{tCalc("currency")}</span>
+            </span>
+          </div>
+          <Link href="/pricing" className="text-[12px] font-mono text-accent hover:underline">{t("summary.edit")} →</Link>
+        </div>
+      ) : (
+        <div className="bg-bg-card rounded-[24px] p-7 flex flex-col gap-4">
+          <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">{t("picker.kicker")}</div>
+          <p className="text-[14px] text-fg-muted m-0 leading-[1.5]">{t("picker.body")}</p>
+          <div className="grid grid-cols-3 gap-1.5">
+            {PROJECT_KINDS.map((k) => (
+              <Link
                 key={k}
-                type="button"
-                onClick={() => setType(k)}
-                className={`py-2 px-1 rounded-lg font-mono text-[10px] uppercase border transition-colors ${
-                  type === k ? "bg-accent text-accent-fg border-accent" : "bg-transparent text-fg border-line"
-                }`}
+                href={`/pricing?kind=${k}`}
+                className="py-3 px-2 rounded-lg font-mono text-[10px] uppercase border border-line text-fg text-center no-underline transition-colors hover:border-fg-muted"
               >
-                {l}
-              </button>
+                {tCalc(`kinds.${k}.short`)}
+              </Link>
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-2 mb-3.5">
-          <span className="text-[12px] text-fg-muted flex justify-between">
-            Liczba podstron
-            <strong className="font-mono text-fg">{pages}</strong>
-          </span>
-          <input
-            type="range"
-            min={1}
-            max={30}
-            value={pages}
-            onChange={(e) => setPages(+e.target.value)}
-            className="w-full h-1 bg-line rounded outline-none accent-accent"
-            aria-label="Liczba podstron"
-            aria-valuetext={`${pages} podstron`}
-          />
-        </div>
-        <div className="flex items-center justify-between py-1">
-          <span className="text-[12px] text-fg-muted">Edycja przez CMS</span>
-          <button
-            type="button"
-            role="switch"
-            aria-checked={cms}
-            aria-label="Edycja przez CMS"
-            onClick={() => setCms((v) => !v)}
-            className={`w-9 h-5 rounded-full relative transition-colors ${cms ? "bg-accent" : "bg-line"}`}
-          >
-            <span className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full transition-transform ${cms ? "translate-x-4 bg-accent-fg" : "translate-x-0 bg-white"}`} />
-          </button>
-        </div>
-        <div className="px-4 py-4 mt-2.5 bg-bg rounded-xl flex items-baseline justify-between border border-line">
-          <span className="font-mono text-[11px] text-fg-muted uppercase">Szacunkowo od</span>
-          <span className="font-display italic text-[28px] text-accent leading-none">
-            {price.toLocaleString("pl-PL")} <span className="font-mono not-italic text-[11px] text-fg-muted ml-1">PLN</span>
-          </span>
-        </div>
-      </div>
+      )}
     </aside>
   );
 }

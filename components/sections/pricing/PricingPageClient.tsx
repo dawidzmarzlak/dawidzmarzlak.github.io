@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { computeAdvancedQuote, type AdvancedQuoteInput } from "@/lib/design/calculator";
 import { PRESETS, type PresetKey } from "@/lib/design/pricing-presets";
 import { saveQuote } from "@/lib/design/quote-store";
@@ -28,6 +29,23 @@ export function PricingPageClient() {
   };
 
   const quote = useMemo(() => computeAdvancedQuote(input), [input]);
+
+  const params = useSearchParams();
+  useEffect(() => {
+    const kindParam = params.get("kind");
+    if (kindParam !== "site" && kindParam !== "shop" && kindParam !== "app") return;
+    setInput((prev) => {
+      if (prev.kind === kindParam) return prev;
+      const shared = {
+        designTier: prev.designTier, languages: prev.languages,
+        hosting: prev.hosting, supportTier: prev.supportTier, timeline: prev.timeline,
+      };
+      if (kindParam === "site") return { kind: "site", ...shared, site: { goal: "company", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
+      if (kindParam === "shop") return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
+      return { kind: "app", ...shared, app: { appType: "saas", auth: "email", backend: "spring", roles: 2, appIntegrations: ["payments"], storage: "postgres", mobile: false } };
+    });
+    setActiveKey(null);
+  }, [params]);
 
   useEffect(() => {
     saveQuote({
