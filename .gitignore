@@ -2,9 +2,14 @@ node_modules
 .next
 .claude
 .playwright-mcp/
-out/
+# Next.js static-export output dir at repo root only — do NOT ignore
+# Spring Boot hexagonal architecture packages (port/out, adapter/out).
+/out/
 playwright-report/
 test-results/
 tsconfig.tsbuildinfo
 nul
 dev-*.log
+
+# Maven build output
+backend/target/
