@@ -10,4 +10,7 @@ test("home / loads with hero, calculator and lime CTA", async ({ page }) => {
   await expect(h1).toContainText("aplikacje", { timeout: 30_000 });
   await expect(h1).toContainText("zarabiać", { timeout: 30_000 });
   await expect(page.getByText(/Kalkulator wyceny/i)).toBeVisible({ timeout: 30_000 });
+  // Mini-calc default = site + 8 pages + cms = 11 200 PLN.
+  // Polish locale uses non-breaking space as thousands separator.
+  await expect(page.getByText(/11[\s ]?200/)).toBeVisible({ timeout: 30_000 });
 });

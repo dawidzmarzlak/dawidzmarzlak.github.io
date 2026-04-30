@@ -1,18 +1,17 @@
 "use client";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { computeQuote, type ProjectType } from "@/lib/design/calculator";
+import { computeMiniQuote, type ProjectKind } from "@/lib/design/calculator";
+import { PROJECT_KINDS } from "@/lib/design/project-kinds";
 import { Link } from "@/i18n/routing";
 
 export function QuoteCalculator() {
   const t = useTranslations("calculator");
   const locale = useLocale();
-  const [type, setType] = useState<ProjectType>("next");
+  const [kind, setKind] = useState<ProjectKind>("site");
   const [pages, setPages] = useState(8);
   const [cms, setCms] = useState(true);
-  const price = computeQuote({ type, pages, cms });
-
-  const types: ProjectType[] = ["next", "wp", "woo", "presta", "app"];
+  const price = computeMiniQuote({ kind, pages, cms });
 
   return (
     <div className="vc-calc bg-bg-card rounded-[24px] p-7 border border-line">
@@ -22,20 +21,21 @@ export function QuoteCalculator() {
       </div>
 
       <div className="flex flex-col gap-2 mb-4">
-        <span className="text-[13px] text-fg-muted">{t("type")}</span>
-        <div className="grid grid-cols-5 gap-1">
-          {types.map((k) => (
+        <span className="text-[13px] text-fg-muted">{t("kind")}</span>
+        <div className="grid grid-cols-3 gap-1.5">
+          {PROJECT_KINDS.map((k) => (
             <button
               key={k}
               type="button"
-              onClick={() => setType(k)}
-              className={`py-2.5 px-1.5 rounded-lg font-mono text-[10px] uppercase border transition-all ${
-                type === k
+              onClick={() => setKind(k)}
+              aria-pressed={kind === k}
+              className={`py-3 px-2 rounded-lg font-mono text-[10px] uppercase border transition-all ${
+                kind === k
                   ? "bg-accent text-accent-fg border-accent"
                   : "bg-transparent text-fg border-line hover:border-fg-muted"
               }`}
             >
-              {t(`types.${k}`)}
+              {t(`kinds.${k}.short`)}
             </button>
           ))}
         </div>
