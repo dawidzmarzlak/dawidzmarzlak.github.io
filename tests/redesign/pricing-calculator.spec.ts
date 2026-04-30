@@ -21,7 +21,7 @@ test("/pl/pricing — klik 'Sklep online' preset zmienia stack na Woo i podnosi 
   test.setTimeout(90_000);
   await page.goto("/pl/pricing", { waitUntil: "domcontentloaded", timeout: 60_000 });
 
+  await expect(page.getByRole("button", { name: /Sklep online/i })).toBeVisible({ timeout: 30_000 });
   await page.getByRole("button", { name: /Sklep online/i }).click();
-  await page.waitForTimeout(150);
-  await expect(page.getByRole("button", { name: /^Woo$/i })).toHaveAttribute("aria-pressed", /true/);
+  await expect(page.getByRole("button", { name: /^Woo$/i })).toHaveAttribute("aria-pressed", "true", { timeout: 5_000 });
 });
