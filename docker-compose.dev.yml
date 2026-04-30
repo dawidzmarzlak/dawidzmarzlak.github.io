@@ -1,0 +1,18 @@
+# Development override.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml --profile dev up -d --build
+# Or via npm: npm run docker:dev
+
+services:
+  caddy:
+    volumes:
+      - ./Caddyfile.dev:/etc/caddy/Caddyfile:ro
+    environment:
+      ACME_EMAIL: dev@example.com
+
+  backend:
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  postgres:
+    ports:
+      - "5432:5432"

@@ -1,0 +1,23 @@
+# Production override.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+# Or via npm: npm run docker:prod
+
+services:
+  postgres:
+    # Don't expose Postgres on the host in prod — only available to other containers.
+    ports: !reset []
+    volumes:
+      - /srv/itsolutions/postgres:/var/lib/postgresql/data
+
+  mailhog:
+    profiles: ["dev"]   # disabled in prod (use real SMTP via SMTP_HOST/SMTP_USER/SMTP_PASSWORD)
+
+  ollama:
+    profiles: ["dev"]   # disabled in prod (use Gemini, or external Ollama via OLLAMA_URL)
+
+  caddy:
+    environment:
+      ACME_EMAIL: ${ACME_EMAIL}
+      DOMAIN_PUBLIC: ${DOMAIN_PUBLIC}
+      DOMAIN_API: ${DOMAIN_API}
+      DOMAIN_ADMIN: ${DOMAIN_ADMIN}
