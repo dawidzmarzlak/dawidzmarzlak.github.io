@@ -3,7 +3,9 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
-import { useStoredQuote, clearQuote } from "@/lib/design/quote-store";
+import { useStoredQuote, saveQuote, clearQuote } from "@/lib/design/quote-store";
+import { computeAdvancedQuote, type AdvancedQuoteInput } from "@/lib/design/calculator";
+import { INDUSTRIES, AUDIENCES, PROJECT_STAGES } from "@/lib/design/project-kinds";
 
 type Step = 0 | 1;
 
@@ -17,6 +19,7 @@ interface FormState {
 
 export function BriefForm() {
   const t = useTranslations("brief");
+  const tCalc = useTranslations("calculator");
   const locale = useLocale();
   const fmt = (n: number) => n.toLocaleString(locale === "pl" ? "pl-PL" : "en-US");
 
@@ -25,6 +28,18 @@ export function BriefForm() {
   const [form, setForm] = useState<FormState>({ name: "", email: "", company: "", desc: "", timelineNote: "" });
   const [submitted, setSubmitted] = useState(false);
   const update = <K extends keyof FormState>(k: K, v: FormState[K]) => setForm((f) => ({ ...f, [k]: v }));
+
+  const setBiz = <K extends "industry" | "audience" | "stage">(k: K, v: AdvancedQuoteInput[K]) => {
+    if (!stored) return;
+    const newInput: AdvancedQuoteInput = { ...stored.input, [k]: v };
+    const recomputed = computeAdvancedQuote(newInput);
+    saveQuote({
+      input: newInput,
+      total: recomputed.total,
+      supportYearly: recomputed.supportYearly,
+      timestamp: Date.now(),
+    });
+  };
 
   const canNext0 = !!form.name && !!form.email && form.email.includes("@");
   const canSubmit = form.desc.length >= 20;
@@ -113,6 +128,21 @@ export function BriefForm() {
 
       {step === 1 && (
         <div className="flex flex-col gap-5">
+          <div className="rounded-[18px] border border-line p-5 flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">{t("context.kicker")}</span>
+              <p className="text-[13px] text-fg-muted leading-[1.55] m-0">{t("context.intro")}</p>
+            </div>
+            <Field label={t("fields.industry")}>
+              <BriefPills options={INDUSTRIES} value={stored.input.industry} onChange={(v) => setBiz("industry", v)} labelFn={(k) => tCalc(`industries.${k}`)} cols={4} />
+            </Field>
+            <Field label={t("fields.audience")}>
+              <BriefPills options={AUDIENCES} value={stored.input.audience} onChange={(v) => setBiz("audience", v)} labelFn={(k) => tCalc(`audiences.${k}`)} cols={4} />
+            </Field>
+            <Field label={t("fields.stage")}>
+              <BriefPills options={PROJECT_STAGES} value={stored.input.stage} onChange={(v) => setBiz("stage", v)} labelFn={(k) => tCalc(`stages.${k}`)} cols={3} />
+            </Field>
+          </div>
           <Field label={t("fields.desc")} required>
             <textarea
               className="brief-input min-h-[140px] leading-[1.5] resize-y"
@@ -184,6 +214,26 @@ function Field({ label, required, children }: { label: string; required?: boolea
         {required && <em className="not-italic text-accent">●</em>}
       </label>
       {children}
+    </div>
+  );
+}
+
+function BriefPills<T extends string>({ options, value, onChange, labelFn, cols }: { options: readonly T[]; value: T; onChange: (v: T) => void; labelFn: (k: T) => string; cols: number }) {
+  return (
+    <div className="grid gap-1.5" style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}>
+      {options.map((k) => (
+        <button
+          key={k}
+          type="button"
+          onClick={() => onChange(k)}
+          aria-pressed={value === k}
+          className={`py-2.5 px-1.5 rounded-lg font-mono text-[10px] uppercase border transition-all ${
+            value === k ? "bg-accent text-accent-fg border-accent" : "bg-transparent text-fg border-line hover:border-fg-muted"
+          }`}
+        >
+          {labelFn(k)}
+        </button>
+      ))}
     </div>
   );
 }
