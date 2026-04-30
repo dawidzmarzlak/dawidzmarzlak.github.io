@@ -12,26 +12,46 @@ export const PRESETS: Preset[] = [
   {
     key: "landing",
     input: {
-      type: "next", pages: 4, cms: false,
-      designTier: "standard", languages: 1, integrations: ["analytics"],
-      supportTier: "basic", hosting: "vercel", timeline: "normal",
+      kind: "site",
+      designTier: "standard", languages: 1, hosting: "vercel",
+      supportTier: "basic", timeline: "normal",
+      site: {
+        goal: "landing",
+        pages: 4,
+        cms: false,
+        siteIntegrations: ["analytics"],
+      },
     },
   },
   {
     key: "company",
     input: {
-      type: "wp", pages: 10, cms: true,
-      designTier: "standard", languages: 2, integrations: ["analytics", "newsletter"],
-      supportTier: "basic", hosting: "vercel", timeline: "normal",
+      kind: "site",
+      designTier: "standard", languages: 2, hosting: "vercel",
+      supportTier: "basic", timeline: "normal",
+      site: {
+        goal: "company",
+        pages: 10,
+        cms: true,
+        siteIntegrations: ["analytics", "newsletter", "form"],
+      },
     },
     badge: "popular",
   },
   {
     key: "ecom",
     input: {
-      type: "woo", pages: 15, cms: true,
-      designTier: "premium", languages: 1, integrations: ["payments", "analytics", "search"],
-      supportTier: "basic", hosting: "vercel", timeline: "normal",
+      kind: "shop",
+      designTier: "premium", languages: 1, hosting: "vercel",
+      supportTier: "basic", timeline: "normal",
+      shop: {
+        platform: "woo",
+        catalogSize: "md",
+        contentPages: 6,
+        paymentGateways: ["blik", "p24"],
+        shopIntegrations: ["courier", "newsletter"],
+        erp: "none",
+      },
     },
   },
 ];
