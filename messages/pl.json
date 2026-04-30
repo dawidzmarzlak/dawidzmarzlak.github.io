@@ -2638,7 +2638,14 @@
       "company":      "Firma",
       "desc":         "Opisz projekt w 3–5 zdaniach",
       "descMin":      "min. 20 znaków",
-      "timelineNote": "Termin (opcjonalnie)"
+      "timelineNote": "Termin (opcjonalnie)",
+      "industry":     "Branża / sektor",
+      "audience":     "Grupa docelowa",
+      "stage":        "Etap projektu"
+    },
+    "context": {
+      "kicker": "// Krótki kontekst",
+      "intro":  "Trzy szybkie pytania o Twoją firmę — pomagają mi zrozumieć biznes przed konsultacją."
     },
     "placeholders": {
       "name":         "np. Anna Kowalska",

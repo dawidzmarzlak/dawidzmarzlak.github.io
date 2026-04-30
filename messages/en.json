@@ -2632,7 +2632,14 @@
       "company":      "Company",
       "desc":         "Describe the project in 3–5 sentences",
       "descMin":      "min. 20 chars",
-      "timelineNote": "Timeline (optional)"
+      "timelineNote": "Timeline (optional)",
+      "industry":     "Industry / sector",
+      "audience":     "Target audience",
+      "stage":        "Project stage"
+    },
+    "context": {
+      "kicker": "// Quick context",
+      "intro":  "Three quick questions about your business — they help me understand the company before the consultation."
     },
     "placeholders": {
       "name":         "e.g. Anna Kowalska",
