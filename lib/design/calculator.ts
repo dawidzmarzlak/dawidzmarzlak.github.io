@@ -3,6 +3,7 @@ import {
   type ShopPlatform, type CatalogSize, type PaymentGateway, type ShopIntegration, type ErpOption,
   type AppType, type AppAuth, type AppBackend, type AppStorage, type AppIntegration,
   type DesignTier, type SupportTier, type Hosting, type Timeline,
+  type Industry, type Audience, type ProjectStage,
 } from "./project-kinds";
 
 export type {
@@ -10,6 +11,7 @@ export type {
   ShopPlatform, CatalogSize, PaymentGateway, ShopIntegration, ErpOption,
   AppType, AppAuth, AppBackend, AppStorage, AppIntegration,
   DesignTier, SupportTier, Hosting, Timeline,
+  Industry, Audience, ProjectStage,
 };
 
 // ---------- price tables ----------
@@ -103,6 +105,10 @@ interface SharedFields {
   hosting: Hosting;
   supportTier: SupportTier;
   timeline: Timeline;
+  // Business context — zero-cost, used to populate brief / drive consultation
+  industry: Industry;
+  audience: Audience;
+  stage: ProjectStage;
 }
 
 export type AdvancedQuoteInput =
