@@ -1,0 +1,26 @@
+# Production profile — overrides application.yml.
+
+spring:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+  mail:
+    host: ${SMTP_HOST}      # required in prod
+    port: ${SMTP_PORT:587}
+
+logging:
+  level:
+    root: WARN
+    com.itsolutions: INFO
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN
+
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false

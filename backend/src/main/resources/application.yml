@@ -76,6 +76,24 @@ cors:
   allow-credentials: true
   max-age: 3600
 
+# Application metadata used by email templates and admin UI links.
+app:
+  admin:
+    email: ${ADMIN_EMAIL:admin@itsolutions.pl}
+    url:   ${ADMIN_URL:http://localhost:5173}
+  public:
+    url:   ${PUBLIC_URL:http://localhost:3000}
+
+# Spring Boot Actuator — only health/info exposed publicly. Rest behind auth.
+management:
+  endpoint:
+    health:
+      show-details: never
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
 # Rate Limiting
 rate-limit:
   enabled: true

@@ -57,7 +57,8 @@ public class SecurityConfig {
                 .requestMatchers("/ws/**").permitAll()
 
                 // Actuator (health checks)
-                .requestMatchers("/actuator/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/actuator/health", "/actuator/info").permitAll()
+                .requestMatchers("/actuator/**").authenticated()
 
                 // Admin endpoints require authentication
                 .requestMatchers("/api/v1/admin/**").authenticated()
