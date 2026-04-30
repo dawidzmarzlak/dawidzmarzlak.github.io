@@ -20,6 +20,7 @@ export function Process() {
             {titleParts[2]}
           </>
         }
+        cta={{ href: "/process", label: t("cta") }}
       />
       <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-4">
         <div className="bg-bg-card rounded-[24px] p-6 lg:p-9 flex flex-col">

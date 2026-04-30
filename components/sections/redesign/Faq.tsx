@@ -23,6 +23,7 @@ export function Faq() {
             {titleParts[2]}
           </>
         }
+        cta={{ href: "/faq", label: t("cta") }}
       />
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8">
         <div>
