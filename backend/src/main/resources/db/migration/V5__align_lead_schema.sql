@@ -46,3 +46,8 @@ ALTER TABLE lead_notes
 
 -- Note: no trigger for update_leads_updated_at is needed — V1 already created
 -- it on the leads table (V1__init_schema.sql lines 216-219).
+
+-- Indices for new filterable / FK columns (mirror V1 conventions).
+CREATE INDEX IF NOT EXISTS idx_leads_assigned_to     ON leads(assigned_to);
+CREATE INDEX IF NOT EXISTS idx_leads_contact_request ON leads(contact_request_id);
+CREATE INDEX IF NOT EXISTS idx_leads_quote_request   ON leads(quote_request_id);

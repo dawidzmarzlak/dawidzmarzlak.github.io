@@ -150,5 +150,9 @@ class LeadRepositoryIT {
         assertThat(forAdmin1).hasSize(1);
         assertThat(forAdmin1.get(0).getEmail()).isEqualTo("filter1@example.com");
         assertThat(forAdmin1.get(0).getAssignedTo()).isEqualTo(admin1);
+
+        // Negative control: passing null assignedTo must NOT filter — both leads visible.
+        var unfiltered = repository.findAll(null, null, null, null, 0, 10, null, null);
+        assertThat(unfiltered).hasSize(2);
     }
 }

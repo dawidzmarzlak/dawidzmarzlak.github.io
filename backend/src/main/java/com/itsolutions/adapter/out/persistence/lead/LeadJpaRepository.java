@@ -15,7 +15,8 @@ import java.util.UUID;
 @Repository
 public interface LeadJpaRepository extends JpaRepository<LeadJpaEntity, UUID> {
 
-    Optional<LeadJpaEntity> findByEmail(String email);
+    @Query("SELECT l FROM LeadJpaEntity l WHERE LOWER(l.email) = LOWER(:email)")
+    Optional<LeadJpaEntity> findByEmail(@Param("email") String email);
 
     @Query("""
            SELECT l FROM LeadJpaEntity l
