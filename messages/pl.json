@@ -2663,6 +2663,11 @@
       "back":   "Wstecz",
       "submit": "Wyślij brief"
     },
+    "submitting": "Wysyłanie...",
+    "errors": {
+      "submit":  "Nie udało się wysłać formularza. Spróbuj ponownie.",
+      "network": "Brak połączenia z serwerem. Spróbuj za chwilę."
+    },
     "submitted": {
       "title": ["Brief w drodze, ", "."],
       "body":  ["Odpowiadam na adres ", " w ciągu 48h."]

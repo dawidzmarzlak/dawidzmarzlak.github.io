@@ -2657,6 +2657,11 @@
       "back":   "Back",
       "submit": "Send brief"
     },
+    "submitting": "Sending...",
+    "errors": {
+      "submit":  "Could not submit the form. Please try again.",
+      "network": "Cannot reach the server. Please try again shortly."
+    },
     "submitted": {
       "title": ["Brief on its way, ", "."],
       "body":  ["I'll reply to ", " within 48h."]

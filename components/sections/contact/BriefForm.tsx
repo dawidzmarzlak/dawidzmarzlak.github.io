@@ -1,11 +1,14 @@
 "use client";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { Link } from "@/i18n/routing";
 import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 import { useStoredQuote, saveQuote, clearQuote } from "@/lib/design/quote-store";
 import { computeAdvancedQuote, type AdvancedQuoteInput } from "@/lib/design/calculator";
 import { INDUSTRIES, AUDIENCES, PROJECT_STAGES } from "@/lib/design/project-kinds";
+import { submitBrief } from "@/lib/api/contact";
+import { ApiError } from "@/lib/api/client";
 
 type Step = 0 | 1;
 
@@ -27,6 +30,15 @@ export function BriefForm() {
   const [step, setStep] = useState<Step>(0);
   const [form, setForm] = useState<FormState>({ name: "", email: "", company: "", desc: "", timelineNote: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileEnabled = Boolean(
+    turnstileSiteKey && turnstileSiteKey !== "1x00000000000000000000AA"
+  );
+
   const update = <K extends keyof FormState>(k: K, v: FormState[K]) => setForm((f) => ({ ...f, [k]: v }));
 
   const setBiz = <K extends "industry" | "audience" | "stage">(k: K, v: AdvancedQuoteInput[K]) => {
@@ -160,32 +172,67 @@ export function BriefForm() {
               placeholder={t("placeholders.timelineNote")}
             />
           </Field>
+          {turnstileEnabled && (
+            <div className="flex justify-center">
+              <Turnstile
+                siteKey={turnstileSiteKey!}
+                onSuccess={setTurnstileToken}
+                onError={() => setTurnstileToken(null)}
+                onExpire={() => setTurnstileToken(null)}
+                options={{ theme: "auto", size: "normal" }}
+              />
+            </div>
+          )}
+
+          {error && (
+            <div className="rounded-[14px] border border-red-500/40 bg-red-500/10 p-4 text-[14px] text-red-400">
+              {error}
+            </div>
+          )}
+
           <div className="flex justify-between mt-4">
             <BriefBtn variant="secondary" onClick={() => setStep(0)}>← {t("nav.back")}</BriefBtn>
             <BriefBtn
-              disabled={!canSubmit}
+              disabled={!canSubmit || submitting || (turnstileEnabled && !turnstileToken)}
               variant="primary"
               onClick={async () => {
+                if (submitting) return;
+                setError(null);
+                setSubmitting(true);
                 try {
-                  await fetch("/api/contact", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
+                  await submitBrief(
+                    {
                       name: form.name,
                       email: form.email,
                       company: form.company,
                       message: form.desc,
                       timelineNote: form.timelineNote,
-                      quote: stored,
-                    }),
-                  });
+                      turnstileToken,
+                      quote: stored
+                        ? {
+                            input: stored.input,
+                            total: stored.total,
+                            supportYearly: stored.supportYearly,
+                            timestamp: stored.timestamp,
+                          }
+                        : undefined,
+                    },
+                    locale as "pl" | "en"
+                  );
+                  setSubmitted(true);
                 } catch (err) {
+                  if (err instanceof ApiError) {
+                    setError(err.message);
+                  } else {
+                    setError(t("errors.network"));
+                  }
                   console.error("brief submission failed", err);
+                } finally {
+                  setSubmitting(false);
                 }
-                setSubmitted(true);
               }}
             >
-              {t("nav.submit")} →
+              {submitting ? t("submitting") : `${t("nav.submit")} →`}
             </BriefBtn>
           </div>
         </div>
