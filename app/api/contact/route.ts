@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { name, email, phone, message } = body;
+    const { name, email, message, company, timelineNote, quote } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -30,10 +30,7 @@ export async function POST(request: NextRequest) {
     // 4. Send confirmation email to user
 
     console.log("Contact form submission:", {
-      name,
-      email,
-      phone,
-      message,
+      name, email, company, message, timelineNote, quote,
       timestamp: new Date().toISOString(),
     });
 
