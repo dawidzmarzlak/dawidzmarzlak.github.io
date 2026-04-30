@@ -8,6 +8,12 @@ export interface Preset {
   badge?: "popular";
 }
 
+const SHARED_BUSINESS = {
+  industry: "services" as const,
+  audience: "b2b" as const,
+  stage: "new" as const,
+};
+
 export const PRESETS: Preset[] = [
   {
     key: "landing",
@@ -15,6 +21,7 @@ export const PRESETS: Preset[] = [
       kind: "site",
       designTier: "standard", languages: 1, hosting: "vercel",
       supportTier: "basic", timeline: "normal",
+      ...SHARED_BUSINESS, audience: "b2c",
       site: {
         goal: "landing",
         pages: 4,
@@ -29,6 +36,7 @@ export const PRESETS: Preset[] = [
       kind: "site",
       designTier: "standard", languages: 2, hosting: "vercel",
       supportTier: "basic", timeline: "normal",
+      ...SHARED_BUSINESS,
       site: {
         goal: "company",
         pages: 10,
@@ -44,6 +52,7 @@ export const PRESETS: Preset[] = [
       kind: "shop",
       designTier: "premium", languages: 1, hosting: "vercel",
       supportTier: "basic", timeline: "normal",
+      ...SHARED_BUSINESS, industry: "ecommerce", audience: "b2c",
       shop: {
         platform: "woo",
         catalogSize: "md",
