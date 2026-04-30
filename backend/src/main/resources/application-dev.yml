@@ -27,6 +27,12 @@ spring:
 turnstile:
   secret-key: 1x0000000000000000000000000000000AA  # Test key - always passes
 
+# Dev JWT secret — Base64 of "a-256-bit-secret-key-for-dev-only-must-be-32+bytes-long".
+# JwtTokenProvider Base64-decodes the value, so a literal non-Base64 string fails at runtime.
+# Override via JWT_SECRET env var in any non-dev profile.
+jwt:
+  secret: YS0yNTYtYml0LXNlY3JldC1rZXktZm9yLWRldi1vbmx5LW11c3QtYmUtMzIrYnl0ZXMtbG9uZw==
+
 # More verbose logging
 logging:
   level:

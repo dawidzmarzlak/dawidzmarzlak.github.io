@@ -9,6 +9,12 @@ public class BusinessException extends RuntimeException {
     private final String code;
     private final HttpStatus status;
 
+    public BusinessException(String message) {
+        super(message);
+        this.code = "BUSINESS_ERROR";
+        this.status = HttpStatus.BAD_REQUEST;
+    }
+
     public BusinessException(String code, String message) {
         super(message);
         this.code = code;
