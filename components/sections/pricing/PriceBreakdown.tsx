@@ -10,7 +10,7 @@ export function PriceBreakdown({ quote }: Props) {
   const tCalc = useTranslations("calculator");
   const locale = useLocale();
   const fmt = (n: number) => n.toLocaleString(locale === "pl" ? "pl-PL" : "en-US");
-  const rows: Array<[string, number]> = [
+  const allRows: Array<[string, number]> = [
     [t("base"),         quote.breakdown.base],
     [t("pages"),        quote.breakdown.pages],
     [t("cms"),          quote.breakdown.cms],
@@ -18,7 +18,8 @@ export function PriceBreakdown({ quote }: Props) {
     [t("languages"),    quote.breakdown.languages],
     [t("integrations"), quote.breakdown.integrations],
     [t("hosting"),      quote.breakdown.hosting],
-  ].filter(([, v]) => v > 0);
+  ];
+  const rows = allRows.filter(([, v]) => v > 0);
 
   return (
     <div className="bg-bg-card rounded-[24px] p-7 border border-line lg:sticky lg:top-24">
