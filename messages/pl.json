@@ -196,7 +196,33 @@
       ["Testy", "E2E, perf, a11y, security."],
       ["Wdrożenie", "CI/CD, SSL, monitoring."],
       ["Wsparcie", "6 mies. w cenie. SLA opcjonalne."]
-    ]
+    ],
+    "page": {
+      "hero": {
+        "crumb": "Proces",
+        "title": ["Od briefu do ", "live", " w siedmiu krokach."],
+        "intro": "Współpraca w siedmiu jasnych krokach. Każdy etap ma konkretny rezultat, znany czas trwania i jeden kontakt po Twojej stronie. Demo co piątek — bez prezentacji, bez handlowca w pętli."
+      },
+      "extended": [
+        ["Konsultacja — 30 minut", "Bezpłatne 30 minut. Rozmawiamy o celu projektu, KPI, ograniczeniach budżetowych i terminowych. Wychodzisz z notatką: co budujemy, jakim stackiem, w jakim modelu rozliczeń. Bez zobowiązań."],
+        ["Wycena w 48 godzin", "Stała cena (Fixed) lub Time & Materials. Harmonogram tygodniowy z kamieniami milowymi. Wycenę dostajesz mailem — możesz zaakceptować, dopytać albo odpuścić bez kosztów."],
+        ["UX/UI — wireframe → Figma hi-fi", "Najpierw szkic — żeby uzgodnić strukturę informacji. Potem hi-fi w Figmie z gotowym design system'em (kolory, typografia, komponenty). Akceptujesz w jednym widoku, nie w 30 mailach."],
+        ["Development — sprinty 2-tygodniowe", "Każdy sprint kończy się demo (piątek, 30 min). Widzisz postęp na żywo: na staging URL, klikalna wersja. Bug tracker po Twojej stronie — wszystko transparentnie."],
+        ["Testy — E2E, perf, a11y, security", "Playwright (E2E + regresje wizualne), Lighthouse 95+, axe-core (WCAG AA), audyt bezpieczeństwa OWASP Top 10. Raport dostarczany przed wdrożeniem."],
+        ["Wdrożenie — CI/CD, SSL, monitoring", "Pipeline GitHub Actions, certyfikat SSL, backup'y, monitoring uptime + błędów. Wdrożenie wieczorem (poza godzinami szczytu) z planem rollback'u."],
+        ["Wsparcie — 6 miesięcy w cenie", "6 miesięcy bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."]
+      ],
+      "philosophy": {
+        "kicker": "// Dlaczego ten proces",
+        "title": ["Bez ", "niespodzianek", ". Bez prezentacji."],
+        "items": [
+          ["Demo co tydzień", "Widzisz postęp w piątek, nie w dniu odbioru. Reagujesz wcześniej, zmiany są tańsze."],
+          ["Stała cena albo T&M — Twój wybór", "Fixed daje przewidywalność budżetu. T&M elastyczność zakresu. Decydujesz na etapie wyceny."],
+          ["Jeden kontakt", "Pracujesz ze mną. Bez handlowca, bez project managera w środku. Decyzje zapadają w 24h."],
+          ["Wszystko po polsku", "Dokumentacja, README z runbook'iem, video-walkthrough panelu. Po roku wciąż wiesz, jak edytować."]
+        ]
+      }
+    }
   },
   "technologies": {
     "title": "Technologie, z których korzystam",
@@ -245,7 +271,60 @@
       ["Czy oferujecie hosting?", "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."],
       ["Czy mogę edytować stronę samodzielnie?", "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja."],
       ["Co z SEO?", "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu."]
-    ]
+    ],
+    "page": {
+      "hero": {
+        "crumb": "FAQ",
+        "title": ["Pytania, na które ", "odpowiadam najczęściej", "."],
+        "intro": "Pięć kategorii, kilkanaście pytań. Jeśli Twojego pytania tu nie ma — napisz, odpowiadam w 24 godziny."
+      },
+      "categories": [
+        {
+          "name": "Współpraca",
+          "items": [
+            ["Jak zacząć współpracę?", "Wypełnij brief lub umów konsultację (30 min, bezpłatnie). W 48 godzin wracam z wyceną i harmonogramem. Decyzja po Twojej stronie — bez zobowiązań."],
+            ["Czy podpisujemy umowę?", "Tak — każdy projekt to umowa B2B z konkretnym zakresem, kamieniami milowymi i warunkami płatności. Wzór wysyłam razem z wyceną."],
+            ["Jak wygląda komunikacja?", "Email + Slack/Teams (do wyboru). Codziennie krótki status, w piątki demo. Bug tracker (Linear/GitHub) — pełna transparentność postępu."],
+            ["Czy mogę przerwać współpracę w trakcie?", "Tak. Płacisz za zrealizowane kamienie milowe, dostajesz pełen kod i dokumentację. Bez kar i ukrytych klauzul."]
+          ]
+        },
+        {
+          "name": "Cennik i płatności",
+          "items": [
+            ["Jak liczona jest cena?", "Fixed (stała cena) lub T&M (Time & Materials). Stała cena = przewidywalny budżet, jasny zakres. T&M = elastyczność, kiedy zakres się zmienia. Kalkulator pokazuje cenę bazową — finalna w wycenie."],
+            ["Kiedy płacę?", "Standardowo: 30% przy starcie, 40% po akceptacji designu, 30% przy wdrożeniu. Negocjowalne. Faktura VAT, B2B."],
+            ["Czy są ukryte koszty?", "Nie. Cena obejmuje rozwój, design, testy, wdrożenie, dokumentację i 6 mies. wsparcia. Płatne dodatkowo: licencje (np. fonty premium), hosting po stronie klienta, integracje, które wymagają płatnych SaaS."],
+            ["Co jeśli budżet nie wystarczy?", "Rozkładamy projekt na fazy MVP → V1 → V2. Robimy to, co najważniejsze, resztę dorzucamy w kolejnych iteracjach."]
+          ]
+        },
+        {
+          "name": "Technologie i kod",
+          "items": [
+            ["Czym się zajmujesz?", "Strony (Next.js, WordPress), sklepy (WooCommerce, PrestaShop, custom Next), aplikacje webowe (Spring Boot + React/Next/Angular). Stack dobieram do problemu — nie odwrotnie."],
+            ["Czyj jest kod?", "Twój. Od pierwszego commit'a. Bez vendor lock-in'u, bez płatnych licencji ukrytych w stacku. Repo trafia do Ciebie po wdrożeniu."],
+            ["Czy mogę edytować stronę samodzielnie?", "Tak — każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."],
+            ["A co z SEO?", "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — wszystko domyślnie. Plus audyt po wdrożeniu z konkretnymi rekomendacjami."]
+          ]
+        },
+        {
+          "name": "Termin",
+          "items": [
+            ["Ile trwa realizacja?", "Wizytówka: 3–4 tygodnie. Sklep: 6–10 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje dokładny harmonogram tygodniowy z wyceną."],
+            ["Co spowalnia projekt?", "Zwykle: brak treści (teksty, zdjęcia, logo), długie cykle akceptacji, zmieniający się zakres. Pomagam tego unikać — checklisty contentu, akceptacje w 48h, zmiany w sprincie."],
+            ["Czy mogę zamówić ekspresowo?", "Tak — opcja 'Rush' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."]
+          ]
+        },
+        {
+          "name": "Po wdrożeniu",
+          "items": [
+            ["Co dostaję po wdrożeniu?", "Działającą stronę/aplikację, repo z kodem, dokumentację, panel CMS/admin, szkolenie + video-walkthrough, certyfikat SSL, monitoring."],
+            ["Co z hostingiem?", "Doradzam i konfiguruję: Vercel (Next.js), AWS, OVH, własny VPS — co pasuje do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."],
+            ["Co jeśli będę potrzebować zmian po wdrożeniu?", "6 miesięcy bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."],
+            ["Co jeśli serwer padnie?", "Pakiet 'Pro' obejmuje SLA z czasem reakcji. Bez SLA — odpowiadam w godzinach roboczych w ciągu 24h."]
+          ]
+        }
+      ]
+    }
   },
   "cta": {
     "title": "Gotowy na nowy projekt?",
@@ -2588,11 +2667,13 @@
       },
       "process": {
         "kicker": "[06] Proces",
-        "title": ["Od briefu do ", "live", "."]
+        "title": ["Od briefu do ", "live", "."],
+        "cta": "Cały proces krok po kroku →"
       },
       "faq": {
         "kicker": "[07] FAQ",
-        "title": ["Pytania, które ", "najczęściej słyszę", "."]
+        "title": ["Pytania, które ", "najczęściej słyszę", "."],
+        "cta": "Wszystkie pytania →"
       }
     }
   }

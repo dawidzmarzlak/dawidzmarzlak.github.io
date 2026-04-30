@@ -196,7 +196,33 @@
       ["Testing", "E2E, perf, a11y, security."],
       ["Deployment", "CI/CD, SSL, monitoring."],
       ["Support", "6 months included. Optional SLA."]
-    ]
+    ],
+    "page": {
+      "hero": {
+        "crumb": "Process",
+        "title": ["From brief to ", "live", " in seven steps."],
+        "intro": "Collaboration in seven clear steps. Each phase has a concrete deliverable, a known duration and one point of contact on your side. Demo every Friday — no slides, no salesperson in the loop."
+      },
+      "extended": [
+        ["Consultation — 30 minutes", "Free 30 minutes. We talk about project goals, KPIs, budget and timeline constraints. You leave with a note: what we're building, with which stack, in which billing model. No commitments."],
+        ["Quote in 48 hours", "Fixed price or Time & Materials. Weekly schedule with milestones. You get the quote by email — accept, ask follow-ups, or pass at no cost."],
+        ["UX/UI — wireframe → Figma hi-fi", "Sketch first — to align on information structure. Then hi-fi in Figma with a ready design system (colors, typography, components). Approve in one view, not in 30 emails."],
+        ["Development — 2-week sprints", "Every sprint ends with a demo (Friday, 30 min). You see progress live: on a staging URL, a clickable version. Bug tracker on your side — full transparency."],
+        ["Testing — E2E, perf, a11y, security", "Playwright (E2E + visual regressions), Lighthouse 95+, axe-core (WCAG AA), OWASP Top 10 security audit. Report delivered before deploy."],
+        ["Deploy — CI/CD, SSL, monitoring", "GitHub Actions pipeline, SSL cert, backups, uptime + error monitoring. Deploy in the evening (off-peak) with a rollback plan."],
+        ["Support — 6 months included", "6 months of bug-fixes free (anything I broke). Paid only for new features. SLA on request."]
+      ],
+      "philosophy": {
+        "kicker": "// Why this process",
+        "title": ["No ", "surprises", ". No slides."],
+        "items": [
+          ["Weekly demo", "You see progress on Friday, not on delivery day. React earlier — changes are cheaper."],
+          ["Fixed price or T&M — your call", "Fixed gives budget predictability. T&M gives scope flexibility. You decide at quote time."],
+          ["One contact", "You work with me. No sales rep, no PM in the middle. Decisions in 24h."],
+          ["Bilingual docs", "README with runbook, video walkthrough of the admin panel. After a year you still know how to edit."]
+        ]
+      }
+    }
   },
   "technologies": {
     "title": "Technologies I Use",
@@ -245,7 +271,60 @@
       ["Do you offer hosting?", "Yes — Vercel, AWS, OVH or your own VPS. I recommend the best option for your stack and budget."],
       ["Can I edit the site myself?", "Every project has a CMS (WordPress, Sanity, Strapi) or admin panel. After launch I run training + documentation."],
       ["What about SEO?", "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. All by default. Plus a post-launch audit."]
-    ]
+    ],
+    "page": {
+      "hero": {
+        "crumb": "FAQ",
+        "title": ["Questions ", "I answer most often", "."],
+        "intro": "Five categories, a dozen questions. If yours isn't here — write to me, I reply within 24 hours."
+      },
+      "categories": [
+        {
+          "name": "Collaboration",
+          "items": [
+            ["How do we start?", "Fill the brief or book a 30-min consultation (free). I come back with a quote and timeline within 48 hours. Decision is yours — no commitment."],
+            ["Do we sign a contract?", "Yes — every project is a B2B contract with a defined scope, milestones, and payment terms. I send the template along with the quote."],
+            ["How do we communicate?", "Email + Slack/Teams (your pick). Short daily status, demo on Friday. Bug tracker (Linear/GitHub) — full transparency."],
+            ["Can I cancel mid-project?", "Yes. You pay for completed milestones, get full code and docs. No penalties, no hidden clauses."]
+          ]
+        },
+        {
+          "name": "Pricing & payments",
+          "items": [
+            ["How is the price calculated?", "Fixed (set price) or T&M (Time & Materials). Fixed = predictable budget, clear scope. T&M = flexibility when scope changes. The calculator shows base price — final one in the quote."],
+            ["When do I pay?", "Standard: 30% at kickoff, 40% on design approval, 30% on deploy. Negotiable. VAT invoice, B2B."],
+            ["Are there hidden costs?", "No. Price covers development, design, testing, deploy, docs and 6 months of support. Extra: licenses (e.g. premium fonts), client-side hosting, paid SaaS integrations."],
+            ["What if my budget falls short?", "We split into phases: MVP → V1 → V2. Build the must-haves first, layer the rest in iterations."]
+          ]
+        },
+        {
+          "name": "Technology & code",
+          "items": [
+            ["What do you build?", "Sites (Next.js, WordPress), stores (WooCommerce, PrestaShop, custom Next), web apps (Spring Boot + React/Next/Angular). Stack picked for the problem — not the other way."],
+            ["Who owns the code?", "You. From the first commit. No vendor lock-in, no paid licenses hidden in the stack. Repo handed over after deploy."],
+            ["Can I edit the site myself?", "Yes — every project ships with a CMS (WordPress, Sanity, Strapi) or admin panel. After deploy: training + PDF docs + video walkthrough."],
+            ["What about SEO?", "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — all default. Plus a post-deploy audit with concrete recommendations."]
+          ]
+        },
+        {
+          "name": "Timeline",
+          "items": [
+            ["How long does delivery take?", "Marketing site: 3–4 weeks. Shop: 6–10 weeks. App: from 12 weeks. Each project gets an exact weekly schedule with the quote."],
+            ["What slows projects down?", "Usually: missing content (copy, photos, logo), long approval cycles, scope creep. I help avoid these — content checklists, 48h approvals, in-sprint changes."],
+            ["Can I rush it?", "Yes — 'Rush' option (+25%) cuts time by 30–40%. Requires client-side availability and clear scope from day zero."]
+          ]
+        },
+        {
+          "name": "Post-launch",
+          "items": [
+            ["What do I get after launch?", "Working site/app, repo with code, docs, CMS/admin panel, training + video walkthrough, SSL certificate, monitoring."],
+            ["What about hosting?", "I advise and set up: Vercel (Next.js), AWS, OVH, your own VPS — whatever fits the stack and budget. Host on your own or have me handle it."],
+            ["What if I need changes after launch?", "6 months of bug-fixes free. New features — quoted per request or 'Pro' subscription (10–20h/mo). No surprises."],
+            ["What if the server goes down?", "'Pro' package includes SLA with response times. Without SLA — I reply during business hours within 24h."]
+          ]
+        }
+      ]
+    }
   },
   "cta": {
     "title": "Ready for a New Project?",
@@ -2582,11 +2661,13 @@
       },
       "process": {
         "kicker": "[06] Process",
-        "title": ["From brief to ", "live", "."]
+        "title": ["From brief to ", "live", "."],
+        "cta": "Full process step-by-step →"
       },
       "faq": {
         "kicker": "[07] FAQ",
-        "title": ["Questions ", "I hear most often", "."]
+        "title": ["Questions ", "I hear most often", "."],
+        "cta": "All questions →"
       }
     }
   }
