@@ -1,0 +1,66 @@
+name: docker-build
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        run: docker build -f backend/Dockerfile -t backend:ci .
+
+      - name: Build frontend image
+        run: |
+          docker build -f Dockerfile.frontend \
+            --build-arg NEXT_PUBLIC_API_URL=https://api.example.com \
+            --build-arg NEXT_PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA \
+            -t frontend:ci .
+
+      - name: Build admin image
+        run: docker build -f admin-frontend/Dockerfile -t admin:ci .
+
+      - name: Compose up smoke (dev profile, no Caddy TLS)
+        run: |
+          cp .env.example .env
+          # Inject a base64 JWT secret valid for the backend startup check.
+          sed -i 's|^JWT_SECRET=.*|JWT_SECRET=dGVzdC1qd3Qtc2VjcmV0LWtleS1mb3ItY2ktbXVzdC1iZS0zMi1ieXRlcy1taW5pbXVtLWxlbmd0aA==|' .env
+          touch deploy/htpasswd
+
+          docker compose -f docker-compose.yml -f docker-compose.dev.yml --profile dev up -d --build --wait
+
+          # Verify Caddy serves the frontend on :80
+          curl -fsS http://localhost/health || curl -fsS http://localhost/
+
+          # Verify backend health (via Caddy api.localhost — needs hosts entry, so use container name)
+          docker compose exec -T backend wget -qO- http://localhost:8080/actuator/health
+
+      - name: Compose down
+        if: always()
+        run: docker compose down -v
+
+  backend-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      docker:
+        image: docker:dind
+        options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: maven
+      - name: Run backend tests (Testcontainers + GreenMail + WireMock)
+        working-directory: backend
+        run: mvn -B verify -Dcodegen.skip=false
