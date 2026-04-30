@@ -3,6 +3,7 @@ package com.itsolutions.application.chat;
 import com.itsolutions.domain.chat.model.ChatAction;
 import com.itsolutions.domain.chat.model.ChatMessage;
 import com.itsolutions.domain.chat.model.ChatSession;
+import com.itsolutions.domain.chat.port.in.GetChatSessionsUseCase;
 import com.itsolutions.domain.chat.port.in.GetConversationUseCase;
 import com.itsolutions.domain.chat.port.in.SendMessageUseCase;
 import com.itsolutions.domain.chat.port.out.ChatRepository;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -24,7 +26,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class ChatService implements SendMessageUseCase, GetConversationUseCase {
+public class ChatService implements SendMessageUseCase, GetConversationUseCase, GetChatSessionsUseCase {
 
     private final ChatRepository chatRepository;
     private final LlmGateway llmGateway;
@@ -88,6 +90,37 @@ public class ChatService implements SendMessageUseCase, GetConversationUseCase {
                 .totalMessages(session.getMessageCount())
                 .totalTokens(session.getTotalTokens())
                 .build();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public ChatSessionListResult getSessions(ChatSessionQuery query) {
+        var sessions = chatRepository.findAllSessions(
+                query.getStatus(),
+                query.getSearch(),
+                query.getPage(),
+                query.getSize(),
+                query.getSortBy(),
+                query.getSortDirection()
+        );
+
+        long total = chatRepository.countSessions(query.getStatus(), query.getSearch());
+        int totalPages = query.getSize() > 0
+                ? (int) Math.ceil((double) total / query.getSize())
+                : 0;
+
+        return ChatSessionListResult.builder()
+                .sessions(sessions)
+                .totalElements((int) total)
+                .totalPages(totalPages)
+                .currentPage(query.getPage())
+                .build();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Optional<ChatSession> getSessionWithMessages(UUID sessionId) {
+        return chatRepository.findByIdWithMessages(sessionId);
     }
 
     private ChatSession getOrCreateSession(SendMessageCommand command) {
