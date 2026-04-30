@@ -6,9 +6,8 @@ import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-const NAV_ITEMS: Array<{ href: string; key: "services" | "portfolio" | "showcase" | "contact"; }> = [
+const NAV_ITEMS: Array<{ href: string; key: "services" | "showcase" | "contact"; }> = [
   { href: "/services",  key: "services" },
-  { href: "/portfolio", key: "portfolio" },
   { href: "/showcase",  key: "showcase" },
   { href: "/contact",   key: "contact" },
 ];
