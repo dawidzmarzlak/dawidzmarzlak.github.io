@@ -9,6 +9,11 @@ import { ItalicAccent } from "@/components/sections/redesign/ItalicAccent";
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Poznaj nasze realizacje - ponad 50 projektów dla zadowolonych klientów.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
 };
 
 export const dynamic = "force-static";
