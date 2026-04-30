@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { SectionHead } from "./SectionHead";
 import { ItalicAccent } from "./ItalicAccent";
 
@@ -47,9 +48,10 @@ export function ServicesBento() {
       `}</style>
       <div className="svc-bento">
         {items.map((s, i) => (
-          <article
+          <Link
             key={i}
-            className={`relative overflow-hidden rounded-[20px] p-7 transition-transform hover:-translate-y-0.5 flex flex-col cursor-pointer ${TONES[i]}`}
+            href="/services"
+            className={`relative overflow-hidden rounded-[20px] p-7 transition-transform hover:-translate-y-0.5 flex flex-col cursor-pointer no-underline ${TONES[i]}`}
           >
             <div className="font-mono text-[11px] uppercase tracking-[0.1em] opacity-70 mb-auto">
               {s.num}
@@ -66,7 +68,7 @@ export function ServicesBento() {
             >
               →
             </span>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
