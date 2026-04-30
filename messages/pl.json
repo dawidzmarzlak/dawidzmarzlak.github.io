@@ -2471,10 +2471,10 @@
       "other":       "Inne"
     },
     "appAuth": {
-      "none":  "Brak",
-      "email": "Email + hasło",
-      "oauth": "OAuth",
-      "sso":   "SSO + RBAC"
+      "none":  "Bez logowania",
+      "email": "Konto z hasłem",
+      "oauth": "Logowanie przez Google / Microsoft",
+      "sso":   "SSO firmowe + role"
     },
     "appBackends": {
       "spring":   "Spring Boot",
@@ -2488,6 +2488,34 @@
       "redis":    "Redis",
       "files":    "Pliki/S3",
       "mixed":    "Mieszane"
+    },
+    "industry": "Branża",
+    "audience": "Odbiorcy",
+    "stage": "Etap projektu",
+    "industries": {
+      "services":   "Usługi profesjonalne",
+      "ecommerce":  "E-commerce",
+      "food":       "Gastronomia",
+      "education":  "Edukacja",
+      "health":     "Zdrowie & uroda",
+      "realestate": "Nieruchomości",
+      "sport":      "Sport & fitness",
+      "travel":     "Turystyka",
+      "saas":       "Software / SaaS",
+      "creative":   "Kreatywne",
+      "nonprofit":  "Non-profit",
+      "other":      "Inne"
+    },
+    "audiences": {
+      "b2c":      "Klienci końcowi (B2C)",
+      "b2b":      "Firmy (B2B)",
+      "b2b2c":    "B2B2C",
+      "internal": "Zespół wewnętrzny"
+    },
+    "stages": {
+      "new":          "Nowy projekt",
+      "redesign":     "Redesign istniejącego",
+      "continuation": "Kontynuacja prac"
     }
   },
   "pricing": {
@@ -2507,26 +2535,31 @@
       "kind": "Typ projektu",
       "pages": "Liczba podstron",
       "contentPages": "Strony treściowe",
-      "cms": "Edycja przez CMS",
+      "cms": "Samodzielna edycja treści",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
       "siteGoal": "Cel strony",
       "siteIntegrations": "Integracje",
       "shopPlatform": "Platforma",
-      "catalogSize": "Wielkość katalogu",
-      "payments": "Bramki płatności",
+      "catalogSize": "Liczba produktów",
+      "payments": "Metody płatności online",
       "shopIntegrations": "Integracje sklepu",
       "erp": "Integracja z ERP",
       "appType": "Rodzaj aplikacji",
-      "appAuth": "Logowanie / role",
+      "appAuth": "Konta użytkowników",
       "appBackend": "Backend",
       "appStorage": "Storage / DB",
       "appIntegrations": "Integracje",
-      "appRoles": "Liczba ról",
+      "appRoles": "Liczba ról użytkowników",
       "appMobile": "Aplikacja mobilna",
       "support": "Wsparcie po wdrożeniu",
       "hosting": "Hosting",
       "timeline": "Termin",
+      "industry": "Branża / sektor",
+      "audience": "Grupa docelowa",
+      "stage": "Etap projektu",
+      "techPreferences": "Preferowane technologie (opcjonalnie)",
+      "techPreferencesHint": "Te wybory omówimy na konsultacji. Pomijaj, jeśli nie masz preferencji.",
       "tiers":     { "lite": "Lite — szablon", "standard": "Standard — custom UI", "premium": "Premium — UX/UI od zera" },
       "supports":  { "none": "Brak", "basic": "6 mies. (gratis)", "pro": "12 mies. + SLA" },
       "hostings":  { "client": "U klienta", "vercel": "Vercel", "vps": "VPS" },
