@@ -1,5 +1,4 @@
 import { Bell, Search } from 'lucide-react';
-import { Input } from '../ui/Input';
 
 interface HeaderProps {
   title: string;

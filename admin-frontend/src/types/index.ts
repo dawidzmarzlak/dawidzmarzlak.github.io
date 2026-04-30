@@ -5,9 +5,14 @@ export interface LoginRequest {
 }
 
 export interface LoginResponse {
-  token: string;
-  expiresIn: number;
+  accessToken: string;
+  refreshToken: string;
   user: AdminUser;
+}
+
+export interface RefreshTokenResponse {
+  accessToken: string;
+  refreshToken: string;
 }
 
 export interface AdminUser {
