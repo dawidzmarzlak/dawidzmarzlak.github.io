@@ -29,7 +29,7 @@ export default function ShowcasePage() {
           24 branże, <ItalicAccent>jedna pracownia</ItalicAccent>.
         </h1>
         <p className="text-[19px] text-fg-muted max-w-[60ch] leading-[1.55] m-0">
-          Każdy projekt to inny stack, inny system kolorów, inny ton. Kliknij dowolny, żeby zobaczyć pełny prototyp z dedykowaną typografią i animacjami.
+          To <strong className="text-fg">demo&apos;a / inspiracje</strong> — nie wdrożenia produkcyjne. Pokazują różnorodność stylów dla różnych branż. Realne realizacje znajdziesz w <Link href="/portfolio" className="text-accent hover:underline">portfolio</Link>.
         </p>
       </section>
 

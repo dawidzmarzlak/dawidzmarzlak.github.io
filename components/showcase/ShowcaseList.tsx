@@ -26,6 +26,9 @@ export function ShowcaseList() {
               className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
+            <span className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-[0.1em] py-1 px-2 rounded-full bg-black/40 text-white backdrop-blur-sm">
+              {t("demoBadge")}
+            </span>
             <span
               className="absolute top-5 right-5 w-10 h-10 rounded-full grid place-items-center bg-black/[0.06] dark:bg-white/[0.06] text-fg backdrop-blur-sm"
               aria-hidden="true"
