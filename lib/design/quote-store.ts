@@ -1,5 +1,5 @@
 "use client";
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import type { AdvancedQuoteInput } from "./calculator";
 
 export interface StoredQuote {
@@ -10,6 +10,7 @@ export interface StoredQuote {
 }
 
 const KEY = "it-solutions:quote-v1";
+const CHANGE_EVENT = "quote-store:change";
 
 function safeGet(): StoredQuote | null {
   if (typeof window === "undefined") return null;
@@ -25,26 +26,26 @@ function safeGet(): StoredQuote | null {
 export function saveQuote(q: StoredQuote): void {
   if (typeof window === "undefined") return;
   window.sessionStorage.setItem(KEY, JSON.stringify(q));
-  window.dispatchEvent(new CustomEvent("quote-store:change"));
+  window.dispatchEvent(new CustomEvent(CHANGE_EVENT));
 }
 
 export function clearQuote(): void {
   if (typeof window === "undefined") return;
   window.sessionStorage.removeItem(KEY);
-  window.dispatchEvent(new CustomEvent("quote-store:change"));
-}
-
-function subscribe(cb: () => void): () => void {
-  if (typeof window === "undefined") return () => {};
-  const handler = () => cb();
-  window.addEventListener("quote-store:change", handler);
-  window.addEventListener("storage", handler);
-  return () => {
-    window.removeEventListener("quote-store:change", handler);
-    window.removeEventListener("storage", handler);
-  };
+  window.dispatchEvent(new CustomEvent(CHANGE_EVENT));
 }
 
 export function useStoredQuote(): StoredQuote | null {
-  return useSyncExternalStore(subscribe, safeGet, () => null);
+  const [stored, setStored] = useState<StoredQuote | null>(null);
+  useEffect(() => {
+    setStored(safeGet());
+    const handler = () => setStored(safeGet());
+    window.addEventListener(CHANGE_EVENT, handler);
+    window.addEventListener("storage", handler);
+    return () => {
+      window.removeEventListener(CHANGE_EVENT, handler);
+      window.removeEventListener("storage", handler);
+    };
+  }, []);
+  return stored;
 }

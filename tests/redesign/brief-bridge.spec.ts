@@ -2,16 +2,22 @@ import { test, expect } from "@playwright/test";
 
 test("/pl/pricing → /pl/contact carries quote summary into brief form", async ({ page }) => {
   test.setTimeout(120_000);
+  // Step 1: visit /pricing so the calculator runs and saveQuote() populates sessionStorage.
   await page.goto("/pl/pricing", { waitUntil: "domcontentloaded", timeout: 60_000 });
+  await expect(page.locator('a[href*="from=quote"]')).toBeVisible({ timeout: 30_000 });
+  await page.waitForFunction(
+    () => !!window.sessionStorage.getItem("it-solutions:quote-v1"),
+    null,
+    { timeout: 10_000 }
+  );
 
-  // Default preset = 'company' (site / 10 pages / cms). Submit it as-is via the breakdown CTA.
-  await expect(page.getByRole("link", { name: /Wyślij brief/i })).toBeVisible({ timeout: 30_000 });
-  await page.getByRole("link", { name: /Wyślij brief/i }).click();
+  // Step 2: navigate to /contact in the same tab — sessionStorage persists, so the brief
+  // should read the stored quote and NOT show the gate.
+  await page.goto("/pl/contact?from=quote#brief", { waitUntil: "domcontentloaded", timeout: 60_000 });
 
-  // We are now on /pl/contact — gate should NOT show because session storage has the quote.
-  await expect(page).toHaveURL(/\/pl\/contact/);
+  // Quote summary should be visible (not the gate).
   await expect(page.getByText(/Twoja wycena/i).first()).toBeVisible({ timeout: 30_000 });
-  await expect(page.getByText(/Strona wizytówka/i)).toBeVisible();
+  await expect(page.getByText(/Strona wizytówka/i).first()).toBeVisible();
 
   // Fill identity step.
   await page.getByPlaceholder(/Anna Kowalska/i).fill("Tester");

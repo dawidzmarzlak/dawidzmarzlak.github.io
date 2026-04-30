@@ -12,10 +12,9 @@ test("/pl/pricing renders presets + calculator and updates total when toggling i
 
   // The 'company' default preset is a site, so 'Newsletter' (siteIntegrations) is the affordance.
   await page.getByRole("button", { name: /^Newsletter$/i }).first().click();
-  await page.waitForTimeout(200);
 
-  const after = await totalRow.innerText();
-  expect(before).not.toBe(after);
+  // Auto-retry until the total row settles to a different value (avoids flake under parallel load).
+  await expect.poll(async () => totalRow.innerText(), { timeout: 5_000 }).not.toBe(before);
 });
 
 test("/pl/pricing — klik 'Sklep online' preset zmienia kind na Sklep i odsłania bramki płatności", async ({ page }) => {
