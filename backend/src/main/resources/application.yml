@@ -52,7 +52,8 @@ jwt:
 
 # LLM Configuration
 llm:
-  provider: ${LLM_PROVIDER:ollama}
+  primary:  ${LLM_PRIMARY:ollama}    # ollama | gemini
+  fallback: ${LLM_FALLBACK:}         # ollama | gemini | <empty> for none
   ollama:
     url: ${OLLAMA_URL:http://localhost:11434}
     model: ${OLLAMA_MODEL:llama3.2}
@@ -60,6 +61,7 @@ llm:
   gemini:
     api-key: ${GEMINI_API_KEY:}
     model: ${GEMINI_MODEL:gemini-1.5-flash}
+    base-url: ${GEMINI_BASE_URL:https://generativelanguage.googleapis.com/v1beta/models}
 
 # Turnstile (Bot Protection)
 turnstile:
