@@ -4,17 +4,11 @@ import com.itsolutions.domain.contact.model.ContactRequest;
 import org.springframework.stereotype.Component;
 
 /**
- * Mapper between {@link ContactRequest} (domain) and {@link ContactJpaEntity} (persistence).
- *
- * <p>The domain model is built via Lombok {@code @Builder} with mostly {@code final} fields,
- * so MapStruct cannot generate setters into it. We therefore implement the mapping by hand
- * and rely on the builders on both sides — this is the explicit fallback the plan describes.</p>
- *
- * <p>Note the asymmetry: the domain field is {@code replyContent} while the JPA column is
- * {@code reply_message}. Both directions translate the name carefully.</p>
- *
- * <p>{@code quoteTotal} and {@code quotePayload} live on the JPA entity only; the current
- * domain model does not track them, so they are intentionally not mapped.</p>
+ * Hand-written mapper between {@link ContactRequest} (Lombok-immutable domain) and
+ * {@link ContactJpaEntity}; MapStruct can't generate setters into the immutable domain builder.
+ * The {@code quoteTotal} and {@code quotePayload} columns exist on the JPA entity but NOT in
+ * the domain model — they are reserved for future use. When extending the domain to include
+ * them, update BOTH {@link #toEntity} and {@link #toDomain}.
  */
 @Component
 public class ContactMapper {

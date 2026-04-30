@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -18,6 +19,9 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 public class ContactRepositoryAdapter implements ContactRepository {
+
+    private static final Set<String> ALLOWED_SORT =
+            Set.of("createdAt", "updatedAt", "name", "email", "status");
 
     private final ContactJpaRepository jpa;
     private final ContactMapper mapper;
@@ -43,7 +47,7 @@ public class ContactRepositoryAdapter implements ContactRepository {
         Sort.Direction dir = "asc".equalsIgnoreCase(sortDirection)
                 ? Sort.Direction.ASC
                 : Sort.Direction.DESC;
-        String prop = (sortBy != null && !sortBy.isBlank()) ? sortBy : "createdAt";
+        String prop = (sortBy != null && ALLOWED_SORT.contains(sortBy)) ? sortBy : "createdAt";
         return jpa.search(status, search, PageRequest.of(page, size, Sort.by(dir, prop)))
                 .map(mapper::toDomain)
                 .getContent();

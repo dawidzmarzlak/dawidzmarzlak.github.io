@@ -12,6 +12,10 @@ ALTER TABLE contact_requests
 
 -- Convert replied_by from VARCHAR(255) (V1) to UUID to match the domain model.
 -- Existing values must be valid UUID strings; in fresh dev/test DBs the column is empty.
+-- SAFETY: The USING NULLIF(replied_by, '')::uuid cast assumes every existing value is either
+-- NULL or the empty string. This holds today because no V1/V2-era code path actually writes
+-- to replied_by, so the cast cannot encounter a non-empty non-UUID string. If a future
+-- migration discovers non-empty non-UUID values, run a cleanup migration first.
 ALTER TABLE contact_requests
   ALTER COLUMN replied_by TYPE UUID USING NULLIF(replied_by, '')::uuid;
 
