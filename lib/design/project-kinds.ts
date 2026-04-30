@@ -52,3 +52,16 @@ export type Hosting = typeof HOSTINGS[number];
 
 export const TIMELINES = ["normal", "rush"] as const;
 export type Timeline = typeof TIMELINES[number];
+
+// --- BUSINESS CONTEXT (zero-cost, informational) ---
+export const INDUSTRIES = [
+  "services", "ecommerce", "food", "education", "health", "realestate",
+  "sport", "travel", "saas", "creative", "nonprofit", "other",
+] as const;
+export type Industry = typeof INDUSTRIES[number];
+
+export const AUDIENCES = ["b2c", "b2b", "b2b2c", "internal"] as const;
+export type Audience = typeof AUDIENCES[number];
+
+export const PROJECT_STAGES = ["new", "redesign", "continuation"] as const;
+export type ProjectStage = typeof PROJECT_STAGES[number];
