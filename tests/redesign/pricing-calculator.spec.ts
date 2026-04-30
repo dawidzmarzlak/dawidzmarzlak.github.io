@@ -6,15 +6,18 @@ test("/pl/pricing renders presets + calculator and updates total when toggling i
 
   await expect(page.getByRole("button", { name: /Strona firmowa/i })).toBeVisible({ timeout: 30_000 });
   await expect(page.getByText(/Najpopularniejsze/i)).toBeVisible();
+  // Wait for the Newsletter chip to be hydrated as a real button (aria-pressed reflects state).
+  const newsletter = page.getByRole("button", { name: /^Newsletter$/i }).first();
+  await expect(newsletter).toBeVisible({ timeout: 30_000 });
+  await expect(newsletter).toHaveAttribute("aria-pressed", /true|false/, { timeout: 10_000 });
 
   const totalRow = page.getByText(/Suma jednorazowa/i).locator("..").locator("..");
   const before = await totalRow.innerText();
 
-  // The 'company' default preset is a site, so 'Newsletter' (siteIntegrations) is the affordance.
-  await page.getByRole("button", { name: /^Newsletter$/i }).first().click();
+  await newsletter.click();
 
   // Auto-retry until the total row settles to a different value (avoids flake under parallel load).
-  await expect.poll(async () => totalRow.innerText(), { timeout: 5_000 }).not.toBe(before);
+  await expect.poll(async () => totalRow.innerText(), { timeout: 15_000 }).not.toBe(before);
 });
 
 test("/pl/pricing — klik 'Sklep online' preset zmienia kind na Sklep i odsłania bramki płatności", async ({ page }) => {
