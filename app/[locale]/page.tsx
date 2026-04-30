@@ -3,6 +3,7 @@ import { StackTicker } from "@/components/sections/redesign/StackTicker";
 import { ServicesBento } from "@/components/sections/redesign/ServicesBento";
 import { AboutBento } from "@/components/sections/redesign/AboutBento";
 import { PortfolioGrid } from "@/components/sections/redesign/PortfolioGrid";
+import { ShowcaseTeaser } from "@/components/sections/redesign/ShowcaseTeaser";
 import { Testimonials } from "@/components/sections/redesign/Testimonials";
 import { Process } from "@/components/sections/redesign/Process";
 import { Faq } from "@/components/sections/redesign/Faq";
@@ -39,6 +40,7 @@ export default async function Home({
       <ServicesBento />
       <AboutBento />
       <PortfolioGrid />
+      <ShowcaseTeaser />
       <Testimonials />
       <Process />
       <Faq />

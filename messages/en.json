@@ -304,6 +304,7 @@
     "keywords": "freelance web developer, web development, web applications, Next.js, WordPress, WooCommerce, PrestaShop, web developer Poland"
   },
   "showcase": {
+    "demoBadge": "Demo / inspiration",
     "sectionTitle": "What Could Your Website Look Like?",
     "sectionSubtitle": "Each project is a unique vision. See what possibilities I offer for different industries.",
     "viewDemo": "View Demo",
@@ -2348,16 +2349,22 @@
         "title": ["Six projects that ", "shipped", " to production."],
         "cta": "All work →"
       },
+      "showcase": {
+        "kicker": "[04] Showcase",
+        "title": ["21 demo projects across ", "industries", "."],
+        "subtitle": "Inspirations. Each showcase has its own stack, color system and tone — to prove the new design is not a template.",
+        "cta": "All demos →"
+      },
       "testi": {
-        "kicker": "[04] Testimonials",
+        "kicker": "[05] Testimonials",
         "title": ["What ", "clients", " say."]
       },
       "process": {
-        "kicker": "[05] Process",
+        "kicker": "[06] Process",
         "title": ["From brief to ", "live", "."]
       },
       "faq": {
-        "kicker": "[06] FAQ",
+        "kicker": "[07] FAQ",
         "title": ["Questions ", "I hear most often", "."]
       }
     }

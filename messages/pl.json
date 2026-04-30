@@ -304,6 +304,7 @@
     "keywords": "freelance web developer, strony internetowe, tworzenie stron www, sklepy internetowe, WordPress developer, Next.js developer, web developer polska"
   },
   "showcase": {
+    "demoBadge": "Demo / inspiracja",
     "sectionTitle": "Jak może wyglądać Twoja strona?",
     "sectionSubtitle": "Każdy projekt to unikalna wizja. Przekonaj się, jakie możliwości oferuję dla różnych branż.",
     "viewDemo": "Zobacz demo",
@@ -2354,16 +2355,22 @@
         "title": ["Sześć projektów, które ", "poszły", " na produkcję."],
         "cta": "Wszystkie realizacje →"
       },
+      "showcase": {
+        "kicker": "[04] Showcase",
+        "title": ["21 demo-projektów dla ", "różnych branż", "."],
+        "subtitle": "Inspiracje. Każdy showcase to inny stack, inny system kolorów, inny ton — żeby pokazać że nowy design ≠ szablon.",
+        "cta": "Wszystkie demo'a →"
+      },
       "testi": {
-        "kicker": "[04] Opinie",
+        "kicker": "[05] Opinie",
         "title": ["Co mówią ", "klienci", "."]
       },
       "process": {
-        "kicker": "[05] Proces",
+        "kicker": "[06] Proces",
         "title": ["Od briefu do ", "live", "."]
       },
       "faq": {
-        "kicker": "[06] FAQ",
+        "kicker": "[07] FAQ",
         "title": ["Pytania, które ", "najczęściej słyszę", "."]
       }
     }
