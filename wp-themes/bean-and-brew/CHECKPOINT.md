@@ -38,6 +38,27 @@ Screenshots written to `test-results/wp-bean-brew-homepage.png` and `test-result
 
 Note: "Flat White" item required `.locator('.cafe-menu__item-name').filter({ hasText: 'Flat White' })` because the span also contains a "Featured" badge child, causing `getByText('Flat White', { exact: true })` to fail.
 
+## Theme Check results (Task 21)
+
+Plugin: theme-check v20231220 (installed via `wp plugin install theme-check --activate`)
+
+| Severity     | Count | Notes |
+|--------------|-------|-------|
+| REQUIRED     | 0     | Resolved: screenshot.jpg added (64 KB), copyright notice added to style.css |
+| WARNING      | 1     | Wrong directory slug — theme dir is `bean-and-brew` but Theme Check expects `bean-brew` from "Bean & Brew" name |
+| RECOMMENDED  | 1     | No `register_block_style` call — block themes use `theme.json` `styles.blocks` instead |
+| INFO         | 3     | `block-theme` and `restaurant` not in WP.org accepted tag list; single text-domain matches theme dir slug |
+
+Resolutions applied:
+- Added `wp-themes/bean-and-brew/screenshot.jpg` (1200×900, 64 KB JPEG) — viewport screenshot of http://localhost:8088/
+- Added GPL copyright notice block to `wp-themes/bean-and-brew/style.css`
+
+Deferred issues (deliberately not fixing in this experiment):
+- WARNING "wrong directory slug": Renaming the theme directory from `bean-and-brew` to `bean-brew` would break all existing fixtures, patterns, and template references. This is a local development theme, not a WP.org submission. Deferred.
+- RECOMMENDED "register_block_style": Block themes use `theme.json` `styles.blocks` for block styling rather than the classic `register_block_style()` PHP API. The recommendation is a false positive for FSE themes. Deferred.
+- INFO "wrong tags" (`block-theme`, `restaurant`): `block-theme` is not in the WP.org tag allowlist (it's implicit); `restaurant` may be valid but was flagged. Not submitting to WP.org, so irrelevant. Deferred.
+- INFO "single text-domain": `bean-and-brew` is the deliberate text-domain matching the theme directory. Not an issue. Deferred.
+
 ## Known carry-over notes
 
 - DM Sans 400/500/600 woff2 files are byte-identical (Google Fonts variable). If actual rendered weights look identical in the browser, replace 3 files with 1 variable + theme.json fontFace `font-weight: 400 600` range.
