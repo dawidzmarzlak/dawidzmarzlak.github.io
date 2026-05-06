@@ -1,0 +1,6 @@
+Demo images shown in the default theme content are placeholders intended for
+preview only. Replace them with your own brand photography before publishing
+to a production site.
+
+If you intend to redistribute this theme commercially, swap these placeholders
+for stock images you own a license for, or commission original photography.
