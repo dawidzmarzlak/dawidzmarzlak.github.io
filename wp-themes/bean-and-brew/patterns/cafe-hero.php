@@ -48,12 +48,12 @@
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem","margin":{"top":"2rem"}}}} -->
             <div class="wp-block-buttons" style="margin-top:2rem">
-                <!-- wp:button {"backgroundColor":"espresso","textColor":"cream","style":{"border":{"radius":"9999px"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
-                <div class="wp-block-button"><a class="wp-block-button__link has-cream-color has-espresso-background-color has-text-color has-background wp-element-button" style="border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">Visit Us</a></div>
+                <!-- wp:button {"backgroundColor":"espresso","textColor":"cream","url":"#visit","style":{"border":{"radius":"9999px"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
+                <div class="wp-block-button"><a class="wp-block-button__link has-cream-color has-espresso-background-color has-text-color has-background wp-element-button" href="#visit" style="border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">Visit Us</a></div>
                 <!-- /wp:button -->
 
-                <!-- wp:button {"textColor":"espresso","className":"is-style-outline","style":{"border":{"radius":"9999px","width":"2px","color":"#5C4033"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
-                <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-espresso-color has-text-color has-border-color wp-element-button" style="border-color:#5C4033;border-width:2px;border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">View Menu</a></div>
+                <!-- wp:button {"textColor":"espresso","className":"is-style-outline","url":"#menu","style":{"border":{"radius":"9999px","width":"2px","color":"#5C4033"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
+                <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-espresso-color has-text-color has-border-color wp-element-button" href="#menu" style="border-color:#5C4033;border-width:2px;border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">View Menu</a></div>
                 <!-- /wp:button -->
             </div>
             <!-- /wp:buttons -->

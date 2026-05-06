@@ -51,6 +51,7 @@ $categories = array(
                     class="cafe-menu__tab<?php echo $first ? ' is-active' : ''; ?>"
                     data-category="<?php echo esc_attr( $slug ); ?>"
                     aria-selected="<?php echo $first ? 'true' : 'false'; ?>"
+                    tabindex="<?php echo $first ? '0' : '-1'; ?>"
                     aria-controls="cafe-menu-panel-<?php echo esc_attr( $slug ); ?>"
                     id="cafe-menu-tab-<?php echo esc_attr( $slug ); ?>"
                 ><?php echo esc_html( $cat['label'] ); ?></button>
