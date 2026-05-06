@@ -19,7 +19,7 @@
         { "slug": "espresso-dark","name":"Espresso Dark",          "color": "#4A3328" },
         { "slug": "clay",       "name": "Clay (accent)",          "color": "#C65D3B" },
         { "slug": "olive",      "name": "Olive (secondary)",      "color": "#6B7B3C" },
-        { "slug": "muted",      "name": "Muted text",             "color": "rgba(92, 64, 51, 0.7)" }
+        { "slug": "muted",      "name": "Muted text",             "color": "#5C4033B3" }
       ]
     },
     "typography": {
@@ -135,7 +135,8 @@
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--display)",
           "fontSize": "var(--wp--preset--font-size--x-large)"
-        }
+        },
+        "color": { "text": "var(--wp--preset--color--espresso)" }
       },
       "button": {
         "border": { "radius": "9999px" },
@@ -146,7 +147,10 @@
           "text": "var(--wp--preset--color--cream)"
         },
         ":hover": {
-          "color": { "background": "var(--wp--preset--color--espresso-dark)" }
+          "color": {
+            "background": "var(--wp--preset--color--espresso-dark)",
+            "text": "var(--wp--preset--color--cream)"
+          }
         }
       },
       "link": {
