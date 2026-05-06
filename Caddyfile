@@ -37,7 +37,11 @@
 # Defence-in-depth: Basic Auth (Caddy) + JWT (app). No public links.
 # Optional: add IP allowlist later if needed (see deploy/README.md).
 {$DOMAIN_ADMIN} {
-    basicauth {
+    # Basic Auth only on SPA paths — XHR to /api/* uses JWT.
+    # If basicauth covered the whole host, the browser would re-prompt on every
+    # fetch because axios doesn't replay Basic credentials.
+    @spa not path /api/*
+    basicauth @spa {
         import /etc/caddy/htpasswd
     }
 

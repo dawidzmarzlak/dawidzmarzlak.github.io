@@ -20,7 +20,11 @@ api.localhost:80 {
 # Default credentials: admin / admin123
 # Hash generated with: docker run --rm caddy:2.9-alpine caddy hash-password --plaintext "admin123"
 admin.localhost:80 {
-    basicauth {
+    # Basic Auth only on SPA paths — XHR to /api/* uses JWT (Authorization: Bearer).
+    # If we put basicauth on the whole host, browsers re-prompt on every fetch
+    # because axios doesn't replay the Basic Auth credentials.
+    @spa not path /api/*
+    basicauth @spa {
         admin $2a$14$tsjJKaCi1WnKzrLF8Ty7P.OTATYf2K5ZgduVzUa4zPN4f3uSCdfyi
     }
     reverse_proxy admin:80
