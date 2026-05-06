@@ -17,6 +17,7 @@
         <!-- wp:column {"verticalAlignment":"center","width":"50%","className":"cafe-story__polaroids"} -->
         <div class="wp-block-column is-vertically-aligned-center cafe-story__polaroids" style="flex-basis:50%">
 
+            <!-- wp:html -->
             <figure class="cafe-story__polaroid cafe-story__polaroid--1">
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/beans.jpg' ); ?>" alt="Coffee beans"/>
                 <figcaption>Est. 2018</figcaption>
@@ -33,6 +34,7 @@
             </figure>
 
             <span class="cafe-story__sticker" aria-hidden="true">100%<br>Organic</span>
+            <!-- /wp:html -->
 
         </div>
         <!-- /wp:column -->

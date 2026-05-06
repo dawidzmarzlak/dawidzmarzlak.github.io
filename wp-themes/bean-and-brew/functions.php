@@ -117,6 +117,15 @@ function bean_and_brew_maybe_create_home_page() {
 
     $post_content = implode( "\n\n", $content_parts );
 
+    /*
+     * Temporarily remove the kses (content sanitisation) filter so that
+     * theme-controlled decorative SVG inside wp:html blocks is preserved
+     * exactly as authored.  We re-enable it immediately after saving.
+     * This is safe because the content comes entirely from theme pattern
+     * files, not from user input.
+     */
+    kses_remove_filters();
+
     if ( $home ) {
         // Self-heal existing empty Home page
         wp_update_post( array(
@@ -134,6 +143,8 @@ function bean_and_brew_maybe_create_home_page() {
             'post_content' => $post_content,
         ) );
     }
+
+    kses_init_filters();
 
     if ( $home_id && ! is_wp_error( $home_id ) ) {
         update_option( 'show_on_front', 'page' );

@@ -14,16 +14,17 @@
     <span aria-hidden="true" class="wp-block-cover__background has-cream-background-color has-background-dim-80 has-background-dim"></span>
     <img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero.jpg' ); ?>" data-object-fit="cover"/>
 
-    <!-- Decorative SVGs (positioned absolutely via theme.css) -->
-    <div class="cafe-hero__decor" aria-hidden="true">
-        <span class="cafe-hero__dashed-circle"></span>
-        <span class="cafe-hero__dots"></span>
-        <svg class="cafe-hero__wave" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,15 Q25,0 50,15 Q75,30 100,15 Q125,0 150,15 Q175,30 200,15" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
-    </div>
-
     <div class="wp-block-cover__inner-container">
+
+        <!-- wp:html -->
+        <div class="cafe-hero__decor" aria-hidden="true">
+            <span class="cafe-hero__dashed-circle"></span>
+            <span class="cafe-hero__dots"></span>
+            <svg class="cafe-hero__wave" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,15 Q25,0 50,15 Q75,30 100,15 Q125,0 150,15 Q175,30 200,15" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </div>
+        <!-- /wp:html -->
 
         <!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
         <div class="wp-block-group">
