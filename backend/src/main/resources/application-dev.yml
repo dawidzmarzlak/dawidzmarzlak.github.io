@@ -18,10 +18,16 @@ spring:
       hibernate:
         format_sql: true
 
-  # Disable email sending in dev
+  # MailHog accepts plain SMTP without auth/STARTTLS — override the global defaults.
   mail:
-    host: localhost
-    port: 1025  # MailHog default port
+    host: ${SMTP_HOST:localhost}
+    port: ${SMTP_PORT:1025}
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
 
 # Disable Turnstile verification in dev
 turnstile:

@@ -31,10 +31,12 @@ services:
     restart: unless-stopped
     volumes:
       - ollama_data:/root/.ollama
-    ports:
-      - "11434:11434"
+    expose:
+      - "11434"
     profiles: ["dev"]
+    # Reachable inside the docker network as http://ollama:11434.
     # First run: docker compose --profile dev exec ollama ollama pull llama3.2
+    # If you need host access, add `ports: ["11435:11434"]` (avoids clash with native Ollama on 11434).
 
   backend:
     build:

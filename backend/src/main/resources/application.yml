@@ -93,6 +93,11 @@ management:
     web:
       exposure:
         include: health,info
+  health:
+    # SMTP health probe authenticates against the relay; in dev MailHog has no auth,
+    # and in prod we already log every send to email_logs. Skip the actuator probe.
+    mail:
+      enabled: false
 
 # Rate Limiting
 rate-limit:
