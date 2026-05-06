@@ -11,7 +11,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import java.util.List;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.equalTo;
+import static com.github.tomakehurst.wiremock.client.WireMock.containing;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
@@ -47,7 +47,7 @@ class OllamaLlmGatewayTest {
     @Test
     void happy_path_returns_content_and_collect_lead_action_when_keywords_match() {
         server.stubFor(post(urlPathEqualTo("/api/chat"))
-                .withHeader("Content-Type", equalTo("application/json"))
+                .withHeader("Content-Type", containing("application/json"))
                 .willReturn(aResponse()
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")

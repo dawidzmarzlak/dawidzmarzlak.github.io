@@ -181,6 +181,15 @@
                 </configuration>
             </plugin>
 
+            <!--
+              OpenAPI generator 7.10 parses inputSpec as a URI. On Windows an
+              absolute path like C:\... triggers "Illegal character in opaque
+              part at index 2" because the parser sees C: as a URI scheme.
+              Use a relative path (resolved against the project basedir by the
+              plugin's ClassLoader) so no drive letter ever reaches the URI
+              parser. Path is relative to backend/, hence ../api/openapi.yaml.
+            -->
+
             <!-- OpenAPI Generator -->
             <plugin>
                 <groupId>org.openapitools</groupId>
@@ -192,7 +201,15 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/../api/openapi.yaml</inputSpec>
+                            <inputSpec>../api/openapi.yaml</inputSpec>
+                            <!--
+                              Spec uses $ref at components.securitySchemes / components.parameters
+                              (bundle-via-ref pattern) which the strict validator rejects. The bundle
+                              works at runtime via swagger-parser's resolver. Controllers are hand-
+                              written (don't extend generated interfaces) so codegen is decorative —
+                              skip strict validation.
+                            -->
+                            <skipValidateSpec>true</skipValidateSpec>
                             <generatorName>spring</generatorName>
                             <apiPackage>com.itsolutions.adapter.in.web.api</apiPackage>
                             <modelPackage>com.itsolutions.adapter.in.web.dto</modelPackage>

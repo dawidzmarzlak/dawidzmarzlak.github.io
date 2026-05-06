@@ -1,14 +1,19 @@
 package com.itsolutions.adapter.out.llm;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itsolutions.domain.chat.port.out.LlmGateway;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.JdkClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClient;
+
+import java.net.http.HttpClient;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,6 +29,15 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Slf4j
 public class GeminiLlmGateway implements LlmGateway {
+
+    private static final ObjectMapper JSON = new ObjectMapper();
+
+    /** Force HTTP/1.1 — Gemini's REST endpoint is fine with HTTP/2 in prod, but
+     * tests use WireMock which doesn't speak h2c, and JDK 21 defaults to HTTP/2. */
+    private static final RestClient REST_CLIENT = RestClient.builder()
+            .requestFactory(new JdkClientHttpRequestFactory(
+                    HttpClient.newBuilder().version(HttpClient.Version.HTTP_1_1).build()))
+            .build();
 
     private final SystemPromptBuilder promptBuilder;
     private final ChatActionDetector actionDetector;
@@ -57,33 +71,45 @@ public class GeminiLlmGateway implements LlmGateway {
             body.put("contents", contents);
             body.put("generationConfig", Map.of("temperature", 0.3, "maxOutputTokens", 500));
 
-            Map<?, ?> resp = RestClient.create()
-                    .post()
-                    .uri(baseUrl + "/" + model + ":generateContent?key={k}", apiKey)
-                    .body(body)
-                    .retrieve()
-                    .body(Map.class);
+            // Build URI manually — Spring's URI template parser chokes on the ":generateContent" segment.
+            String encodedKey = java.net.URLEncoder.encode(apiKey, java.nio.charset.StandardCharsets.UTF_8);
+            java.net.URI uri = java.net.URI.create(baseUrl + "/" + model + ":generateContent?key=" + encodedKey);
 
-            String content = extractText(resp);
-            Integer tokens = extractTokens(resp);
-            int elapsed = (int) Math.min(Integer.MAX_VALUE, System.currentTimeMillis() - t0);
-            String lastUser = !request.getMessages().isEmpty()
-                    ? request.getMessages().get(request.getMessages().size() - 1).content()
-                    : "";
-            return LlmResponse.builder()
-                    .success(true).content(content).tokensUsed(tokens)
-                    .responseTimeMs(elapsed)
-                    .providerName(getProviderName())
-                    .suggestedAction(actionDetector.detect(content, lastUser, request.getLocale()))
-                    .build();
-        } catch (HttpClientErrorException.TooManyRequests e) {
-            return error(t0, ErrorType.QUOTA_EXCEEDED, "Gemini 429: " + e.getResponseBodyAsString());
-        } catch (HttpClientErrorException e) {
-            int sc = e.getStatusCode().value();
-            return error(t0,
-                    (sc == 401 || sc == 403) ? ErrorType.FATAL : ErrorType.FATAL,
-                    "Gemini " + sc + ": " + e.getResponseBodyAsString());
-        } catch (HttpServerErrorException | ResourceAccessException e) {
+            ResponseEntity<String> entity = REST_CLIENT.post()
+                    .uri(uri)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(body)
+                    .exchange((req, res) -> {
+                        String b = res.getBody() == null ? "" :
+                                new String(res.getBody().readAllBytes(), java.nio.charset.StandardCharsets.UTF_8);
+                        return ResponseEntity.status(res.getStatusCode()).body(b);
+                    }, false);
+
+            HttpStatusCode status = entity.getStatusCode();
+            if (status.is2xxSuccessful()) {
+                Map<?, ?> resp = parseJson(entity.getBody());
+                String content = extractText(resp);
+                Integer tokens = extractTokens(resp);
+                int elapsed = (int) Math.min(Integer.MAX_VALUE, System.currentTimeMillis() - t0);
+                String lastUser = !request.getMessages().isEmpty()
+                        ? request.getMessages().get(request.getMessages().size() - 1).content()
+                        : "";
+                return LlmResponse.builder()
+                        .success(true).content(content).tokensUsed(tokens)
+                        .responseTimeMs(elapsed)
+                        .providerName(getProviderName())
+                        .suggestedAction(actionDetector.detect(content, lastUser, request.getLocale()))
+                        .build();
+            }
+            // Gemini's 429 is RESOURCE_EXHAUSTED (per-minute or daily quota). Treat as fallback-trigger.
+            if (status.value() == 429) {
+                return error(t0, ErrorType.QUOTA_EXCEEDED, "Gemini 429: " + entity.getBody());
+            }
+            if (status.is4xxClientError()) {
+                return error(t0, ErrorType.FATAL, "Gemini " + status + ": " + entity.getBody());
+            }
+            return error(t0, ErrorType.TRANSIENT, "Gemini 5xx: " + status);
+        } catch (ResourceAccessException e) {
             return error(t0, ErrorType.TRANSIENT, "Gemini transient: " + e.getMessage());
         } catch (Exception e) {
             log.error("Gemini unexpected error: {}", e.getMessage(), e);
@@ -110,6 +136,12 @@ public class GeminiLlmGateway implements LlmGateway {
             return n.intValue();
         }
         return null;
+    }
+
+    private static Map<?, ?> parseJson(String body) {
+        if (body == null || body.isBlank()) return null;
+        try { return JSON.readValue(body, Map.class); }
+        catch (Exception e) { return null; }
     }
 
     private LlmResponse error(long t0, ErrorType type, String msg) {
