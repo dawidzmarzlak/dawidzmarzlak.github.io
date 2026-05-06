@@ -28,6 +28,16 @@ Open in two browser tabs:
 | CTA      |                        |       |
 | Footer   |                        |       |
 
+## Playwright spec results (Task 20)
+
+- `WP homepage exposes all expected sections and content`: PASS
+- `decorative elements load (sanity)`: PASS
+- `homepage screenshot diff (informational)`: PASS
+
+Screenshots written to `test-results/wp-bean-brew-homepage.png` and `test-results/next-bean-brew-homepage.png`.
+
+Note: "Flat White" item required `.locator('.cafe-menu__item-name').filter({ hasText: 'Flat White' })` because the span also contains a "Featured" badge child, causing `getByText('Flat White', { exact: true })` to fail.
+
 ## Known carry-over notes
 
 - DM Sans 400/500/600 woff2 files are byte-identical (Google Fonts variable). If actual rendered weights look identical in the browser, replace 3 files with 1 variable + theme.json fontFace `font-weight: 400 600` range.
