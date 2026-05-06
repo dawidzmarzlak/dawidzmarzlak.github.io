@@ -1,0 +1,274 @@
+/* ============================================================
+   Bean & Brew — decorative styles theme.json cannot express.
+   Token references use --wp--preset--color--<slug> from theme.json.
+   ============================================================ */
+
+/* ---------- Smooth scroll & basics ---------- */
+html { scroll-behavior: smooth; }
+.cafe-hero, .cafe-story, .cafe-menu, .cafe-location, .cafe-cta { position: relative; overflow: hidden; }
+
+/* ---------- Hero decorative elements ---------- */
+.cafe-hero__decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.cafe-hero__dashed-circle {
+    position: absolute;
+    top: 5rem; right: 5rem;
+    width: 8rem; height: 8rem;
+    border: 2px dashed rgba(92, 64, 51, 0.2);
+    border-radius: 50%;
+    animation: cafe-spin 60s linear infinite;
+}
+.cafe-hero__dots {
+    position: absolute;
+    bottom: 5rem; left: 5rem;
+    width: 3rem; height: 3rem;
+    background-image: radial-gradient(circle, rgba(198, 93, 59, 0.3) 25%, transparent 26%);
+    background-size: 1rem 1rem;
+}
+.cafe-hero__wave {
+    position: absolute;
+    bottom: 25%; right: 25%;
+    width: 12rem; height: 2rem;
+    color: rgba(107, 123, 60, 0.3);
+}
+.cafe-hero__icon { margin-bottom: 2rem; }
+
+@keyframes cafe-spin { to { transform: rotate(360deg); } }
+
+/* ---------- Story polaroids ---------- */
+.cafe-story__polaroids {
+    position: relative;
+    min-height: 500px;
+}
+.cafe-story__polaroid {
+    position: absolute;
+    background: #fff;
+    padding: 0.75rem 0.75rem 3rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 12rem;
+    transition: transform 0.3s ease;
+    margin: 0;
+}
+.cafe-story__polaroid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+.cafe-story__polaroid figcaption {
+    text-align: center;
+    margin-top: 0.75rem;
+    color: var(--wp--preset--color--espresso);
+    font-family: "Caveat", cursive;
+    font-size: 1.25rem;
+}
+.cafe-story__polaroid--1 { top: 0; left: 0; transform: rotate(-8deg); }
+.cafe-story__polaroid--2 { top: 5rem; left: 8rem; transform: rotate(5deg); width: 13rem; }
+.cafe-story__polaroid--3 { bottom: 0; left: 4rem; transform: rotate(-3deg); width: 11rem; }
+.cafe-story__polaroid:hover { transform: rotate(0deg) scale(1.05); z-index: 2; }
+
+.cafe-story__sticker {
+    position: absolute;
+    top: 50%; right: 2rem;
+    width: 6rem; height: 6rem;
+    border-radius: 50%;
+    background: var(--wp--preset--color--clay);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transform: rotate(12deg);
+    line-height: 1.1;
+}
+
+.cafe-story__values {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+}
+.cafe-story__values li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    color: var(--wp--preset--color--espresso);
+}
+.cafe-story__value-icon {
+    display: grid;
+    place-items: center;
+    width: 3rem; height: 3rem;
+    border-radius: 50%;
+    background: var(--wp--preset--color--cream);
+    color: var(--wp--preset--color--clay);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* ---------- Menu chalkboard ---------- */
+.cafe-menu__chalkboard {
+    background: #4A3328;
+    padding: 3rem;
+    border-radius: 0.75rem;
+    color: #fff;
+    position: relative;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.3);
+}
+.cafe-menu__header { text-align: center; margin-bottom: 3rem; }
+.cafe-menu__header h2 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin: 0 0 0.5rem;
+}
+.cafe-menu__subtitle {
+    font-family: "Caveat", cursive;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.cafe-menu__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.cafe-menu__tab {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.cafe-menu__tab:hover { border-color: rgba(255, 255, 255, 0.4); color: #fff; }
+.cafe-menu__tab.is-active {
+    background: var(--wp--preset--color--clay);
+    color: #fff;
+    border-color: var(--wp--preset--color--clay);
+}
+.cafe-menu__items {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 36rem;
+}
+.cafe-menu__items[hidden] { display: none; }
+.cafe-menu__item {
+    display: flex;
+    align-items: baseline;
+    padding: 0.75rem 0;
+}
+.cafe-menu__item-name {
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.125rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.cafe-menu__badge {
+    background: rgba(198, 93, 59, 0.5);
+    color: #fff;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+.cafe-menu__leader {
+    flex: 1;
+    margin: 0 0.75rem;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+    transform: translateY(-0.25rem);
+}
+.cafe-menu__price {
+    color: var(--wp--preset--color--clay);
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+}
+
+/* ---------- Location map placeholder ---------- */
+.cafe-location__map {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, rgba(107, 123, 60, 0.2), rgba(92, 64, 51, 0.2));
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.cafe-location__map-roads { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cafe-location__map-pin {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.cafe-location__map-pin svg {
+    animation: cafe-bounce 2s ease-in-out infinite;
+    margin: 0 auto 1rem;
+    display: block;
+}
+.cafe-location__map-pin p {
+    font-family: "Caveat", cursive;
+    font-size: 1.5rem;
+    color: var(--wp--preset--color--espresso);
+    margin: 0;
+}
+@keyframes cafe-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.cafe-location__info {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+}
+.cafe-location__info li {
+    padding: 0.75rem 0;
+    color: var(--wp--preset--color--espresso);
+    font-size: 1.125rem;
+    border-bottom: 1px solid rgba(92, 64, 51, 0.1);
+}
+.cafe-location__info strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--wp--preset--color--clay);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ---------- Site header (transparent over hero) ---------- */
+.site-header { position: relative; z-index: 10; }
+
+/* ---------- Scroll-reveal classes (toggled by reveal.js) ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Apply reveal to top-level sections by default */
+.cafe-story, .cafe-menu, .cafe-location, .cafe-cta { /* IntersectionObserver attaches .reveal */ }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .cafe-story__polaroids { min-height: 600px; }
+    .cafe-story__polaroid--1 { left: 50%; transform: translateX(-110%) rotate(-8deg); }
+    .cafe-story__polaroid--2 { left: 50%; transform: translateX(10%) rotate(5deg); }
+    .cafe-story__polaroid--3 { left: 50%; transform: translateX(-50%) rotate(-3deg); }
+    .cafe-story__sticker { right: 0.5rem; top: 1rem; }
+    .cafe-menu__chalkboard { padding: 1.5rem; }
+    .cafe-menu__tab { padding: 0.5rem 1rem; font-size: 0.875rem; }
+}
