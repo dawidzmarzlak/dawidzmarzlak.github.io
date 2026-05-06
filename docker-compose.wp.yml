@@ -1,0 +1,58 @@
+# Local WordPress test environment for the Bean & Brew theme experiment.
+# Start with:  docker compose -f docker-compose.wp.yml up -d
+# Stop with:   docker compose -f docker-compose.wp.yml down
+# Reset:       docker compose -f docker-compose.wp.yml down -v
+#
+# WordPress: http://localhost:8088
+# Admin:     http://localhost:8088/wp-admin   (admin / admin on first install)
+
+services:
+  wp-db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: wp
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: wp
+    volumes:
+      - wp_db_data:/var/lib/mysql
+    networks: [wp-net]
+
+  wordpress:
+    image: wordpress:6.5-php8.2-apache
+    restart: unless-stopped
+    depends_on: [wp-db]
+    ports:
+      - "8088:80"
+    environment:
+      WORDPRESS_DB_HOST: wp-db:3306
+      WORDPRESS_DB_NAME: wp
+      WORDPRESS_DB_USER: wp
+      WORDPRESS_DB_PASSWORD: wp
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_DEBUG_LOG', true);
+        define('WP_DEBUG_DISPLAY', false);
+    volumes:
+      - wp_core:/var/www/html
+      - ./wp-themes/bean-and-brew:/var/www/html/wp-content/themes/bean-and-brew
+    networks: [wp-net]
+
+  wp-cli:
+    image: wordpress:cli-php8.2
+    depends_on: [wordpress, wp-db]
+    user: "33:33"
+    working_dir: /var/www/html
+    volumes:
+      - wp_core:/var/www/html
+      - ./wp-themes/bean-and-brew:/var/www/html/wp-content/themes/bean-and-brew
+    profiles: [cli]
+    networks: [wp-net]
+
+volumes:
+  wp_db_data:
+  wp_core:
+
+networks:
+  wp-net:
