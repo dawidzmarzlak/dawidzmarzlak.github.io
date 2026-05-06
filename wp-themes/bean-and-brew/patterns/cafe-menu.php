@@ -8,24 +8,29 @@
  * Viewport Width: 1400
  */
 
+require_once get_template_directory() . '/inc/template-tags.php';
+if ( ! bean_and_brew_is_section_visible( 'menu' ) ) {
+    return;
+}
+
 $categories = array(
-    'coffee'   => array( 'label' => 'Coffee',   'items' => array(
+    'coffee'   => array( 'label' => bean_and_brew_text( 'menu_category_coffee' ),   'items' => array(
         array( 'name' => 'Espresso',     'price' => '12', 'featured' => false ),
         array( 'name' => 'Flat White',   'price' => '18', 'featured' => true  ),
         array( 'name' => 'Pour Over',    'price' => '22', 'featured' => true  ),
         array( 'name' => 'Cold Brew',    'price' => '16', 'featured' => false ),
     ) ),
-    'tea'      => array( 'label' => 'Tea',      'items' => array(
+    'tea'      => array( 'label' => bean_and_brew_text( 'menu_category_tea' ),      'items' => array(
         array( 'name' => 'Matcha Latte', 'price' => '18', 'featured' => true  ),
         array( 'name' => 'Earl Grey',    'price' => '14', 'featured' => false ),
         array( 'name' => 'Chai Latte',   'price' => '16', 'featured' => false ),
     ) ),
-    'food'     => array( 'label' => 'Snacks',   'items' => array(
+    'food'     => array( 'label' => bean_and_brew_text( 'menu_category_food' ),     'items' => array(
         array( 'name' => 'Avocado Toast','price' => '28', 'featured' => true  ),
         array( 'name' => 'Granola Bowl', 'price' => '24', 'featured' => false ),
         array( 'name' => 'Eggs Benedict','price' => '32', 'featured' => false ),
     ) ),
-    'pastries' => array( 'label' => 'Pastries', 'items' => array(
+    'pastries' => array( 'label' => bean_and_brew_text( 'menu_category_pastries' ), 'items' => array(
         array( 'name' => 'Croissant',    'price' => '12', 'featured' => false ),
         array( 'name' => 'Cinnamon Roll','price' => '14', 'featured' => true  ),
         array( 'name' => 'Banana Bread', 'price' => '10', 'featured' => false ),
@@ -39,8 +44,8 @@ $categories = array(
     <div class="cafe-menu__chalkboard">
 
         <header class="cafe-menu__header">
-            <h2>Our Menu</h2>
-            <p class="cafe-menu__subtitle">Handcrafted with the finest ingredients</p>
+            <h2><?php echo esc_html( bean_and_brew_text( 'menu_title' ) ); ?></h2>
+            <p class="cafe-menu__subtitle"><?php echo esc_html( bean_and_brew_text( 'menu_subtitle' ) ); ?></p>
         </header>
 
         <div class="cafe-menu__tabs" role="tablist" aria-label="Menu categories">

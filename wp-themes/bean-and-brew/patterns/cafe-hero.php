@@ -8,6 +8,16 @@
  * Block Types: core/post-content
  * Viewport Width: 1400
  */
+
+require_once get_template_directory() . '/inc/template-tags.php';
+if ( ! bean_and_brew_is_section_visible( 'hero' ) ) {
+    return;
+}
+
+$primary_url      = bean_and_brew_text( 'hero_cta_primary_url' );
+$primary_label    = bean_and_brew_text( 'hero_cta_primary_label' );
+$secondary_url    = bean_and_brew_text( 'hero_cta_secondary_url' );
+$secondary_label  = bean_and_brew_text( 'hero_cta_secondary_label' );
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":80,"overlayColor":"cream","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"className":"cafe-hero","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem","left":"1rem","right":"1rem"}}}} -->
 <div class="wp-block-cover is-light cafe-hero" style="padding-top:6rem;padding-right:1rem;padding-bottom:6rem;padding-left:1rem;min-height:100vh">
@@ -36,25 +46,29 @@
             <!-- /wp:image -->
 
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontFamily":"\"DM Serif Display\", Georgia, serif","letterSpacing":"0.2em","textTransform":"uppercase","fontSize":"1.25rem"}},"textColor":"espresso"} -->
-            <p class="has-text-align-center has-espresso-color has-text-color" style="font-family:&quot;DM Serif Display&quot;, Georgia, serif;font-size:1.25rem;letter-spacing:0.2em;text-transform:uppercase">Bean &amp; Brew</p>
+            <p class="has-text-align-center has-espresso-color has-text-color" style="font-family:&quot;DM Serif Display&quot;, Georgia, serif;font-size:1.25rem;letter-spacing:0.2em;text-transform:uppercase"><?php echo esc_html( bean_and_brew_text( 'hero_brand' ) ); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"\"DM Serif Display\", Georgia, serif","lineHeight":"1.1"}},"textColor":"espresso","fontSize":"hero"} -->
-            <h1 class="wp-block-heading has-text-align-center has-espresso-color has-text-color has-hero-font-size" style="font-family:&quot;DM Serif Display&quot;, Georgia, serif;line-height:1.1">Every Cup Tells a Story</h1>
+            <h1 class="wp-block-heading has-text-align-center has-espresso-color has-text-color has-hero-font-size" style="font-family:&quot;DM Serif Display&quot;, Georgia, serif;line-height:1.1"><?php echo esc_html( bean_and_brew_text( 'hero_title' ) ); ?></h1>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontFamily":"\"Caveat\", cursive","fontSize":"clamp(1.5rem, 3vw, 2rem)"}},"textColor":"clay"} -->
-            <p class="has-text-align-center has-clay-color has-text-color" style="font-family:&quot;Caveat&quot;, cursive;font-size:clamp(1.5rem, 3vw, 2rem)">Artisan coffee brewed with love. Beans from small farms, baked fresh daily.</p>
+            <p class="has-text-align-center has-clay-color has-text-color" style="font-family:&quot;Caveat&quot;, cursive;font-size:clamp(1.5rem, 3vw, 2rem)"><?php echo esc_html( bean_and_brew_text( 'hero_subtitle' ) ); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem","margin":{"top":"2rem"}}}} -->
             <div class="wp-block-buttons" style="margin-top:2rem">
-                <!-- wp:button {"backgroundColor":"espresso","textColor":"cream","url":"#visit","style":{"border":{"radius":"9999px"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
-                <div class="wp-block-button"><a class="wp-block-button__link has-cream-color has-espresso-background-color has-text-color has-background wp-element-button" href="#visit" style="border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">Visit Us</a></div>
+                <?php
+                // NOTE: The url value in the wp:button JSON comment is set to match the runtime <a href>
+                // so there is no conflict between the block attribute and the rendered anchor.
+                ?>
+                <!-- wp:button {"backgroundColor":"espresso","textColor":"cream","url":"<?php echo esc_attr( $primary_url ); ?>","style":{"border":{"radius":"9999px"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
+                <div class="wp-block-button"><a class="wp-block-button__link has-cream-color has-espresso-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $primary_url ); ?>" style="border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem"><?php echo esc_html( $primary_label ); ?></a></div>
                 <!-- /wp:button -->
 
-                <!-- wp:button {"textColor":"espresso","className":"is-style-outline","url":"#menu","style":{"border":{"radius":"9999px","width":"2px","color":"#5C4033"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
-                <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-espresso-color has-text-color has-border-color wp-element-button" href="#menu" style="border-color:#5C4033;border-width:2px;border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem">View Menu</a></div>
+                <!-- wp:button {"textColor":"espresso","className":"is-style-outline","url":"<?php echo esc_attr( $secondary_url ); ?>","style":{"border":{"radius":"9999px","width":"2px","color":"#5C4033"},"spacing":{"padding":{"top":"1rem","right":"2rem","bottom":"1rem","left":"2rem"}}}} -->
+                <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-espresso-color has-text-color has-border-color wp-element-button" href="<?php echo esc_url( $secondary_url ); ?>" style="border-color:#5C4033;border-width:2px;border-radius:9999px;padding-top:1rem;padding-right:2rem;padding-bottom:1rem;padding-left:2rem"><?php echo esc_html( $secondary_label ); ?></a></div>
                 <!-- /wp:button -->
             </div>
             <!-- /wp:buttons -->

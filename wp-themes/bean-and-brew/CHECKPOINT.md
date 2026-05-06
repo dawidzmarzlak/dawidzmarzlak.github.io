@@ -88,3 +88,21 @@ The cafe-menu pattern's PHP-rendered tabs are baked to static HTML at pattern re
 - Function_exists guards on `bean_and_brew_enqueue_assets` and `bean_and_brew_register_pattern_categories` were noted as plan-level gaps in Task 5 review.
 - This run was a retry after a prior Docker Desktop / WSL crash blocked Tasks 19–21. The crash has been resolved by the user.
 - `wordpress:cli-php8.2` WP-CLI Docker image had exec format error (empty /usr/local/bin/wp binary) — setup was performed via a PHP bootstrap script running inside the `wordpress:6.5-php8.2-apache` container instead, with `define('WP_INSTALLING', true)` to bypass the wp_not_installed() redirect.
+
+## Customizer-based section editing (Task 28)
+
+Reverted the Page-based front page (Tasks 26–27) and switched to a Customizer-driven model:
+
+- `templates/front-page.html` is static — inline `wp:pattern` references for the 5 sections.
+- `inc/template-tags.php` defines the central defaults table (`bean_and_brew_defaults()`) plus `bean_and_brew_text($key)` lookup and `bean_and_brew_is_section_visible($section)` gate.
+- `inc/customizer.php` registers a top-level "Bean & Brew" panel with 5 sections (Hero / Story / Menu / Location / Final CTA), each exposing visibility + text fields.
+- Each `patterns/cafe-*.php` reads its content via `bean_and_brew_text()` and gates the whole render with the visibility check.
+- The auto-population functions (`bean_and_brew_flag_demo_content_setup`, `bean_and_brew_maybe_create_home_page`, `kses_remove_filters` workaround) have been removed from `functions.php`.
+
+End user flow: **Wygląd → Dostosuj → Bean & Brew** → pick a section → toggle visibility or edit any field. Saving triggers a full preview refresh; published changes take effect site-wide.
+
+### Phase 2 enhancements (deferred)
+
+- Footer text customization — would require a custom dynamic block or a PHP-rendered footer template part (HTML template parts can't `<?php echo ... ?>`).
+- Menu items as Customizer fields — currently 14 items × 3 fields = 42 settings, too noisy for this iteration. Worth a custom Customizer control with a JSON repeater or a Gutenberg-style item list.
+- Image fields (hero background, polaroid photos) — would use `WP_Customize_Image_Control`. Currently images are file-based in `assets/images/`.
