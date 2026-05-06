@@ -182,6 +182,7 @@ Backend `start_period: 60s` w healthcheck zostawia czas na Flyway migrations. Ca
 | 502 Bad Gateway na `/api/*` | backend nie wystartowal (Flyway, brak DB) | `docker compose logs backend`, sprawdz `DB_*` env |
 | Cert Let's Encrypt nie wystawia sie | DNS jeszcze nie dotarl / port 80/443 zablokowany | `dig +short itsolutions.pl`, `ufw status` |
 | `401 Unauthorized` na `admin.*` (browser dialog) | brak / zla Basic Auth | wpisz dane z `deploy/htpasswd` lub odswież: `htpasswd -B deploy/htpasswd admin && docker compose up -d caddy` |
+| `500` na `POST /auth/login` z błędem `Illegal base64 character` | `JWT_SECRET` w `.env` ma CR (\r) — Windows sed wstawia CRLF | wygeneruj na nowo bez CR: `JWT=$(openssl rand -base64 48 \| tr -d '\r\n')` i wpisz w `.env` ręcznie (NIE przez `sed -i` na Windows) |
 | Email nie wysyla sie w prod | SMTP creds zle | sprawdz `email_logs`: `SELECT * FROM email_logs WHERE status='FAILED' ORDER BY created_at DESC LIMIT 10` |
 | Chat odpowiada "technical issues" | Ollama nie odpowiada / model nie pobrany | `docker compose exec ollama ollama list`, lub przelacz na Gemini |
 | Frontend laduje sie ale `submitBrief` rzuca CORS | `CORS_ORIGINS` nie zawiera `DOMAIN_PUBLIC` | popraw w `.env`, `docker compose up -d backend` |
