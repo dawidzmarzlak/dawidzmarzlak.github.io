@@ -13,29 +13,22 @@ if ( ! bean_and_brew_is_section_visible( 'menu' ) ) {
     return;
 }
 
-$categories = array(
-    'coffee'   => array( 'label' => bean_and_brew_text( 'menu_category_coffee' ),   'items' => array(
-        array( 'name' => 'Espresso',     'price' => '12', 'featured' => false ),
-        array( 'name' => 'Flat White',   'price' => '18', 'featured' => true  ),
-        array( 'name' => 'Pour Over',    'price' => '22', 'featured' => true  ),
-        array( 'name' => 'Cold Brew',    'price' => '16', 'featured' => false ),
-    ) ),
-    'tea'      => array( 'label' => bean_and_brew_text( 'menu_category_tea' ),      'items' => array(
-        array( 'name' => 'Matcha Latte', 'price' => '18', 'featured' => true  ),
-        array( 'name' => 'Earl Grey',    'price' => '14', 'featured' => false ),
-        array( 'name' => 'Chai Latte',   'price' => '16', 'featured' => false ),
-    ) ),
-    'food'     => array( 'label' => bean_and_brew_text( 'menu_category_food' ),     'items' => array(
-        array( 'name' => 'Avocado Toast','price' => '28', 'featured' => true  ),
-        array( 'name' => 'Granola Bowl', 'price' => '24', 'featured' => false ),
-        array( 'name' => 'Eggs Benedict','price' => '32', 'featured' => false ),
-    ) ),
-    'pastries' => array( 'label' => bean_and_brew_text( 'menu_category_pastries' ), 'items' => array(
-        array( 'name' => 'Croissant',    'price' => '12', 'featured' => false ),
-        array( 'name' => 'Cinnamon Roll','price' => '14', 'featured' => true  ),
-        array( 'name' => 'Banana Bread', 'price' => '10', 'featured' => false ),
-    ) ),
-);
+$categories = array();
+foreach ( array(
+    'coffee'   => bean_and_brew_text( 'menu_category_coffee' ),
+    'tea'      => bean_and_brew_text( 'menu_category_tea' ),
+    'food'     => bean_and_brew_text( 'menu_category_food' ),
+    'pastries' => bean_and_brew_text( 'menu_category_pastries' ),
+) as $slug => $label ) {
+    $items = bean_and_brew_menu_items( $slug );
+    if ( empty( $items ) ) {
+        continue; // hide empty categories
+    }
+    $categories[ $slug ] = array(
+        'label' => $label,
+        'items' => $items,
+    );
+}
 ?>
 <!-- wp:group {"tagName":"section","className":"cafe-menu","backgroundColor":"espresso","textColor":"cream","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem","left":"1rem","right":"1rem"}}},"layout":{"type":"constrained","contentSize":"1200px"},"anchor":"menu"} -->
 <section id="menu" class="wp-block-group cafe-menu has-cream-color has-espresso-background-color has-text-color has-background" style="padding-top:6rem;padding-right:1rem;padding-bottom:6rem;padding-left:1rem">

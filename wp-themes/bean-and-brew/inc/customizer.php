@@ -89,7 +89,7 @@ function bean_and_brew_customize_register( $wp_customize ) {
     // ---------- MENU section ----------
     $wp_customize->add_section( 'bean_and_brew_menu', array(
         'title'       => __( 'Menu', 'bean-and-brew' ),
-        'description' => __( 'Section heading + category tab labels. Menu items themselves are defined in patterns/cafe-menu.php (Phase 2 will expose them here).', 'bean-and-brew' ),
+        'description' => __( 'Section heading, category tab labels, and menu items. Items format: "Name | Price | featured" (one per line). The "featured" flag is optional.', 'bean-and-brew' ),
         'panel'       => 'bean_and_brew',
         'priority'    => 30,
     ) );
@@ -100,6 +100,10 @@ function bean_and_brew_customize_register( $wp_customize ) {
     $add_text(     'menu_category_tea',      __( 'Category: tea', 'bean-and-brew' ),     'bean_and_brew_menu' );
     $add_text(     'menu_category_food',     __( 'Category: food', 'bean-and-brew' ),    'bean_and_brew_menu' );
     $add_text(     'menu_category_pastries', __( 'Category: pastries', 'bean-and-brew' ), 'bean_and_brew_menu' );
+    $add_text( 'menu_items_coffee',   __( 'Coffee items (one per line, "Name | Price | featured")', 'bean-and-brew' ),   'bean_and_brew_menu', 'textarea' );
+    $add_text( 'menu_items_tea',      __( 'Tea items', 'bean-and-brew' ),      'bean_and_brew_menu', 'textarea' );
+    $add_text( 'menu_items_food',     __( 'Food items', 'bean-and-brew' ),     'bean_and_brew_menu', 'textarea' );
+    $add_text( 'menu_items_pastries', __( 'Pastry items', 'bean-and-brew' ),   'bean_and_brew_menu', 'textarea' );
 
     // ---------- LOCATION section ----------
     $wp_customize->add_section( 'bean_and_brew_location', array(
@@ -126,8 +130,42 @@ function bean_and_brew_customize_register( $wp_customize ) {
     $add_text(     'cta_button_label', __( 'Button label', 'bean-and-brew' ), 'bean_and_brew_cta' );
     $add_text(     'cta_button_url',   __( 'Button URL', 'bean-and-brew' ),   'bean_and_brew_cta', 'url' );
 
-    // NOTE: Footer Customizer section is deferred to Phase 2.
-    // HTML template parts (parts/footer.html) cannot execute PHP directly.
-    // Would require a custom dynamic block or a PHP-rendered footer template part.
+    // ---------- IMAGE controls ----------
+
+    // Hero section: background image
+    $wp_customize->add_setting( 'bean_and_brew_hero_image', array(
+        'default'           => $defaults['hero_image'],
+        'sanitize_callback' => 'esc_url_raw',
+        'transport'         => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bean_and_brew_hero_image', array(
+        'label'    => __( 'Background image', 'bean-and-brew' ),
+        'section'  => 'bean_and_brew_hero',
+        'settings' => 'bean_and_brew_hero_image',
+    ) ) );
+
+    // Story section: 3 polaroid images
+    foreach ( array( 1, 2, 3 ) as $i ) {
+        $key = "story_polaroid_{$i}_image";
+        $wp_customize->add_setting( "bean_and_brew_{$key}", array(
+            'default'           => $defaults[ $key ],
+            'sanitize_callback' => 'esc_url_raw',
+            'transport'         => 'refresh',
+        ) );
+        $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "bean_and_brew_{$key}", array(
+            'label'    => sprintf( __( 'Polaroid #%d image', 'bean-and-brew' ), $i ),
+            'section'  => 'bean_and_brew_story',
+            'settings' => "bean_and_brew_{$key}",
+        ) ) );
+    }
+
+    // ---------- FOOTER section ----------
+    $wp_customize->add_section( 'bean_and_brew_footer', array(
+        'title'    => __( 'Footer', 'bean-and-brew' ),
+        'panel'    => 'bean_and_brew',
+        'priority' => 60,
+    ) );
+    $add_text( 'footer_tagline',         __( 'Tagline (Caveat font, clay color)', 'bean-and-brew' ), 'bean_and_brew_footer' );
+    $add_text( 'footer_copyright_owner', __( 'Copyright text after the year', 'bean-and-brew' ),    'bean_and_brew_footer' );
 }
 add_action( 'customize_register', 'bean_and_brew_customize_register' );

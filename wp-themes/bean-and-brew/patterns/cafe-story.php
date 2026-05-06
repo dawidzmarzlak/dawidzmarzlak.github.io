@@ -24,17 +24,17 @@ if ( ! bean_and_brew_is_section_visible( 'story' ) ) {
 
             <!-- wp:html -->
             <figure class="cafe-story__polaroid cafe-story__polaroid--1">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/beans.jpg' ); ?>" alt="Coffee beans"/>
+                <img src="<?php echo esc_url( bean_and_brew_text( 'story_polaroid_1_image' ) ); ?>" alt="Coffee beans"/>
                 <figcaption>Est. 2018</figcaption>
             </figure>
 
             <figure class="cafe-story__polaroid cafe-story__polaroid--2">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/latte-art.jpg' ); ?>" alt="Latte art"/>
+                <img src="<?php echo esc_url( bean_and_brew_text( 'story_polaroid_2_image' ) ); ?>" alt="Latte art"/>
                 <figcaption>Fresh daily</figcaption>
             </figure>
 
             <figure class="cafe-story__polaroid cafe-story__polaroid--3">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pastry.jpg' ); ?>" alt="Fresh pastries"/>
+                <img src="<?php echo esc_url( bean_and_brew_text( 'story_polaroid_3_image' ) ); ?>" alt="Fresh pastries"/>
                 <figcaption>Made with love</figcaption>
             </figure>
 

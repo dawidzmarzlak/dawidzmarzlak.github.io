@@ -65,3 +65,4 @@ add_action( 'wp_enqueue_scripts', 'bean_and_brew_enqueue_assets' );
 require_once get_template_directory() . '/inc/block-patterns.php';
 require_once get_template_directory() . '/inc/template-tags.php';
 require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/dynamic-blocks.php';

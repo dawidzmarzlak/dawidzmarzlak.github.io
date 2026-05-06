@@ -80,6 +80,22 @@ function bean_and_brew_defaults() {
         'cta_subtitle'              => 'Stop by, slow down, stay a while.',
         'cta_button_label'          => 'Visit Us',
         'cta_button_url'            => '#visit',
+
+        // Images
+        'hero_image'                => get_template_directory_uri() . '/assets/images/hero.jpg',
+        'story_polaroid_1_image'    => get_template_directory_uri() . '/assets/images/beans.jpg',
+        'story_polaroid_2_image'    => get_template_directory_uri() . '/assets/images/latte-art.jpg',
+        'story_polaroid_3_image'    => get_template_directory_uri() . '/assets/images/pastry.jpg',
+
+        // Menu items (one per line, "Name | Price | featured")
+        'menu_items_coffee'   => "Espresso | 12\nFlat White | 18 | featured\nPour Over | 22 | featured\nCold Brew | 16",
+        'menu_items_tea'      => "Matcha Latte | 18 | featured\nEarl Grey | 14\nChai Latte | 16",
+        'menu_items_food'     => "Avocado Toast | 28 | featured\nGranola Bowl | 24\nEggs Benedict | 32",
+        'menu_items_pastries' => "Croissant | 12\nCinnamon Roll | 14 | featured\nBanana Bread | 10",
+
+        // Footer
+        'footer_tagline'         => 'Coffee with passion since 2018',
+        'footer_copyright_owner' => 'Bean & Brew. All rights reserved.',
     );
 }
 
@@ -102,3 +118,40 @@ function bean_and_brew_text_shortcode( $atts ) {
     return esc_html( bean_and_brew_text( $atts['key'] ) );
 }
 add_shortcode( 'bean_and_brew_text', 'bean_and_brew_text_shortcode' );
+
+/**
+ * Parse the menu-items textarea for a given category into an array of items.
+ *
+ * Format (one item per line):
+ *   Espresso | 12
+ *   Flat White | 18 | featured
+ *
+ * @param string $category One of 'coffee', 'tea', 'food', 'pastries'.
+ * @return array<int, array{name:string, price:string, featured:bool}>
+ */
+function bean_and_brew_menu_items( $category ) {
+    $key   = 'menu_items_' . $category;
+    $raw   = bean_and_brew_text( $key );
+    $items = array();
+
+    if ( empty( $raw ) ) {
+        return $items;
+    }
+
+    $lines = preg_split( '/\r?\n/', trim( $raw ) );
+    foreach ( $lines as $line ) {
+        $line = trim( $line );
+        if ( '' === $line ) continue;
+
+        $parts = array_map( 'trim', explode( '|', $line ) );
+        if ( count( $parts ) < 2 ) continue; // need at least name + price
+
+        $items[] = array(
+            'name'     => (string) $parts[0],
+            'price'    => (string) $parts[1],
+            'featured' => isset( $parts[2] ) && 'featured' === strtolower( $parts[2] ),
+        );
+    }
+
+    return $items;
+}

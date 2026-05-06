@@ -106,3 +106,28 @@ End user flow: **Wygląd → Dostosuj → Bean & Brew** → pick a section → t
 - Footer text customization — would require a custom dynamic block or a PHP-rendered footer template part (HTML template parts can't `<?php echo ... ?>`).
 - Menu items as Customizer fields — currently 14 items × 3 fields = 42 settings, too noisy for this iteration. Worth a custom Customizer control with a JSON repeater or a Gutenberg-style item list.
 - Image fields (hero background, polaroid photos) — would use `WP_Customize_Image_Control`. Currently images are file-based in `assets/images/`.
+
+## Phase 2 Customizer enhancements (Task 29)
+
+Added:
+
+- **Image fields** (4): hero background + 3 polaroid photos. Use `WP_Customize_Image_Control` so the user picks via the WP media library. Defaults are the bundled `assets/images/*.jpg`.
+- **Menu items** per category (4 textareas): `coffee`, `tea`, `food`, `pastries`. Format = "Name | Price | featured" one per line. Parsed at render time by `bean_and_brew_menu_items($category)` helper. Empty categories are hidden.
+- **Footer tagline + copyright** via custom dynamic blocks `bean-and-brew/footer-tagline` and `bean-and-brew/footer-copyright`, registered in `inc/dynamic-blocks.php`. The blocks have `render_callback`s so they can read theme mods at render time despite living inside an HTML template part.
+
+Files added:
+- `inc/dynamic-blocks.php` (52 lines)
+
+Files modified:
+- `inc/template-tags.php` — image/menu/footer defaults + `bean_and_brew_menu_items()` parser
+- `inc/customizer.php` — image controls, menu textareas, footer section
+- `functions.php` — require_once dynamic-blocks.php
+- `patterns/cafe-hero.php` — hero image dynamic
+- `patterns/cafe-story.php` — 3 polaroid images dynamic
+- `patterns/cafe-menu.php` — items array built at render time
+- `parts/footer.html` — wp:bean-and-brew/footer-tagline + wp:bean-and-brew/footer-copyright
+
+Phase 2 deferrals (now Phase 3):
+- Polaroid alt text + caption per polaroid (currently `Est. 2018` / `Fresh daily` / `Made with love` are hardcoded captions inside the figure markup)
+- Story values' icons (currently emoji ♥ / 🌱 / 👥 hardcoded)
+- Color overrides through Customizer (currently in theme.json palette only)

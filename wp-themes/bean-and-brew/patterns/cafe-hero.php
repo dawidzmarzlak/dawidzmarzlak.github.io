@@ -19,10 +19,10 @@ $primary_label    = bean_and_brew_text( 'hero_cta_primary_label' );
 $secondary_url    = bean_and_brew_text( 'hero_cta_secondary_url' );
 $secondary_label  = bean_and_brew_text( 'hero_cta_secondary_label' );
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero.jpg' ); ?>","dimRatio":80,"overlayColor":"cream","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"className":"cafe-hero","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem","left":"1rem","right":"1rem"}}}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( bean_and_brew_text( 'hero_image' ) ); ?>","dimRatio":80,"overlayColor":"cream","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"className":"cafe-hero","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem","left":"1rem","right":"1rem"}}}} -->
 <div class="wp-block-cover is-light cafe-hero" style="padding-top:6rem;padding-right:1rem;padding-bottom:6rem;padding-left:1rem;min-height:100vh">
     <span aria-hidden="true" class="wp-block-cover__background has-cream-background-color has-background-dim-80 has-background-dim"></span>
-    <img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero.jpg' ); ?>" data-object-fit="cover"/>
+    <img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( bean_and_brew_text( 'hero_image' ) ); ?>" data-object-fit="cover"/>
 
     <div class="wp-block-cover__inner-container">
 
