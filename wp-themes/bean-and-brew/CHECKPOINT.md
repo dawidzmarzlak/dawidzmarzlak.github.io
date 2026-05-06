@@ -59,6 +59,20 @@ Deferred issues (deliberately not fixing in this experiment):
 - INFO "wrong tags" (`block-theme`, `restaurant`): `block-theme` is not in the WP.org tag allowlist (it's implicit); `restaurant` may be valid but was flagged. Not submitting to WP.org, so irrelevant. Deferred.
 - INFO "single text-domain": `bean-and-brew` is the deliberate text-domain matching the theme directory. Not an issue. Deferred.
 
+## Polish round (post-Task 24)
+
+Fixed:
+- Header & footer wordmark hardcoded to "Bean & Brew" instead of dynamic WP site title (which would otherwise show whatever the buyer sets, e.g. "Bean and Brew Demo" during testing). Replaced `wp:site-title` block with a `wp:paragraph` block in both `parts/header.html` and `parts/footer.html`.
+- `reveal.js` now has a `rootMargin: '0px 0px 100px 0px'` pre-trigger so the IntersectionObserver fires 100px before a section enters the viewport, and a 1500ms fail-safe that force-reveals any sections still at `opacity:0` — was causing all below-fold sections to stay invisible in full-page screenshots. Also updated the screenshot test to wait 2000ms so the fail-safe fires before the capture.
+
+Noted but not fixed (visual audit against Next.js reference):
+- Hero dashed-circle (top-right decorative ring) is noticeably smaller/fainter than the Next.js version — the SVG renders at a similar position but the border alpha/thickness differs slightly. A quick fix would be to increase `border-width` or `opacity`, but the difference is minor and acceptable.
+- Hero dot-grid pattern (bottom-left) is proportionally smaller in WP vs. Next.js — adjusting SVG viewBox or element size could improve this, but it does not affect usability.
+- Story polaroid section: the three polaroid cards in WP are correctly rendered with tilts and overlaps; the sticker badge is present. The vertical spacing between the polaroid section and the adjacent sections looks slightly tighter than Next.js (roughly 2rem vs. 3rem gap). Acceptable.
+- Menu chalkboard: tab alignment and item list match well. Minor colour difference on the active tab pill (WP uses a slightly more opaque clay; Next.js has more contrast). Not worth fixing in isolation.
+- Location map placeholder is a static beige box; Next.js shows the same placeholder. No difference.
+- Footer: WP and Next.js both show "Bean & Brew" + tagline + copyright. Match is good.
+
 ## Known carry-over notes
 
 - DM Sans 400/500/600 woff2 files are byte-identical (Google Fonts variable). If actual rendered weights look identical in the browser, replace 3 files with 1 variable + theme.json fontFace `font-weight: 400 600` range.
