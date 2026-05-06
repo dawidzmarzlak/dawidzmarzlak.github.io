@@ -1,0 +1,161 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "768px",
+      "wideSize": "1200px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "defaultDuotone": false,
+      "palette": [
+        { "slug": "cream",      "name": "Cream (background)",     "color": "#FFF8F0" },
+        { "slug": "beige",      "name": "Beige (alt background)", "color": "#E8DFD0" },
+        { "slug": "white",      "name": "White",                  "color": "#FFFFFF" },
+        { "slug": "espresso",   "name": "Espresso (primary)",     "color": "#5C4033" },
+        { "slug": "espresso-dark","name":"Espresso Dark",          "color": "#4A3328" },
+        { "slug": "clay",       "name": "Clay (accent)",          "color": "#C65D3B" },
+        { "slug": "olive",      "name": "Olive (secondary)",      "color": "#6B7B3C" },
+        { "slug": "muted",      "name": "Muted text",             "color": "rgba(92, 64, 51, 0.7)" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "display",
+          "name": "DM Serif Display",
+          "fontFamily": "\"DM Serif Display\", Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "DM Serif Display",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/dm-serif-display-regular.woff2"]
+            }
+          ]
+        },
+        {
+          "slug": "body",
+          "name": "DM Sans",
+          "fontFamily": "\"DM Sans\", -apple-system, system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/dm-sans-regular.woff2"]
+            },
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": ["file:./assets/fonts/dm-sans-500.woff2"]
+            },
+            {
+              "fontFamily": "DM Sans",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "src": ["file:./assets/fonts/dm-sans-600.woff2"]
+            }
+          ]
+        },
+        {
+          "slug": "handwritten",
+          "name": "Caveat (handwritten)",
+          "fontFamily": "\"Caveat\", cursive",
+          "fontFace": [
+            {
+              "fontFamily": "Caveat",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/caveat-regular.woff2"]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small",    "name": "Small",     "size": "0.875rem" },
+        { "slug": "regular",  "name": "Regular",   "size": "1rem" },
+        { "slug": "medium",   "name": "Medium",    "size": "1.125rem" },
+        { "slug": "large",    "name": "Large",     "size": "1.5rem" },
+        { "slug": "x-large",  "name": "X-Large",   "size": "2rem" },
+        { "slug": "xx-large", "name": "XX-Large",  "size": "3rem" },
+        { "slug": "hero",     "name": "Hero",      "size": "clamp(2.5rem, 6vw, 4.5rem)" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "em", "rem", "%", "vw", "vh"],
+      "spacingScale": {
+        "operator": "*",
+        "increment": 1.5,
+        "steps": 7,
+        "mediumStep": 1.5,
+        "unit": "rem"
+      }
+    },
+    "custom": {
+      "borderRadius": {
+        "pill": "9999px",
+        "card": "1.5rem",
+        "small": "0.5rem"
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--cream)",
+      "text": "var(--wp--preset--color--espresso)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "fontSize": "var(--wp--preset--font-size--regular)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontSize": "var(--wp--preset--font-size--hero)",
+          "lineHeight": "1.1"
+        },
+        "color": { "text": "var(--wp--preset--color--espresso)" }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontSize": "var(--wp--preset--font-size--xx-large)",
+          "lineHeight": "1.2"
+        },
+        "color": { "text": "var(--wp--preset--color--espresso)" }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontSize": "var(--wp--preset--font-size--x-large)"
+        }
+      },
+      "button": {
+        "border": { "radius": "9999px" },
+        "spacing": { "padding": { "top": "1rem", "right": "2rem", "bottom": "1rem", "left": "2rem" } },
+        "typography": { "fontFamily": "var(--wp--preset--font-family--body)", "fontWeight": "500" },
+        "color": {
+          "background": "var(--wp--preset--color--espresso)",
+          "text": "var(--wp--preset--color--cream)"
+        },
+        ":hover": {
+          "color": { "background": "var(--wp--preset--color--espresso-dark)" }
+        }
+      },
+      "link": {
+        "color": { "text": "var(--wp--preset--color--clay)" }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Header", "area": "header" },
+    { "name": "footer", "title": "Footer", "area": "footer" }
+  ]
+}
