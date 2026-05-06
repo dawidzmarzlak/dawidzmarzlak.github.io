@@ -73,6 +73,14 @@ Noted but not fixed (visual audit against Next.js reference):
 - Location map placeholder is a static beige box; Next.js shows the same placeholder. No difference.
 - Footer: WP and Next.js both show "Bean & Brew" + tagline + copyright. Match is good.
 
+## Front-page architecture change (post-Task 25)
+
+Refactor: `templates/front-page.html` now renders `<!-- wp:post-content /-->` instead of inline-referencing the 5 cafe patterns. The patterns are inserted into the Home page's `post_content` at theme activation (and self-healed on first init if the page exists empty).
+
+Result: end users edit the homepage at **Pages → Home → Edit** in the regular Block Editor. Each section (hero, story, menu items, location, CTA) appears as a tree of editable blocks. Reordering, swapping text/images, deleting sections, and inserting new patterns from the "Bean & Brew" inserter category all work without leaving the page editor — closer to the workflow most WP users already know.
+
+The cafe-menu pattern's PHP-rendered tabs are baked to static HTML at pattern registration (via WP's standard output-buffering of pattern files), so the menu ends up as editable plain block markup in post_content. Each menu item can be edited directly.
+
 ## Known carry-over notes
 
 - DM Sans 400/500/600 woff2 files are byte-identical (Google Fonts variable). If actual rendered weights look identical in the browser, replace 3 files with 1 variable + theme.json fontFace `font-weight: 400 600` range.
