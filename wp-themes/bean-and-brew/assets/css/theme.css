@@ -17,17 +17,17 @@ html { scroll-behavior: smooth; }
 .cafe-hero__dashed-circle {
     position: absolute;
     top: 5rem; right: 5rem;
-    width: 8rem; height: 8rem;
-    border: 2px dashed rgba(92, 64, 51, 0.2);
+    width: 9rem; height: 9rem;
+    border: 3px dashed rgba(92, 64, 51, 0.35);
     border-radius: 50%;
     animation: cafe-spin 60s linear infinite;
 }
 .cafe-hero__dots {
     position: absolute;
     bottom: 5rem; left: 5rem;
-    width: 3rem; height: 3rem;
-    background-image: radial-gradient(circle, rgba(198, 93, 59, 0.3) 25%, transparent 26%);
-    background-size: 1rem 1rem;
+    width: 4.5rem; height: 4.5rem;
+    background-image: radial-gradient(circle, rgba(198, 93, 59, 0.45) 28%, transparent 29%);
+    background-size: 1.25rem 1.25rem;
 }
 .cafe-hero__wave {
     position: absolute;
@@ -42,7 +42,8 @@ html { scroll-behavior: smooth; }
 /* ---------- Story polaroids ---------- */
 .cafe-story__polaroids {
     position: relative;
-    min-height: 500px;
+    min-height: 560px;
+    padding: 1rem 0;
 }
 .cafe-story__polaroid {
     position: absolute;
@@ -155,6 +156,8 @@ html { scroll-behavior: smooth; }
     background: var(--wp--preset--color--clay);
     color: #fff;
     border-color: var(--wp--preset--color--clay);
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(198, 93, 59, 0.35);
 }
 .cafe-menu__items {
     list-style: none;
