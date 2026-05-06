@@ -49,7 +49,7 @@ test.describe('Bean & Brew — WP theme vs. Next.js showcase parity', () => {
 
   test('homepage screenshot diff (informational)', async ({ page }) => {
     await page.goto(WP_URL, { waitUntil: 'networkidle' });
-    await page.waitForTimeout(500); // let scroll-reveal settle
+    await page.waitForTimeout(2000); // let scroll-reveal + 1500ms fail-safe settle
     await page.screenshot({
       path: 'test-results/wp-bean-brew-homepage.png',
       fullPage: true,
