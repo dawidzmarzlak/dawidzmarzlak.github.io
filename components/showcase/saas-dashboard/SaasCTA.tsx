@@ -1,18 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { SaasDashboardContent } from "@/lib/showcase/saas-dashboard/template.config";
 
 export function SaasCTA() {
-  const t = useTranslations("showcase.saas-dashboard.cta");
+  const theme = useTheme();
+  const c = useContent<SaasDashboardContent["cta"]>("cta");
 
   return (
-    <section className="py-24 bg-[#0F172A] relative overflow-hidden">
+    <section
+      className="py-24 relative overflow-hidden"
+      style={{ backgroundColor: theme.palette.bg }}
+    >
       {/* Background gradient */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#6366F1]/10 via-transparent to-[#06B6D4]/10" />
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            background: `linear-gradient(to bottom right, ${withAlpha(theme.palette.accent, 10)}, transparent, ${withAlpha(theme.palette.accentTertiary, 10)})`,
+          }}
+        />
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -20,26 +31,33 @@ export function SaasCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#1E293B]/80 to-[#1E293B]/50 backdrop-blur-xl rounded-3xl border border-[#334155] p-12"
+          className="backdrop-blur-xl rounded-3xl p-12"
+          style={{
+            background: `linear-gradient(to right, ${withAlpha(theme.palette.surface, 80)}, ${withAlpha(theme.palette.surface, 50)})`,
+            border: `1px solid ${theme.palette.surfaceLight}`,
+          }}
         >
           <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-urbanist)" }}
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("title")}
+            {c.title}
           </h2>
           <p
-            className="text-lg text-[#94A3B8] mb-8 max-w-xl mx-auto"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-lg mb-8 max-w-xl mx-auto"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("description")}
+            {c.description}
           </p>
           <Button
             size="lg"
-            className="bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5558E3] hover:to-[#7C4FE8] text-white font-semibold px-8 py-6 text-base rounded-xl group"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-white font-semibold px-8 py-6 text-base rounded-xl group hover:opacity-90 transition-opacity"
+            style={{
+              fontFamily: theme.fonts.body,
+              background: `linear-gradient(to right, ${theme.palette.accent}, ${theme.palette.accentSecondary})`,
+            }}
           >
-            {t("button")}
+            {c.button}
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
