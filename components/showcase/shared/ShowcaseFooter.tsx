@@ -33,9 +33,11 @@ export function ShowcaseFooter({
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-center md:text-left">
             <span className="opacity-70">{t("demoNote")}</span>
-            <span className="font-semibold ml-1" style={{ color: resolvedAccent }}>
-              {resolvedName}
-            </span>
+            {resolvedName && (
+              <span className="font-semibold ml-1" style={{ color: resolvedAccent }}>
+                {resolvedName}
+              </span>
+            )}
           </div>
 
           <div className="flex items-center gap-4 text-sm">

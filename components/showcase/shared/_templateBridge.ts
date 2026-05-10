@@ -1,8 +1,4 @@
-"use client";
-
-// Re-exports the TemplateProvider's internal context object as nullable so shared chrome
-// can opportunistically theme itself when wrapped, without hard-requiring a provider.
-import { createContext } from "react";
-import type { BrandConfig } from "@/lib/templates/types";
-
-export const TemplateContextOptional = createContext<BrandConfig | null>(null);
+// Re-exports the TemplateProvider context so shared-chrome components can
+// read it via useContext without taking a direct dependency on lib/templates/provider.
+// The context lives in lib/templates/context.ts (single source of truth).
+export { TemplateContext as TemplateContextOptional } from "@/lib/templates/context";

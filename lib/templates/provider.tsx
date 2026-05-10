@@ -4,9 +4,7 @@ import { useContext, useMemo } from "react";
 import type { ReactNode } from "react";
 import type { BrandConfig, MediaRegistry, ThemeTokens } from "./types";
 import { themeToCssVars } from "./cssVars";
-import { TemplateContextOptional } from "@/components/showcase/shared/_templateBridge";
-
-const TemplateContext = TemplateContextOptional;
+import { TemplateContext } from "./context";
 
 export interface TemplateProviderProps {
   config: BrandConfig;
