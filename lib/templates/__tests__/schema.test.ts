@@ -47,4 +47,35 @@ describe("BrandConfigSchema", () => {
     const r = BrandConfigSchema.safeParse(bad);
     expect(r.success).toBe(false);
   });
+
+  it("accepts extra palette keys when they are valid hex colors", () => {
+    const config = {
+      ...minimalValidConfig,
+      theme: {
+        ...minimalValidConfig.theme,
+        palette: { bg: "#fff", fg: "#000", accent: "#0af", muted: "#aaa", border: "#ccc8" },
+      },
+    };
+    const r = BrandConfigSchema.safeParse(config);
+    expect(r.success).toBe(true);
+  });
+
+  it("rejects extra palette keys whose values are not valid hex", () => {
+    const config = {
+      ...minimalValidConfig,
+      theme: {
+        ...minimalValidConfig.theme,
+        palette: { bg: "#fff", fg: "#000", accent: "#0af", muted: "red" },
+      },
+    };
+    const r = BrandConfigSchema.safeParse(config);
+    expect(r.success).toBe(false);
+  });
+
+  it("rejects empty media values", () => {
+    const config1 = { ...minimalValidConfig, media: { hero: "" } };
+    const config2 = { ...minimalValidConfig, media: { gallery: [] } };
+    expect(BrandConfigSchema.safeParse(config1).success).toBe(false);
+    expect(BrandConfigSchema.safeParse(config2).success).toBe(false);
+  });
 });
