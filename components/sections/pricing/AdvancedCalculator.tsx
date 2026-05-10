@@ -313,19 +313,17 @@ function CollapsibleChipGrid<T extends string>({
   showAllLabel: string;
   hideExtraLabel: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  // If any extra option is already active (e.g. preset applied), auto-expand on mount.
-  const hasActiveExtra = extra.some((k) => active.includes(k));
-  const isOpen = expanded || hasActiveExtra;
+  // Auto-expand on mount if a preset pre-selected an "extra" option; user can collapse freely afterwards.
+  const [expanded, setExpanded] = useState(() => extra.some((k) => active.includes(k)));
   return (
     <>
       <ChipGrid options={popular} active={active} onToggle={onToggle} labelFn={labelFn} cols={cols} />
-      {isOpen && (
+      {expanded && (
         <div className="mt-2">
           <ChipGrid options={extra} active={active} onToggle={onToggle} labelFn={labelFn} cols={cols} />
         </div>
       )}
-      {!hasActiveExtra && extra.length > 0 && (
+      {extra.length > 0 && (
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
