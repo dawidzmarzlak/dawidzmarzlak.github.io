@@ -2,20 +2,17 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import Image from "next/image";
-
-const testimonials = [
-  { id: "customer1", image: "/showcase/saas-dashboard/testimonial-1.jpg", rating: 5 },
-  { id: "customer2", image: "/showcase/saas-dashboard/testimonial-2.jpg", rating: 5 },
-  { id: "customer3", image: "/showcase/saas-dashboard/testimonial-3.jpg", rating: 5 },
-];
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { SaasDashboardContent } from "@/lib/showcase/saas-dashboard/template.config";
 
 export function SaasTestimonials() {
-  const t = useTranslations("showcase.saas-dashboard.testimonials");
+  const theme = useTheme();
+  const c = useContent<SaasDashboardContent["testimonials"]>("testimonials");
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -41,9 +38,15 @@ export function SaasTestimonials() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 bg-[#0F172A] relative overflow-hidden">
+    <section
+      className="py-24 relative overflow-hidden"
+      style={{ backgroundColor: theme.palette.bg }}
+    >
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6366F1]/5 rounded-full blur-[100px]" />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[100px]"
+        style={{ backgroundColor: withAlpha(theme.palette.accent, 5) }}
+      />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -54,16 +57,16 @@ export function SaasTestimonials() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-urbanist)" }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("title")}
+            {c.title}
           </h2>
           <p
-            className="text-lg text-[#94A3B8] max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-lg max-w-2xl mx-auto"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("subtitle")}
+            {c.subtitle}
           </p>
         </motion.div>
 
@@ -71,14 +74,24 @@ export function SaasTestimonials() {
           {/* Navigation */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-[#1E293B] border border-[#334155] hover:border-[#6366F1] text-white flex items-center justify-center transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-colors hover:border-opacity-100"
+            style={{
+              backgroundColor: theme.palette.surface,
+              border: `1px solid ${theme.palette.surfaceLight}`,
+              color: theme.palette.fg,
+            }}
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-[#1E293B] border border-[#334155] hover:border-[#6366F1] text-white flex items-center justify-center transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-colors hover:border-opacity-100"
+            style={{
+              backgroundColor: theme.palette.surface,
+              border: `1px solid ${theme.palette.surfaceLight}`,
+              color: theme.palette.fg,
+            }}
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -86,38 +99,53 @@ export function SaasTestimonials() {
           {/* Carousel */}
           <div className="overflow-hidden px-16" ref={emblaRef}>
             <div className="flex">
-              {testimonials.map((testimonial, index) => (
+              {c.items.map((testimonial, index) => (
                 <div key={testimonial.id} className="flex-[0_0_100%] min-w-0 px-4">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: selectedIndex === index ? 1 : 0.3 }}
-                    className="bg-[#1E293B]/50 backdrop-blur-sm rounded-2xl border border-[#334155] p-8 md:p-12"
+                    className="backdrop-blur-sm rounded-2xl p-8 md:p-12"
+                    style={{
+                      backgroundColor: withAlpha(theme.palette.surface, 50),
+                      border: `1px solid ${theme.palette.surfaceLight}`,
+                    }}
                   >
                     <div className="flex flex-col md:flex-row gap-8 items-center">
                       {/* Avatar */}
                       <div className="relative">
-                        <div className="w-20 h-20 rounded-2xl overflow-hidden ring-4 ring-[#6366F1]/20">
+                        <div
+                          className="w-20 h-20 rounded-2xl overflow-hidden"
+                          style={{ boxShadow: `0 0 0 4px ${withAlpha(theme.palette.accent, 20)}` }}
+                        >
                           <Image
-                            src={testimonial.image}
-                            alt={t(`reviews.${testimonial.id}.name`)}
+                            src={testimonial.avatarSrc}
+                            alt={testimonial.name}
                             fill
                             className="object-cover"
                           />
                         </div>
                         {/* Glow effect */}
-                        <div className="absolute -inset-2 bg-gradient-to-r from-[#6366F1]/20 to-[#06B6D4]/20 rounded-3xl blur-xl -z-10" />
+                        <div
+                          className="absolute -inset-2 rounded-3xl blur-xl -z-10"
+                          style={{
+                            background: `linear-gradient(to right, ${withAlpha(theme.palette.accent, 20)}, ${withAlpha(theme.palette.accentTertiary, 20)})`,
+                          }}
+                        />
                       </div>
 
                       <div className="flex-1 text-center md:text-left">
                         {/* Quote icon */}
-                        <Quote className="w-10 h-10 text-[#6366F1]/30 mb-4 mx-auto md:mx-0" />
+                        <Quote
+                          className="w-10 h-10 mb-4 mx-auto md:mx-0"
+                          style={{ color: withAlpha(theme.palette.accent, 30) }}
+                        />
 
                         {/* Quote */}
                         <blockquote
-                          className="text-lg md:text-xl text-white leading-relaxed mb-6"
-                          style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                          className="text-lg md:text-xl leading-relaxed mb-6"
+                          style={{ fontFamily: theme.fonts.body, color: theme.palette.fg }}
                         >
-                          &ldquo;{t(`reviews.${testimonial.id}.quote`)}&rdquo;
+                          &ldquo;{testimonial.quote}&rdquo;
                         </blockquote>
 
                         {/* Rating */}
@@ -128,8 +156,9 @@ export function SaasTestimonials() {
                               className={`w-4 h-4 ${
                                 i < testimonial.rating
                                   ? "fill-[#FFE66D] text-[#FFE66D]"
-                                  : "text-[#334155]"
+                                  : ""
                               }`}
+                              style={i >= testimonial.rating ? { color: theme.palette.surfaceLight } : undefined}
                             />
                           ))}
                         </div>
@@ -137,16 +166,16 @@ export function SaasTestimonials() {
                         {/* Author */}
                         <div>
                           <p
-                            className="text-lg text-white font-semibold"
-                            style={{ fontFamily: "var(--font-urbanist)" }}
+                            className="text-lg font-semibold"
+                            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
                           >
-                            {t(`reviews.${testimonial.id}.name`)}
+                            {testimonial.name}
                           </p>
                           <p
-                            className="text-sm text-[#6366F1]"
-                            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                            className="text-sm"
+                            style={{ fontFamily: theme.fonts.body, color: theme.palette.accent }}
                           >
-                            {t(`reviews.${testimonial.id}.role`)}
+                            {testimonial.role}
                           </p>
                         </div>
                       </div>
@@ -159,15 +188,18 @@ export function SaasTestimonials() {
 
           {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
+            {c.items.map((testimonial, index) => (
               <button
-                key={index}
+                key={testimonial.id}
                 onClick={() => emblaApi?.scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  selectedIndex === index
-                    ? "w-8 bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]"
-                    : "bg-[#334155]"
-                }`}
+                className="h-2 rounded-full transition-all"
+                style={{
+                  width: selectedIndex === index ? "2rem" : "0.5rem",
+                  background:
+                    selectedIndex === index
+                      ? `linear-gradient(to right, ${theme.palette.accent}, ${theme.palette.accentSecondary})`
+                      : theme.palette.surfaceLight,
+                }}
               />
             ))}
           </div>
