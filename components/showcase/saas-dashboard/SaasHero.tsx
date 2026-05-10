@@ -1,28 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Play, ArrowRight, Sparkles } from "lucide-react";
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { SaasDashboardContent } from "@/lib/showcase/saas-dashboard/template.config";
 
 export function SaasHero() {
-  const t = useTranslations("showcase.saas-dashboard");
+  const theme = useTheme();
+  const c = useContent<SaasDashboardContent["hero"]>("hero");
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0F172A]">
+    <section
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: theme.palette.bg }}
+    >
       {/* Mesh gradient background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6366F1]/30 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#06B6D4]/20 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#8B5CF6]/10 rounded-full blur-[150px]" />
+        <div
+          className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[120px]"
+          style={{ backgroundColor: withAlpha(theme.palette.accent, 30) }}
+        />
+        <div
+          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full blur-[100px]"
+          style={{ backgroundColor: withAlpha(theme.palette.accentTertiary, 20) }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[150px]"
+          style={{ backgroundColor: withAlpha(theme.palette.accentSecondary, 10) }}
+        />
       </div>
 
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `linear-gradient(${withAlpha(theme.palette.accent, 10)} 1px, transparent 1px), linear-gradient(90deg, ${withAlpha(theme.palette.accent, 10)} 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
         }}
       />
 
@@ -34,14 +49,18 @@ export function SaasHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6366F1]/10 border border-[#6366F1]/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+            style={{
+              backgroundColor: withAlpha(theme.palette.accent, 10),
+              border: `1px solid ${withAlpha(theme.palette.accent, 20)}`,
+            }}
           >
-            <Sparkles className="w-4 h-4 text-[#6366F1]" />
+            <Sparkles className="w-4 h-4" style={{ color: theme.palette.accent }} />
             <span
-              className="text-sm text-[#6366F1]"
-              style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              className="text-sm"
+              style={{ fontFamily: theme.fonts.body, color: theme.palette.accent }}
             >
-              AI-Powered Analytics Platform
+              {c.eyebrow}
             </span>
           </motion.div>
 
@@ -50,10 +69,10 @@ export function SaasHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight"
-            style={{ fontFamily: "var(--font-urbanist)" }}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("hero.title")}
+            {c.title}
           </motion.h1>
 
           {/* Subtitle */}
@@ -61,10 +80,10 @@ export function SaasHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("hero.subtitle")}
+            {c.subtitle}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -76,20 +95,26 @@ export function SaasHero() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[#6366F1] to-[#8B5CF6] hover:from-[#5558E3] hover:to-[#7C4FE8] text-white font-semibold px-8 py-6 text-base rounded-xl group"
-              style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              className="text-white font-semibold px-8 py-6 text-base rounded-xl group hover:opacity-90 transition-opacity"
+              style={{
+                fontFamily: theme.fonts.body,
+                background: `linear-gradient(to right, ${theme.palette.accent}, ${theme.palette.accentSecondary})`,
+              }}
             >
-              {t("hero.cta")}
+              {c.primaryCta}
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-[#334155] text-white hover:bg-[#1E293B] px-8 py-6 text-base rounded-xl"
-              style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              className="text-white px-8 py-6 text-base rounded-xl hover:opacity-80 transition-opacity"
+              style={{
+                fontFamily: theme.fonts.body,
+                borderColor: theme.palette.surfaceLight,
+              }}
             >
               <Play className="w-4 h-4 mr-2" />
-              {t("hero.ctaSecondary")}
+              {c.secondaryCta}
             </Button>
           </motion.div>
         </div>
@@ -102,7 +127,13 @@ export function SaasHero() {
           className="mt-20 relative"
         >
           {/* Glassmorphism card */}
-          <div className="relative bg-[#1E293B]/50 backdrop-blur-xl rounded-2xl border border-[#334155] p-6 shadow-2xl">
+          <div
+            className="relative backdrop-blur-xl rounded-2xl p-6 shadow-2xl"
+            style={{
+              backgroundColor: withAlpha(theme.palette.surface, 50),
+              border: `1px solid ${theme.palette.surfaceLight}`,
+            }}
+          >
             {/* Window controls */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
@@ -113,26 +144,34 @@ export function SaasHero() {
             {/* Dashboard content */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Metric cards */}
-              {[
-                { label: "Total Revenue", value: "$1.2M", change: "+12.5%", color: "#6366F1" },
-                { label: "Active Users", value: "45.2K", change: "+8.2%", color: "#06B6D4" },
-                { label: "Conversion Rate", value: "3.45%", change: "+2.1%", color: "#8B5CF6" },
-              ].map((metric, i) => (
+              {c.metrics.map((metric, i) => (
                 <motion.div
                   key={metric.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 + i * 0.1 }}
-                  className="bg-[#0F172A]/50 rounded-xl p-4 border border-[#334155]"
+                  className="rounded-xl p-4"
+                  style={{
+                    backgroundColor: withAlpha(theme.palette.bg, 50),
+                    border: `1px solid ${theme.palette.surfaceLight}`,
+                  }}
                 >
-                  <p className="text-sm text-[#94A3B8] mb-1">{metric.label}</p>
+                  <p className="text-sm mb-1" style={{ color: theme.palette.muted }}>
+                    {metric.label}
+                  </p>
                   <div className="flex items-end gap-2">
-                    <span className="text-2xl font-bold text-white" style={{ fontFamily: "var(--font-urbanist)" }}>
+                    <span
+                      className="text-2xl font-bold"
+                      style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
+                    >
                       {metric.value}
                     </span>
-                    <span className="text-sm text-[#22C55E] mb-1">{metric.change}</span>
+                    <span className="text-sm mb-1 text-[#22C55E]">{metric.change}</span>
                   </div>
-                  <div className="mt-3 h-1 bg-[#1E293B] rounded-full overflow-hidden">
+                  <div
+                    className="mt-3 h-1 rounded-full overflow-hidden"
+                    style={{ backgroundColor: theme.palette.surface }}
+                  >
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: "70%" }}
@@ -146,14 +185,26 @@ export function SaasHero() {
             </div>
 
             {/* Chart placeholder */}
-            <div className="mt-6 bg-[#0F172A]/50 rounded-xl p-4 border border-[#334155]">
+            <div
+              className="mt-6 rounded-xl p-4"
+              style={{
+                backgroundColor: withAlpha(theme.palette.bg, 50),
+                border: `1px solid ${theme.palette.surfaceLight}`,
+              }}
+            >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-[#94A3B8]">Analytics Overview</span>
+                <span className="text-sm" style={{ color: theme.palette.muted }}>
+                  Analytics Overview
+                </span>
                 <div className="flex gap-2">
                   {["7D", "1M", "1Y"].map((period) => (
                     <button
                       key={period}
-                      className="px-3 py-1 text-xs rounded-lg bg-[#1E293B] text-[#94A3B8] hover:text-white transition-colors"
+                      className="px-3 py-1 text-xs rounded-lg hover:text-white transition-colors"
+                      style={{
+                        backgroundColor: theme.palette.surface,
+                        color: theme.palette.muted,
+                      }}
                     >
                       {period}
                     </button>
@@ -168,7 +219,10 @@ export function SaasHero() {
                     initial={{ height: 0 }}
                     animate={{ height: `${height}%` }}
                     transition={{ delay: 1.2 + i * 0.05, duration: 0.5 }}
-                    className="flex-1 rounded-t-sm bg-gradient-to-t from-[#6366F1] to-[#06B6D4]"
+                    className="flex-1 rounded-t-sm"
+                    style={{
+                      background: `linear-gradient(to top, ${theme.palette.accent}, ${theme.palette.accentTertiary})`,
+                    }}
                   />
                 ))}
               </div>
@@ -176,7 +230,12 @@ export function SaasHero() {
           </div>
 
           {/* Glow effect */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-[#6366F1]/20 via-[#8B5CF6]/10 to-[#06B6D4]/20 rounded-3xl blur-2xl -z-10" />
+          <div
+            className="absolute -inset-4 rounded-3xl blur-2xl -z-10"
+            style={{
+              background: `linear-gradient(to right, ${withAlpha(theme.palette.accent, 20)}, ${withAlpha(theme.palette.accentSecondary, 10)}, ${withAlpha(theme.palette.accentTertiary, 20)})`,
+            }}
+          />
         </motion.div>
 
         {/* Trusted by logos */}
@@ -186,15 +245,18 @@ export function SaasHero() {
           transition={{ delay: 1.5 }}
           className="mt-20 text-center"
         >
-          <p className="text-sm text-[#64748B] mb-6" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
-            {t("testimonials.subtitle")}
+          <p
+            className="text-sm mb-6"
+            style={{ fontFamily: theme.fonts.body, color: withAlpha(theme.palette.muted, 70) }}
+          >
+            {c.trustedByLabel}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
-            {["Stripe", "Vercel", "Linear", "Notion", "Figma"].map((company) => (
+            {c.trustedByBrands.map((company) => (
               <span
                 key={company}
-                className="text-xl font-bold text-[#64748B]"
-                style={{ fontFamily: "var(--font-urbanist)" }}
+                className="text-xl font-bold"
+                style={{ fontFamily: theme.fonts.display, color: withAlpha(theme.palette.muted, 70) }}
               >
                 {company}
               </span>
