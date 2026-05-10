@@ -1,16 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { FashionStoreContent } from "@/lib/showcase/fashion-store/template.config";
 
 export function FashionHero() {
-  const t = useTranslations("showcase.fashion-store");
+  const theme = useTheme();
+  const c = useContent<FashionStoreContent["hero"]>("hero");
 
   return (
-    <section className="relative min-h-screen bg-[#FAFAFA] overflow-hidden">
+    <section
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: theme.palette.bg }}
+    >
       {/* Split layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         {/* Left - Content */}
@@ -26,45 +32,72 @@ export function FashionHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-sm tracking-[0.3em] text-[#8B7355] uppercase mb-6"
-              style={{ fontFamily: "var(--font-montserrat)" }}
+              className="text-sm tracking-[0.3em] uppercase mb-6"
+              style={{ fontFamily: theme.fonts.body, color: theme.palette.brandLabel }}
             >
-              {t("brandName")}
+              {c.brandLabel}
             </motion.p>
 
             {/* Title */}
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-light text-[#0A0A0A] mb-6 leading-[1.1]"
-              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-[1.1]"
+              style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
             >
-              {t("hero.title")}
+              {c.title}
             </h1>
 
             {/* Subtitle */}
             <p
-              className="text-base text-[#666666] mb-10 leading-relaxed"
-              style={{ fontFamily: "var(--font-montserrat)" }}
+              className="text-base mb-10 leading-relaxed"
+              style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
             >
-              {t("hero.subtitle")}
+              {c.subtitle}
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-[#0A0A0A] hover:bg-[#1A1A1A] text-white font-normal px-8 py-6 text-sm tracking-wider uppercase"
-                style={{ fontFamily: "var(--font-montserrat)" }}
+                className="font-normal px-8 py-6 text-sm tracking-wider uppercase transition-colors"
+                style={{
+                  fontFamily: theme.fonts.body,
+                  backgroundColor: theme.palette.fg,
+                  color: theme.palette.surface,
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+                    theme.palette.fgHover;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
+                    theme.palette.fg;
+                }}
               >
-                {t("hero.cta")}
+                {c.primaryCta}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[#0A0A0A] text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white px-8 py-6 text-sm tracking-wider uppercase"
-                style={{ fontFamily: "var(--font-montserrat)" }}
+                className="font-normal px-8 py-6 text-sm tracking-wider uppercase transition-colors"
+                style={{
+                  fontFamily: theme.fonts.body,
+                  borderColor: theme.palette.fg,
+                  color: theme.palette.fg,
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={(e) => {
+                  const btn = e.currentTarget as HTMLButtonElement;
+                  btn.style.backgroundColor = theme.palette.fg;
+                  btn.style.color = theme.palette.surface;
+                }}
+                onMouseLeave={(e) => {
+                  const btn = e.currentTarget as HTMLButtonElement;
+                  btn.style.backgroundColor = "transparent";
+                  btn.style.color = theme.palette.fg;
+                }}
               >
-                {t("hero.ctaSecondary")}
+                {c.secondaryCta}
               </Button>
             </div>
 
@@ -73,13 +106,14 @@ export function FashionHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex gap-8 mt-12 pt-12 border-t border-[#E5E5E5]"
+              className="flex gap-8 mt-12 pt-12"
+              style={{ borderTop: `1px solid ${theme.palette.border}` }}
             >
-              {[t("about.craftsmanship"), t("about.sustainable"), t("about.exclusive")].map((feature) => (
+              {c.features.map((feature) => (
                 <div key={feature} className="text-center">
                   <p
-                    className="text-xs tracking-wider text-[#666666] uppercase"
-                    style={{ fontFamily: "var(--font-montserrat)" }}
+                    className="text-xs tracking-wider uppercase"
+                    style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
                   >
                     {feature}
                   </p>
@@ -104,26 +138,32 @@ export function FashionHero() {
             priority
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(to top, ${withAlpha(theme.palette.fg, 20)}, transparent)`,
+            }}
+          />
 
           {/* Season badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm px-6 py-4"
+            className="absolute bottom-8 left-8 backdrop-blur-sm px-6 py-4"
+            style={{ backgroundColor: withAlpha(theme.palette.surface, 90) }}
           >
             <p
-              className="text-xs tracking-[0.2em] text-[#666666] uppercase mb-1"
-              style={{ fontFamily: "var(--font-montserrat)" }}
+              className="text-xs tracking-[0.2em] uppercase mb-1"
+              style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
             >
-              {t("collections.spring")}
+              {c.seasonLabel}
             </p>
             <p
-              className="text-sm font-light text-[#0A0A0A]"
-              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="text-sm font-light"
+              style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
             >
-              {t("collections.viewCollection")}
+              {c.viewCollectionLabel}
             </p>
           </motion.div>
         </motion.div>
