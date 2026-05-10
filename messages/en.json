@@ -2975,7 +2975,18 @@
         "form": "Form",
         "chat": "Chat",
         "map": "Map",
-        "booking": "Booking"
+        "booking": "Booking",
+        "wcag-aa": "WCAG 2.1 AA (accessibility)",
+        "animations-medium": "Medium animations (scroll/Framer Motion)",
+        "animations-premium": "Premium animations (GSAP/Lottie)",
+        "cwv-basic": "Basic CWV optimization",
+        "cwv-full": "Full CWV optimization",
+        "seo-onpage": "On-page SEO (meta + schema + sitemap)",
+        "seo-tech-full": "Full technical SEO + hreflang",
+        "blog-cms": "Blog with categorization",
+        "multistep-form": "Multi-step form",
+        "configurator": "Configurator / calculator",
+        "rodo-pack": "GDPR pack (cookie + policy)"
       },
       "shopIntegr": {
         "courier": "Couriers",
@@ -2983,7 +2994,21 @@
         "crm": "CRM",
         "allegro": "Allegro",
         "marketplace": "Marketplace",
-        "subscription": "Subscriptions"
+        "subscription": "Subscriptions",
+        "baselinker-basic": "BaseLinker (basic)",
+        "baselinker-std": "BaseLinker (standard + warehouse)",
+        "empik-amazon": "Empik Place / Amazon",
+        "ceneo-google": "Ceneo + Google Merchant",
+        "dropshipping": "Dropshipping",
+        "wholesale-xml": "Wholesale (XML/CSV import)",
+        "ksef": "KSeF (mandatory from 04.2026)",
+        "omnibus": "Omnibus directive",
+        "nip-gus": "NIP/REGON validation (GUS)",
+        "vat-faktury": "VAT invoices (gen + delivery)",
+        "product-configurator": "Product configurator",
+        "loyalty": "Loyalty program",
+        "multi-warehouse": "Multi-warehouse",
+        "reviews": "Reviews with moderation"
       },
       "appIntegr": {
         "payments": "Payments",
@@ -2991,7 +3016,18 @@
         "email": "Email",
         "ai": "AI",
         "external-api": "External API",
-        "websockets": "WebSockets"
+        "websockets": "WebSockets",
+        "rbac": "Roles & permissions (RBAC)",
+        "admin-panel": "Admin panel (CRUD + filters)",
+        "i18n": "Backend internationalization (i18n)",
+        "rest-openapi": "REST API + OpenAPI",
+        "graphql": "GraphQL API (Apollo)",
+        "export-files": "File export (PDF/Excel/CSV)",
+        "import-mass": "Mass import + validation",
+        "push-notifications": "Push notifications (FCM/APNs)",
+        "search-elastic": "Search (Elasticsearch)",
+        "upload-s3": "File upload (S3 + CDN)",
+        "stripe-subs": "Stripe subscriptions"
       }
     },
     "breakdown": {

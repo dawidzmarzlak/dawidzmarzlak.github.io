@@ -3001,7 +3001,18 @@
         "form": "Formularz",
         "chat": "Czat",
         "map": "Mapa",
-        "booking": "Rezerwacje"
+        "booking": "Rezerwacje",
+        "wcag-aa": "WCAG 2.1 AA (dostępność)",
+        "animations-medium": "Animacje średnie (scroll/Framer Motion)",
+        "animations-premium": "Animacje premium (GSAP/Lottie)",
+        "cwv-basic": "Optymalizacja CWV podstawowa",
+        "cwv-full": "Optymalizacja CWV pełna",
+        "seo-onpage": "SEO on-page (meta + schema + sitemap)",
+        "seo-tech-full": "SEO techniczne pełne + hreflang",
+        "blog-cms": "Blog z kategoryzacją",
+        "multistep-form": "Wieloetapowy formularz",
+        "configurator": "Konfigurator / kalkulator",
+        "rodo-pack": "Pakiet RODO (cookie + polityka)"
       },
       "shopIntegr": {
         "courier": "Kurierzy",
@@ -3009,7 +3020,21 @@
         "crm": "CRM",
         "allegro": "Allegro",
         "marketplace": "Marketplace",
-        "subscription": "Subskrypcje"
+        "subscription": "Subskrypcje",
+        "baselinker-basic": "BaseLinker (podstawowy)",
+        "baselinker-std": "BaseLinker (standard + hurtownia)",
+        "empik-amazon": "Empik Place / Amazon",
+        "ceneo-google": "Ceneo + Google Merchant",
+        "dropshipping": "Dropshipping",
+        "wholesale-xml": "Hurtownia (XML/CSV import)",
+        "ksef": "KSeF (obowiązek od 04.2026)",
+        "omnibus": "Dyrektywa Omnibus",
+        "nip-gus": "Walidacja NIP/REGON (GUS)",
+        "vat-faktury": "Faktury VAT (gen + wysyłka)",
+        "product-configurator": "Konfigurator produktu",
+        "loyalty": "Program lojalnościowy",
+        "multi-warehouse": "Wielomagazynowość",
+        "reviews": "Recenzje z moderacją"
       },
       "appIntegr": {
         "payments": "Płatności",
@@ -3017,7 +3042,18 @@
         "email": "Email",
         "ai": "AI",
         "external-api": "API zewnętrzne",
-        "websockets": "WebSockets"
+        "websockets": "WebSockets",
+        "rbac": "Role i uprawnienia (RBAC)",
+        "admin-panel": "Panel administracyjny (CRUD + filtry)",
+        "i18n": "Wielojęzyczność backend (i18n)",
+        "rest-openapi": "API REST + OpenAPI",
+        "graphql": "API GraphQL (Apollo)",
+        "export-files": "Eksport plików (PDF/Excel/CSV)",
+        "import-mass": "Import masowy + walidacja",
+        "push-notifications": "Powiadomienia push (FCM/APNs)",
+        "search-elastic": "Wyszukiwarka (Elasticsearch)",
+        "upload-s3": "Upload plików (S3 + CDN)",
+        "stripe-subs": "Subskrypcje Stripe"
       }
     },
     "breakdown": {

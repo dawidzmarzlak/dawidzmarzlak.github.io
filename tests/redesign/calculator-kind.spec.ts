@@ -3,6 +3,7 @@ import {
   computeAdvancedQuote,
   computeMiniQuote,
   BASE_PRICE,
+  CMS_FLAT,
   DESIGN_TIER_PRICE,
   TIMELINE_RUSH_MULT,
   type AdvancedQuoteInput,
@@ -54,50 +55,53 @@ const APP_BASELINE: AdvancedQuoteInput = {
 
 test.describe("BASE_PRICE — project kinds", () => {
   test("site/shop/app base prices match handoff", () => {
-    expect(BASE_PRICE).toEqual({ site: 5500, shop: 12000, app: 18000 });
+    expect(BASE_PRICE).toEqual({ site: 750, shop: 5500, app: 28000 });
   });
 });
 
 test.describe("computeMiniQuote", () => {
-  test("site + 8 pages + cms = 5500 + 7*600 + 1500 = 11 200", () => {
-    expect(computeMiniQuote({ kind: "site", pages: 8, cms: true })).toBe(11_200);
+  test("site + 8 pages + cms = 750 + 7*350 + 3000 = 6 200", () => {
+    expect(computeMiniQuote({ kind: "site", pages: 8, cms: true })).toBe(6_200);
   });
-  test("shop + 8 pages + cms = 12000 + 7*600 + 1500 = 17 700", () => {
-    expect(computeMiniQuote({ kind: "shop", pages: 8, cms: true })).toBe(17_700);
+  test("shop + 8 pages + cms = 5500 + 7*350 + 3000 = 10 950", () => {
+    expect(computeMiniQuote({ kind: "shop", pages: 8, cms: true })).toBe(10_950);
   });
-  test("app + 8 pages + cms = 18000 + 7*600 + 1500 = 23 700", () => {
-    expect(computeMiniQuote({ kind: "app", pages: 8, cms: true })).toBe(23_700);
+  test("app + 8 pages + cms = 28000 + 7*350 + 3000 = 33 450", () => {
+    expect(computeMiniQuote({ kind: "app", pages: 8, cms: true })).toBe(33_450);
   });
 });
 
 test.describe("computeAdvancedQuote — site", () => {
   test("baseline subtotal includes base + pages + cms + design tier", () => {
     const out = computeAdvancedQuote(SITE_BASELINE);
-    // 5500 + 7*600 + 1500 + 2500 = 13_700
-    expect(out.subtotal).toBe(13_700);
+    // 750 (base) + 7*350 (pages) + 3000 (cms) + 700 (design standard) = 6_900
+    expect(out.subtotal).toBe(6_900);
   });
-  test("each extra page adds 600 PLN", () => {
+  test("each extra page adds 350 PLN", () => {
     const a = computeAdvancedQuote({ ...SITE_BASELINE, site: { ...SITE_BASELINE.site, pages: 8 } });
     const b = computeAdvancedQuote({ ...SITE_BASELINE, site: { ...SITE_BASELINE.site, pages: 9 } });
-    expect(b.subtotal - a.subtotal).toBe(600);
+    expect(b.subtotal - a.subtotal).toBe(350);
   });
   test("design tier 'lite' is 0 PLN", () => {
     const out = computeAdvancedQuote({ ...SITE_BASELINE, designTier: "lite" });
-    expect(out.subtotal).toBe(13_700 - DESIGN_TIER_PRICE.standard);
+    expect(out.subtotal).toBe(6_900 - DESIGN_TIER_PRICE.standard);
+  });
+  test("CMS_FLAT exported constant equals 3000", () => {
+    expect(CMS_FLAT).toBe(3000);
   });
 });
 
 test.describe("computeAdvancedQuote — shop", () => {
   test("baseline subtotal: base + content pages + design + catalog md", () => {
     const out = computeAdvancedQuote(SHOP_BASELINE);
-    // 12000 (base) + 5*600 (contentPages 6 → 5 extra) +
-    // 2500 (design standard) + 1500 (catalog md) = 19_000
-    expect(out.subtotal).toBe(19_000);
+    // 5500 (base) + 5*350 (contentPages 6 → 5 extra) +
+    // 700 (design standard) + 1500 (catalog md) = 9_450
+    expect(out.subtotal).toBe(9_450);
   });
-  test("payment gateways add 900 each", () => {
+  test("payment gateways add 600 each", () => {
     const a = computeAdvancedQuote(SHOP_BASELINE);
     const b = computeAdvancedQuote({ ...SHOP_BASELINE, shop: { ...SHOP_BASELINE.shop, paymentGateways: ["blik", "p24"] } });
-    expect(b.subtotal - a.subtotal).toBe(1800);
+    expect(b.subtotal - a.subtotal).toBe(1200);
   });
   test("shop integration 'courier' adds 800", () => {
     const a = computeAdvancedQuote(SHOP_BASELINE);
@@ -123,9 +127,9 @@ test.describe("computeAdvancedQuote — shop", () => {
 test.describe("computeAdvancedQuote — app", () => {
   test("baseline subtotal: base + design + email auth + 1 extra role", () => {
     const out = computeAdvancedQuote(APP_BASELINE);
-    // 18000 (base) + 2500 (design) + 600 (auth email) +
-    // 0 (spring) + 0 (postgres) + 1000 (roles 2 → 1 extra) = 22_100
-    expect(out.subtotal).toBe(22_100);
+    // 28000 (base) + 700 (design standard) + 600 (auth email) +
+    // 0 (spring) + 0 (postgres) + 1000 (roles 2 → 1 extra) = 30_300
+    expect(out.subtotal).toBe(30_300);
   });
   test("payments integration adds 1800", () => {
     const a = computeAdvancedQuote(APP_BASELINE);
@@ -150,10 +154,10 @@ test.describe("computeAdvancedQuote — shared knobs", () => {
     const rush   = computeAdvancedQuote({ ...SITE_BASELINE, timeline: "rush" });
     expect(rush.total).toBeCloseTo(normal.subtotal * TIMELINE_RUSH_MULT, 0);
   });
-  test("each extra language adds 1500 PLN", () => {
+  test("each extra language adds 1400 PLN", () => {
     const a = computeAdvancedQuote({ ...SITE_BASELINE, languages: 1 });
     const b = computeAdvancedQuote({ ...SITE_BASELINE, languages: 2 });
-    expect(b.subtotal - a.subtotal).toBe(1500);
+    expect(b.subtotal - a.subtotal).toBe(1400);
   });
   test("support tier 'pro' surfaces yearly cost separately", () => {
     const out = computeAdvancedQuote({ ...SITE_BASELINE, supportTier: "pro" });
