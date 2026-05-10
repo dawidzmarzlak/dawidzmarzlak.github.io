@@ -15,10 +15,12 @@ describe("fashion-store config", () => {
     }
   });
 
-  it("declares at least 3 collections and at least 4 products", () => {
+  it("renders 3 collections and 4 products (visual layout requirement)", () => {
     const collections = fashionStoreConfig.content.collections as { items: unknown[] };
     const products = fashionStoreConfig.content.products as { items: unknown[] };
-    expect(collections.items.length).toBeGreaterThanOrEqual(3);
-    expect(products.items.length).toBeGreaterThanOrEqual(4);
+    // Visual layout is a 3-column collection grid + 4-card product row.
+    // If a buyer adds/removes items, the grid will visually break — keep these exact counts.
+    expect(collections.items.length).toBe(3);
+    expect(products.items.length).toBe(4);
   });
 });

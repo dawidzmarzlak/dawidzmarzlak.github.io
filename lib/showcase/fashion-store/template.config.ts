@@ -5,7 +5,7 @@ export interface FashionProduct {
   name: string;
   price: string;
   imageSrc: string;
-  badge: "newArrival" | "soldOut" | null;
+  badge?: "newArrival" | null;
 }
 
 export interface FashionCollection {
@@ -100,6 +100,9 @@ export const fashionStoreConfig: BrandConfig = {
       secondaryCta: "Lookbook",
       seasonLabel: "Spring/Summer 2025",
       viewCollectionLabel: "View Collection",
+      // Sourced from the original about.{craftsmanship,sustainable,exclusive} i18n block —
+      // FashionAbout was unused so these strings were consolidated into the hero strip.
+      // If FashionAbout is wired up in Phase 2, decide whether to duplicate or reference these.
       features: ["Handcrafted", "Sustainable Fashion", "Exclusive Materials"],
     },
     collections: {
@@ -167,5 +170,7 @@ export const fashionStoreConfig: BrandConfig = {
       button: "Subscribe",
     },
   } satisfies Record<keyof FashionStoreContent, unknown>,
-  media: {},
+  media: {
+    hero: "/showcase/fashion-store/hero.jpg",
+  },
 };

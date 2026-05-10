@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export default function ArtisanCafePage() {
   return (
-    <TemplateProvider config={artisanCafeConfig} className="min-h-screen">
+    <TemplateProvider config={artisanCafeConfig} className="min-h-screen bg-[var(--brand-color-bg)]">
       <BackToPortfolio />
       <CafeHero />
       <CafeStory />

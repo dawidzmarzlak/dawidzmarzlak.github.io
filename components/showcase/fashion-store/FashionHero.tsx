@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useTheme, useContent } from "@/lib/templates/provider";
+import { useTheme, useContent, useMedia } from "@/lib/templates/provider";
 import { withAlpha } from "@/lib/templates/cssVars";
 import type { FashionStoreContent } from "@/lib/showcase/fashion-store/template.config";
 
 export function FashionHero() {
   const theme = useTheme();
+  const heroSrc = useMedia<string>("hero");
   const c = useContent<FashionStoreContent["hero"]>("hero");
 
   return (
@@ -131,7 +132,7 @@ export function FashionHero() {
           className="relative order-1 lg:order-2 min-h-[60vh] lg:min-h-screen"
         >
           <Image
-            src="/showcase/fashion-store/hero.jpg"
+            src={heroSrc}
             alt="Fashion Collection"
             fill
             className="object-cover"
