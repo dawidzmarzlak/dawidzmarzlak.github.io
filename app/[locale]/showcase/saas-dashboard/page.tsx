@@ -34,16 +34,8 @@ export default function SaasDashboardPage() {
         <SaasFAQ />
         <SaasPricing />
         <SaasCTA />
-        <ShowcaseCTA
-          theme="dark"
-          accentColor={saasDashboardConfig.theme.palette.accent}
-          projectName={saasDashboardConfig.meta.brandName}
-        />
-        <ShowcaseFooter
-          projectName={saasDashboardConfig.meta.brandName}
-          accentColor={saasDashboardConfig.theme.palette.accent}
-          theme="dark"
-        />
+        <ShowcaseCTA theme="dark" />
+        <ShowcaseFooter theme="dark" />
       </div>
     </TemplateProvider>
   );

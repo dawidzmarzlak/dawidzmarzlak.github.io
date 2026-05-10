@@ -123,6 +123,7 @@ export const saasDashboardConfig: BrandConfig = {
       muted: "#94A3B8",
       surface: "#1E293B",
       surfaceLight: "#334155",
+      success: "#22C55E",
     },
     fonts: {
       display: "var(--font-urbanist)",

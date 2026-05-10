@@ -166,7 +166,7 @@ export function SaasHero() {
                     >
                       {metric.value}
                     </span>
-                    <span className="text-sm mb-1 text-[#22C55E]">{metric.change}</span>
+                    <span className="text-sm mb-1" style={{ color: theme.palette.success }}>{metric.change}</span>
                   </div>
                   <div
                     className="mt-3 h-1 rounded-full overflow-hidden"

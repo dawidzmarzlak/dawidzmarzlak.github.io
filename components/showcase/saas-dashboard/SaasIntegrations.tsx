@@ -104,7 +104,7 @@ export function SaasIntegrations() {
 
               {/* Check icon on hover */}
               <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Check className="w-4 h-4 text-[#22C55E]" />
+                <Check className="w-4 h-4" style={{ color: theme.palette.success }} />
               </div>
             </motion.div>
           ))}
