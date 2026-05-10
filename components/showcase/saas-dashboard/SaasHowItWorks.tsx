@@ -1,22 +1,32 @@
 "use client";
 
+import type React from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Upload, Zap, BarChart3 } from "lucide-react";
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { SaasDashboardContent, SaasStep } from "@/lib/showcase/saas-dashboard/template.config";
 
-const steps = [
-  { key: "connect", icon: Upload, number: 1 },
-  { key: "analyze", icon: Zap, number: 2 },
-  { key: "insights", icon: BarChart3, number: 3 },
-];
+const STEP_ICONS: Record<SaasStep["iconName"], React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+  Upload,
+  Zap,
+  BarChart3,
+};
 
 export function SaasHowItWorks() {
-  const t = useTranslations("showcase.saas-dashboard.howItWorks");
+  const theme = useTheme();
+  const c = useContent<SaasDashboardContent["howItWorks"]>("howItWorks");
 
   return (
-    <section className="py-24 bg-[#0F172A] relative overflow-hidden">
+    <section
+      className="py-24 relative overflow-hidden"
+      style={{ backgroundColor: theme.palette.bg }}
+    >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#06B6D4]/10 rounded-full blur-[120px]" />
+      <div
+        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px]"
+        style={{ backgroundColor: withAlpha(theme.palette.accentTertiary, 10) }}
+      />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -27,16 +37,16 @@ export function SaasHowItWorks() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-urbanist)" }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("title")}
+            {c.title}
           </h2>
           <p
-            className="text-lg text-[#94A3B8] max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-lg max-w-2xl mx-auto"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("subtitle")}
+            {c.subtitle}
           </p>
         </motion.div>
 
@@ -45,12 +55,17 @@ export function SaasHowItWorks() {
           {/* Connection lines */}
           <div className="hidden md:block absolute top-1/4 left-0 right-0 h-0.5">
             <div className="relative h-full max-w-5xl mx-auto px-24">
-              <div className="h-full bg-gradient-to-r from-transparent via-[#6366F1]/30 to-transparent" />
+              <div
+                className="h-full"
+                style={{
+                  background: `linear-gradient(to right, transparent, ${withAlpha(theme.palette.accent, 30)}, transparent)`,
+                }}
+              />
             </div>
           </div>
 
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+          {c.steps.map((step, index) => {
+            const Icon = STEP_ICONS[step.iconName];
             return (
               <motion.div
                 key={step.key}
@@ -60,17 +75,34 @@ export function SaasHowItWorks() {
                 transition={{ delay: index * 0.2 }}
                 className="relative"
               >
-                <div className="bg-[#1E293B]/50 backdrop-blur-sm rounded-2xl border border-[#334155] p-8 text-center hover:border-[#6366F1]/50 transition-all duration-300 group">
+                <div
+                  className="backdrop-blur-sm rounded-2xl p-8 text-center transition-all duration-300 group"
+                  style={{
+                    backgroundColor: withAlpha(theme.palette.surface, 50),
+                    border: `1px solid ${theme.palette.surfaceLight}`,
+                  }}
+                >
                   {/* Step number with glassmorphism */}
                   <div className="relative inline-flex items-center justify-center mb-6">
                     {/* Outer glow */}
-                    <div className="absolute w-24 h-24 bg-gradient-to-r from-[#6366F1]/20 to-[#06B6D4]/20 rounded-full blur-xl group-hover:scale-110 transition-transform" />
+                    <div
+                      className="absolute w-24 h-24 rounded-full blur-xl group-hover:scale-110 transition-transform"
+                      style={{
+                        background: `linear-gradient(to right, ${withAlpha(theme.palette.accent, 20)}, ${withAlpha(theme.palette.accentTertiary, 20)})`,
+                      }}
+                    />
 
                     {/* Number circle */}
-                    <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center border-4 border-[#0F172A]">
+                    <div
+                      className="relative w-16 h-16 rounded-full flex items-center justify-center"
+                      style={{
+                        background: `linear-gradient(to bottom right, ${theme.palette.accent}, ${theme.palette.accentSecondary})`,
+                        border: `4px solid ${theme.palette.bg}`,
+                      }}
+                    >
                       <span
                         className="text-2xl font-bold text-white"
-                        style={{ fontFamily: "var(--font-urbanist)" }}
+                        style={{ fontFamily: theme.fonts.display }}
                       >
                         {step.number}
                       </span>
@@ -79,23 +111,29 @@ export function SaasHowItWorks() {
 
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-[#0F172A]/50 border border-[#334155] flex items-center justify-center group-hover:border-[#6366F1]/50 transition-colors">
-                      <Icon className="w-7 h-7 text-[#6366F1]" />
+                    <div
+                      className="w-14 h-14 rounded-xl flex items-center justify-center transition-colors"
+                      style={{
+                        backgroundColor: withAlpha(theme.palette.bg, 50),
+                        border: `1px solid ${theme.palette.surfaceLight}`,
+                      }}
+                    >
+                      <Icon className="w-7 h-7" style={{ color: theme.palette.accent }} />
                     </div>
                   </div>
 
                   {/* Content */}
                   <h3
-                    className="text-xl font-semibold text-white mb-3"
-                    style={{ fontFamily: "var(--font-urbanist)" }}
+                    className="text-xl font-semibold mb-3"
+                    style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
                   >
-                    {t(`${step.key}.title`)}
+                    {step.title}
                   </h3>
                   <p
-                    className="text-[#94A3B8] leading-relaxed"
-                    style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                    className="leading-relaxed"
+                    style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
                   >
-                    {t(`${step.key}.description`)}
+                    {step.description}
                   </p>
                 </div>
               </motion.div>
@@ -112,10 +150,10 @@ export function SaasHowItWorks() {
           className="mt-12 text-center"
         >
           <p
-            className="text-sm text-[#64748B]"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-sm"
+            style={{ fontFamily: theme.fonts.body, color: withAlpha(theme.palette.muted, 70) }}
           >
-            {t("bottomText")}
+            {c.bottomText}
           </p>
         </motion.div>
       </div>
