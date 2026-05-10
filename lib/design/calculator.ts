@@ -15,17 +15,23 @@ export type {
 };
 
 // ---------- price tables ----------
+//
+// Calibration: 2025/2026 Polish market (senior freelancer, ~180 PLN/h reference).
+// Goal: 3 simple-calculator presets land in target ranges (±5%):
+//   landing ~3 400 PLN, company ~10 800 PLN, ecom ~16 900 PLN.
+// App preset (~39 900 PLN) is added in Task 6; BASE_PRICE.app pre-sized for it.
 
 export const BASE_PRICE: Record<ProjectKind, number> = {
-  site: 5500, shop: 12000, app: 18000,
+  site: 750, shop: 5500, app: 28000,
 };
 
-export const PAGE_UNIT = 600;
-export const LANGUAGE_UNIT = 1500;
+export const PAGE_UNIT = 350;
+export const LANGUAGE_UNIT = 1400;
+export const CMS_FLAT = 3000;
 export const TIMELINE_RUSH_MULT = 1.25;
 
 export const DESIGN_TIER_PRICE: Record<DesignTier, number> = {
-  lite: 0, standard: 2500, premium: 7500,
+  lite: 0, standard: 700, premium: 5050,
 };
 
 export const SUPPORT_YEARLY: Record<SupportTier, number> = {
@@ -38,7 +44,20 @@ export const HOSTING_SETUP: Record<Hosting, number> = {
 
 // site
 export const SITE_INTEGRATION_COST: Record<SiteIntegration, number> = {
+  // Existing
   analytics: 300, newsletter: 500, form: 400, chat: 600, map: 250, booking: 1800,
+  // New (2025/2026)
+  "wcag-aa": 2500,
+  "animations-medium": 3200,
+  "animations-premium": 9000,
+  "cwv-basic": 1200,
+  "cwv-full": 4500,
+  "seo-onpage": 1800,
+  "seo-tech-full": 5500,
+  "blog-cms": 2200,
+  "multistep-form": 1800,
+  configurator: 4500,
+  "rodo-pack": 1200,
 };
 
 // shop
@@ -46,10 +65,26 @@ export const CATALOG_SIZE_COST: Record<CatalogSize, number> = {
   sm: 0, md: 1500, lg: 4500, xl: 9000,
 };
 export const PAYMENT_GATEWAY_COST: Record<PaymentGateway, number> = {
-  blik: 900, p24: 900, stripe: 900, paypal: 900, card: 900,
+  blik: 600, p24: 600, stripe: 600, paypal: 600, card: 600,
 };
 export const SHOP_INTEGRATION_COST: Record<ShopIntegration, number> = {
+  // Existing
   courier: 800, newsletter: 500, crm: 1200, allegro: 1500, marketplace: 2200, subscription: 2400,
+  // New (2025/2026) — KSeF mandatory from 2026-04-01 in Poland
+  "baselinker-basic": 3500,
+  "baselinker-std": 5500,
+  "empik-amazon": 3500,
+  "ceneo-google": 1800,
+  dropshipping: 2200,
+  "wholesale-xml": 1800,
+  ksef: 1800,
+  omnibus: 700,
+  "nip-gus": 600,
+  "vat-faktury": 900,
+  "product-configurator": 4800,
+  loyalty: 2200,
+  "multi-warehouse": 3500,
+  reviews: 1200,
 };
 export const ERP_COST: Record<ErpOption, number> = {
   none: 0, subiekt: 3500, wapro: 3500, comarch: 5000, custom: 6000,
@@ -66,7 +101,20 @@ export const APP_STORAGE_COST: Record<AppStorage, number> = {
   postgres: 0, mongo: 0, redis: 600, files: 800, mixed: 1500,
 };
 export const APP_INTEGRATION_COST: Record<AppIntegration, number> = {
+  // Existing
   payments: 1800, sms: 700, email: 500, ai: 3000, "external-api": 1200, websockets: 2200,
+  // New (2025/2026)
+  rbac: 11700,
+  "admin-panel": 23400,
+  i18n: 9000,
+  "rest-openapi": 19800,
+  graphql: 23400,
+  "export-files": 6800,
+  "import-mass": 9000,
+  "push-notifications": 9000,
+  "search-elastic": 23400,
+  "upload-s3": 9000,
+  "stripe-subs": 16200,
 };
 export const APP_ROLE_UNIT = 1000;
 export const APP_MOBILE_COST = 8000;
@@ -125,7 +173,7 @@ export interface MiniQuoteInput {
 }
 
 export function computeMiniQuote({ kind, pages, cms }: MiniQuoteInput): number {
-  return BASE_PRICE[kind] + Math.max(0, pages - 1) * PAGE_UNIT + (cms ? 1500 : 0);
+  return BASE_PRICE[kind] + Math.max(0, pages - 1) * PAGE_UNIT + (cms ? CMS_FLAT : 0);
 }
 
 // ---------- advanced quote ----------
@@ -177,7 +225,7 @@ export function computeAdvancedQuote(input: AdvancedQuoteInput): AdvancedQuoteRe
   if (input.kind === "site") {
     const s = input.site;
     b.pages = Math.max(0, s.pages - 1) * PAGE_UNIT;
-    b.cms = s.cms ? 1500 : 0;
+    b.cms = s.cms ? CMS_FLAT : 0;
     b.siteIntegrations = s.siteIntegrations.reduce((a, k) => a + SITE_INTEGRATION_COST[k], 0);
   } else if (input.kind === "shop") {
     const s = input.shop;

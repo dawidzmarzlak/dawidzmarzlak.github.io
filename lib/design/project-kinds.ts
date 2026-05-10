@@ -5,7 +5,13 @@ export type ProjectKind = typeof PROJECT_KINDS[number];
 export const SITE_GOALS = ["landing", "company", "portfolio", "blog", "showcase"] as const;
 export type SiteGoal = typeof SITE_GOALS[number];
 
-export const SITE_INTEGRATIONS = ["analytics", "newsletter", "form", "chat", "map", "booking"] as const;
+export const SITE_INTEGRATIONS = [
+  "analytics", "newsletter", "form", "chat", "map", "booking",
+  // New addons (2025/2026 market calibration)
+  "wcag-aa", "animations-medium", "animations-premium",
+  "cwv-basic", "cwv-full", "seo-onpage", "seo-tech-full",
+  "blog-cms", "multistep-form", "configurator", "rodo-pack",
+] as const;
 export type SiteIntegration = typeof SITE_INTEGRATIONS[number];
 
 // --- SHOP ---
@@ -18,7 +24,13 @@ export type CatalogSize = typeof CATALOG_SIZES[number];
 export const PAYMENT_GATEWAYS = ["blik", "p24", "stripe", "paypal", "card"] as const;
 export type PaymentGateway = typeof PAYMENT_GATEWAYS[number];
 
-export const SHOP_INTEGRATIONS = ["courier", "newsletter", "crm", "allegro", "marketplace", "subscription"] as const;
+export const SHOP_INTEGRATIONS = [
+  "courier", "newsletter", "crm", "allegro", "marketplace", "subscription",
+  // New addons (2025/2026 market calibration)
+  "baselinker-basic", "baselinker-std", "empik-amazon", "ceneo-google",
+  "dropshipping", "wholesale-xml", "ksef", "omnibus", "nip-gus", "vat-faktury",
+  "product-configurator", "loyalty", "multi-warehouse", "reviews",
+] as const;
 export type ShopIntegration = typeof SHOP_INTEGRATIONS[number];
 
 export const ERP_OPTIONS = ["none", "subiekt", "wapro", "comarch", "custom"] as const;
@@ -37,7 +49,13 @@ export type AppBackend = typeof APP_BACKENDS[number];
 export const APP_STORAGE = ["postgres", "mongo", "redis", "files", "mixed"] as const;
 export type AppStorage = typeof APP_STORAGE[number];
 
-export const APP_INTEGRATIONS = ["payments", "sms", "email", "ai", "external-api", "websockets"] as const;
+export const APP_INTEGRATIONS = [
+  "payments", "sms", "email", "ai", "external-api", "websockets",
+  // New addons (2025/2026 market calibration)
+  "rbac", "admin-panel", "i18n", "rest-openapi", "graphql",
+  "export-files", "import-mass", "push-notifications",
+  "search-elastic", "upload-s3", "stripe-subs",
+] as const;
 export type AppIntegration = typeof APP_INTEGRATIONS[number];
 
 // --- SHARED ---
