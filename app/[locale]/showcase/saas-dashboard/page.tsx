@@ -11,6 +11,8 @@ import {
   SaasPricing,
   SaasCTA,
 } from "@/components/showcase/saas-dashboard";
+import { TemplateProvider } from "@/lib/templates/provider";
+import { saasDashboardConfig } from "@/lib/showcase/saas-dashboard/template.config";
 import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-static";
@@ -21,26 +23,28 @@ export function generateStaticParams() {
 
 export default function SaasDashboardPage() {
   return (
-    <div className="min-h-screen bg-[#0F172A]">
-      <BackToPortfolio />
-      <SaasHero />
-      <SaasFeatures />
-      <SaasHowItWorks />
-      <SaasIntegrations />
-      <SaasTestimonials />
-      <SaasFAQ />
-      <SaasPricing />
-      <SaasCTA />
-      <ShowcaseCTA
-        theme="dark"
-        accentColor="#6366F1"
-        projectName="Pulse Analytics"
-      />
-      <ShowcaseFooter
-        projectName="Pulse Analytics"
-        accentColor="#6366F1"
-        theme="dark"
-      />
-    </div>
+    <TemplateProvider config={saasDashboardConfig} className="min-h-screen">
+      <div style={{ backgroundColor: saasDashboardConfig.theme.palette.bg }}>
+        <BackToPortfolio />
+        <SaasHero />
+        <SaasFeatures />
+        <SaasHowItWorks />
+        <SaasIntegrations />
+        <SaasTestimonials />
+        <SaasFAQ />
+        <SaasPricing />
+        <SaasCTA />
+        <ShowcaseCTA
+          theme="dark"
+          accentColor={saasDashboardConfig.theme.palette.accent}
+          projectName={saasDashboardConfig.meta.brandName}
+        />
+        <ShowcaseFooter
+          projectName={saasDashboardConfig.meta.brandName}
+          accentColor={saasDashboardConfig.theme.palette.accent}
+          theme="dark"
+        />
+      </div>
+    </TemplateProvider>
   );
 }
