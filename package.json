@@ -12,7 +12,7 @@
     "test:hero": "playwright test tests/hero-section.spec.ts",
     "test:unit": "vitest run",
     "test:unit:watch": "vitest",
-    "test:visual": "playwright test tests/showcase-templates/visual-regression.spec.ts",
+    "test:visual": "playwright test tests/showcase-templates/visual-regression.spec.ts --project=chromium",
     "extract:showcase": "node scripts/extract-showcase.mjs",
     "generate-thumbnails": "npx tsx scripts/generate-thumbnails.ts",
     "docker:dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml --profile dev up -d --build",
