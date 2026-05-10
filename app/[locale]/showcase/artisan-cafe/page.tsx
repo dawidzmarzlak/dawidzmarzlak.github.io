@@ -7,6 +7,8 @@ import {
   CafeMenu,
   CafeLocation,
 } from "@/components/showcase/artisan-cafe";
+import { TemplateProvider } from "@/lib/templates/provider";
+import { artisanCafeConfig } from "@/lib/showcase/artisan-cafe/template.config";
 import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-static";
@@ -17,22 +19,14 @@ export function generateStaticParams() {
 
 export default function ArtisanCafePage() {
   return (
-    <div className="min-h-screen bg-[#FFF8F0]">
+    <TemplateProvider config={artisanCafeConfig} className="min-h-screen">
       <BackToPortfolio />
       <CafeHero />
       <CafeStory />
       <CafeMenu />
       <CafeLocation />
-      <ShowcaseCTA
-        theme="light"
-        accentColor="#C65D3B"
-        projectName="Bean & Brew"
-      />
-      <ShowcaseFooter
-        projectName="Bean & Brew"
-        accentColor="#C65D3B"
-        theme="light"
-      />
-    </div>
+      <ShowcaseCTA theme="light" />
+      <ShowcaseFooter theme="light" />
+    </TemplateProvider>
   );
 }

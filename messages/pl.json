@@ -73,12 +73,32 @@
       }
     },
     "bigLabel": "// elastyczność",
-    "big": ["Dopasowuję rozwiązanie do ", "Twoich potrzeb", " — nie odwrotnie."],
+    "big": [
+      "Dopasowuję rozwiązanie do ",
+      "Twoich potrzeb",
+      " — nie odwrotnie."
+    ],
     "stats": [
-      { "label": "// experience", "num": "5+", "foot": "Lat na produkcji od pierwszego deployu w 2020." },
-      { "label": "// stacks",     "num": "5",  "foot": "Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot." },
-      { "label": "// quote SLA",  "num": "48h", "foot": "Od briefu do wyceny. Bez prezentacji, bez handlowca." },
-      { "label": "// support",    "num": "6 mies.", "foot": "Wsparcie po wdrożeniu w cenie projektu — bug fixy gratis." }
+      {
+        "label": "// experience",
+        "num": "5+",
+        "foot": "Lat na produkcji od pierwszego deployu w 2020."
+      },
+      {
+        "label": "// stacks",
+        "num": "5",
+        "foot": "Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot."
+      },
+      {
+        "label": "// quote SLA",
+        "num": "48h",
+        "foot": "Od briefu do wyceny. Bez prezentacji, bez handlowca."
+      },
+      {
+        "label": "// support",
+        "num": "6 mies.",
+        "foot": "Wsparcie po wdrożeniu w cenie projektu — bug fixy gratis."
+      }
     ],
     "quote": {
       "label": "// klient · 2024",
@@ -111,11 +131,31 @@
       "description": "Spring Boot backend + React/Next.js/Angular frontend"
     },
     "items": [
-      { "num": "[01]", "title": "Strony Next.js", "desc": "Aplikacje React z SSR, ISR i edge runtime. Lighthouse 95+, TTI poniżej 2 s. Idealne dla SaaS, marketingu, dashboardów." },
-      { "num": "[02]", "title": "WordPress", "desc": "Headless lub klasyczny. Edycja, której zespół faktycznie używa." },
-      { "num": "[03]", "title": "WooCommerce", "desc": "Sklepy do 50k SKU, integracje z magazynem, kurierami, Allegro." },
-      { "num": "[04]", "title": "Presta\nShop", "desc": "" },
-      { "num": "[05]", "title": "Aplikacje webowe", "desc": "Spring Boot + React/Angular. SSO, RBAC, audyt — gotowe na produkcję enterprise." }
+      {
+        "num": "[01]",
+        "title": "Strony Next.js",
+        "desc": "Aplikacje React z SSR, ISR i edge runtime. Lighthouse 95+, TTI poniżej 2 s. Idealne dla SaaS, marketingu, dashboardów."
+      },
+      {
+        "num": "[02]",
+        "title": "WordPress",
+        "desc": "Headless lub klasyczny. Edycja, której zespół faktycznie używa."
+      },
+      {
+        "num": "[03]",
+        "title": "WooCommerce",
+        "desc": "Sklepy do 50k SKU, integracje z magazynem, kurierami, Allegro."
+      },
+      {
+        "num": "[04]",
+        "title": "Presta\nShop",
+        "desc": ""
+      },
+      {
+        "num": "[05]",
+        "title": "Aplikacje webowe",
+        "desc": "Spring Boot + React/Angular. SSO, RBAC, audyt — gotowe na produkcję enterprise."
+      }
     ]
   },
   "portfolio": {
@@ -141,10 +181,34 @@
     "title": "Co dostajesz, pracując ze mną",
     "subtitle": "Wartości, które działają — niezależnie od projektu",
     "items": [
-      { "q": "Kod, który dostajesz po wdrożeniu, jest twoją własnością — bez vendor lock-inu, bez płatnych licencji ukrytych w stacku.", "name": "Własność kodu", "role": "Każdy projekt", "avatar": "→", "size": "big" },
-      { "q": "6 miesięcy wsparcia w cenie wdrożenia. Bezpłatne poprawki bug'ów. Płatne tylko nowe funkcje.", "name": "Wsparcie", "role": "Po wdrożeniu", "avatar": "→", "size": "med" },
-      { "q": "Dokumentacja po polsku, README z runbook'iem, video-walkthrough panelu. Wracasz po roku — wciąż wiesz jak edytować.", "name": "Dokumentacja", "role": "Standard", "avatar": "→", "size": "med" },
-      { "q": "<<USER_INPUT: autoryzowany cytat klienta — wstawić później>>", "name": "<<USER_INPUT: imię>>", "role": "<<USER_INPUT: rola, firma>>", "avatar": "<<USER_INPUT: inicjały>>", "size": "lite" }
+      {
+        "q": "Kod, który dostajesz po wdrożeniu, jest twoją własnością — bez vendor lock-inu, bez płatnych licencji ukrytych w stacku.",
+        "name": "Własność kodu",
+        "role": "Każdy projekt",
+        "avatar": "→",
+        "size": "big"
+      },
+      {
+        "q": "6 miesięcy wsparcia w cenie wdrożenia. Bezpłatne poprawki bug'ów. Płatne tylko nowe funkcje.",
+        "name": "Wsparcie",
+        "role": "Po wdrożeniu",
+        "avatar": "→",
+        "size": "med"
+      },
+      {
+        "q": "Dokumentacja po polsku, README z runbook'iem, video-walkthrough panelu. Wracasz po roku — wciąż wiesz jak edytować.",
+        "name": "Dokumentacja",
+        "role": "Standard",
+        "avatar": "→",
+        "size": "med"
+      },
+      {
+        "q": "<<USER_INPUT: autoryzowany cytat klienta — wstawić później>>",
+        "name": "<<USER_INPUT: imię>>",
+        "role": "<<USER_INPUT: rola, firma>>",
+        "avatar": "<<USER_INPUT: inicjały>>",
+        "size": "lite"
+      }
     ]
   },
   "blog": {
@@ -187,39 +251,105 @@
       }
     },
     "label": "// pipeline",
-    "h": ["Siedem kroków. ", "Bez niespodzianek", "."],
+    "h": [
+      "Siedem kroków. ",
+      "Bez niespodzianek",
+      "."
+    ],
     "stepsList": [
-      ["Konsultacja", "Bezpłatne 30 min. Brief, cele, KPI."],
-      ["Wycena", "Stała cena lub T&M. Harmonogram."],
-      ["UX/UI", "Wireframe → Figma hi-fi."],
-      ["Development", "Sprinty 2-tyg. Demo co piątek."],
-      ["Testy", "E2E, perf, a11y, security."],
-      ["Wdrożenie", "CI/CD, SSL, monitoring."],
-      ["Wsparcie", "6 mies. w cenie. SLA opcjonalne."]
+      [
+        "Konsultacja",
+        "Bezpłatne 30 min. Brief, cele, KPI."
+      ],
+      [
+        "Wycena",
+        "Stała cena lub T&M. Harmonogram."
+      ],
+      [
+        "UX/UI",
+        "Wireframe → Figma hi-fi."
+      ],
+      [
+        "Development",
+        "Sprinty 2-tyg. Demo co piątek."
+      ],
+      [
+        "Testy",
+        "E2E, perf, a11y, security."
+      ],
+      [
+        "Wdrożenie",
+        "CI/CD, SSL, monitoring."
+      ],
+      [
+        "Wsparcie",
+        "6 mies. w cenie. SLA opcjonalne."
+      ]
     ],
     "page": {
       "hero": {
         "crumb": "Proces",
-        "title": ["Od briefu do ", "live", " w siedmiu krokach."],
+        "title": [
+          "Od briefu do ",
+          "live",
+          " w siedmiu krokach."
+        ],
         "intro": "Współpraca w siedmiu jasnych krokach. Każdy etap ma konkretny rezultat, znany czas trwania i jeden kontakt po Twojej stronie. Demo co piątek — bez prezentacji, bez handlowca w pętli."
       },
       "extended": [
-        ["Konsultacja — 30 minut", "Bezpłatne 30 minut. Rozmawiamy o celu projektu, KPI, ograniczeniach budżetowych i terminowych. Wychodzisz z notatką: co budujemy, jakim stackiem, w jakim modelu rozliczeń. Bez zobowiązań."],
-        ["Wycena w 48 godzin", "Stała cena (Fixed) lub Time & Materials. Harmonogram tygodniowy z kamieniami milowymi. Wycenę dostajesz mailem — możesz zaakceptować, dopytać albo odpuścić bez kosztów."],
-        ["UX/UI — wireframe → Figma hi-fi", "Najpierw szkic — żeby uzgodnić strukturę informacji. Potem hi-fi w Figmie z gotowym design system'em (kolory, typografia, komponenty). Akceptujesz w jednym widoku, nie w 30 mailach."],
-        ["Development — sprinty 2-tygodniowe", "Każdy sprint kończy się demo (piątek, 30 min). Widzisz postęp na żywo: na staging URL, klikalna wersja. Bug tracker po Twojej stronie — wszystko transparentnie."],
-        ["Testy — E2E, perf, a11y, security", "Playwright (E2E + regresje wizualne), Lighthouse 95+, axe-core (WCAG AA), audyt bezpieczeństwa OWASP Top 10. Raport dostarczany przed wdrożeniem."],
-        ["Wdrożenie — CI/CD, SSL, monitoring", "Pipeline GitHub Actions, certyfikat SSL, backup'y, monitoring uptime + błędów. Wdrożenie wieczorem (poza godzinami szczytu) z planem rollback'u."],
-        ["Wsparcie — 6 miesięcy w cenie", "6 miesięcy bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."]
+        [
+          "Konsultacja — 30 minut",
+          "Bezpłatne 30 minut. Rozmawiamy o celu projektu, KPI, ograniczeniach budżetowych i terminowych. Wychodzisz z notatką: co budujemy, jakim stackiem, w jakim modelu rozliczeń. Bez zobowiązań."
+        ],
+        [
+          "Wycena w 48 godzin",
+          "Stała cena (Fixed) lub Time & Materials. Harmonogram tygodniowy z kamieniami milowymi. Wycenę dostajesz mailem — możesz zaakceptować, dopytać albo odpuścić bez kosztów."
+        ],
+        [
+          "UX/UI — wireframe → Figma hi-fi",
+          "Najpierw szkic — żeby uzgodnić strukturę informacji. Potem hi-fi w Figmie z gotowym design system'em (kolory, typografia, komponenty). Akceptujesz w jednym widoku, nie w 30 mailach."
+        ],
+        [
+          "Development — sprinty 2-tygodniowe",
+          "Każdy sprint kończy się demo (piątek, 30 min). Widzisz postęp na żywo: na staging URL, klikalna wersja. Bug tracker po Twojej stronie — wszystko transparentnie."
+        ],
+        [
+          "Testy — E2E, perf, a11y, security",
+          "Playwright (E2E + regresje wizualne), Lighthouse 95+, axe-core (WCAG AA), audyt bezpieczeństwa OWASP Top 10. Raport dostarczany przed wdrożeniem."
+        ],
+        [
+          "Wdrożenie — CI/CD, SSL, monitoring",
+          "Pipeline GitHub Actions, certyfikat SSL, backup'y, monitoring uptime + błędów. Wdrożenie wieczorem (poza godzinami szczytu) z planem rollback'u."
+        ],
+        [
+          "Wsparcie — 6 miesięcy w cenie",
+          "6 miesięcy bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."
+        ]
       ],
       "philosophy": {
         "kicker": "// Dlaczego ten proces",
-        "title": ["Bez ", "niespodzianek", ". Bez prezentacji."],
+        "title": [
+          "Bez ",
+          "niespodzianek",
+          ". Bez prezentacji."
+        ],
         "items": [
-          ["Demo co tydzień", "Widzisz postęp w piątek, nie w dniu odbioru. Reagujesz wcześniej, zmiany są tańsze."],
-          ["Stała cena albo T&M — Twój wybór", "Fixed daje przewidywalność budżetu. T&M elastyczność zakresu. Decydujesz na etapie wyceny."],
-          ["Jeden kontakt", "Pracujesz ze mną. Bez handlowca, bez project managera w środku. Decyzje zapadają w 24h."],
-          ["Wszystko po polsku", "Dokumentacja, README z runbook'iem, video-walkthrough panelu. Po roku wciąż wiesz, jak edytować."]
+          [
+            "Demo co tydzień",
+            "Widzisz postęp w piątek, nie w dniu odbioru. Reagujesz wcześniej, zmiany są tańsze."
+          ],
+          [
+            "Stała cena albo T&M — Twój wybór",
+            "Fixed daje przewidywalność budżetu. T&M elastyczność zakresu. Decydujesz na etapie wyceny."
+          ],
+          [
+            "Jeden kontakt",
+            "Pracujesz ze mną. Bez handlowca, bez project managera w środku. Decyzje zapadają w 24h."
+          ],
+          [
+            "Wszystko po polsku",
+            "Dokumentacja, README z runbook'iem, video-walkthrough panelu. Po roku wciąż wiesz, jak edytować."
+          ]
         ]
       }
     }
@@ -264,63 +394,142 @@
         "answer": "Tak, wszystkie moje strony są w pełni responsywne i dostosowane do urządzeń mobilnych, tabletów i desktopów."
       }
     },
-    "side": ["Nie znalazłeś swojego pytania? ", "Napisz do mnie →"],
+    "side": [
+      "Nie znalazłeś swojego pytania? ",
+      "Napisz do mnie →"
+    ],
     "itemsList": [
-      ["Ile trwa realizacja projektu?", "Wizytówka: 3–4 tyg. Sklep: 6–10 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje dokładny harmonogram tygodniowy."],
-      ["Ile kosztuje strona internetowa?", "Wizytówka od 5 500 PLN, sklep od 9 500 PLN, aplikacja od 18 000 PLN. Dokładna wycena w 48h od briefu."],
-      ["Czy oferujecie hosting?", "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."],
-      ["Czy mogę edytować stronę samodzielnie?", "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja."],
-      ["Co z SEO?", "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu."]
+      [
+        "Ile trwa realizacja projektu?",
+        "Wizytówka: 3–4 tyg. Sklep: 6–10 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje dokładny harmonogram tygodniowy."
+      ],
+      [
+        "Ile kosztuje strona internetowa?",
+        "Wizytówka od 5 500 PLN, sklep od 9 500 PLN, aplikacja od 18 000 PLN. Dokładna wycena w 48h od briefu."
+      ],
+      [
+        "Czy oferujecie hosting?",
+        "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."
+      ],
+      [
+        "Czy mogę edytować stronę samodzielnie?",
+        "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja."
+      ],
+      [
+        "Co z SEO?",
+        "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu."
+      ]
     ],
     "page": {
       "hero": {
         "crumb": "FAQ",
-        "title": ["Pytania, na które ", "odpowiadam najczęściej", "."],
+        "title": [
+          "Pytania, na które ",
+          "odpowiadam najczęściej",
+          "."
+        ],
         "intro": "Pięć kategorii, kilkanaście pytań. Jeśli Twojego pytania tu nie ma — napisz, odpowiadam w 24 godziny."
       },
       "categories": [
         {
           "name": "Współpraca",
           "items": [
-            ["Jak zacząć współpracę?", "Wypełnij brief lub umów konsultację (30 min, bezpłatnie). W 48 godzin wracam z wyceną i harmonogramem. Decyzja po Twojej stronie — bez zobowiązań."],
-            ["Czy podpisujemy umowę?", "Tak — każdy projekt to umowa B2B z konkretnym zakresem, kamieniami milowymi i warunkami płatności. Wzór wysyłam razem z wyceną."],
-            ["Jak wygląda komunikacja?", "Email + Slack/Teams (do wyboru). Codziennie krótki status, w piątki demo. Bug tracker (Linear/GitHub) — pełna transparentność postępu."],
-            ["Czy mogę przerwać współpracę w trakcie?", "Tak. Płacisz za zrealizowane kamienie milowe, dostajesz pełen kod i dokumentację. Bez kar i ukrytych klauzul."]
+            [
+              "Jak zacząć współpracę?",
+              "Wypełnij brief lub umów konsultację (30 min, bezpłatnie). W 48 godzin wracam z wyceną i harmonogramem. Decyzja po Twojej stronie — bez zobowiązań."
+            ],
+            [
+              "Czy podpisujemy umowę?",
+              "Tak — każdy projekt to umowa B2B z konkretnym zakresem, kamieniami milowymi i warunkami płatności. Wzór wysyłam razem z wyceną."
+            ],
+            [
+              "Jak wygląda komunikacja?",
+              "Email + Slack/Teams (do wyboru). Codziennie krótki status, w piątki demo. Bug tracker (Linear/GitHub) — pełna transparentność postępu."
+            ],
+            [
+              "Czy mogę przerwać współpracę w trakcie?",
+              "Tak. Płacisz za zrealizowane kamienie milowe, dostajesz pełen kod i dokumentację. Bez kar i ukrytych klauzul."
+            ]
           ]
         },
         {
           "name": "Cennik i płatności",
           "items": [
-            ["Jak liczona jest cena?", "Fixed (stała cena) lub T&M (Time & Materials). Stała cena = przewidywalny budżet, jasny zakres. T&M = elastyczność, kiedy zakres się zmienia. Kalkulator pokazuje cenę bazową — finalna w wycenie."],
-            ["Kiedy płacę?", "Standardowo: 30% przy starcie, 40% po akceptacji designu, 30% przy wdrożeniu. Negocjowalne. Faktura VAT, B2B."],
-            ["Czy są ukryte koszty?", "Nie. Cena obejmuje rozwój, design, testy, wdrożenie, dokumentację i 6 mies. wsparcia. Płatne dodatkowo: licencje (np. fonty premium), hosting po stronie klienta, integracje, które wymagają płatnych SaaS."],
-            ["Co jeśli budżet nie wystarczy?", "Rozkładamy projekt na fazy MVP → V1 → V2. Robimy to, co najważniejsze, resztę dorzucamy w kolejnych iteracjach."]
+            [
+              "Jak liczona jest cena?",
+              "Fixed (stała cena) lub T&M (Time & Materials). Stała cena = przewidywalny budżet, jasny zakres. T&M = elastyczność, kiedy zakres się zmienia. Kalkulator pokazuje cenę bazową — finalna w wycenie."
+            ],
+            [
+              "Kiedy płacę?",
+              "Standardowo: 30% przy starcie, 40% po akceptacji designu, 30% przy wdrożeniu. Negocjowalne. Faktura VAT, B2B."
+            ],
+            [
+              "Czy są ukryte koszty?",
+              "Nie. Cena obejmuje rozwój, design, testy, wdrożenie, dokumentację i 6 mies. wsparcia. Płatne dodatkowo: licencje (np. fonty premium), hosting po stronie klienta, integracje, które wymagają płatnych SaaS."
+            ],
+            [
+              "Co jeśli budżet nie wystarczy?",
+              "Rozkładamy projekt na fazy MVP → V1 → V2. Robimy to, co najważniejsze, resztę dorzucamy w kolejnych iteracjach."
+            ]
           ]
         },
         {
           "name": "Technologie i kod",
           "items": [
-            ["Czym się zajmujesz?", "Strony (Next.js, WordPress), sklepy (WooCommerce, PrestaShop, custom Next), aplikacje webowe (Spring Boot + React/Next/Angular). Stack dobieram do problemu — nie odwrotnie."],
-            ["Czyj jest kod?", "Twój. Od pierwszego commit'a. Bez vendor lock-in'u, bez płatnych licencji ukrytych w stacku. Repo trafia do Ciebie po wdrożeniu."],
-            ["Czy mogę edytować stronę samodzielnie?", "Tak — każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."],
-            ["A co z SEO?", "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — wszystko domyślnie. Plus audyt po wdrożeniu z konkretnymi rekomendacjami."]
+            [
+              "Czym się zajmujesz?",
+              "Strony (Next.js, WordPress), sklepy (WooCommerce, PrestaShop, custom Next), aplikacje webowe (Spring Boot + React/Next/Angular). Stack dobieram do problemu — nie odwrotnie."
+            ],
+            [
+              "Czyj jest kod?",
+              "Twój. Od pierwszego commit'a. Bez vendor lock-in'u, bez płatnych licencji ukrytych w stacku. Repo trafia do Ciebie po wdrożeniu."
+            ],
+            [
+              "Czy mogę edytować stronę samodzielnie?",
+              "Tak — każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."
+            ],
+            [
+              "A co z SEO?",
+              "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — wszystko domyślnie. Plus audyt po wdrożeniu z konkretnymi rekomendacjami."
+            ]
           ]
         },
         {
           "name": "Termin",
           "items": [
-            ["Ile trwa realizacja?", "Wizytówka: 3–4 tygodnie. Sklep: 6–10 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje dokładny harmonogram tygodniowy z wyceną."],
-            ["Co spowalnia projekt?", "Zwykle: brak treści (teksty, zdjęcia, logo), długie cykle akceptacji, zmieniający się zakres. Pomagam tego unikać — checklisty contentu, akceptacje w 48h, zmiany w sprincie."],
-            ["Czy mogę zamówić ekspresowo?", "Tak — opcja 'Rush' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."]
+            [
+              "Ile trwa realizacja?",
+              "Wizytówka: 3–4 tygodnie. Sklep: 6–10 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje dokładny harmonogram tygodniowy z wyceną."
+            ],
+            [
+              "Co spowalnia projekt?",
+              "Zwykle: brak treści (teksty, zdjęcia, logo), długie cykle akceptacji, zmieniający się zakres. Pomagam tego unikać — checklisty contentu, akceptacje w 48h, zmiany w sprincie."
+            ],
+            [
+              "Czy mogę zamówić ekspresowo?",
+              "Tak — opcja 'Rush' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."
+            ]
           ]
         },
         {
           "name": "Po wdrożeniu",
           "items": [
-            ["Co dostaję po wdrożeniu?", "Działającą stronę/aplikację, repo z kodem, dokumentację, panel CMS/admin, szkolenie + video-walkthrough, certyfikat SSL, monitoring."],
-            ["Co z hostingiem?", "Doradzam i konfiguruję: Vercel (Next.js), AWS, OVH, własny VPS — co pasuje do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."],
-            ["Co jeśli będę potrzebować zmian po wdrożeniu?", "6 miesięcy bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."],
-            ["Co jeśli serwer padnie?", "Pakiet 'Pro' obejmuje SLA z czasem reakcji. Bez SLA — odpowiadam w godzinach roboczych w ciągu 24h."]
+            [
+              "Co dostaję po wdrożeniu?",
+              "Działającą stronę/aplikację, repo z kodem, dokumentację, panel CMS/admin, szkolenie + video-walkthrough, certyfikat SSL, monitoring."
+            ],
+            [
+              "Co z hostingiem?",
+              "Doradzam i konfiguruję: Vercel (Next.js), AWS, OVH, własny VPS — co pasuje do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
+            ],
+            [
+              "Co jeśli będę potrzebować zmian po wdrożeniu?",
+              "6 miesięcy bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."
+            ],
+            [
+              "Co jeśli serwer padnie?",
+              "Pakiet 'Pro' obejmuje SLA z czasem reakcji. Bez SLA — odpowiadam w godzinach roboczych w ciągu 24h."
+            ]
           ]
         }
       ]
@@ -363,8 +572,18 @@
     "colStudio": "Pracownia",
     "colContact": "Kontakt",
     "linksList": {
-      "studio": ["O nas", "Showcase", "Blog", "Cennik"],
-      "services": ["Next.js", "WordPress", "E-commerce", "Aplikacje"]
+      "studio": [
+        "O nas",
+        "Showcase",
+        "Blog",
+        "Cennik"
+      ],
+      "services": [
+        "Next.js",
+        "WordPress",
+        "E-commerce",
+        "Aplikacje"
+      ]
     },
     "copy": "© 2026 IT Solutions. Wszystkie prawa zastrzeżone.",
     "legal": "NIP: 000-000-00-00 · Polityka prywatności"
@@ -401,7 +620,6 @@
     "pageTitle": "Showcase Portfolio",
     "pageSubtitle": "Odkryj różnorodność stylów i możliwości dla Twojej branży",
     "exploreProject": "Eksploruj projekt",
-
     "luxury-hotel": {
       "name": "Luksusowy Hotel",
       "brandName": "Grand Riviera",
@@ -461,7 +679,6 @@
         "bookNow": "Sprawdź dostępność"
       }
     },
-
     "fine-dining": {
       "name": "Restauracja Fine Dining",
       "brandName": "Noir et Or",
@@ -562,7 +779,6 @@
         "featuredIn": "Pisali o nas"
       }
     },
-
     "spa-wellness": {
       "name": "Spa & Wellness",
       "brandName": "Serenity Springs",
@@ -692,10 +908,22 @@
           "notes": "Specjalne Życzenia (opcjonalnie)"
         },
         "treatments": {
-          "massage": { "name": "Masaż Relaksacyjny", "duration": "60-90 min" },
-          "facial": { "name": "Zabieg Odmładzający", "duration": "45-60 min" },
-          "body": { "name": "Zabieg na Ciało", "duration": "75 min" },
-          "package": { "name": "Pakiet Spa Day", "duration": "3 godziny" }
+          "massage": {
+            "name": "Masaż Relaksacyjny",
+            "duration": "60-90 min"
+          },
+          "facial": {
+            "name": "Zabieg Odmładzający",
+            "duration": "45-60 min"
+          },
+          "body": {
+            "name": "Zabieg na Ciało",
+            "duration": "75 min"
+          },
+          "package": {
+            "name": "Pakiet Spa Day",
+            "duration": "3 godziny"
+          }
         },
         "back": "Wstecz",
         "next": "Dalej",
@@ -707,7 +935,6 @@
         }
       }
     },
-
     "architecture-studio": {
       "name": "Studio Architektoniczne",
       "brandName": "FORM & VOID",
@@ -845,58 +1072,6 @@
         }
       }
     },
-
-    "artisan-cafe": {
-      "name": "Kawiarnia Rzemieślnicza",
-      "brandName": "Bean & Brew",
-      "tagline": "Kawa z Pasją, Smak z Charakterem",
-      "industry": "Gastronomia",
-      "hero": {
-        "title": "Każda Filiżanka to Historia",
-        "subtitle": "Rzemieślnicza kawa parzenna z miłością. Ziarna z małych farm, wypiek na miejscu.",
-        "cta": "Odwiedź Nas",
-        "ctaSecondary": "Zobacz Menu"
-      },
-      "story": {
-        "title": "Nasza Historia",
-        "description": "Bean & Brew powstało z miłości do kawy i przekonania, że najlepsza filiżanka to ta, którą robi się z sercem. Od 2018 roku serwujemy kawę z najlepszych mikro-palarni.",
-        "values": {
-          "quality": "Jakość ponad wszystko",
-          "sustainability": "Zrównoważone źródła",
-          "community": "Lokalna społeczność"
-        }
-      },
-      "menu": {
-        "title": "Nasze Menu",
-        "subtitle": "Ręcznie przygotowane z najlepszych składników",
-        "categories": {
-          "coffee": "Kawa",
-          "tea": "Herbata",
-          "food": "Przekąski",
-          "pastries": "Wypieki"
-        },
-        "featured": "Polecane"
-      },
-      "coffee": {
-        "title": "Podróż Kawy",
-        "subtitle": "Od ziarna do filiżanki",
-        "origin": "Pochodzenie",
-        "roasting": "Palenie",
-        "brewing": "Parzenie"
-      },
-      "instagram": {
-        "title": "Obserwuj Nas",
-        "handle": "@beanandbrewpl",
-        "followUs": "Śledź nas na Instagramie"
-      },
-      "location": {
-        "title": "Odwiedź Nas",
-        "address": "ul. Kawowa 15, Warszawa",
-        "hours": "Pon-Pt: 7:00-20:00 | Sob-Nd: 8:00-18:00",
-        "directions": "Jak dojechać"
-      }
-    },
-
     "saas-dashboard": {
       "name": "Dashboard SaaS",
       "brandName": "Pulse Analytics",
@@ -937,19 +1112,34 @@
           "name": "Starter",
           "price": "99 zł",
           "description": "Dla małych zespołów",
-          "features": ["5 użytkowników", "10 dashboardów", "7 dni historii", "Email wsparcie"]
+          "features": [
+            "5 użytkowników",
+            "10 dashboardów",
+            "7 dni historii",
+            "Email wsparcie"
+          ]
         },
         "pro": {
           "name": "Professional",
           "price": "299 zł",
           "description": "Dla rozwijających się firm",
-          "features": ["25 użytkowników", "Nielimitowane dashboardy", "1 rok historii", "Priorytetowe wsparcie"]
+          "features": [
+            "25 użytkowników",
+            "Nielimitowane dashboardy",
+            "1 rok historii",
+            "Priorytetowe wsparcie"
+          ]
         },
         "enterprise": {
           "name": "Enterprise",
           "price": "Kontakt",
           "description": "Dla dużych organizacji",
-          "features": ["Nielimitowani użytkownicy", "Dedykowana infrastruktura", "Nielimitowana historia", "24/7 wsparcie"]
+          "features": [
+            "Nielimitowani użytkownicy",
+            "Dedykowana infrastruktura",
+            "Nielimitowana historia",
+            "24/7 wsparcie"
+          ]
         },
         "cta": "Wybierz Plan"
       },
@@ -1036,7 +1226,6 @@
         "button": "Rozpocznij 14-dniowy Trial"
       }
     },
-
     "fashion-store": {
       "name": "Butik Mody",
       "brandName": "MAISON ÉLISE",
@@ -1082,7 +1271,6 @@
         "button": "Subskrybuj"
       }
     },
-
     "fitness-studio": {
       "name": "Studio Fitness",
       "brandName": "APEX PERFORMANCE",
@@ -1251,23 +1439,38 @@
         "basic": {
           "name": "BASIC",
           "price": "149 zł/mies.",
-          "features": ["Dostęp do siłowni 24/7", "Szatnie premium", "Aplikacja mobilna", "Darmowy parking (2 godz.)"]
+          "features": [
+            "Dostęp do siłowni 24/7",
+            "Szatnie premium",
+            "Aplikacja mobilna",
+            "Darmowy parking (2 godz.)"
+          ]
         },
         "pro": {
           "name": "PRO",
           "price": "249 zł/mies.",
           "popular": "Najpopularniejszy",
-          "features": ["Wszystko z BASIC", "Nielimitowane zajęcia grupowe", "1 trening personalny/mies.", "Konsultacja żywieniowa"]
+          "features": [
+            "Wszystko z BASIC",
+            "Nielimitowane zajęcia grupowe",
+            "1 trening personalny/mies.",
+            "Konsultacja żywieniowa"
+          ]
         },
         "elite": {
           "name": "ELITE",
           "price": "449 zł/mies.",
-          "features": ["Wszystko z PRO", "4 treningi personalne/mies.", "Indywidualny plan żywieniowy", "Szafka VIP", "Nielimitowany parking"]
+          "features": [
+            "Wszystko z PRO",
+            "4 treningi personalne/mies.",
+            "Indywidualny plan żywieniowy",
+            "Szafka VIP",
+            "Nielimitowany parking"
+          ]
         },
         "cta": "Wybierz Plan"
       }
     },
-
     "creative-agency": {
       "name": "Agencja Kreatywna",
       "brandName": "NOVA CREATIVE",
@@ -1386,7 +1589,6 @@
         "cta": "Napisz do Nas"
       }
     },
-
     "real-estate": {
       "name": "Nieruchomości Premium",
       "brandName": "Skyline Estates",
@@ -1535,7 +1737,6 @@
         "cta": "Umów Spotkanie"
       }
     },
-
     "music-store": {
       "name": "Sklep z Płytami Winylowymi",
       "brandName": "Analog Alley",
@@ -1554,10 +1755,30 @@
         "addToCart": "Dodaj do Koszyka",
         "outOfStock": "Wyprzedane",
         "items": {
-          "0": { "artist": "Pink Floyd", "album": "The Dark Side of the Moon", "price": "149,99 zł", "genre": "Rock Progresywny" },
-          "1": { "artist": "Miles Davis", "album": "Kind of Blue", "price": "129,99 zł", "genre": "Jazz" },
-          "2": { "artist": "Fleetwood Mac", "album": "Rumours", "price": "139,99 zł", "genre": "Rock" },
-          "3": { "artist": "Daft Punk", "album": "Random Access Memories", "price": "189,99 zł", "genre": "Elektronika" }
+          "0": {
+            "artist": "Pink Floyd",
+            "album": "The Dark Side of the Moon",
+            "price": "149,99 zł",
+            "genre": "Rock Progresywny"
+          },
+          "1": {
+            "artist": "Miles Davis",
+            "album": "Kind of Blue",
+            "price": "129,99 zł",
+            "genre": "Jazz"
+          },
+          "2": {
+            "artist": "Fleetwood Mac",
+            "album": "Rumours",
+            "price": "139,99 zł",
+            "genre": "Rock"
+          },
+          "3": {
+            "artist": "Daft Punk",
+            "album": "Random Access Memories",
+            "price": "189,99 zł",
+            "genre": "Elektronika"
+          }
         }
       },
       "releases": {
@@ -1577,7 +1798,6 @@
         "soul": "Soul & R&B"
       }
     },
-
     "crypto-platform": {
       "name": "Platforma Web3",
       "brandName": "NexChain",
@@ -1606,22 +1826,56 @@
         "title": "Dlaczego NexChain",
         "subtitle": "Stworzone dla traderów, którzy wymagają więcej",
         "items": {
-          "0": { "title": "Bezpieczeństwo Bankowe", "description": "Portfele multi-signature, cold storage i monitoring 24/7" },
-          "1": { "title": "Błyskawiczna Szybkość", "description": "Wykonuj transakcje w milisekundach dzięki naszemu silnikowi" },
-          "2": { "title": "Globalny Dostęp", "description": "Handluj z dowolnego miejsca z obsługą 150+ krajów" },
-          "3": { "title": "Bezpieczne Przechowywanie", "description": "Twoje aktywa chronione wojskowym szyfrowaniem" },
-          "4": { "title": "Niskie Opłaty", "description": "Wiodące w branży stawki od 0,1% za transakcję" },
-          "5": { "title": "Zaawansowana Analityka", "description": "Wykresy w czasie rzeczywistym i wgląd w rynek na wyciągnięcie ręki" }
+          "0": {
+            "title": "Bezpieczeństwo Bankowe",
+            "description": "Portfele multi-signature, cold storage i monitoring 24/7"
+          },
+          "1": {
+            "title": "Błyskawiczna Szybkość",
+            "description": "Wykonuj transakcje w milisekundach dzięki naszemu silnikowi"
+          },
+          "2": {
+            "title": "Globalny Dostęp",
+            "description": "Handluj z dowolnego miejsca z obsługą 150+ krajów"
+          },
+          "3": {
+            "title": "Bezpieczne Przechowywanie",
+            "description": "Twoje aktywa chronione wojskowym szyfrowaniem"
+          },
+          "4": {
+            "title": "Niskie Opłaty",
+            "description": "Wiodące w branży stawki od 0,1% za transakcję"
+          },
+          "5": {
+            "title": "Zaawansowana Analityka",
+            "description": "Wykresy w czasie rzeczywistym i wgląd w rynek na wyciągnięcie ręki"
+          }
         }
       },
       "roadmap": {
         "title": "Mapa Rozwoju",
         "subtitle": "Nasza droga do rewolucji w finansach",
         "phases": {
-          "0": { "quarter": "Q1 2024", "title": "Fundament", "description": "Uruchomienie Platformy, Beta Aplikacji Mobilnej, 100+ Par Handlowych" },
-          "1": { "quarter": "Q2 2024", "title": "Ekspansja", "description": "Start Stakingu, Marketplace NFT, API v2.0" },
-          "2": { "quarter": "Q3 2024", "title": "Integracja", "description": "Integracja DeFi, Narzędzia Instytucjonalne, Ekspansja Globalna" },
-          "3": { "quarter": "Q4 2024", "title": "Decentralizacja", "description": "Token NexChain, Governance DAO, Most Cross-chain" }
+          "0": {
+            "quarter": "Q1 2024",
+            "title": "Fundament",
+            "description": "Uruchomienie Platformy, Beta Aplikacji Mobilnej, 100+ Par Handlowych"
+          },
+          "1": {
+            "quarter": "Q2 2024",
+            "title": "Ekspansja",
+            "description": "Start Stakingu, Marketplace NFT, API v2.0"
+          },
+          "2": {
+            "quarter": "Q3 2024",
+            "title": "Integracja",
+            "description": "Integracja DeFi, Narzędzia Instytucjonalne, Ekspansja Globalna"
+          },
+          "3": {
+            "quarter": "Q4 2024",
+            "title": "Decentralizacja",
+            "description": "Token NexChain, Governance DAO, Most Cross-chain"
+          }
         }
       },
       "stats": {
@@ -1631,7 +1885,6 @@
         "uptime": "Dostępność"
       }
     },
-
     "law-firm": {
       "name": "Kancelaria Prawna",
       "brandName": "Sterling & Associates",
@@ -1656,12 +1909,30 @@
         "subtitle": "Kompleksowe usługi prawne dla osób prywatnych i firm",
         "learnMore": "Dowiedz się więcej",
         "items": {
-          "0": { "title": "Prawo Korporacyjne", "description": "Fuzje, przejęcia i zakładanie firm" },
-          "1": { "title": "Spory Sądowe", "description": "Rozstrzyganie sporów cywilnych i handlowych" },
-          "2": { "title": "Nieruchomości", "description": "Transakcje i inwestycje w nieruchomości" },
-          "3": { "title": "Prawo Rodzinne", "description": "Rozwody, opieka nad dziećmi i planowanie majątku" },
-          "4": { "title": "Prawo Pracy", "description": "Prawa pracowników i obrona pracodawców" },
-          "5": { "title": "Własność Intelektualna", "description": "Patenty, znaki towarowe i prawa autorskie" }
+          "0": {
+            "title": "Prawo Korporacyjne",
+            "description": "Fuzje, przejęcia i zakładanie firm"
+          },
+          "1": {
+            "title": "Spory Sądowe",
+            "description": "Rozstrzyganie sporów cywilnych i handlowych"
+          },
+          "2": {
+            "title": "Nieruchomości",
+            "description": "Transakcje i inwestycje w nieruchomości"
+          },
+          "3": {
+            "title": "Prawo Rodzinne",
+            "description": "Rozwody, opieka nad dziećmi i planowanie majątku"
+          },
+          "4": {
+            "title": "Prawo Pracy",
+            "description": "Prawa pracowników i obrona pracodawców"
+          },
+          "5": {
+            "title": "Własność Intelektualna",
+            "description": "Patenty, znaki towarowe i prawa autorskie"
+          }
         }
       },
       "caseStudies": {
@@ -1676,7 +1947,11 @@
             "category": "Prawo Korporacyjne",
             "result": "Pomyślnie zamknięta akwizycja za 2,5 mld $",
             "description": "Reprezentowaliśmy firmę przejmującą w złożonej fuzji transgranicznej.",
-            "outcomes": { "0": "Zamknięcie transakcji w 6 miesięcy", "1": "Oszczędności podatkowe 50 mln $", "2": "Pełna integracja zespołów" },
+            "outcomes": {
+              "0": "Zamknięcie transakcji w 6 miesięcy",
+              "1": "Oszczędności podatkowe 50 mln $",
+              "2": "Pełna integracja zespołów"
+            },
             "quote": "Sterling & Associates przeprowadzili nas przez najbardziej skomplikowaną transakcję w historii naszej firmy.",
             "client": "CEO, Tech Corp"
           },
@@ -1685,7 +1960,11 @@
             "category": "Własność Intelektualna",
             "result": "Utrzymanie praw patentowych, 50 mln $ odszkodowania",
             "description": "Broniliśmy klienta przed roszczeniami o naruszenie patentu.",
-            "outcomes": { "0": "Pełne utrzymanie patentu", "1": "50 mln $ odszkodowania", "2": "Precedens prawny" },
+            "outcomes": {
+              "0": "Pełne utrzymanie patentu",
+              "1": "50 mln $ odszkodowania",
+              "2": "Precedens prawny"
+            },
             "quote": "Ich strategia i przygotowanie były kluczem do naszego zwycięstwa.",
             "client": "CTO, Innovation Labs"
           },
@@ -1694,7 +1973,11 @@
             "category": "Spory Sądowe",
             "result": "Sprawa oddalona definitywnie",
             "description": "Skutecznie broniliśmy firmę z Fortune 500 w pozwie zbiorowym.",
-            "outcomes": { "0": "Sprawa oddalona", "1": "Zero odszkodowań", "2": "Ochrona reputacji" },
+            "outcomes": {
+              "0": "Sprawa oddalona",
+              "1": "Zero odszkodowań",
+              "2": "Ochrona reputacji"
+            },
             "quote": "Profesjonalizm i determinacja zespołu uratowały naszą firmę.",
             "client": "General Counsel, Fortune 500"
           }
@@ -1705,10 +1988,30 @@
         "subtitle": "Wybitni profesjonaliści prawa",
         "viewProfile": "Zobacz Profil",
         "members": {
-          "0": { "name": "Robert Sterling", "role": "Partner Zarządzający", "specialty": "Prawo Korporacyjne", "education": "Harvard Law School" },
-          "1": { "name": "Elizabeth Warren", "role": "Starszy Partner", "specialty": "Spory Sądowe", "education": "Yale Law School" },
-          "2": { "name": "James Mitchell", "role": "Partner", "specialty": "Nieruchomości", "education": "Stanford Law School" },
-          "3": { "name": "Sarah Chen", "role": "Współpracownik", "specialty": "Własność Intelektualna", "education": "Columbia Law School" }
+          "0": {
+            "name": "Robert Sterling",
+            "role": "Partner Zarządzający",
+            "specialty": "Prawo Korporacyjne",
+            "education": "Harvard Law School"
+          },
+          "1": {
+            "name": "Elizabeth Warren",
+            "role": "Starszy Partner",
+            "specialty": "Spory Sądowe",
+            "education": "Yale Law School"
+          },
+          "2": {
+            "name": "James Mitchell",
+            "role": "Partner",
+            "specialty": "Nieruchomości",
+            "education": "Stanford Law School"
+          },
+          "3": {
+            "name": "Sarah Chen",
+            "role": "Współpracownik",
+            "specialty": "Własność Intelektualna",
+            "education": "Columbia Law School"
+          }
         }
       },
       "contact": {
@@ -1724,7 +2027,6 @@
         }
       }
     },
-
     "podcast-studio": {
       "name": "Studio Podcastowe",
       "brandName": "SoundWave",
@@ -1752,7 +2054,11 @@
             "duration": "45:32",
             "date": "18 Gru 2024",
             "description": "Odkrywamy jak sztuczna inteligencja zmienia przemysł i co to oznacza dla przyszłości pracy.",
-            "transcript": { "0": "Witamy w Tech Tomorrow. Dziś zagłębiamy się w temat AI...", "1": "Porozmawiajmy o praktycznych zastosowaniach, które widzimy...", "2": "Patrząc w przyszłość, implikacje są ogromne..." }
+            "transcript": {
+              "0": "Witamy w Tech Tomorrow. Dziś zagłębiamy się w temat AI...",
+              "1": "Porozmawiajmy o praktycznych zastosowaniach, które widzimy...",
+              "2": "Patrząc w przyszłość, implikacje są ogromne..."
+            }
           },
           "1": {
             "title": "Budowanie Odporności",
@@ -1760,7 +2066,11 @@
             "duration": "38:15",
             "date": "16 Gru 2024",
             "description": "Strategie rozwijania odporności psychicznej i radzenia sobie z wyzwaniami życiowymi.",
-            "transcript": { "0": "Odporność psychiczna to coś, co wszyscy możemy rozwinąć...", "1": "Kluczem jest zrozumienie naszych wzorców myślowych...", "2": "Ćwicz te techniki codziennie dla najlepszych rezultatów..." }
+            "transcript": {
+              "0": "Odporność psychiczna to coś, co wszyscy możemy rozwinąć...",
+              "1": "Kluczem jest zrozumienie naszych wzorców myślowych...",
+              "2": "Ćwicz te techniki codziennie dla najlepszych rezultatów..."
+            }
           },
           "2": {
             "title": "Historie Startupów: Od Zera do IPO",
@@ -1768,7 +2078,11 @@
             "duration": "52:48",
             "date": "14 Gru 2024",
             "description": "Posłuchaj niesamowitej podróży założycieli, którzy zbudowali firmy warte miliardy od zera.",
-            "transcript": { "0": "Każdy startup zaczyna się od pomysłu...", "1": "Rundy finansowania były trudne, ale konieczne...", "2": "Wejście na giełdę było ekscytujące i przerażające zarazem..." }
+            "transcript": {
+              "0": "Każdy startup zaczyna się od pomysłu...",
+              "1": "Rundy finansowania były trudne, ale konieczne...",
+              "2": "Wejście na giełdę było ekscytujące i przerażające zarazem..."
+            }
           },
           "3": {
             "title": "True Crime: Zaginiona Dziedziczka",
@@ -1776,7 +2090,11 @@
             "duration": "61:22",
             "date": "12 Gru 2024",
             "description": "Badamy tajemnicze zaginięcie zamożnej osoby towarzyskiej w 1985 roku.",
-            "transcript": { "0": "Noc 15 listopada 1985 zmieniła wszystko...", "1": "Śledczy znaleźli kilka kluczowych wskazówek...", "2": "Sprawa pozostaje nierozwiązana do dziś..." }
+            "transcript": {
+              "0": "Noc 15 listopada 1985 zmieniła wszystko...",
+              "1": "Śledczy znaleźli kilka kluczowych wskazówek...",
+              "2": "Sprawa pozostaje nierozwiązana do dziś..."
+            }
           }
         }
       },
@@ -1786,10 +2104,26 @@
         "episodes": "Odcinków",
         "followers": "Obserwujących",
         "members": {
-          "0": { "name": "Alex Rivers", "role": "Prowadzący Tech Tomorrow", "bio": "Były dyrektor z Doliny Krzemowej, obecnie dziennikarz technologiczny" },
-          "1": { "name": "Dr. Maya Thompson", "role": "Prowadząca Mind Matters", "bio": "Psycholog kliniczny i autorka bestsellerów" },
-          "2": { "name": "Jordan Blake", "role": "Prowadzący Founder Files", "bio": "Seryjny przedsiębiorca i inwestor" },
-          "3": { "name": "Sarah Mitchell", "role": "Prowadząca Cold Case Files", "bio": "Dziennikarka śledcza i ekspertka true crime" }
+          "0": {
+            "name": "Alex Rivers",
+            "role": "Prowadzący Tech Tomorrow",
+            "bio": "Były dyrektor z Doliny Krzemowej, obecnie dziennikarz technologiczny"
+          },
+          "1": {
+            "name": "Dr. Maya Thompson",
+            "role": "Prowadząca Mind Matters",
+            "bio": "Psycholog kliniczny i autorka bestsellerów"
+          },
+          "2": {
+            "name": "Jordan Blake",
+            "role": "Prowadzący Founder Files",
+            "bio": "Seryjny przedsiębiorca i inwestor"
+          },
+          "3": {
+            "name": "Sarah Mitchell",
+            "role": "Prowadząca Cold Case Files",
+            "bio": "Dziennikarka śledcza i ekspertka true crime"
+          }
         }
       },
       "subscribe": {
@@ -1800,7 +2134,6 @@
         "button": "Subskrybuj"
       }
     },
-
     "wedding-planner": {
       "name": "Wedding Planner",
       "brandName": "Forever & Always",
@@ -1835,19 +2168,43 @@
       "services": {
         "title": "Nasze Usługi",
         "subtitle": "Kompleksowe planowanie ślubu",
-        "fullPlanning": { "title": "Pełne Planowanie", "description": "Kompletna koordynacja od zaręczyn do miesiąca miodowego" },
-        "partialPlanning": { "title": "Częściowe Planowanie", "description": "Wsparcie w wybranych aspektach celebracji" },
-        "dayOf": { "title": "Koordynacja w Dniu Ślubu", "description": "Bezproblemowa realizacja w Twoim wyjątkowym dniu" },
-        "destination": { "title": "Śluby za Granicą", "description": "Wymarzone celebracje w zapierających dech lokalizacjach" }
+        "fullPlanning": {
+          "title": "Pełne Planowanie",
+          "description": "Kompletna koordynacja od zaręczyn do miesiąca miodowego"
+        },
+        "partialPlanning": {
+          "title": "Częściowe Planowanie",
+          "description": "Wsparcie w wybranych aspektach celebracji"
+        },
+        "dayOf": {
+          "title": "Koordynacja w Dniu Ślubu",
+          "description": "Bezproblemowa realizacja w Twoim wyjątkowym dniu"
+        },
+        "destination": {
+          "title": "Śluby za Granicą",
+          "description": "Wymarzone celebracje w zapierających dech lokalizacjach"
+        }
       },
       "timeline": {
         "title": "Nasze Historie Miłosne",
         "subtitle": "Prawdziwe pary, prawdziwe chwile",
         "events": {
-          "0": { "title": "Pierwsze Spotkanie", "description": "Poznaliśmy się na imprezie znajomych i poczuliśmy natychmiastową więź" },
-          "1": { "title": "Pierwsza Randka", "description": "Magiczny wieczór, który stał się początkiem wieczności" },
-          "2": { "title": "Zaręczyny", "description": "On zapytał, ona powiedziała tak, i nasza podróż się rozpoczęła" },
-          "3": { "title": "Ślub", "description": "Dzień, w którym stajemy się jednym, otoczeni tymi, których kochamy" }
+          "0": {
+            "title": "Pierwsze Spotkanie",
+            "description": "Poznaliśmy się na imprezie znajomych i poczuliśmy natychmiastową więź"
+          },
+          "1": {
+            "title": "Pierwsza Randka",
+            "description": "Magiczny wieczór, który stał się początkiem wieczności"
+          },
+          "2": {
+            "title": "Zaręczyny",
+            "description": "On zapytał, ona powiedziała tak, i nasza podróż się rozpoczęła"
+          },
+          "3": {
+            "title": "Ślub",
+            "description": "Dzień, w którym stajemy się jednym, otoczeni tymi, których kochamy"
+          }
         }
       },
       "packages": {
@@ -1855,12 +2212,40 @@
         "subtitle": "Dopasowane do Twoich potrzeb i budżetu",
         "starting": "Od",
         "inquire": "Zapytaj",
-        "essential": { "name": "Essential", "price": "20 000 zł", "features": ["Koordynacja w dniu ślubu", "Rekomendacje dostawców", "Stworzenie harmonogramu", "Zarządzanie próbą"] },
-        "premium": { "name": "Premium", "price": "50 000 zł", "features": ["Pełne usługi planowania", "Zarządzanie budżetem", "Negocjacje z dostawcami", "Design i dekoracje", "Zarządzanie gośćmi"] },
-        "luxury": { "name": "Luxury", "price": "100 000 zł", "features": ["Wszystko z Premium", "Planowanie destynacji", "Dostęp do luksusowych dostawców", "Usługi concierge", "Koordynacja wielodniowa"] }
+        "essential": {
+          "name": "Essential",
+          "price": "20 000 zł",
+          "features": [
+            "Koordynacja w dniu ślubu",
+            "Rekomendacje dostawców",
+            "Stworzenie harmonogramu",
+            "Zarządzanie próbą"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "price": "50 000 zł",
+          "features": [
+            "Pełne usługi planowania",
+            "Zarządzanie budżetem",
+            "Negocjacje z dostawcami",
+            "Design i dekoracje",
+            "Zarządzanie gośćmi"
+          ]
+        },
+        "luxury": {
+          "name": "Luxury",
+          "price": "100 000 zł",
+          "features": [
+            "Wszystko z Premium",
+            "Planowanie destynacji",
+            "Dostęp do luksusowych dostawców",
+            "Usługi concierge",
+            "Koordynacja wielodniowa"
+          ]
+        }
       }
     },
-
     "vet-clinic": {
       "name": "Klinika Weterynaryjna",
       "brandName": "Happy Paws",
@@ -1908,35 +2293,90 @@
           "exotic": "Egzotyczne"
         },
         "items": {
-          "0": { "title": "Badania Profilaktyczne", "description": "Regularne kontrole dla zdrowia Twojego pupila", "price": "Od 150 zł" },
-          "1": { "title": "Szczepienia", "description": "Podstawowe i dodatkowe szczepionki ochronne", "price": "Od 80 zł" },
-          "2": { "title": "Chirurgia", "description": "Od rutynowych zabiegów po złożone operacje", "price": "Skontaktuj się" },
-          "3": { "title": "Stomatologia", "description": "Profesjonalne czyszczenie i zdrowie jamy ustnej", "price": "Od 300 zł" },
-          "4": { "title": "Pielęgnacja", "description": "Kąpiele, strzyżenie i obcinanie pazurów", "price": "Od 70 zł" },
-          "5": { "title": "Hotel", "description": "Bezpieczne, komfortowe noclegi", "price": "Od 100 zł/noc" }
+          "0": {
+            "title": "Badania Profilaktyczne",
+            "description": "Regularne kontrole dla zdrowia Twojego pupila",
+            "price": "Od 150 zł"
+          },
+          "1": {
+            "title": "Szczepienia",
+            "description": "Podstawowe i dodatkowe szczepionki ochronne",
+            "price": "Od 80 zł"
+          },
+          "2": {
+            "title": "Chirurgia",
+            "description": "Od rutynowych zabiegów po złożone operacje",
+            "price": "Skontaktuj się"
+          },
+          "3": {
+            "title": "Stomatologia",
+            "description": "Profesjonalne czyszczenie i zdrowie jamy ustnej",
+            "price": "Od 300 zł"
+          },
+          "4": {
+            "title": "Pielęgnacja",
+            "description": "Kąpiele, strzyżenie i obcinanie pazurów",
+            "price": "Od 70 zł"
+          },
+          "5": {
+            "title": "Hotel",
+            "description": "Bezpieczne, komfortowe noclegi",
+            "price": "Od 100 zł/noc"
+          }
         }
       },
       "team": {
         "title": "Poznaj Nasz Zespół",
         "subtitle": "Oddani profesjonaliści, którzy kochają zwierzęta",
         "members": {
-          "0": { "name": "Dr Sarah Williams", "role": "Główny Weterynarz", "specialty": "Małe Zwierzęta", "experience": "15 lat" },
-          "1": { "name": "Dr Michael Chen", "role": "Chirurg", "specialty": "Chirurgia Ortopedyczna", "experience": "12 lat" },
-          "2": { "name": "Dr Emily Rodriguez", "role": "Weterynarz", "specialty": "Zwierzęta Egzotyczne", "experience": "8 lat" },
-          "3": { "name": "Jessica Thompson", "role": "Technik Weterynarii", "specialty": "Nagłe Przypadki", "experience": "10 lat" }
+          "0": {
+            "name": "Dr Sarah Williams",
+            "role": "Główny Weterynarz",
+            "specialty": "Małe Zwierzęta",
+            "experience": "15 lat"
+          },
+          "1": {
+            "name": "Dr Michael Chen",
+            "role": "Chirurg",
+            "specialty": "Chirurgia Ortopedyczna",
+            "experience": "12 lat"
+          },
+          "2": {
+            "name": "Dr Emily Rodriguez",
+            "role": "Weterynarz",
+            "specialty": "Zwierzęta Egzotyczne",
+            "experience": "8 lat"
+          },
+          "3": {
+            "name": "Jessica Thompson",
+            "role": "Technik Weterynarii",
+            "specialty": "Nagłe Przypadki",
+            "experience": "10 lat"
+          }
         }
       },
       "testimonials": {
         "title": "Szczęśliwi Właściciele",
         "subtitle": "Co mówią nasi klienci",
         "reviews": {
-          "0": { "name": "Joanna M.", "pet": "Max (Golden Retriever)", "quote": "Dr Williams uratowała życie Maxa podczas nagłego przypadku. Na zawsze wdzięczna!" },
-          "1": { "name": "Dawid K.", "pet": "Luna (Kot Perski)", "quote": "Cały personel traktuje Lunę jak królową. Nie poszłabym nigdzie indziej." },
-          "2": { "name": "Maria S.", "pet": "Coco (Papuga)", "quote": "W końcu znalazłam weterynarza, który rozumie egzotyczne ptaki. Niesamowita opieka!" }
+          "0": {
+            "name": "Joanna M.",
+            "pet": "Max (Golden Retriever)",
+            "quote": "Dr Williams uratowała życie Maxa podczas nagłego przypadku. Na zawsze wdzięczna!"
+          },
+          "1": {
+            "name": "Dawid K.",
+            "pet": "Luna (Kot Perski)",
+            "quote": "Cały personel traktuje Lunę jak królową. Nie poszłabym nigdzie indziej."
+          },
+          "2": {
+            "name": "Maria S.",
+            "pet": "Coco (Papuga)",
+            "quote": "W końcu znalazłam weterynarza, który rozumie egzotyczne ptaki. Niesamowita opieka!"
+          }
         }
       }
     },
-
     "coworking-space": {
       "name": "Przestrzeń Coworkingowa",
       "brandName": "The Hub",
@@ -1967,10 +2407,22 @@
           "lounge": "Strefa Relaksu"
         },
         "spaces": {
-          "hotdesk": { "title": "Hot Deski", "description": "Elastyczne miejsca za 100 zł/dzień - 12 dostępnych" },
-          "private": { "title": "Prywatne Biura", "description": "Zamykane biura od 5000 zł/mies. - 3 dostępne" },
-          "meeting": { "title": "Sale Konferencyjne", "description": "Rezerwacja godzinowa za 200 zł/godz. - 6 sal" },
-          "lounge": { "title": "Strefa Relaksu", "description": "Odpoczynek i networking z kawiarnią i przekąskami" }
+          "hotdesk": {
+            "title": "Hot Deski",
+            "description": "Elastyczne miejsca za 100 zł/dzień - 12 dostępnych"
+          },
+          "private": {
+            "title": "Prywatne Biura",
+            "description": "Zamykane biura od 5000 zł/mies. - 3 dostępne"
+          },
+          "meeting": {
+            "title": "Sale Konferencyjne",
+            "description": "Rezerwacja godzinowa za 200 zł/godz. - 6 sal"
+          },
+          "lounge": {
+            "title": "Strefa Relaksu",
+            "description": "Odpoczynek i networking z kawiarnią i przekąskami"
+          }
         }
       },
       "amenities": {
@@ -1994,10 +2446,50 @@
         "popular": "Najpopularniejszy",
         "cta": "Rozpocznij",
         "plans": {
-          "0": { "name": "Karnet Dzienny", "description": "Idealny na okazjonalne wizyty", "price": "150 zł", "features": { "0": "Dostęp do hot desków", "1": "WiFi i udogodnienia", "2": "Kawa i herbata", "3": "Ważny jeden dzień" } },
-          "1": { "name": "Flex Desk", "description": "Idealny dla pracujących na pół etatu", "price": "1199 zł", "features": { "0": "10 dni/miesiąc", "1": "Dowolne wolne biurko", "2": "Kredyty na sale", "3": "Wydarzenia społeczności" } },
-          "2": { "name": "Dedykowane Biurko", "description": "Twoja osobista przestrzeń", "price": "1999 zł", "features": { "0": "Twoje własne biurko 24/7", "1": "Szafka", "2": "Obsługa poczty", "3": "Nielimitowane sale" } },
-          "3": { "name": "Prywatne Biuro", "description": "Dla zespołów potrzebujących prywatności", "price": "5000 zł", "features": { "0": "Zamykane biuro", "1": "Dostęp 24/7", "2": "Własny branding", "3": "Priorytetowe wsparcie" } }
+          "0": {
+            "name": "Karnet Dzienny",
+            "description": "Idealny na okazjonalne wizyty",
+            "price": "150 zł",
+            "features": {
+              "0": "Dostęp do hot desków",
+              "1": "WiFi i udogodnienia",
+              "2": "Kawa i herbata",
+              "3": "Ważny jeden dzień"
+            }
+          },
+          "1": {
+            "name": "Flex Desk",
+            "description": "Idealny dla pracujących na pół etatu",
+            "price": "1199 zł",
+            "features": {
+              "0": "10 dni/miesiąc",
+              "1": "Dowolne wolne biurko",
+              "2": "Kredyty na sale",
+              "3": "Wydarzenia społeczności"
+            }
+          },
+          "2": {
+            "name": "Dedykowane Biurko",
+            "description": "Twoja osobista przestrzeń",
+            "price": "1999 zł",
+            "features": {
+              "0": "Twoje własne biurko 24/7",
+              "1": "Szafka",
+              "2": "Obsługa poczty",
+              "3": "Nielimitowane sale"
+            }
+          },
+          "3": {
+            "name": "Prywatne Biuro",
+            "description": "Dla zespołów potrzebujących prywatności",
+            "price": "5000 zł",
+            "features": {
+              "0": "Zamykane biuro",
+              "1": "Dostęp 24/7",
+              "2": "Własny branding",
+              "3": "Priorytetowe wsparcie"
+            }
+          }
         }
       },
       "community": {
@@ -2011,7 +2503,6 @@
         }
       }
     },
-
     "photo-portfolio": {
       "name": "Portfolio Fotograficzne",
       "brandName": "Lens & Light",
@@ -2052,10 +2543,26 @@
       "services": {
         "title": "Usługi",
         "subtitle": "Profesjonalna fotografia na każdą okazję",
-        "portrait": { "title": "Sesje Portretowe", "price": "Od 1500 zł", "description": "Portrety indywidualne i rodzinne w studio lub plenerze" },
-        "wedding": { "title": "Fotografia Ślubna", "price": "Od 8000 zł", "description": "Całodzienna obecność z obrobioną galerią cyfrową" },
-        "commercial": { "title": "Komercyjna", "price": "Wycena Indywidualna", "description": "Fotografia produktowa, korporacyjna i brandowa" },
-        "events": { "title": "Eventy", "price": "Od 2000 zł", "description": "Imprezy firmowe, przyjęcia i celebracje" }
+        "portrait": {
+          "title": "Sesje Portretowe",
+          "price": "Od 1500 zł",
+          "description": "Portrety indywidualne i rodzinne w studio lub plenerze"
+        },
+        "wedding": {
+          "title": "Fotografia Ślubna",
+          "price": "Od 8000 zł",
+          "description": "Całodzienna obecność z obrobioną galerią cyfrową"
+        },
+        "commercial": {
+          "title": "Komercyjna",
+          "price": "Wycena Indywidualna",
+          "description": "Fotografia produktowa, korporacyjna i brandowa"
+        },
+        "events": {
+          "title": "Eventy",
+          "price": "Od 2000 zł",
+          "description": "Imprezy firmowe, przyjęcia i celebracje"
+        }
       },
       "about": {
         "title": "O Artyście",
@@ -2078,7 +2585,6 @@
         }
       }
     },
-
     "esports-team": {
       "name": "Drużyna Esportowa",
       "brandName": "PHANTOM ESPORTS",
@@ -2105,11 +2611,41 @@
         "earnings": "Zarobki Kariery",
         "achievements": "Osiągnięcia",
         "players": {
-          "0": { "name": "ShadowStrike", "realName": "Alex Chen", "role": "Kapitan Drużyny", "game": "Valorant", "country": "USA" },
-          "1": { "name": "NightHawk", "realName": "Kim Min-jun", "role": "Entry Fragger", "game": "Valorant", "country": "Korea Płd." },
-          "2": { "name": "PhantomX", "realName": "Lucas Silva", "role": "Support", "game": "Valorant", "country": "Brazylia" },
-          "3": { "name": "BladeRunner", "realName": "Emma Williams", "role": "Sentinel", "game": "Valorant", "country": "UK" },
-          "4": { "name": "VoidWalker", "realName": "Yuki Tanaka", "role": "Controller", "game": "Valorant", "country": "Japonia" }
+          "0": {
+            "name": "ShadowStrike",
+            "realName": "Alex Chen",
+            "role": "Kapitan Drużyny",
+            "game": "Valorant",
+            "country": "USA"
+          },
+          "1": {
+            "name": "NightHawk",
+            "realName": "Kim Min-jun",
+            "role": "Entry Fragger",
+            "game": "Valorant",
+            "country": "Korea Płd."
+          },
+          "2": {
+            "name": "PhantomX",
+            "realName": "Lucas Silva",
+            "role": "Support",
+            "game": "Valorant",
+            "country": "Brazylia"
+          },
+          "3": {
+            "name": "BladeRunner",
+            "realName": "Emma Williams",
+            "role": "Sentinel",
+            "game": "Valorant",
+            "country": "UK"
+          },
+          "4": {
+            "name": "VoidWalker",
+            "realName": "Yuki Tanaka",
+            "role": "Controller",
+            "game": "Valorant",
+            "country": "Japonia"
+          }
         }
       },
       "schedule": {
@@ -2120,9 +2656,24 @@
         "watchStream": "Oglądaj Stream",
         "setReminder": "Ustaw Przypomnienie",
         "matches": {
-          "0": { "opponent": "Team Liquid", "tournament": "VCT Masters", "date": "22 Gru", "time": "21:00 CET" },
-          "1": { "opponent": "Cloud9", "tournament": "VCT Masters", "date": "24 Gru", "time": "23:00 CET" },
-          "2": { "opponent": "Fnatic", "tournament": "VCT Masters Finals", "date": "28 Gru", "time": "20:00 CET" }
+          "0": {
+            "opponent": "Team Liquid",
+            "tournament": "VCT Masters",
+            "date": "22 Gru",
+            "time": "21:00 CET"
+          },
+          "1": {
+            "opponent": "Cloud9",
+            "tournament": "VCT Masters",
+            "date": "24 Gru",
+            "time": "23:00 CET"
+          },
+          "2": {
+            "opponent": "Fnatic",
+            "tournament": "VCT Masters Finals",
+            "date": "28 Gru",
+            "time": "20:00 CET"
+          }
         }
       },
       "achievements": {
@@ -2145,7 +2696,6 @@
         "viewAll": "Zobacz Wszystkie Produkty"
       }
     },
-
     "eco-brand": {
       "name": "Ekologiczna Marka",
       "brandName": "Terra Collective",
@@ -2185,28 +2735,70 @@
         "subtitle": "Ekologiczne niezbędniki na co dzień",
         "viewAll": "Zobacz Wszystkie Produkty",
         "items": {
-          "0": { "name": "Zestaw Bambusowy", "description": "Komplet do łazienki", "price": "189,00 zł" },
-          "1": { "name": "Torba z Bawełny Organicznej", "description": "Wielorazowa torba na zakupy", "price": "119,00 zł" },
-          "2": { "name": "Zestaw Wosku Pszczelego", "description": "Przechowywanie bez plastiku", "price": "99,00 zł" },
-          "3": { "name": "Naturalne Środki Czystości", "description": "Ekologiczna pielęgnacja domu", "price": "219,00 zł" }
+          "0": {
+            "name": "Zestaw Bambusowy",
+            "description": "Komplet do łazienki",
+            "price": "189,00 zł"
+          },
+          "1": {
+            "name": "Torba z Bawełny Organicznej",
+            "description": "Wielorazowa torba na zakupy",
+            "price": "119,00 zł"
+          },
+          "2": {
+            "name": "Zestaw Wosku Pszczelego",
+            "description": "Przechowywanie bez plastiku",
+            "price": "99,00 zł"
+          },
+          "3": {
+            "name": "Naturalne Środki Czystości",
+            "description": "Ekologiczna pielęgnacja domu",
+            "price": "219,00 zł"
+          }
         }
       },
       "timeline": {
         "title": "Nasza Podróż",
         "subtitle": "Budowanie zrównoważonej przyszłości, krok po kroku",
         "milestones": {
-          "0": { "title": "Założeni z Celem", "description": "Rozpoczęliśmy z misją redukcji odpadów plastikowych" },
-          "1": { "title": "Osiągnięte Zero Waste", "description": "Pierwsza w pełni certyfikowana marka zero-waste w naszej kategorii" },
-          "2": { "title": "Certyfikat B Corp", "description": "Uznani za spełnianie najwyższych standardów społecznych i środowiskowych" },
-          "3": { "title": "Globalny Wpływ", "description": "Ekspansja do 50+ krajów z zachowaniem naszych wartości" }
+          "0": {
+            "title": "Założeni z Celem",
+            "description": "Rozpoczęliśmy z misją redukcji odpadów plastikowych"
+          },
+          "1": {
+            "title": "Osiągnięte Zero Waste",
+            "description": "Pierwsza w pełni certyfikowana marka zero-waste w naszej kategorii"
+          },
+          "2": {
+            "title": "Certyfikat B Corp",
+            "description": "Uznani za spełnianie najwyższych standardów społecznych i środowiskowych"
+          },
+          "3": {
+            "title": "Globalny Wpływ",
+            "description": "Ekspansja do 50+ krajów z zachowaniem naszych wartości"
+          }
         }
       },
       "values": {
         "title": "Nasze Wartości",
-        "transparency": { "title": "Radykalna Transparentność", "description": "Dzielimy się każdym szczegółem łańcucha dostaw" },
-        "quality": { "title": "Bezkompromisowa Jakość", "description": "Zrównoważony rozwój nie oznacza godzenia się na mniej" },
-        "community": { "title": "Społeczność Przede Wszystkim", "description": "Wspieranie lokalnych rzemieślników i uczciwe płace" }
+        "transparency": {
+          "title": "Radykalna Transparentność",
+          "description": "Dzielimy się każdym szczegółem łańcucha dostaw"
+        },
+        "quality": {
+          "title": "Bezkompromisowa Jakość",
+          "description": "Zrównoważony rozwój nie oznacza godzenia się na mniej"
+        },
+        "community": {
+          "title": "Społeczność Przede Wszystkim",
+          "description": "Wspieranie lokalnych rzemieślników i uczciwe płace"
+        }
       }
+    },
+    "artisan-cafe": {
+      "brandName": "Bean & Brew",
+      "industry": "Gastronomia",
+      "tagline": "Kawa z Pasją, Smak z Charakterem"
     }
   },
   "cookies": {
@@ -2415,32 +3007,32 @@
     "kinds": {
       "site": {
         "short": "Wizytówka",
-        "long":  "Strona wizytówka, firmowa lub portfolio",
-        "hint":  "Strona prezentująca firmę, ofertę lub portfolio. Może mieć blog, formularze, integracje z mailingiem."
+        "long": "Strona wizytówka, firmowa lub portfolio",
+        "hint": "Strona prezentująca firmę, ofertę lub portfolio. Może mieć blog, formularze, integracje z mailingiem."
       },
       "shop": {
         "short": "Sklep",
-        "long":  "Sklep internetowy z katalogiem produktów",
-        "hint":  "Pełnoprawny e-commerce: koszyk, płatności, integracje z magazynem i kurierami."
+        "long": "Sklep internetowy z katalogiem produktów",
+        "hint": "Pełnoprawny e-commerce: koszyk, płatności, integracje z magazynem i kurierami."
       },
       "app": {
         "short": "Aplikacja",
-        "long":  "Aplikacja webowa lub SaaS",
-        "hint":  "System z logowaniem, panelami, rolami użytkowników i własną logiką biznesową."
+        "long": "Aplikacja webowa lub SaaS",
+        "hint": "System z logowaniem, panelami, rolami użytkowników i własną logiką biznesową."
       }
     },
     "siteGoals": {
-      "landing":  "Landing",
-      "company":  "Firmowa",
-      "portfolio":"Portfolio",
-      "blog":     "Blog",
+      "landing": "Landing",
+      "company": "Firmowa",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
       "showcase": "Showcase"
     },
     "shopPlatforms": {
-      "woo":     "WooCommerce",
-      "presta":  "PrestaShop",
+      "woo": "WooCommerce",
+      "presta": "PrestaShop",
       "shopify": "Shopify",
-      "custom":  "Custom (Next)"
+      "custom": "Custom (Next)"
     },
     "catalogSizes": {
       "sm": "do 50",
@@ -2449,87 +3041,100 @@
       "xl": "5k+"
     },
     "paymentGateways": {
-      "blik":   "BLIK",
-      "p24":    "Przelewy24",
+      "blik": "BLIK",
+      "p24": "Przelewy24",
       "stripe": "Stripe",
       "paypal": "PayPal",
-      "card":   "Karta"
+      "card": "Karta"
     },
     "erp": {
-      "none":    "Brak",
+      "none": "Brak",
       "subiekt": "Subiekt",
-      "wapro":   "WAPRO",
+      "wapro": "WAPRO",
       "comarch": "Comarch",
-      "custom":  "Inny"
+      "custom": "Inny"
     },
     "appTypes": {
-      "saas":        "SaaS",
-      "internal":    "Wewnętrzna",
-      "portal":      "Portal",
-      "dashboard":   "Dashboard",
+      "saas": "SaaS",
+      "internal": "Wewnętrzna",
+      "portal": "Portal",
+      "dashboard": "Dashboard",
       "marketplace": "Marketplace",
-      "other":       "Inne"
+      "other": "Inne"
     },
     "appAuth": {
-      "none":  "Bez logowania",
+      "none": "Bez logowania",
       "email": "Konto z hasłem",
       "oauth": "Logowanie przez Google / Microsoft",
-      "sso":   "SSO firmowe + role"
+      "sso": "SSO firmowe + role"
     },
     "appBackends": {
-      "spring":   "Spring Boot",
-      "node":     "Node",
+      "spring": "Spring Boot",
+      "node": "Node",
       "next-api": "Next.js API",
-      "other":    "Inny"
+      "other": "Inny"
     },
     "appStorage": {
       "postgres": "PostgreSQL",
-      "mongo":    "MongoDB",
-      "redis":    "Redis",
-      "files":    "Pliki/S3",
-      "mixed":    "Mieszane"
+      "mongo": "MongoDB",
+      "redis": "Redis",
+      "files": "Pliki/S3",
+      "mixed": "Mieszane"
     },
     "industry": "Branża",
     "audience": "Odbiorcy",
     "stage": "Etap projektu",
     "industries": {
-      "services":   "Usługi profesjonalne",
-      "ecommerce":  "E-commerce",
-      "food":       "Gastronomia",
-      "education":  "Edukacja",
-      "health":     "Zdrowie & uroda",
+      "services": "Usługi profesjonalne",
+      "ecommerce": "E-commerce",
+      "food": "Gastronomia",
+      "education": "Edukacja",
+      "health": "Zdrowie & uroda",
       "realestate": "Nieruchomości",
-      "sport":      "Sport & fitness",
-      "travel":     "Turystyka",
-      "saas":       "Software / SaaS",
-      "creative":   "Kreatywne",
-      "nonprofit":  "Non-profit",
-      "other":      "Inne"
+      "sport": "Sport & fitness",
+      "travel": "Turystyka",
+      "saas": "Software / SaaS",
+      "creative": "Kreatywne",
+      "nonprofit": "Non-profit",
+      "other": "Inne"
     },
     "audiences": {
-      "b2c":      "Klienci końcowi (B2C)",
-      "b2b":      "Firmy (B2B)",
-      "b2b2c":    "B2B2C",
+      "b2c": "Klienci końcowi (B2C)",
+      "b2b": "Firmy (B2B)",
+      "b2b2c": "B2B2C",
       "internal": "Zespół wewnętrzny"
     },
     "stages": {
-      "new":          "Nowy projekt",
-      "redesign":     "Redesign istniejącego",
+      "new": "Nowy projekt",
+      "redesign": "Redesign istniejącego",
       "continuation": "Kontynuacja prac"
     }
   },
   "pricing": {
     "hero": {
       "crumb": "Cennik",
-      "title": ["3 presety. ", "Reszta", " — kalkulator."],
+      "title": [
+        "3 presety. ",
+        "Reszta",
+        " — kalkulator."
+      ],
       "intro": "Wybierz jeden z 3 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
       "popular": "Najpopularniejsze",
       "from": "od",
-      "landing":  { "name": "Landing Page",      "desc": "4 podstrony, design standard, hosting na Vercel. Dla startupów i kampanii." },
-      "company":  { "name": "Strona firmowa",    "desc": "10 podstron, CMS, PL+EN, newsletter. Najczęściej zamawiana konfiguracja." },
-      "ecom":     { "name": "Sklep online",      "desc": "WooCommerce, katalog 50–500 produktów, BLIK + Przelewy24, kurierzy." }
+      "landing": {
+        "name": "Landing Page",
+        "desc": "4 podstrony, design standard, hosting na Vercel. Dla startupów i kampanii."
+      },
+      "company": {
+        "name": "Strona firmowa",
+        "desc": "10 podstron, CMS, PL+EN, newsletter. Najczęściej zamawiana konfiguracja."
+      },
+      "ecom": {
+        "name": "Sklep online",
+        "desc": "WooCommerce, katalog 50–500 produktów, BLIK + Przelewy24, kurierzy."
+      }
     },
     "knobs": {
       "kind": "Typ projektu",
@@ -2560,33 +3165,48 @@
       "stage": "Etap projektu",
       "techPreferences": "Preferowane technologie (opcjonalnie)",
       "techPreferencesHint": "Te wybory omówimy na konsultacji. Pomijaj, jeśli nie masz preferencji.",
-      "tiers":     { "lite": "Lite — szablon", "standard": "Standard — custom UI", "premium": "Premium — UX/UI od zera" },
-      "supports":  { "none": "Brak", "basic": "6 mies. (gratis)", "pro": "12 mies. + SLA" },
-      "hostings":  { "client": "U klienta", "vercel": "Vercel", "vps": "VPS" },
-      "timelines": { "normal": "Standard", "rush": "Rush (+25%)" },
+      "tiers": {
+        "lite": "Lite — szablon",
+        "standard": "Standard — custom UI",
+        "premium": "Premium — UX/UI od zera"
+      },
+      "supports": {
+        "none": "Brak",
+        "basic": "6 mies. (gratis)",
+        "pro": "12 mies. + SLA"
+      },
+      "hostings": {
+        "client": "U klienta",
+        "vercel": "Vercel",
+        "vps": "VPS"
+      },
+      "timelines": {
+        "normal": "Standard",
+        "rush": "Rush (+25%)"
+      },
       "siteIntegr": {
-        "analytics":  "Analytics",
+        "analytics": "Analytics",
         "newsletter": "Newsletter",
-        "form":       "Formularz",
-        "chat":       "Czat",
-        "map":        "Mapa",
-        "booking":    "Rezerwacje"
+        "form": "Formularz",
+        "chat": "Czat",
+        "map": "Mapa",
+        "booking": "Rezerwacje"
       },
       "shopIntegr": {
-        "courier":      "Kurierzy",
-        "newsletter":   "Newsletter",
-        "crm":          "CRM",
-        "allegro":      "Allegro",
-        "marketplace":  "Marketplace",
+        "courier": "Kurierzy",
+        "newsletter": "Newsletter",
+        "crm": "CRM",
+        "allegro": "Allegro",
+        "marketplace": "Marketplace",
         "subscription": "Subskrypcje"
       },
       "appIntegr": {
-        "payments":     "Płatności",
-        "sms":          "SMS",
-        "email":        "Email",
-        "ai":           "AI",
+        "payments": "Płatności",
+        "sms": "SMS",
+        "email": "Email",
+        "ai": "AI",
         "external-api": "API zewnętrzne",
-        "websockets":   "WebSockets"
+        "websockets": "WebSockets"
       }
     },
     "breakdown": {
@@ -2616,71 +3236,85 @@
     }
   },
   "brief": {
-    "title":  ["Brief w ", "2 krokach", "."],
+    "title": [
+      "Brief w ",
+      "2 krokach",
+      "."
+    ],
     "kinds": {
       "site": "Strona wizytówka",
       "shop": "Sklep online",
-      "app":  "Aplikacja webowa"
+      "app": "Aplikacja webowa"
     },
     "summary": {
       "kicker": "// Twoja wycena",
-      "edit":   "Edytuj wycenę"
+      "edit": "Edytuj wycenę"
     },
     "gate": {
       "kicker": "Krok zerowy",
-      "title":  ["Najpierw ", "krótka wycena", ", potem brief."],
-      "body":   "Wypełnij szybki kalkulator (3 minuty), żebym wiedział co budujemy i z jakim budżetem. Brief wyśle się razem z wyceną — bez powtarzania pytań.",
-      "cta":    "Otwórz kalkulator →"
+      "title": [
+        "Najpierw ",
+        "krótka wycena",
+        ", potem brief."
+      ],
+      "body": "Wypełnij szybki kalkulator (3 minuty), żebym wiedział co budujemy i z jakim budżetem. Brief wyśle się razem z wyceną — bez powtarzania pytań.",
+      "cta": "Otwórz kalkulator →"
     },
     "fields": {
-      "name":         "Imię i nazwisko",
-      "email":        "Email",
-      "company":      "Firma",
-      "desc":         "Opisz projekt w 3–5 zdaniach",
-      "descMin":      "min. 20 znaków",
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "company": "Firma",
+      "desc": "Opisz projekt w 3–5 zdaniach",
+      "descMin": "min. 20 znaków",
       "timelineNote": "Termin (opcjonalnie)",
-      "industry":     "Branża / sektor",
-      "audience":     "Grupa docelowa",
-      "stage":        "Etap projektu"
+      "industry": "Branża / sektor",
+      "audience": "Grupa docelowa",
+      "stage": "Etap projektu"
     },
     "context": {
       "kicker": "// Krótki kontekst",
-      "intro":  "Trzy szybkie pytania o Twoją firmę — pomagają mi zrozumieć biznes przed konsultacją."
+      "intro": "Trzy szybkie pytania o Twoją firmę — pomagają mi zrozumieć biznes przed konsultacją."
     },
     "placeholders": {
-      "name":         "np. Anna Kowalska",
-      "email":        "anna@firma.pl",
-      "company":      "opcjonalnie",
+      "name": "np. Anna Kowalska",
+      "email": "anna@firma.pl",
+      "company": "opcjonalnie",
       "timelineNote": "np. start za 4 tygodnie",
       "desc": {
         "site": "Co budujemy? Dla kogo? Najważniejsze sekcje? Czy masz benchmark — link?",
         "shop": "Co sprzedajesz? Skąd produkty (ręcznie / hurtownia / ERP)? Najważniejsze integracje?",
-        "app":  "Co aplikacja ma robić? Główni użytkownicy i ich role? Najważniejsze przepływy?"
+        "app": "Co aplikacja ma robić? Główni użytkownicy i ich role? Najważniejsze przepływy?"
       }
     },
     "nav": {
-      "next":   "Dalej",
-      "back":   "Wstecz",
+      "next": "Dalej",
+      "back": "Wstecz",
       "submit": "Wyślij brief"
     },
     "submitting": "Wysyłanie...",
     "errors": {
-      "submit":  "Nie udało się wysłać formularza. Spróbuj ponownie.",
+      "submit": "Nie udało się wysłać formularza. Spróbuj ponownie.",
       "network": "Brak połączenia z serwerem. Spróbuj za chwilę."
     },
     "submitted": {
-      "title": ["Brief w drodze, ", "."],
-      "body":  ["Odpowiadam na adres ", " w ciągu 48h."]
+      "title": [
+        "Brief w drodze, ",
+        "."
+      ],
+      "body": [
+        "Odpowiadam na adres ",
+        " w ciągu 48h."
+      ]
     },
     "aside": {
       "slots": "Dostępne sloty · 30 min",
       "summary": {
         "kicker": "// Twoja wycena",
-        "edit":   "Edytuj wycenę"
+        "edit": "Edytuj wycenę"
       },
       "picker": {
         "kicker": "// Wycena szybka",
-        "body":   "Wybierz typ projektu — przeniesiemy Cię do kalkulatora."
+        "body": "Wybierz typ projektu — przeniesiemy Cię do kalkulatora."
       }
     }
   },
@@ -2688,36 +3322,64 @@
     "sections": {
       "services": {
         "kicker": "[01] Usługi",
-        "title": ["Pięć stosów. ", "Jeden senior", ". Twój projekt."],
+        "title": [
+          "Pięć stosów. ",
+          "Jeden senior",
+          ". Twój projekt."
+        ],
         "cta": "Wszystkie usługi →"
       },
       "about": {
         "kicker": "[02] O pracowni",
-        "title": ["Pięć lat. ", "Tysiące", " użytkowników. Zero zniknięć."]
+        "title": [
+          "Pięć lat. ",
+          "Tysiące",
+          " użytkowników. Zero zniknięć."
+        ]
       },
       "portfolio": {
         "kicker": "[03] Portfolio",
-        "title": ["Sześć projektów, które ", "poszły", " na produkcję."],
+        "title": [
+          "Sześć projektów, które ",
+          "poszły",
+          " na produkcję."
+        ],
         "cta": "Wszystkie realizacje →"
       },
       "showcase": {
         "kicker": "[04] Showcase",
-        "title": ["21 demo-projektów dla ", "różnych branż", "."],
+        "title": [
+          "21 demo-projektów dla ",
+          "różnych branż",
+          "."
+        ],
         "subtitle": "Inspiracje. Każdy showcase to inny stack, inny system kolorów, inny ton — żeby pokazać że nowy design ≠ szablon.",
         "cta": "Wszystkie demo'a →"
       },
       "testi": {
         "kicker": "[05] Opinie",
-        "title": ["Co mówią ", "klienci", "."]
+        "title": [
+          "Co mówią ",
+          "klienci",
+          "."
+        ]
       },
       "process": {
         "kicker": "[06] Proces",
-        "title": ["Od briefu do ", "live", "."],
+        "title": [
+          "Od briefu do ",
+          "live",
+          "."
+        ],
         "cta": "Cały proces krok po kroku →"
       },
       "faq": {
         "kicker": "[07] FAQ",
-        "title": ["Pytania, które ", "najczęściej słyszę", "."],
+        "title": [
+          "Pytania, które ",
+          "najczęściej słyszę",
+          "."
+        ],
         "cta": "Wszystkie pytania →"
       }
     }
