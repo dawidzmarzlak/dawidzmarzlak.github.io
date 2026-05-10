@@ -14,5 +14,6 @@ export function themeToCssVars(theme: ThemeTokens): CSSProperties {
     if (typeof v === "string") out[`--brand-radius-${k}`] = v;
   }
 
+  // CSSProperties does not type CSS custom properties; the cast is intentional and matches React's accepted style-prop usage.
   return out as CSSProperties;
 }

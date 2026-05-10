@@ -24,6 +24,8 @@ describe("themeToCssVars", () => {
 
   it("ignores undefined palette entries", () => {
     const vars = themeToCssVars({
+      // Cast is intentional: exercises the runtime typeof-string guard for unvalidated inputs.
+      // Once Task 2's Zod schema validates BrandConfig at the boundary, undefined keys can't reach here.
       palette: { bg: "#fff", fg: "#000", accent: "#0af", muted: undefined as unknown as string },
       fonts: { display: "serif", body: "sans-serif", accent: "cursive" },
       radius: { sm: "0", md: "0", lg: "0" },
