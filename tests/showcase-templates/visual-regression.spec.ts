@@ -1,9 +1,21 @@
 import { test, expect } from "@playwright/test";
 
+/**
+ * Visual regression baselines committed in `*-snapshots/` are platform-specific
+ * (Playwright tags them with `-chromium-<platform>.png`). The current set was
+ * generated on win32 / chromium. When this suite is wired into CI (Linux runner)
+ * in a future phase, fresh Linux baselines must be generated and committed —
+ * the win32 PNGs will not be consulted by the Linux runner.
+ *
+ * For Phase 1 (local customization validation), the win32 baselines are
+ * sufficient: run `BASE_URL=http://localhost:3001 npm run test:visual` after
+ * making a config change to verify the page hasn't drifted from its baseline.
+ */
+
 const PAGES = [
-  { slug: "artisan-cafe",   path: "/en/showcase/artisan-cafe"   },
-  { slug: "saas-dashboard", path: "/en/showcase/saas-dashboard" },
-  { slug: "fashion-store",  path: "/en/showcase/fashion-store"  },
+  { slug: "artisan-cafe",   path: "/en/showcase/artisan-cafe",   settleMs: 500 },
+  { slug: "saas-dashboard", path: "/en/showcase/saas-dashboard", settleMs: 500 },
+  { slug: "fashion-store",  path: "/en/showcase/fashion-store",  settleMs: 500 },
 ];
 
 const VIEWPORTS = [
@@ -36,10 +48,13 @@ for (const p of PAGES) {
           ].join("")
         });
         // Wait for any JS-driven animations (e.g. framer-motion whileInView) to settle
-        await page.waitForTimeout(500);
+        await page.waitForTimeout(p.settleMs);
         await expect(page).toHaveScreenshot(`${p.slug}-${vp.name}.png`, {
           fullPage: true,
-          maxDiffPixelRatio: 0.02, // tolerate up to 2% pixel diff (font hinting, AA, subpixel)
+          // Tolerate up to 2% pixel diff. Higher than the plan's nominal 1% to absorb
+          // font hinting + AA + subpixel noise on win32. Reconsider when Linux baselines
+          // are generated for CI — Linux fontconfig produces less subpixel jitter.
+          maxDiffPixelRatio: 0.02,
           animations: "disabled",  // Playwright also disables CSS animations during capture
           timeout: 60_000,         // allow up to 60 s for stable screenshot pair
         });
