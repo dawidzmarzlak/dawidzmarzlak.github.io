@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 64" width="448" height="64" role="img" aria-label="IT Solutions — Dawid Zmarzlak">
+  <title>IT Solutions — Dawid Zmarzlak</title>
+
+  
+  <rect x="0" y="0" width="64" height="64" fill="#c4ff3a"></rect>
+  <text x="32" y="44" text-anchor="middle" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-size="26" font-weight="700" fill="#050505">i/s</text>
+
+  
+  <text x="78" y="28" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-size="16" font-weight="600" fill="#f7f7f5" letter-spacing="2">IT SOLUTIONS</text>
+  <text x="78" y="52" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-size="13" font-weight="400" fill="#888884" letter-spacing="2">DAWID ZMARZLAK</text>
+</svg>
