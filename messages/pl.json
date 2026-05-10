@@ -2980,6 +2980,8 @@
       "stage": "Etap projektu",
       "techPreferences": "Preferowane technologie (opcjonalnie)",
       "techPreferencesHint": "Te wybory omówimy na konsultacji. Pomijaj, jeśli nie masz preferencji.",
+      "showAllOptions": "Pokaż wszystkie opcje",
+      "hideExtraOptions": "Ukryj dodatkowe opcje",
       "tiers": {
         "lite": "Lite — szablon",
         "standard": "Standard — custom UI",

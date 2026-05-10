@@ -14,6 +14,12 @@ export const SITE_INTEGRATIONS = [
 ] as const;
 export type SiteIntegration = typeof SITE_INTEGRATIONS[number];
 
+// Most commonly requested site addons — shown by default in the calculator.
+// Remaining options surface via the "Show all" toggle.
+export const POPULAR_SITE_INTEGRATIONS: readonly SiteIntegration[] = [
+  "analytics", "form", "newsletter", "blog-cms", "seo-onpage", "wcag-aa", "animations-medium",
+];
+
 // --- SHOP ---
 export const SHOP_PLATFORMS = ["woo", "presta", "shopify", "custom"] as const;
 export type ShopPlatform = typeof SHOP_PLATFORMS[number];
@@ -32,6 +38,11 @@ export const SHOP_INTEGRATIONS = [
   "product-configurator", "loyalty", "multi-warehouse", "reviews",
 ] as const;
 export type ShopIntegration = typeof SHOP_INTEGRATIONS[number];
+
+// Most commonly requested shop addons — shown by default in the calculator.
+export const POPULAR_SHOP_INTEGRATIONS: readonly ShopIntegration[] = [
+  "courier", "newsletter", "crm", "baselinker-basic", "ksef", "allegro", "omnibus", "reviews",
+];
 
 export const ERP_OPTIONS = ["none", "subiekt", "wapro", "comarch", "custom"] as const;
 export type ErpOption = typeof ERP_OPTIONS[number];
@@ -57,6 +68,11 @@ export const APP_INTEGRATIONS = [
   "search-elastic", "upload-s3", "stripe-subs",
 ] as const;
 export type AppIntegration = typeof APP_INTEGRATIONS[number];
+
+// Most commonly requested app addons — shown by default in the calculator.
+export const POPULAR_APP_INTEGRATIONS: readonly AppIntegration[] = [
+  "payments", "email", "rbac", "admin-panel", "rest-openapi", "stripe-subs", "ai",
+];
 
 // --- SHARED ---
 export const DESIGN_TIERS = ["lite", "standard", "premium"] as const;

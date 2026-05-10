@@ -2954,6 +2954,8 @@
       "stage": "Project stage",
       "techPreferences": "Preferred technologies (optional)",
       "techPreferencesHint": "We discuss these at the consultation. Skip if you have no preferences.",
+      "showAllOptions": "Show all options",
+      "hideExtraOptions": "Hide extra options",
       "tiers": {
         "lite": "Lite — template",
         "standard": "Standard — custom UI",

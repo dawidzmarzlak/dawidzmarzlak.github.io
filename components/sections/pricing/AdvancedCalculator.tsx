@@ -5,9 +5,9 @@ import {
   type AdvancedQuoteInput, type ProjectKind, type SiteFields, type ShopFields, type AppFields,
 } from "@/lib/design/calculator";
 import {
-  PROJECT_KINDS, SITE_GOALS, SITE_INTEGRATIONS,
-  SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, ERP_OPTIONS,
-  APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS,
+  PROJECT_KINDS, SITE_GOALS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
+  SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, POPULAR_SHOP_INTEGRATIONS, ERP_OPTIONS,
+  APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS, POPULAR_APP_INTEGRATIONS,
   DESIGN_TIERS, SUPPORT_TIERS, HOSTINGS, TIMELINES,
 } from "@/lib/design/project-kinds";
 
@@ -103,6 +103,8 @@ function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: Sit
   const set = <K extends keyof SiteFields>(k: K, v: SiteFields[K]) => onChange({ ...value, [k]: v });
   const toggle = (k: typeof SITE_INTEGRATIONS[number]) =>
     set("siteIntegrations", value.siteIntegrations.includes(k) ? value.siteIntegrations.filter(x => x !== k) : [...value.siteIntegrations, k]);
+  const popular = POPULAR_SITE_INTEGRATIONS;
+  const extra = SITE_INTEGRATIONS.filter((k) => !popular.includes(k));
   return (
     <>
       <Knob label={t("siteGoal")}>
@@ -115,7 +117,16 @@ function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: Sit
         <Toggle on={value.cms} onToggle={() => set("cms", !value.cms)} />
       </Knob>
       <Knob label={t("siteIntegrations")}>
-        <ChipGrid options={SITE_INTEGRATIONS} active={value.siteIntegrations} onToggle={toggle} labelFn={(k) => t(`siteIntegr.${k}`)} cols={3} />
+        <CollapsibleChipGrid
+          popular={popular}
+          extra={extra}
+          active={value.siteIntegrations}
+          onToggle={toggle}
+          labelFn={(k) => t(`siteIntegr.${k}`)}
+          cols={3}
+          showAllLabel={t("showAllOptions")}
+          hideExtraLabel={t("hideExtraOptions")}
+        />
       </Knob>
     </>
   );
@@ -131,6 +142,8 @@ function ShopSection({ value, onChange }: { value: ShopFields; onChange: (v: Sho
     set("paymentGateways", value.paymentGateways.includes(k) ? value.paymentGateways.filter(x => x !== k) : [...value.paymentGateways, k]);
   const toggleIntegr = (k: typeof SHOP_INTEGRATIONS[number]) =>
     set("shopIntegrations", value.shopIntegrations.includes(k) ? value.shopIntegrations.filter(x => x !== k) : [...value.shopIntegrations, k]);
+  const popular = POPULAR_SHOP_INTEGRATIONS;
+  const extra = SHOP_INTEGRATIONS.filter((k) => !popular.includes(k));
   return (
     <>
       <Knob label={t("catalogSize")}>
@@ -143,7 +156,16 @@ function ShopSection({ value, onChange }: { value: ShopFields; onChange: (v: Sho
         <ChipGrid options={PAYMENT_GATEWAYS} active={value.paymentGateways} onToggle={toggleGateway} labelFn={(k) => tCalc(`paymentGateways.${k}`)} cols={3} />
       </Knob>
       <Knob label={t("shopIntegrations")}>
-        <ChipGrid options={SHOP_INTEGRATIONS} active={value.shopIntegrations} onToggle={toggleIntegr} labelFn={(k) => t(`shopIntegr.${k}`)} cols={3} />
+        <CollapsibleChipGrid
+          popular={popular}
+          extra={extra}
+          active={value.shopIntegrations}
+          onToggle={toggleIntegr}
+          labelFn={(k) => t(`shopIntegr.${k}`)}
+          cols={3}
+          showAllLabel={t("showAllOptions")}
+          hideExtraLabel={t("hideExtraOptions")}
+        />
       </Knob>
       <Knob label={t("erp")}>
         <Pills options={ERP_OPTIONS} value={value.erp} onChange={(v) => set("erp", v)} labelFn={(k) => tCalc(`erp.${k}`)} cols={5} />
@@ -160,6 +182,8 @@ function AppSection({ value, onChange }: { value: AppFields; onChange: (v: AppFi
   const set = <K extends keyof AppFields>(k: K, v: AppFields[K]) => onChange({ ...value, [k]: v });
   const toggleIntegr = (k: typeof APP_INTEGRATIONS[number]) =>
     set("appIntegrations", value.appIntegrations.includes(k) ? value.appIntegrations.filter(x => x !== k) : [...value.appIntegrations, k]);
+  const popular = POPULAR_APP_INTEGRATIONS;
+  const extra = APP_INTEGRATIONS.filter((k) => !popular.includes(k));
   return (
     <>
       <Knob label={t("appType")}>
@@ -172,7 +196,16 @@ function AppSection({ value, onChange }: { value: AppFields; onChange: (v: AppFi
         <input type="range" min={1} max={6} value={value.roles} onChange={(e) => set("roles", +e.target.value)} className="w-full h-1 bg-line rounded outline-none accent-accent" />
       </Knob>
       <Knob label={t("appIntegrations")}>
-        <ChipGrid options={APP_INTEGRATIONS} active={value.appIntegrations} onToggle={toggleIntegr} labelFn={(k) => t(`appIntegr.${k}`)} cols={3} />
+        <CollapsibleChipGrid
+          popular={popular}
+          extra={extra}
+          active={value.appIntegrations}
+          onToggle={toggleIntegr}
+          labelFn={(k) => t(`appIntegr.${k}`)}
+          cols={3}
+          showAllLabel={t("showAllOptions")}
+          hideExtraLabel={t("hideExtraOptions")}
+        />
       </Knob>
       <Knob label={t("appMobile")}>
         <Toggle on={value.mobile} onToggle={() => set("mobile", !value.mobile)} />
@@ -265,6 +298,43 @@ function ChipGrid<T extends string>({ options, active, onToggle, labelFn, cols }
         </button>
       ))}
     </div>
+  );
+}
+
+function CollapsibleChipGrid<T extends string>({
+  popular, extra, active, onToggle, labelFn, cols, showAllLabel, hideExtraLabel,
+}: {
+  popular: readonly T[];
+  extra: readonly T[];
+  active: readonly T[];
+  onToggle: (v: T) => void;
+  labelFn: (k: T) => string;
+  cols: number;
+  showAllLabel: string;
+  hideExtraLabel: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  // If any extra option is already active (e.g. preset applied), auto-expand on mount.
+  const hasActiveExtra = extra.some((k) => active.includes(k));
+  const isOpen = expanded || hasActiveExtra;
+  return (
+    <>
+      <ChipGrid options={popular} active={active} onToggle={onToggle} labelFn={labelFn} cols={cols} />
+      {isOpen && (
+        <div className="mt-2">
+          <ChipGrid options={extra} active={active} onToggle={onToggle} labelFn={labelFn} cols={cols} />
+        </div>
+      )}
+      {!hasActiveExtra && extra.length > 0 && (
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-2 self-start font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted hover:text-fg transition-colors"
+        >
+          {expanded ? hideExtraLabel : `${showAllLabel} (${extra.length})`}
+        </button>
+      )}
+    </>
   );
 }
 
