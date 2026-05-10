@@ -15,7 +15,7 @@ export function PricingPresets({ activeKey, onSelect }: Props) {
   const fmt = (n: number) => n.toLocaleString(locale === "pl" ? "pl-PL" : "en-US");
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
       {PRESETS.map((preset, idx) => {
         const quote = computeAdvancedQuote(preset.input);
         const active = activeKey === preset.key;

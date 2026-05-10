@@ -30,6 +30,14 @@ describe("computeAdvancedQuote — preset calibration (2025/2026)", () => {
     expect(result.total).toBeLessThanOrEqual(17745);
   });
 
+  it("Aplikacja webowa preset (app) gives ~39 900 zl (+/-5%)", () => {
+    const preset = PRESETS.find((p) => p.key === "app")!;
+    expect(preset).toBeDefined();
+    const result = computeAdvancedQuote(preset.input);
+    expect(result.total).toBeGreaterThanOrEqual(37905);
+    expect(result.total).toBeLessThanOrEqual(41895);
+  });
+
   it("KSeF addon adds 1 800 zl to shop quote", () => {
     const input = presetInput("ecom");
     if (input.kind !== "shop") throw new Error("ecom preset must be a shop");
