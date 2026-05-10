@@ -10,7 +10,7 @@ describe("artisan-cafe config", () => {
   });
 
   it("declares all media keys consumed by the section components", () => {
-    for (const k of ["hero", "polaroid1", "polaroid2", "polaroid3"]) {
+    for (const k of ["hero"]) {
       expect(artisanCafeConfig.media).toHaveProperty(k);
     }
   });

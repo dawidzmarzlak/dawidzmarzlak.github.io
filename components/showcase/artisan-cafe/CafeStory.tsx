@@ -5,7 +5,7 @@ import { useRef, Fragment } from "react";
 import { Heart, Leaf, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
-import { useTheme, useContent, useMedia } from "@/lib/templates/provider";
+import { useTheme, useContent } from "@/lib/templates/provider";
 import type { ArtisanCafeContent, CafeStoryValue } from "@/lib/showcase/artisan-cafe/template.config";
 
 const VALUE_ICONS: Record<CafeStoryValue["iconName"], LucideIcon> = {
@@ -31,9 +31,7 @@ export function CafeStory() {
             transition={{ duration: 0.8 }}
             className="relative h-[500px]"
           >
-            {c.polaroids.map((p, i) => {
-              const imgSrc = useMedia<string>(p.imageKey);
-              return (
+            {c.polaroids.map((p, i) => (
                 <motion.div
                   key={i}
                   className={`absolute bg-white p-3 pb-12 shadow-lg ${p.positionClass} ${p.widthClass}`}
@@ -43,7 +41,7 @@ export function CafeStory() {
                 >
                   <div className="aspect-square relative overflow-hidden">
                     <Image
-                      src={imgSrc}
+                      src={p.imageSrc}
                       alt={p.alt}
                       fill
                       className="object-cover"
@@ -56,8 +54,7 @@ export function CafeStory() {
                     {p.caption}
                   </p>
                 </motion.div>
-              );
-            })}
+            ))}
 
             {/* Decorative sticker */}
             <motion.div

@@ -24,7 +24,7 @@ export interface CafePolaroid {
   rotation: number;
   positionClass: string;
   widthClass: string;
-  imageKey: string;
+  imageSrc: string;
   alt: string;
 }
 
@@ -112,7 +112,7 @@ export const artisanCafeConfig: BrandConfig = {
           rotation: -8,
           positionClass: "top-0 left-0",
           widthClass: "w-48",
-          imageKey: "polaroid1",
+          imageSrc: "/showcase/artisan-cafe/beans.jpg",
           alt: "Coffee beans",
         },
         {
@@ -120,7 +120,7 @@ export const artisanCafeConfig: BrandConfig = {
           rotation: 5,
           positionClass: "top-20 left-32",
           widthClass: "w-52",
-          imageKey: "polaroid2",
+          imageSrc: "/showcase/artisan-cafe/latte-art.jpg",
           alt: "Latte art",
         },
         {
@@ -128,7 +128,7 @@ export const artisanCafeConfig: BrandConfig = {
           rotation: -3,
           positionClass: "bottom-0 left-16",
           widthClass: "w-44",
-          imageKey: "polaroid3",
+          imageSrc: "/showcase/artisan-cafe/pastry.jpg",
           alt: "Fresh pastries",
         },
       ],
@@ -195,9 +195,6 @@ export const artisanCafeConfig: BrandConfig = {
   } satisfies Record<keyof ArtisanCafeContent, unknown>,
   media: {
     hero: "/showcase/artisan-cafe/hero.jpg",
-    polaroid1: "/showcase/artisan-cafe/beans.jpg",
-    polaroid2: "/showcase/artisan-cafe/latte-art.jpg",
-    polaroid3: "/showcase/artisan-cafe/pastry.jpg",
     interior: "/showcase/artisan-cafe/interior.jpg",
   },
 };
