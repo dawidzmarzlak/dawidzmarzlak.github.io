@@ -2,6 +2,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import type { AdvancedQuoteResult } from "@/lib/design/calculator";
 import { Link } from "@/i18n/routing";
+import { formatPlnWithEurTooltip } from "@/lib/design/format-price";
 
 interface Props { quote: AdvancedQuoteResult; }
 
@@ -49,12 +50,22 @@ export function PriceBreakdown({ quote }: Props) {
           <span className="font-mono">+{fmt(quote.rushDelta)}</span>
         </div>
       )}
-      <div className="border-t border-line pt-4 flex justify-between items-baseline">
-        <span className="font-mono text-[11px] text-fg-muted uppercase">{t("total")}</span>
-        <span className="font-display italic text-[36px] text-accent leading-none">
-          {fmt(quote.total)} <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">{tCalc("currency")}</span>
-        </span>
-      </div>
+      {(() => {
+        const { tooltip } = formatPlnWithEurTooltip(quote.total, locale);
+        return (
+          <div className="border-t border-line pt-4 flex justify-between items-baseline">
+            <span className="font-mono text-[11px] text-fg-muted uppercase">{t("total")}</span>
+            <span className="flex flex-col items-end">
+              <span className="font-display italic text-[36px] text-accent leading-none" title={tooltip ?? undefined}>
+                {fmt(quote.total)} <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">{tCalc("currency")}</span>
+              </span>
+              {tooltip && (
+                <span className="font-mono text-[11px] text-fg-muted opacity-70 mt-1">{tooltip}</span>
+              )}
+            </span>
+          </div>
+        );
+      })()}
       {quote.supportYearly > 0 && (
         <div className="mt-3 text-[12px] text-fg-muted flex justify-between">
           <span>{t("supportYearly")}</span>

@@ -2,6 +2,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { PRESETS, type PresetKey } from "@/lib/design/pricing-presets";
 import { computeAdvancedQuote } from "@/lib/design/calculator";
+import { formatPlnWithEurTooltip } from "@/lib/design/format-price";
 
 interface Props {
   activeKey: PresetKey | null;
@@ -39,9 +40,20 @@ export function PricingPresets({ activeKey, onSelect }: Props) {
             <p className={`text-[13px] m-0 mb-4 leading-[1.5] ${active ? "opacity-80" : "text-fg-muted"}`}>
               {t(`${preset.key}.desc`)}
             </p>
-            <div className={`font-display italic text-[32px] leading-none ${active ? "text-accent-fg" : "text-accent"}`}>
-              {t("from")} {fmt(quote.total)} <span className="font-mono not-italic text-[12px] opacity-70 ml-1.5">{tCalc("currency")}</span>
-            </div>
+            {(() => {
+              const { tooltip } = formatPlnWithEurTooltip(quote.total, locale);
+              return (
+                <div className={`font-display italic text-[32px] leading-none ${active ? "text-accent-fg" : "text-accent"}`}>
+                  <span title={tooltip ?? undefined}>
+                    {t("from")} {fmt(quote.total)}{" "}
+                    <span className="font-mono not-italic text-[12px] opacity-70 ml-1.5">{tCalc("currency")}</span>
+                  </span>
+                  {tooltip && (
+                    <span className="block font-mono not-italic text-[11px] opacity-50 mt-1">{tooltip}</span>
+                  )}
+                </div>
+              );
+            })()}
           </button>
         );
       })}

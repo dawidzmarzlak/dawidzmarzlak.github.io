@@ -1,9 +1,16 @@
+"use client";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { type Stack } from "@/lib/design/services-stacks";
+import { formatPlnWithEurTooltip } from "@/lib/design/format-price";
 
 interface Props { stack: Stack; }
 
 export function StackDetailCard({ stack: s }: Props) {
+  const locale = useLocale();
+  const tPricing = useTranslations("pricing");
+  const { text: priceText, tooltip: priceTooltip } = formatPlnWithEurTooltip(s.fromPln, locale);
+  const perMonthSuffix = s.fromPlnPerMonth ? ` ${tPricing("perMonth")}` : "";
   return (
     <section className="max-w-[1400px] mx-auto px-5 lg:px-9 py-6" data-stack-detail>
       <div className="bg-bg-card rounded-[32px] p-6 lg:p-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12">
@@ -57,7 +64,12 @@ export function StackDetailCard({ stack: s }: Props) {
           <div className="pt-6 border-t border-line grid grid-cols-2 gap-4">
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">Od</div>
-              <div className="font-display italic text-[36px] leading-none text-accent mt-1.5">{s.from}</div>
+              <div className="font-display italic text-[36px] leading-none text-accent mt-1.5" title={priceTooltip ?? undefined}>
+                {priceText}{perMonthSuffix}
+              </div>
+              {priceTooltip && (
+                <div className="font-mono text-[11px] text-fg-muted opacity-70 mt-1">{priceTooltip}{perMonthSuffix}</div>
+              )}
             </div>
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">Czas</div>

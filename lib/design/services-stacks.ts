@@ -10,7 +10,12 @@ export interface Stack {
   use: string[];
   bullets: Array<[string, string, string]>;
   examples: string[];
+  /** Legacy display string (kept for backward compatibility). New code should use `fromPln`. */
   from: string;
+  /** Numeric PLN baseline price — source of truth for currency formatting (EUR conversion etc.). */
+  fromPln: number;
+  /** When true, the price is "per month" (recurring). Used for maintenance stack. */
+  fromPlnPerMonth?: boolean;
   time: string;
 }
 
@@ -30,6 +35,7 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["FashionHub — sklep premium", "EduPlatform — platforma kursów"],
     from: "2 600 PLN",
+    fromPln: 2600,
     time: "4–8 tygodni",
   },
   "wp-woo": {
@@ -47,6 +53,7 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["TechCorp — strona korporacyjna IT", "BeautyShop — kosmetyki premium"],
     from: "2 900 PLN",
+    fromPln: 2900,
     time: "3–8 tygodni",
   },
   app: {
@@ -64,6 +71,7 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["MediClinic — portal pacjenta", "BookingPro — system rezerwacji"],
     from: "36 000 PLN",
+    fromPln: 36000,
     time: "Od 12 tygodni",
   },
   maintenance: {
@@ -81,6 +89,8 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["MediClinic — SLA Gold 24/7", "BeautyShop — Standard z 6h dev/mc"],
     from: "240 PLN / mc",
+    fromPln: 240,
+    fromPlnPerMonth: true,
     time: "Od następnego dnia",
   },
   audits: {
@@ -98,6 +108,7 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["FoodCorp — audyt CWV + plan optymalizacji", "LawFirm — audyt WCAG z planem fixów"],
     from: "800 PLN",
+    fromPln: 800,
     time: "1–2 tygodnie",
   },
   migrations: {
@@ -115,6 +126,7 @@ export const STACKS: Record<StackKey, Stack> = {
     ],
     examples: ["HurtBudowlany — Shoper → WC z 8k produktów", "FashionHub — integracja Allegro + Empik"],
     from: "2 500 PLN",
+    fromPln: 2500,
     time: "2–6 tygodni",
   },
 };
