@@ -1,23 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
-
-const products = [
-  { name: "Silk Blouse", price: "$320", image: "/showcase/fashion-store/product-1.jpg", isNew: true },
-  { name: "Wool Coat", price: "$890", image: "/showcase/fashion-store/product-2.jpg", isNew: false },
-  { name: "Cashmere Sweater", price: "$450", image: "/showcase/fashion-store/product-3.jpg", isNew: true },
-  { name: "Leather Bag", price: "$680", image: "/showcase/fashion-store/product-4.jpg", isNew: false },
-];
+import { useTheme, useContent } from "@/lib/templates/provider";
+import type { FashionStoreContent } from "@/lib/showcase/fashion-store/template.config";
 
 export function FashionProducts() {
-  const t = useTranslations("showcase.fashion-store.products");
+  const theme = useTheme();
+  const c = useContent<FashionStoreContent["products"]>("products");
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24" style={{ backgroundColor: theme.palette.surface }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -27,24 +22,24 @@ export function FashionProducts() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-light text-[#0A0A0A] mb-4"
-            style={{ fontFamily: "var(--font-cormorant)" }}
+            className="text-4xl md:text-5xl font-light mb-4"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("title")}
+            {c.title}
           </h2>
           <p
-            className="text-base text-[#666666]"
-            style={{ fontFamily: "var(--font-montserrat)" }}
+            className="text-base"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("subtitle")}
+            {c.subtitle}
           </p>
         </motion.div>
 
         {/* Products grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
+          {c.items.map((product, index) => (
             <motion.div
-              key={product.name}
+              key={product.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -52,17 +47,26 @@ export function FashionProducts() {
               className="group"
             >
               {/* Product image */}
-              <div className="aspect-[3/4] mb-4 relative overflow-hidden bg-[#F5F5F5]">
+              <div
+                className="aspect-[3/4] mb-4 relative overflow-hidden"
+                style={{ backgroundColor: theme.palette.surfaceAlt }}
+              >
                 <Image
-                  src={product.image}
+                  src={product.imageSrc}
                   alt={product.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* New badge */}
-                {product.isNew && (
-                  <div className="absolute top-4 left-4 bg-[#0A0A0A] text-white text-xs tracking-wider uppercase px-3 py-1">
-                    {t("newArrival")}
+                {product.badge === "newArrival" && (
+                  <div
+                    className="absolute top-4 left-4 text-xs tracking-wider uppercase px-3 py-1"
+                    style={{
+                      backgroundColor: theme.palette.fg,
+                      color: theme.palette.surface,
+                    }}
+                  >
+                    {c.newArrivalBadge}
                   </div>
                 )}
 
@@ -73,25 +77,39 @@ export function FashionProducts() {
                   className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Button
-                    className="w-full bg-white hover:bg-[#0A0A0A] text-[#0A0A0A] hover:text-white font-normal text-xs tracking-wider uppercase"
-                    style={{ fontFamily: "var(--font-montserrat)" }}
+                    className="w-full font-normal text-xs tracking-wider uppercase transition-colors"
+                    style={{
+                      fontFamily: theme.fonts.body,
+                      backgroundColor: theme.palette.surface,
+                      color: theme.palette.fg,
+                    }}
+                    onMouseEnter={(e) => {
+                      const btn = e.currentTarget as HTMLButtonElement;
+                      btn.style.backgroundColor = theme.palette.fg;
+                      btn.style.color = theme.palette.surface;
+                    }}
+                    onMouseLeave={(e) => {
+                      const btn = e.currentTarget as HTMLButtonElement;
+                      btn.style.backgroundColor = theme.palette.surface;
+                      btn.style.color = theme.palette.fg;
+                    }}
                   >
                     <ShoppingBag className="w-4 h-4 mr-2" />
-                    {t("addToCart")}
+                    {c.addToCartCta}
                   </Button>
                 </motion.div>
               </div>
 
               {/* Product info */}
               <h3
-                className="text-base font-light text-[#0A0A0A]"
-                style={{ fontFamily: "var(--font-cormorant)" }}
+                className="text-base font-light"
+                style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
               >
                 {product.name}
               </h3>
               <p
-                className="text-sm text-[#666666] mt-1"
-                style={{ fontFamily: "var(--font-montserrat)" }}
+                className="text-sm mt-1"
+                style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
               >
                 {product.price}
               </p>
