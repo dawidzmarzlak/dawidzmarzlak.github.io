@@ -1,31 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { Zap, Check } from "lucide-react";
-
-const integrations = [
-  { name: "Slack", category: "communication" },
-  { name: "GitHub", category: "development" },
-  { name: "Salesforce", category: "crm" },
-  { name: "Stripe", category: "payments" },
-  { name: "HubSpot", category: "marketing" },
-  { name: "Jira", category: "development" },
-  { name: "Intercom", category: "support" },
-  { name: "Zapier", category: "automation" },
-  { name: "Google Analytics", category: "analytics" },
-  { name: "Mailchimp", category: "marketing" },
-  { name: "Zendesk", category: "support" },
-  { name: "Notion", category: "productivity" },
-];
+import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
+import type { SaasDashboardContent } from "@/lib/showcase/saas-dashboard/template.config";
 
 export function SaasIntegrations() {
-  const t = useTranslations("showcase.saas-dashboard.integrations");
+  const theme = useTheme();
+  const c = useContent<SaasDashboardContent["integrations"]>("integrations");
 
   return (
-    <section className="py-24 bg-[#1E293B]/30 relative overflow-hidden">
+    <section
+      className="py-24 relative overflow-hidden"
+      style={{ backgroundColor: withAlpha(theme.palette.surface, 30) }}
+    >
       {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#8B5CF6]/10 rounded-full blur-[100px]" />
+      <div
+        className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[100px]"
+        style={{ backgroundColor: withAlpha(theme.palette.accentSecondary, 10) }}
+      />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -35,32 +29,38 @@ export function SaasIntegrations() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6366F1]/10 border border-[#6366F1]/20 mb-6">
-            <Zap className="w-4 h-4 text-[#6366F1]" />
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+            style={{
+              backgroundColor: withAlpha(theme.palette.accent, 10),
+              border: `1px solid ${withAlpha(theme.palette.accent, 20)}`,
+            }}
+          >
+            <Zap className="w-4 h-4" style={{ color: theme.palette.accent }} />
             <span
-              className="text-sm text-[#6366F1]"
-              style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              className="text-sm"
+              style={{ fontFamily: theme.fonts.body, color: theme.palette.accent }}
             >
-              {t("badge")}
+              {c.badge}
             </span>
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-urbanist)" }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
           >
-            {t("title")}
+            {c.title}
           </h2>
           <p
-            className="text-lg text-[#94A3B8] max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            className="text-lg max-w-2xl mx-auto"
+            style={{ fontFamily: theme.fonts.body, color: theme.palette.muted }}
           >
-            {t("subtitle")}
+            {c.subtitle}
           </p>
         </motion.div>
 
         {/* Integrations Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {integrations.map((integration, index) => (
+          {c.items.map((integration, index) => (
             <motion.div
               key={integration.name}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -68,27 +68,36 @@ export function SaasIntegrations() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-[#0F172A]/80 backdrop-blur-sm rounded-xl border border-[#334155] p-6 hover:border-[#6366F1]/50 transition-all duration-300 group cursor-pointer"
+              className="relative backdrop-blur-sm rounded-xl p-6 transition-all duration-300 group cursor-pointer"
+              style={{
+                backgroundColor: withAlpha(theme.palette.bg, 80),
+                border: `1px solid ${theme.palette.surfaceLight}`,
+              }}
             >
               {/* Icon placeholder */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#6366F1]/20 to-[#06B6D4]/20 flex items-center justify-center mb-4 group-hover:from-[#6366F1]/30 group-hover:to-[#06B6D4]/30 transition-all">
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all"
+                style={{
+                  background: `linear-gradient(to bottom right, ${withAlpha(theme.palette.accent, 20)}, ${withAlpha(theme.palette.accentTertiary, 20)})`,
+                }}
+              >
                 <span
-                  className="text-lg font-bold text-[#6366F1]"
-                  style={{ fontFamily: "var(--font-urbanist)" }}
+                  className="text-lg font-bold"
+                  style={{ fontFamily: theme.fonts.display, color: theme.palette.accent }}
                 >
                   {integration.name.charAt(0)}
                 </span>
               </div>
 
               <h3
-                className="text-white font-medium mb-1 group-hover:text-[#6366F1] transition-colors"
-                style={{ fontFamily: "var(--font-urbanist)" }}
+                className="font-medium mb-1 transition-colors group-hover:opacity-80"
+                style={{ fontFamily: theme.fonts.display, color: theme.palette.fg }}
               >
                 {integration.name}
               </h3>
               <p
-                className="text-xs text-[#64748B] capitalize"
-                style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                className="text-xs capitalize"
+                style={{ fontFamily: theme.fonts.body, color: withAlpha(theme.palette.muted, 70) }}
               >
                 {integration.category}
               </p>
@@ -110,12 +119,14 @@ export function SaasIntegrations() {
           className="mt-12 text-center"
         >
           <p
-            className="text-[#64748B]"
-            style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            style={{ fontFamily: theme.fonts.body, color: withAlpha(theme.palette.muted, 70) }}
           >
-            {t("moreText")}{" "}
-            <span className="text-[#6366F1] cursor-pointer hover:underline">
-              {t("viewAll")}
+            {c.moreText}{" "}
+            <span
+              className="cursor-pointer hover:underline"
+              style={{ color: theme.palette.accent }}
+            >
+              {c.viewAllCta}
             </span>
           </p>
         </motion.div>
