@@ -22,8 +22,6 @@ export interface CafeStoryValue {
 export interface CafePolaroid {
   caption: string;
   rotation: number;
-  positionClass: string;
-  widthClass: string;
   imageSrc: string;
   alt: string;
 }
@@ -61,6 +59,10 @@ export interface ArtisanCafeContent {
 }
 
 export const artisanCafeConfig: BrandConfig = {
+  // NOTE: meta.brandName / meta.industry / meta.tagline are also duplicated in
+  // messages/en.json and messages/pl.json (showcase.artisan-cafe.{...}) because
+  // the unrefactored ShowcaseList component still reads them from i18n. Keep both
+  // in sync until ShowcaseList is refactored (Phase 2 plan).
   meta: {
     slug: "artisan-cafe",
     brandName: "Bean & Brew",
@@ -76,6 +78,7 @@ export const artisanCafeConfig: BrandConfig = {
       muted: "#6B7B3C",
       surface: "#4A3328",
       surfaceAlt: "#E8DFD0",
+      surfaceLight: "#FFFFFF",
     },
     fonts: {
       display: "var(--font-dm-serif)",
@@ -110,24 +113,18 @@ export const artisanCafeConfig: BrandConfig = {
         {
           caption: "Est. 2018",
           rotation: -8,
-          positionClass: "top-0 left-0",
-          widthClass: "w-48",
           imageSrc: "/showcase/artisan-cafe/beans.jpg",
           alt: "Coffee beans",
         },
         {
           caption: "Fresh daily",
           rotation: 5,
-          positionClass: "top-20 left-32",
-          widthClass: "w-52",
           imageSrc: "/showcase/artisan-cafe/latte-art.jpg",
           alt: "Latte art",
         },
         {
           caption: "Made with love",
           rotation: -3,
-          positionClass: "bottom-0 left-16",
-          widthClass: "w-44",
           imageSrc: "/showcase/artisan-cafe/pastry.jpg",
           alt: "Fresh pastries",
         },
@@ -195,6 +192,5 @@ export const artisanCafeConfig: BrandConfig = {
   } satisfies Record<keyof ArtisanCafeContent, unknown>,
   media: {
     hero: "/showcase/artisan-cafe/hero.jpg",
-    interior: "/showcase/artisan-cafe/interior.jpg",
   },
 };

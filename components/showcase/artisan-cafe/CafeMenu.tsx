@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Coffee, Leaf, Croissant, Cookie } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
 import type {
   ArtisanCafeContent,
   CafeMenuCategory,
@@ -80,7 +81,7 @@ export function CafeMenu() {
                 <button
                   key={category.key}
                   onClick={() => setActiveCategory(category.key)}
-                  className="flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300"
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300${!isActive ? " hover:border-white/40" : ""}`}
                   style={{
                     fontFamily: theme.fonts.body,
                     backgroundColor: isActive ? theme.palette.accent : "transparent",
@@ -122,7 +123,7 @@ export function CafeMenu() {
                     {item.featured && (
                       <Badge
                         className="text-white border-0 text-xs"
-                        style={{ backgroundColor: theme.palette.accent + "80" }}
+                        style={{ backgroundColor: withAlpha(theme.palette.accent, 50) }}
                       >
                         {c.featuredLabel}
                       </Badge>

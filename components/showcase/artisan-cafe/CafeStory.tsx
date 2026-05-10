@@ -6,6 +6,7 @@ import { Heart, Leaf, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
 import type { ArtisanCafeContent, CafeStoryValue } from "@/lib/showcase/artisan-cafe/template.config";
 
 const VALUE_ICONS: Record<CafeStoryValue["iconName"], LucideIcon> = {
@@ -14,6 +15,12 @@ const VALUE_ICONS: Record<CafeStoryValue["iconName"], LucideIcon> = {
   Users,
 };
 
+const POLAROID_LAYOUT = [
+  { positionClass: "top-0 left-0",       widthClass: "w-48" },
+  { positionClass: "top-20 left-32",     widthClass: "w-52" },
+  { positionClass: "bottom-0 left-16",   widthClass: "w-44" },
+] as const;
+
 export function CafeStory() {
   const theme = useTheme();
   const c = useContent<ArtisanCafeContent["story"]>("story");
@@ -21,7 +28,7 @@ export function CafeStory() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section ref={ref} className="py-24" style={{ backgroundColor: theme.palette.surfaceLight }}>
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Polaroid Photos Side */}
@@ -31,10 +38,12 @@ export function CafeStory() {
             transition={{ duration: 0.8 }}
             className="relative h-[500px]"
           >
-            {c.polaroids.map((p, i) => (
+            {c.polaroids.map((p, i) => {
+              const layout = POLAROID_LAYOUT[i] ?? POLAROID_LAYOUT[POLAROID_LAYOUT.length - 1];
+              return (
                 <motion.div
-                  key={i}
-                  className={`absolute bg-white p-3 pb-12 shadow-lg ${p.positionClass} ${p.widthClass}`}
+                  key={p.caption}
+                  className={`absolute bg-white p-3 pb-12 shadow-lg ${layout.positionClass} ${layout.widthClass}`}
                   initial={{ rotate: p.rotation }}
                   whileHover={{ rotate: 0, scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -54,7 +63,8 @@ export function CafeStory() {
                     {p.caption}
                   </p>
                 </motion.div>
-            ))}
+              );
+            })}
 
             {/* Decorative sticker */}
             <motion.div
@@ -93,7 +103,7 @@ export function CafeStory() {
 
             <p
               className="text-lg leading-relaxed mb-8"
-              style={{ fontFamily: theme.fonts.body, color: theme.palette.fg + "B3" }}
+              style={{ fontFamily: theme.fonts.body, color: withAlpha(theme.palette.fg, 70) }}
             >
               {c.description}
             </p>

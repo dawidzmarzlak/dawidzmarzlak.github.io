@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Coffee } from "lucide-react";
 import Image from "next/image";
 import { useTheme, useContent, useMedia } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
 import type { ArtisanCafeContent } from "@/lib/showcase/artisan-cafe/template.config";
 
 export function CafeHero() {
@@ -32,7 +33,7 @@ export function CafeHero() {
         {/* Dashed circle */}
         <motion.div
           className="absolute top-20 right-20 w-32 h-32 rounded-full border-2 border-dashed"
-          style={{ borderColor: theme.palette.fg + "33" }}
+          style={{ borderColor: withAlpha(theme.palette.fg, 20) }}
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
         />
@@ -44,7 +45,7 @@ export function CafeHero() {
               key={i}
               className="absolute w-2 h-2 rounded-full"
               style={{
-                backgroundColor: theme.palette.accent + "4D",
+                backgroundColor: withAlpha(theme.palette.accent, 30),
                 left: `${(i % 3) * 16}px`,
                 top: `${Math.floor(i / 3) * 16}px`,
               }}
@@ -55,7 +56,7 @@ export function CafeHero() {
         {/* Wavy line */}
         <svg
           className="absolute bottom-1/4 right-1/4 w-48 h-8"
-          style={{ color: theme.palette.muted + "4D" }}
+          style={{ color: withAlpha(theme.palette.muted, 30) }}
           viewBox="0 0 200 30"
         >
           <path
@@ -158,7 +159,7 @@ export function CafeHero() {
           >
             <Button
               size="lg"
-              className="text-white font-normal px-8 py-6 text-base rounded-full"
+              className="font-normal px-8 py-6 text-base text-white hover:opacity-90 transition-opacity rounded-full"
               style={{
                 fontFamily: theme.fonts.body,
                 backgroundColor: theme.palette.fg,
@@ -169,7 +170,7 @@ export function CafeHero() {
             <Button
               size="lg"
               variant="outline"
-              className="px-8 py-6 text-base rounded-full"
+              className="px-8 py-6 text-base hover:opacity-80 transition-opacity rounded-full"
               style={{
                 fontFamily: theme.fonts.body,
                 borderColor: theme.palette.fg,

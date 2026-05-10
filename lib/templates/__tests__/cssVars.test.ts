@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { themeToCssVars } from "../cssVars";
+import { themeToCssVars, withAlpha } from "../cssVars";
 
 describe("themeToCssVars", () => {
   it("flattens palette into --brand-color-* custom properties", () => {
@@ -31,5 +31,25 @@ describe("themeToCssVars", () => {
       radius: { sm: "0", md: "0", lg: "0" },
     });
     expect(vars).not.toHaveProperty("--brand-color-muted");
+  });
+});
+
+describe("withAlpha", () => {
+  it("appends alpha to 6-digit hex", () => {
+    expect(withAlpha("#5C4033", 20)).toBe("#5C403333");
+    expect(withAlpha("#5C4033", 50)).toBe("#5C403380");
+    expect(withAlpha("#5C4033", 100)).toBe("#5C4033ff");
+  });
+
+  it("expands 3-digit shorthand before appending", () => {
+    expect(withAlpha("#fff", 50)).toBe("#ffffff80");
+  });
+
+  it("strips existing alpha (idempotent)", () => {
+    expect(withAlpha("#5C403380", 20)).toBe("#5C403333");
+  });
+
+  it("returns input unchanged for invalid hex", () => {
+    expect(withAlpha("blue", 50)).toBe("blue");
   });
 });

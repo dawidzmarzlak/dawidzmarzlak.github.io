@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Navigation } from "lucide-react";
 import { useTheme, useContent } from "@/lib/templates/provider";
+import { withAlpha } from "@/lib/templates/cssVars";
 import type { ArtisanCafeContent } from "@/lib/showcase/artisan-cafe/template.config";
 
 export function CafeLocation() {
@@ -28,7 +29,7 @@ export function CafeLocation() {
             transition={{ duration: 0.8 }}
             className="aspect-square rounded-3xl relative overflow-hidden"
             style={{
-              background: `linear-gradient(135deg, ${theme.palette.muted}33, ${theme.palette.fg}33)`,
+              background: `linear-gradient(135deg, ${withAlpha(theme.palette.muted, 20)}, ${withAlpha(theme.palette.fg, 20)})`,
             }}
           >
             {/* Illustrated map style */}
@@ -112,7 +113,7 @@ export function CafeLocation() {
 
             <Button
               size="lg"
-              className="text-white rounded-full"
+              className="text-white rounded-full hover:opacity-90 transition-opacity"
               style={{
                 fontFamily: theme.fonts.body,
                 backgroundColor: theme.palette.fg,
