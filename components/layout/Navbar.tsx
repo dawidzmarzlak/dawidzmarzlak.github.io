@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { Logo } from "@/components/layout/Logo";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -30,9 +31,8 @@ export function Navbar() {
     <>
       <header className="sticky top-0 z-50 bg-bg/95 backdrop-blur border-b border-line">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-9 py-4 flex items-center gap-9">
-          <Link href="/" className="flex items-center gap-3 text-fg no-underline">
-            <span className="w-9 h-9 rounded-full bg-accent text-accent-fg grid place-items-center font-extrabold text-[18px]">i</span>
-            <span className="font-semibold text-[18px] tracking-[-0.03em]">IT Solutions</span>
+          <Link href="/" className="flex items-center text-fg no-underline" aria-label="IT Solutions — Home">
+            <Logo />
           </Link>
 
           <nav className="hidden md:flex gap-7 ml-auto text-[14px] font-medium" aria-label={t("menu")}>
