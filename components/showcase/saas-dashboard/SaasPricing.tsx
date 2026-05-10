@@ -74,7 +74,7 @@ export function SaasPricing() {
                     background: `linear-gradient(to right, ${theme.palette.accent}, ${theme.palette.accentSecondary})`,
                   }}
                 >
-                  <span className="text-xs font-semibold text-white">Popular</span>
+                  <span className="text-xs font-semibold text-white">{c.popularBadge}</span>
                 </div>
               )}
 
@@ -99,9 +99,9 @@ export function SaasPricing() {
                   >
                     {tier.price}
                   </span>
-                  {tier.key !== "enterprise" && (
+                  {tier.priceUnit && (
                     <span className="mb-1" style={{ color: theme.palette.muted }}>
-                      /{c.billingToggle.monthly.toLowerCase()}
+                      /{tier.priceUnit}
                     </span>
                   )}
                 </div>

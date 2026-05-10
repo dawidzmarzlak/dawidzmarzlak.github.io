@@ -23,20 +23,21 @@ export function generateStaticParams() {
 
 export default function SaasDashboardPage() {
   return (
-    <TemplateProvider config={saasDashboardConfig} className="min-h-screen">
-      <div style={{ backgroundColor: saasDashboardConfig.theme.palette.bg }}>
-        <BackToPortfolio />
-        <SaasHero />
-        <SaasFeatures />
-        <SaasHowItWorks />
-        <SaasIntegrations />
-        <SaasTestimonials />
-        <SaasFAQ />
-        <SaasPricing />
-        <SaasCTA />
-        <ShowcaseCTA theme="dark" />
-        <ShowcaseFooter theme="dark" />
-      </div>
+    <TemplateProvider
+      config={saasDashboardConfig}
+      className="min-h-screen bg-[var(--brand-color-bg)]"
+    >
+      <BackToPortfolio />
+      <SaasHero />
+      <SaasFeatures />
+      <SaasHowItWorks />
+      <SaasIntegrations />
+      <SaasTestimonials />
+      <SaasFAQ />
+      <SaasPricing />
+      <SaasCTA />
+      <ShowcaseCTA theme="dark" />
+      <ShowcaseFooter theme="dark" />
     </TemplateProvider>
   );
 }

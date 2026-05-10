@@ -1,12 +1,13 @@
 "use client";
 
+import type React from "react";
 import { motion } from "framer-motion";
 import { Activity, Brain, Blocks, Shield } from "lucide-react";
 import { useTheme, useContent } from "@/lib/templates/provider";
 import { withAlpha } from "@/lib/templates/cssVars";
 import type { SaasDashboardContent, SaasFeature } from "@/lib/showcase/saas-dashboard/template.config";
 
-const FEATURE_ICONS: Record<SaasFeature["iconName"], React.ComponentType<{ className?: string }>> = {
+const FEATURE_ICONS: Record<SaasFeature["iconName"], React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   Activity,
   Brain,
   Blocks,

@@ -153,12 +153,12 @@ export function SaasTestimonials() {
                           {Array.from({ length: 5 }).map((_, i) => (
                             <Star
                               key={i}
-                              className={`w-4 h-4 ${
+                              className="w-4 h-4"
+                              style={
                                 i < testimonial.rating
-                                  ? "fill-[#FFE66D] text-[#FFE66D]"
-                                  : ""
-                              }`}
-                              style={i >= testimonial.rating ? { color: theme.palette.surfaceLight } : undefined}
+                                  ? { fill: theme.palette.warning, color: theme.palette.warning }
+                                  : { color: theme.palette.surfaceLight }
+                              }
                             />
                           ))}
                         </div>

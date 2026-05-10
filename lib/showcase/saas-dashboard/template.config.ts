@@ -39,6 +39,7 @@ export interface SaasPricingTier {
   key: string;
   name: string;
   price: string;
+  priceUnit: string | null;
   description: string;
   featured: boolean;
   features: string[];
@@ -90,8 +91,7 @@ export interface SaasDashboardContent {
   pricing: {
     title: string;
     subtitle: string;
-    billingToggle: { monthly: string; annually: string };
-    chooseCta: string;
+    popularBadge: string;
     tiers: SaasPricingTier[];
   };
   cta: {
@@ -124,6 +124,7 @@ export const saasDashboardConfig: BrandConfig = {
       surface: "#1E293B",
       surfaceLight: "#334155",
       success: "#22C55E",
+      warning: "#FFE66D",
     },
     fonts: {
       display: "var(--font-urbanist)",
@@ -311,13 +312,13 @@ export const saasDashboardConfig: BrandConfig = {
     pricing: {
       title: "Pricing",
       subtitle: "Choose the plan that fits your needs",
-      billingToggle: { monthly: "Monthly", annually: "Annually" },
-      chooseCta: "Choose Plan",
+      popularBadge: "Popular",
       tiers: [
         {
           key: "starter",
           name: "Starter",
           price: "$29",
+          priceUnit: "month",
           description: "For small teams",
           featured: false,
           features: ["5 users", "10 dashboards", "7-day history", "Email support"],
@@ -327,6 +328,7 @@ export const saasDashboardConfig: BrandConfig = {
           key: "pro",
           name: "Professional",
           price: "$79",
+          priceUnit: "month",
           description: "For growing companies",
           featured: true,
           features: ["25 users", "Unlimited dashboards", "1-year history", "Priority support"],
@@ -336,6 +338,7 @@ export const saasDashboardConfig: BrandConfig = {
           key: "enterprise",
           name: "Enterprise",
           price: "Contact Us",
+          priceUnit: null,
           description: "For large organizations",
           featured: false,
           features: [
