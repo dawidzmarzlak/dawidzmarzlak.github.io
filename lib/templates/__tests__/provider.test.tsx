@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { TemplateProvider, useTheme, useContent, useMedia } from "../provider";
+import { TemplateProvider, useTheme, useContent, useMedia, useMeta } from "../provider";
 import type { BrandConfig } from "../types";
 
 const config: BrandConfig = {
@@ -70,5 +70,32 @@ describe("TemplateProvider", () => {
       return null;
     }
     expect(() => render(<NakedProbe />)).toThrow(/TemplateProvider/);
+  });
+
+  it("useMedia throws helpful error when key missing", () => {
+    function BadMedia() {
+      useMedia("missing-key");
+      return null;
+    }
+    expect(() =>
+      render(
+        <TemplateProvider config={config}>
+          <BadMedia />
+        </TemplateProvider>,
+      ),
+    ).toThrow(/missing-key/);
+  });
+
+  it("useMeta returns the meta object", () => {
+    function MetaProbe() {
+      const meta = useMeta();
+      return <span data-testid="slug">{meta.slug}</span>;
+    }
+    render(
+      <TemplateProvider config={config}>
+        <MetaProbe />
+      </TemplateProvider>,
+    );
+    expect(screen.getByTestId("slug")).toHaveTextContent("demo");
   });
 });
