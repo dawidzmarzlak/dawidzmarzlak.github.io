@@ -7,6 +7,8 @@ import {
   FashionProducts,
   FashionNewsletter,
 } from "@/components/showcase/fashion-store";
+import { TemplateProvider } from "@/lib/templates/provider";
+import { fashionStoreConfig } from "@/lib/showcase/fashion-store/template.config";
 import { routing } from "@/i18n/routing";
 
 export const dynamic = "force-static";
@@ -17,22 +19,17 @@ export function generateStaticParams() {
 
 export default function FashionStorePage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <TemplateProvider
+      config={fashionStoreConfig}
+      className="min-h-screen bg-[var(--brand-color-bg)]"
+    >
       <BackToPortfolio />
       <FashionHero />
       <FashionCollections />
       <FashionProducts />
       <FashionNewsletter />
-      <ShowcaseCTA
-        theme="light"
-        accentColor="#D4A5A5"
-        projectName="MAISON ÉLISE"
-      />
-      <ShowcaseFooter
-        projectName="MAISON ÉLISE"
-        accentColor="#D4A5A5"
-        theme="light"
-      />
-    </div>
+      <ShowcaseCTA theme="light" />
+      <ShowcaseFooter theme="light" />
+    </TemplateProvider>
   );
 }

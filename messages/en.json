@@ -1078,49 +1078,9 @@
       "tagline": "Real-Time Data Insights"
     },
     "fashion-store": {
-      "name": "Fashion Boutique",
       "brandName": "MAISON ÉLISE",
-      "tagline": "Timeless Elegance",
       "industry": "Fashion",
-      "hero": {
-        "title": "New Collection",
-        "subtitle": "Discover sophisticated designs that define modern luxury. Handcrafted with the finest materials.",
-        "cta": "Discover Collection",
-        "ctaSecondary": "Lookbook"
-      },
-      "collections": {
-        "title": "Collections",
-        "subtitle": "Seasonal inspirations",
-        "spring": "Spring/Summer 2025",
-        "autumn": "Autumn/Winter 2024",
-        "essentials": "Essentials",
-        "viewCollection": "View Collection"
-      },
-      "products": {
-        "title": "Bestsellers",
-        "subtitle": "Our most popular products",
-        "addToCart": "Add to Cart",
-        "viewDetails": "Details",
-        "newArrival": "New Arrival",
-        "soldOut": "Sold Out"
-      },
-      "lookbook": {
-        "title": "Lookbook",
-        "subtitle": "Style inspiration for every occasion"
-      },
-      "about": {
-        "title": "About the Brand",
-        "description": "MAISON ÉLISE is a Parisian brand founded in 2015. We blend French elegance with modern minimalism, creating timeless designs for discerning clients.",
-        "craftsmanship": "Handcrafted",
-        "sustainable": "Sustainable Fashion",
-        "exclusive": "Exclusive Materials"
-      },
-      "newsletter": {
-        "title": "Stay Updated",
-        "description": "Subscribe and get 10% off your first order",
-        "placeholder": "Your email",
-        "button": "Subscribe"
-      }
+      "tagline": "Timeless Elegance"
     },
     "fitness-studio": {
       "name": "Fitness Studio",

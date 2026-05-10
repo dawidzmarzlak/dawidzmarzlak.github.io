@@ -1078,49 +1078,9 @@
       "tagline": "Dane w Czasie Rzeczywistym"
     },
     "fashion-store": {
-      "name": "Butik Mody",
       "brandName": "MAISON ÉLISE",
-      "tagline": "Ponadczasowa Elegancja",
       "industry": "Moda",
-      "hero": {
-        "title": "Nowa Kolekcja",
-        "subtitle": "Odkryj wyrafinowane projekty, które definiują nowoczesny luksus. Ręcznie wykonane z najlepszych materiałów.",
-        "cta": "Odkryj Kolekcję",
-        "ctaSecondary": "Lookbook"
-      },
-      "collections": {
-        "title": "Kolekcje",
-        "subtitle": "Sezonowe inspiracje",
-        "spring": "Wiosna/Lato 2025",
-        "autumn": "Jesień/Zima 2024",
-        "essentials": "Essentials",
-        "viewCollection": "Zobacz Kolekcję"
-      },
-      "products": {
-        "title": "Bestsellery",
-        "subtitle": "Nasze najpopularniejsze produkty",
-        "addToCart": "Dodaj do Koszyka",
-        "viewDetails": "Szczegóły",
-        "newArrival": "Nowość",
-        "soldOut": "Wyprzedane"
-      },
-      "lookbook": {
-        "title": "Lookbook",
-        "subtitle": "Inspiracje stylizacji na każdą okazję"
-      },
-      "about": {
-        "title": "O Marce",
-        "description": "MAISON ÉLISE to paryska marka założona w 2015 roku. Łączymy francuską elegancję z nowoczesnym minimalizmem, tworząc ponadczasowe projekty dla wymagających klientów.",
-        "craftsmanship": "Ręczne wykonanie",
-        "sustainable": "Zrównoważona moda",
-        "exclusive": "Ekskluzywne materiały"
-      },
-      "newsletter": {
-        "title": "Bądź na Bieżąco",
-        "description": "Zapisz się i otrzymaj 10% zniżki na pierwsze zamówienie",
-        "placeholder": "Twój email",
-        "button": "Subskrybuj"
-      }
+      "tagline": "Ponadczasowa Elegancja"
     },
     "fitness-studio": {
       "name": "Studio Fitness",
