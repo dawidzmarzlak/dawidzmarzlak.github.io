@@ -23,8 +23,9 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS, audience: "b2c",
       site: {
+        platform: "wp",
         pages: 5,
-        cms: false,
+        cms: true,
         siteIntegrations: ["analytics", "form"],
       },
     },
@@ -37,6 +38,7 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS, audience: "b2c",
       site: {
+        platform: "nextjs",
         pages: 4,
         cms: false,
         siteIntegrations: ["analytics", "form"],
@@ -51,6 +53,7 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS,
       site: {
+        platform: "nextjs",
         pages: 10,
         cms: true,
         siteIntegrations: ["analytics", "newsletter", "form", "blog-cms"],

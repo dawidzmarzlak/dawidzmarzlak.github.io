@@ -1,5 +1,5 @@
 import {
-  type ProjectKind, type SiteIntegration,
+  type ProjectKind, type SitePlatform, type SiteIntegration,
   type ShopPlatform, type CatalogSize, type PaymentGateway, type ShopIntegration, type ErpOption,
   type AppType, type AppAuth, type AppBackend, type AppStorage, type AppIntegration,
   type DesignTier, type SupportTier, type Hosting, type Timeline,
@@ -7,7 +7,7 @@ import {
 } from "./project-kinds";
 
 export type {
-  ProjectKind, SiteIntegration,
+  ProjectKind, SitePlatform, SiteIntegration,
   ShopPlatform, CatalogSize, PaymentGateway, ShopIntegration, ErpOption,
   AppType, AppAuth, AppBackend, AppStorage, AppIntegration,
   DesignTier, SupportTier, Hosting, Timeline,
@@ -122,6 +122,7 @@ export const APP_MOBILE_COST = 8000;
 // ---------- input shapes ----------
 
 export interface SiteFields {
+  platform: SitePlatform;
   pages: number;
   cms: boolean;
   siteIntegrations: SiteIntegration[];
@@ -224,7 +225,8 @@ export function computeAdvancedQuote(input: AdvancedQuoteInput): AdvancedQuoteRe
   if (input.kind === "site") {
     const s = input.site;
     b.pages = Math.max(0, s.pages - 1) * PAGE_UNIT;
-    b.cms = s.cms ? CMS_FLAT : 0;
+    // CMS edit capability: free on WP (admin built-in), CMS_FLAT on Next.js (Sanity setup).
+    b.cms = s.cms ? (s.platform === "wp" ? 0 : CMS_FLAT) : 0;
     b.siteIntegrations = s.siteIntegrations.reduce((a, k) => a + SITE_INTEGRATION_COST[k], 0);
   } else if (input.kind === "shop") {
     const s = input.shop;

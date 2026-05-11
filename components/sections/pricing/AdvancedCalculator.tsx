@@ -5,7 +5,7 @@ import {
   type AdvancedQuoteInput, type ProjectKind, type SiteFields, type ShopFields, type AppFields,
 } from "@/lib/design/calculator";
 import {
-  PROJECT_KINDS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
+  PROJECT_KINDS, SITE_PLATFORMS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
   SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, POPULAR_SHOP_INTEGRATIONS, ERP_OPTIONS,
   APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS, POPULAR_APP_INTEGRATIONS,
   DESIGN_TIERS, SUPPORT_TIERS, HOSTINGS, TIMELINES,
@@ -87,7 +87,7 @@ function emptyInput(kind: ProjectKind, prev: AdvancedQuoteInput): AdvancedQuoteI
     industry: prev.industry, audience: prev.audience, stage: prev.stage,
   };
   if (kind === "site") {
-    return { kind: "site", ...shared, site: { pages: 6, cms: true, siteIntegrations: ["analytics"] } };
+    return { kind: "site", ...shared, site: { platform: "nextjs", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
   }
   if (kind === "shop") {
     return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
@@ -236,6 +236,11 @@ function TechPreferencesPanel({ value, onChange }: { value: AdvancedQuoteInput; 
       </button>
       {open && (
         <div className="px-5 pb-5 pt-1 flex flex-col gap-5 border-t border-line">
+          {value.kind === "site" && (
+            <Knob label={t("sitePlatform")}>
+              <Pills options={SITE_PLATFORMS} value={value.site.platform} onChange={(v) => onChange({ ...value, site: { ...value.site, platform: v } })} labelFn={(k) => tCalc(`sitePlatforms.${k}`)} cols={2} />
+            </Knob>
+          )}
           {value.kind === "shop" && (
             <Knob label={t("shopPlatform")}>
               <Pills options={SHOP_PLATFORMS} value={value.shop.platform} onChange={(v) => onChange({ ...value, shop: { ...value.shop, platform: v } })} labelFn={(k) => tCalc(`shopPlatforms.${k}`)} cols={4} />

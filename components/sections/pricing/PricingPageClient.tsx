@@ -41,7 +41,7 @@ export function PricingPageClient() {
         hosting: prev.hosting, supportTier: prev.supportTier, timeline: prev.timeline,
         industry: prev.industry, audience: prev.audience, stage: prev.stage,
       };
-      if (kindParam === "site") return { kind: "site", ...shared, site: { pages: 6, cms: true, siteIntegrations: ["analytics"] } };
+      if (kindParam === "site") return { kind: "site", ...shared, site: { platform: "nextjs", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
       if (kindParam === "shop") return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
       return { kind: "app", ...shared, app: { appType: "saas", auth: "email", backend: "spring", roles: 2, appIntegrations: ["payments"], storage: "postgres", mobile: false } };
     });

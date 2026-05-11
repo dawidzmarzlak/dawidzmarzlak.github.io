@@ -2,6 +2,9 @@ export const PROJECT_KINDS = ["site", "shop", "app"] as const;
 export type ProjectKind = typeof PROJECT_KINDS[number];
 
 // --- SITE ---
+export const SITE_PLATFORMS = ["wp", "nextjs"] as const;
+export type SitePlatform = typeof SITE_PLATFORMS[number];
+
 export const SITE_INTEGRATIONS = [
   "analytics", "newsletter", "form", "chat", "map", "booking",
   // New addons (2025/2026 market calibration)

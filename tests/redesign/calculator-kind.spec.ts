@@ -15,6 +15,7 @@ const SITE_BASELINE: AdvancedQuoteInput = {
   supportTier: "basic", timeline: "normal",
   industry: "other", audience: "b2c", stage: "new",
   site: {
+    platform: "nextjs",
     pages: 8,
     cms: true,
     siteIntegrations: [],

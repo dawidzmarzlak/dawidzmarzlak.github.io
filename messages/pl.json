@@ -2832,6 +2832,10 @@
         "hint": "System z logowaniem, panelami, rolami użytkowników i własną logiką biznesową."
       }
     },
+    "sitePlatforms": {
+      "wp": "WordPress",
+      "nextjs": "Next.js"
+    },
     "shopPlatforms": {
       "woo": "WooCommerce",
       "presta": "PrestaShop",
@@ -2930,7 +2934,7 @@
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Prosta strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Gotowa w tydzień na premium szablonie WordPress — sam zmieniasz teksty i zdjęcia w panelu admin."
+        "desc": "Prosta strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Gotowa w tydzień na premium szablonie WordPress — samodzielnie zmieniasz treści w panelu admin."
       },
       "landing": {
         "name": "Landing Page",
@@ -2949,7 +2953,8 @@
       "kind": "Typ projektu",
       "pages": "Liczba podstron",
       "contentPages": "Strony treściowe",
-      "cms": "Zaawansowany CMS (Sanity / ACF Pro)",
+      "cms": "Samodzielna edycja treści",
+      "sitePlatform": "Stack",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
       "siteIntegrations": "Integracje",

@@ -2806,6 +2806,10 @@
         "hint": "A system with login, panels, user roles and custom business logic."
       }
     },
+    "sitePlatforms": {
+      "wp": "WordPress",
+      "nextjs": "Next.js"
+    },
     "shopPlatforms": {
       "woo": "WooCommerce",
       "presta": "PrestaShop",
@@ -2904,7 +2908,7 @@
       "from": "from",
       "express": {
         "name": "Express business card",
-        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week on a premium WordPress template — you edit text and images yourself in the admin panel."
+        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week on a premium WordPress template — self-edit content via the admin panel."
       },
       "landing": {
         "name": "Landing Page",
@@ -2923,7 +2927,8 @@
       "kind": "Project type",
       "pages": "Number of pages",
       "contentPages": "Content pages",
-      "cms": "Advanced CMS (Sanity / ACF Pro)",
+      "cms": "Self-edit content",
+      "sitePlatform": "Stack",
       "designTier": "Design level",
       "languages": "Number of languages",
       "siteIntegrations": "Integrations",
