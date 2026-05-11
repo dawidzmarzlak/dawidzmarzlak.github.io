@@ -2904,7 +2904,7 @@
       "from": "from",
       "express": {
         "name": "Express business card",
-        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week, built on a premium template customized to your brand."
+        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week on a premium WordPress template — you edit text and images yourself in the admin panel."
       },
       "landing": {
         "name": "Landing Page",
@@ -2923,7 +2923,7 @@
       "kind": "Project type",
       "pages": "Number of pages",
       "contentPages": "Content pages",
-      "cms": "Self-edit content",
+      "cms": "Advanced CMS (Sanity / ACF Pro)",
       "designTier": "Design level",
       "languages": "Number of languages",
       "siteIntegrations": "Integrations",

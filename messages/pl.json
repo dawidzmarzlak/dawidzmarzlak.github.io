@@ -2930,7 +2930,7 @@
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Prosta strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Gotowa w tydzień na bazie premium szablonu dopasowanego pod Twoją markę."
+        "desc": "Prosta strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Gotowa w tydzień na premium szablonie WordPress — sam zmieniasz teksty i zdjęcia w panelu admin."
       },
       "landing": {
         "name": "Landing Page",
@@ -2949,7 +2949,7 @@
       "kind": "Typ projektu",
       "pages": "Liczba podstron",
       "contentPages": "Strony treściowe",
-      "cms": "Samodzielna edycja treści",
+      "cms": "Zaawansowany CMS (Sanity / ACF Pro)",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
       "siteIntegrations": "Integracje",
