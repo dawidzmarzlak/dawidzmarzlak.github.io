@@ -1,4 +1,4 @@
-export type StackKey = "next" | "wp-woo" | "wp-express" | "app" | "maintenance" | "audits" | "migrations";
+export type StackKey = "next" | "wp-woo" | "wp-express" | "app" | "maintenance" | "migrations";
 
 export interface Stack {
   label: string;
@@ -111,27 +111,9 @@ export const STACKS: Record<StackKey, Stack> = {
     fromPlnPerMonth: true,
     time: "Od następnego dnia",
   },
-  audits: {
-    label: "Audyty i konsultacje",
-    tag: "06",
-    kicker: "Diagnoza przed inwestycją",
-    title: "Wiesz dokładnie, co poprawić — i ile to kosztuje.",
-    desc: "Audyty SEO (od 800 zł lokalny, 5 000+ e-commerce), Core Web Vitals, WCAG dostępność, bezpieczeństwo WordPressa (pen-test), code review, compliance RODO/KSeF. Każdy audyt kończy się raportem z konkretnymi rekomendacjami i wyceną wdrożenia poprawek.",
-    stack: ["Lighthouse / PSI", "Screaming Frog", "Wordfence", "WAVE / Axe", "OWASP ZAP", "Custom audits"],
-    use: ["Strona z niską konwersją", "Sklep przed sezonem", "Migracja CMS", "Wymóg WCAG / RODO"],
-    bullets: [
-      ["SEO", "TOP 10 fraz", "Analiza techniczna, treści, linkbuildingu i konkurencji."],
-      ["CWV", "< 2.5s LCP", "Lighthouse, PSI, real-user monitoring + plan optymalizacji."],
-      ["WCAG", "2.1 AA report", "Audyt dostępności z listą fixów priorytetyzowanych po impact."],
-    ],
-    examples: ["FoodCorp — audyt CWV + plan optymalizacji", "LawFirm — audyt WCAG z planem fixów"],
-    from: "800 PLN",
-    fromPln: 800,
-    time: "1–2 tygodnie",
-  },
   migrations: {
     label: "Migracje i integracje",
-    tag: "07",
+    tag: "06",
     kicker: "Bezpieczne przeprowadzki",
     title: "Z dowolnego systemu do nowoczesnego stacku — bez utraty SEO.",
     desc: "Migracje Shoper / PrestaShop / Magento / Shopify → WooCommerce. Integracje z BaseLinker, Allegro, marketplaces, ERP (Subiekt, Comarch, Wapro, custom). Przenoszenie produktów, klientów, zamówień, redirecty 301 dla zachowania pozycji w Google. Zero downtime, pełna sync ERP w obie strony.",
