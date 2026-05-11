@@ -2923,7 +2923,7 @@
       },
       "ecom": {
         "name": "Online store",
-        "desc": "A store for small and medium businesses — from first sale to hundreds of orders per month. All Polish payment methods, couriers, Allegro integration, and newsletter. KSeF-compliant (2026 mandate) and Omnibus-ready."
+        "desc": "Starter online store for small business. InPost shipping, online payments via Przelewy24 (BLIK, card, fast transfers), Omnibus-directive compliant. KSeF invoicing, Allegro integration and newsletter — available as optional add-ons in the calculator."
       }
     },
     "knobs": {

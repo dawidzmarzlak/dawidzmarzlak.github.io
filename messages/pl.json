@@ -2949,7 +2949,7 @@
       },
       "ecom": {
         "name": "Sklep online",
-        "desc": "Sklep dla małej i średniej firmy — od pierwszej sprzedaży po setki zamówień miesięcznie. Wszystkie polskie metody płatności, kurierzy, integracja z Allegro i newsletter. Zgodny z KSeF (wymóg 2026) i dyrektywą Omnibus."
+        "desc": "Sklep dla małej firmy w wersji startowej. Dostawa InPostem, płatności online przez Przelewy24 (BLIK, karta, szybkie przelewy), zgodny z dyrektywą Omnibus. Fakturowanie KSeF, integracja z Allegro i newsletter — możesz dodać jako opcje w kalkulatorze."
       }
     },
     "knobs": {

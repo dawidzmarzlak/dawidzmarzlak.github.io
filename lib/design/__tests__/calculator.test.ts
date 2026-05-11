@@ -23,11 +23,11 @@ describe("computeAdvancedQuote — preset calibration (2025/2026)", () => {
     expect(result.total).toBeLessThanOrEqual(11340);
   });
 
-  it("Sklep preset (ecom) gives ~16 900 zl (+/-5%)", () => {
+  it("Sklep preset (ecom) gives ~9 950 zl (+/-5%) - minimal viable shop", () => {
     const input = presetInput("ecom");
     const result = computeAdvancedQuote(input);
-    expect(result.total).toBeGreaterThanOrEqual(16055);
-    expect(result.total).toBeLessThanOrEqual(17745);
+    expect(result.total).toBeGreaterThanOrEqual(9452);
+    expect(result.total).toBeLessThanOrEqual(10448);
   });
 
   it("Wizytowka Express preset (express) gives ~2 900 zl (+/-5%)", () => {
