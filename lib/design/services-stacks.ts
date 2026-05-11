@@ -60,9 +60,9 @@ export const STACKS: Record<StackKey, Stack> = {
     label: "WP Express",
     tag: "03",
     kicker: "Szybki start na WordPressie",
-    title: "Strona w tydzień — Astra + Claude Code.",
-    desc: "Dla mikro-firm i jednoosobowych biznesów. Bazujemy na premium szablonach Astra Pro / Kadence Pro, dostosowujemy pod Twoją markę, podpinamy formularz, RODO i pozycjonowanie podstawowe. Claude Code automatyzuje content swap, customizacje i konfigurację wtyczek — finalna jakość wizualna jak agencyjna, czas realizacji 2-4× krótszy.",
-    stack: ["WordPress 6", "Astra Pro / Kadence Pro", "Elementor Pro", "ACF Pro", "RankMath SEO", "Claude Code automation"],
+    title: "Strona w tydzień — bez kompromisów.",
+    desc: "Dla mikro-firm i jednoosobowych biznesów. Bazujemy na premium szablonach Astra Pro / Kadence Pro, dostosowujemy pod Twoją markę, podpinamy formularz, RODO i pozycjonowanie podstawowe. Jakość wizualna jak z agencji, czas realizacji 5–7 dni, edycja w Elementor Pro — sam dodajesz teksty i zdjęcia po wdrożeniu.",
+    stack: ["WordPress 6", "Astra Pro / Kadence Pro", "Elementor Pro", "ACF Pro", "RankMath SEO", "Cyber_Folks / LH"],
     use: ["Wizytówka mikro-firmy", "Strona jednoosobówki", "Profil zawodowy / portfolio", "Strona usługowa lokalna"],
     bullets: [
       ["Czas", "5–7 dni", "Astra Starter Template + customizacja + treści."],

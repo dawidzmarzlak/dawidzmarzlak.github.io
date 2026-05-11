@@ -1,6 +1,6 @@
 import type { AdvancedQuoteInput } from "./calculator";
 
-export type PresetKey = "express" | "landing" | "company" | "ecom" | "app";
+export type PresetKey = "express" | "landing" | "company" | "ecom";
 
 export interface Preset {
   key: PresetKey;
@@ -75,24 +75,6 @@ export const PRESETS: Preset[] = [
         paymentGateways: ["blik", "p24"],
         shopIntegrations: ["courier", "newsletter"],
         erp: "none",
-      },
-    },
-  },
-  {
-    key: "app",
-    input: {
-      kind: "app",
-      designTier: "standard", languages: 1, hosting: "vercel",
-      supportTier: "basic", timeline: "normal",
-      ...SHARED_BUSINESS, industry: "saas", audience: "b2b",
-      app: {
-        appType: "saas",
-        auth: "oauth",
-        backend: "spring",
-        roles: 3,
-        appIntegrations: ["payments", "email", "ai"],
-        storage: "postgres",
-        mobile: false,
       },
     },
   },

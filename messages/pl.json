@@ -2926,18 +2926,18 @@
     "hero": {
       "crumb": "Cennik",
       "title": [
-        "5 presetów. ",
+        "4 presety. ",
         "Reszta",
         " — kalkulator."
       ],
-      "intro": "Wybierz jeden z 5 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
+      "intro": "Wybierz jeden z 4 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
       "popular": "Najpopularniejsze",
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Astra + Elementor + Claude Code, dla mikro-firm. 5–7 dni."
+        "desc": "Astra Pro + Elementor, dla mikro-firm. 5–7 dni."
       },
       "landing": {
         "name": "Landing Page",
@@ -2950,10 +2950,6 @@
       "ecom": {
         "name": "Sklep online",
         "desc": "WooCommerce, katalog 50–500 produktów, BLIK + Przelewy24, kurierzy."
-      },
-      "app": {
-        "name": "Aplikacja webowa",
-        "desc": "Spring Boot + Next.js MVP, logowanie OAuth, role, płatności, e-mail, AI."
       }
     },
     "knobs": {

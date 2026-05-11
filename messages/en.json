@@ -2900,18 +2900,18 @@
     "hero": {
       "crumb": "Pricing",
       "title": [
-        "5 presets. ",
+        "4 presets. ",
         "The rest",
         " — calculator."
       ],
-      "intro": "Pick one of 5 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click — the price updates live. When done, send the brief — quote context travels with it."
+      "intro": "Pick one of 4 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click — the price updates live. When done, send the brief — quote context travels with it."
     },
     "presets": {
       "popular": "Most popular",
       "from": "from",
       "express": {
         "name": "Express landing",
-        "desc": "Astra + Elementor + Claude Code, for micro-businesses. 5–7 days."
+        "desc": "Astra Pro + Elementor, for micro-businesses. 5–7 days."
       },
       "landing": {
         "name": "Landing Page",
@@ -2924,10 +2924,6 @@
       "ecom": {
         "name": "Online store",
         "desc": "WooCommerce, catalog 50–500 SKUs, BLIK + Przelewy24, couriers."
-      },
-      "app": {
-        "name": "Custom web app",
-        "desc": "Spring Boot + Next.js MVP, OAuth login, roles, payments, email, AI."
       }
     },
     "knobs": {
