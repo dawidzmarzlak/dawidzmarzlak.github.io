@@ -38,6 +38,14 @@ describe("computeAdvancedQuote — preset calibration (2025/2026)", () => {
     expect(result.total).toBeLessThanOrEqual(41895);
   });
 
+  it("Wizytowka Express preset (express) gives ~2 900 zl (+/-5%)", () => {
+    const preset = PRESETS.find((p) => p.key === "express")!;
+    expect(preset).toBeDefined();
+    const result = computeAdvancedQuote(preset.input);
+    expect(result.total).toBeGreaterThanOrEqual(2755);
+    expect(result.total).toBeLessThanOrEqual(3045);
+  });
+
   it("KSeF addon adds 1 800 zl to shop quote", () => {
     const input = presetInput("ecom");
     if (input.kind !== "shop") throw new Error("ecom preset must be a shop");

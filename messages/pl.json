@@ -2926,15 +2926,19 @@
     "hero": {
       "crumb": "Cennik",
       "title": [
-        "4 presety. ",
+        "5 presetów. ",
         "Reszta",
         " — kalkulator."
       ],
-      "intro": "Wybierz jeden z 4 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
+      "intro": "Wybierz jeden z 5 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
       "popular": "Najpopularniejsze",
       "from": "od",
+      "express": {
+        "name": "Wizytówka Express",
+        "desc": "Astra + Elementor + Claude Code, dla mikro-firm. 5–7 dni."
+      },
       "landing": {
         "name": "Landing Page",
         "desc": "4 podstrony, design standard, hosting na Vercel. Dla startupów i kampanii."

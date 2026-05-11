@@ -1,4 +1,4 @@
-export type StackKey = "next" | "wp-woo" | "app" | "maintenance" | "audits" | "migrations";
+export type StackKey = "next" | "wp-woo" | "wp-express" | "app" | "maintenance" | "audits" | "migrations";
 
 export interface Stack {
   label: string;
@@ -56,9 +56,27 @@ export const STACKS: Record<StackKey, Stack> = {
     fromPln: 2900,
     time: "3–8 tygodni",
   },
+  "wp-express": {
+    label: "WP Express",
+    tag: "03",
+    kicker: "Szybki start na WordPressie",
+    title: "Strona w tydzień — Astra + Claude Code.",
+    desc: "Dla mikro-firm i jednoosobowych biznesów. Bazujemy na premium szablonach Astra Pro / Kadence Pro, dostosowujemy pod Twoją markę, podpinamy formularz, RODO i pozycjonowanie podstawowe. Claude Code automatyzuje content swap, customizacje i konfigurację wtyczek — finalna jakość wizualna jak agencyjna, czas realizacji 2-4× krótszy.",
+    stack: ["WordPress 6", "Astra Pro / Kadence Pro", "Elementor Pro", "ACF Pro", "RankMath SEO", "Claude Code automation"],
+    use: ["Wizytówka mikro-firmy", "Strona jednoosobówki", "Profil zawodowy / portfolio", "Strona usługowa lokalna"],
+    bullets: [
+      ["Czas", "5–7 dni", "Astra Starter Template + customizacja + treści."],
+      ["Edycja", "Elementor Pro", "Samodzielnie zmieniasz teksty, zdjęcia, sekcje."],
+      ["SEO", "RankMath + Schema", "Podstawowe pozycjonowanie techniczne w cenie."],
+    ],
+    examples: ["LocalDesigner — wizytówka projektanta wnętrz", "FreshFloral — kwiaciarnia z formularzem zamówień"],
+    from: "2 900 PLN",
+    fromPln: 2900,
+    time: "5–7 dni",
+  },
   app: {
     label: "Aplikacje webowe",
-    tag: "03",
+    tag: "04",
     kicker: "Spring Boot + React",
     title: "Aplikacje, które mają działać latami.",
     desc: "Backend Spring Boot 3 (Java 21), frontend React/Next.js, PostgreSQL, Redis na cache. CI/CD z GitHub Actions, Docker, monitoring (Sentry, Grafana). Skala do tysięcy concurrent users.",
@@ -76,7 +94,7 @@ export const STACKS: Record<StackKey, Stack> = {
   },
   maintenance: {
     label: "Utrzymanie i hosting",
-    tag: "04",
+    tag: "05",
     kicker: "Opieka po wdrożeniu",
     title: "Strona, która zawsze działa.",
     desc: "Trzy pakiety z SLA — Basic 240 / Standard 640 / Premium 1 600 PLN miesięcznie. Hosting na cyber_Folks, Hetzner lub Vercel z pełną administracją. Aktualizacje, backupy, monitoring 24/7, security patches. Reakcja na awarie od 4 do 24h w zależności od pakietu.",
@@ -95,7 +113,7 @@ export const STACKS: Record<StackKey, Stack> = {
   },
   audits: {
     label: "Audyty i konsultacje",
-    tag: "05",
+    tag: "06",
     kicker: "Diagnoza przed inwestycją",
     title: "Wiesz dokładnie, co poprawić — i ile to kosztuje.",
     desc: "Audyty SEO (od 800 zł lokalny, 5 000+ e-commerce), Core Web Vitals, WCAG dostępność, bezpieczeństwo WordPressa (pen-test), code review, compliance RODO/KSeF. Każdy audyt kończy się raportem z konkretnymi rekomendacjami i wyceną wdrożenia poprawek.",
@@ -113,7 +131,7 @@ export const STACKS: Record<StackKey, Stack> = {
   },
   migrations: {
     label: "Migracje i integracje",
-    tag: "06",
+    tag: "07",
     kicker: "Bezpieczne przeprowadzki",
     title: "Z dowolnego systemu do nowoczesnego stacku — bez utraty SEO.",
     desc: "Migracje Shoper / PrestaShop / Magento / Shopify → WooCommerce. Integracje z BaseLinker, Allegro, marketplaces, ERP (Subiekt, Comarch, Wapro, custom). Przenoszenie produktów, klientów, zamówień, redirecty 301 dla zachowania pozycji w Google. Zero downtime, pełna sync ERP w obie strony.",

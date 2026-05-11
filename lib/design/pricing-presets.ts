@@ -1,6 +1,6 @@
 import type { AdvancedQuoteInput } from "./calculator";
 
-export type PresetKey = "landing" | "company" | "ecom" | "app";
+export type PresetKey = "express" | "landing" | "company" | "ecom" | "app";
 
 export interface Preset {
   key: PresetKey;
@@ -15,6 +15,21 @@ const SHARED_BUSINESS = {
 };
 
 export const PRESETS: Preset[] = [
+  {
+    key: "express",
+    input: {
+      kind: "site",
+      designTier: "lite", languages: 1, hosting: "client",
+      supportTier: "basic", timeline: "normal",
+      ...SHARED_BUSINESS, audience: "b2c",
+      site: {
+        goal: "company",
+        pages: 5,
+        cms: false,
+        siteIntegrations: ["analytics", "form"],
+      },
+    },
+  },
   {
     key: "landing",
     input: {
