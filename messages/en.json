@@ -2910,20 +2910,20 @@
       "popular": "Most popular",
       "from": "from",
       "express": {
-        "name": "Express landing",
-        "desc": "Astra Pro + Elementor, for micro-businesses. 5–7 days."
+        "name": "Express business card",
+        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week — you can edit content yourself."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "4 pages, standard design, Vercel hosting. For startups and campaigns."
+        "desc": "A page for a single ad campaign or product. Focused on turning visitors into customers — clear offer, strong CTAs, lead form."
       },
       "company": {
         "name": "Business site",
-        "desc": "10 pages, CMS, PL+EN, newsletter. Most-ordered configuration."
+        "desc": "Complete business presence online. Services, team, case studies, blog to build client trust. Bilingual (Polish + English) with self-edit content management."
       },
       "ecom": {
         "name": "Online store",
-        "desc": "WooCommerce, catalog 50–500 SKUs, BLIK + Przelewy24, couriers."
+        "desc": "A store for small and medium businesses — from first sale to hundreds of orders per month. All Polish payment methods, couriers, Allegro integration, and newsletter. KSeF-compliant (2026 mandate) and Omnibus-ready."
       }
     },
     "knobs": {
