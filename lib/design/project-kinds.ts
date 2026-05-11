@@ -2,9 +2,6 @@ export const PROJECT_KINDS = ["site", "shop", "app"] as const;
 export type ProjectKind = typeof PROJECT_KINDS[number];
 
 // --- SITE ---
-export const SITE_GOALS = ["landing", "company", "portfolio", "blog", "showcase"] as const;
-export type SiteGoal = typeof SITE_GOALS[number];
-
 export const SITE_INTEGRATIONS = [
   "analytics", "newsletter", "form", "chat", "map", "booking",
   // New addons (2025/2026 market calibration)

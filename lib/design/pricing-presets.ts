@@ -23,7 +23,6 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS, audience: "b2c",
       site: {
-        goal: "company",
         pages: 5,
         cms: false,
         siteIntegrations: ["analytics", "form"],
@@ -38,7 +37,6 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS, audience: "b2c",
       site: {
-        goal: "landing",
         pages: 4,
         cms: false,
         siteIntegrations: ["analytics", "form"],
@@ -53,7 +51,6 @@ export const PRESETS: Preset[] = [
       supportTier: "basic", timeline: "normal",
       ...SHARED_BUSINESS,
       site: {
-        goal: "company",
         pages: 10,
         cms: true,
         siteIntegrations: ["analytics", "newsletter", "form", "blog-cms"],

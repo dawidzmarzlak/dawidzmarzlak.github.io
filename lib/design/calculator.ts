@@ -1,5 +1,5 @@
 import {
-  type ProjectKind, type SiteGoal, type SiteIntegration,
+  type ProjectKind, type SiteIntegration,
   type ShopPlatform, type CatalogSize, type PaymentGateway, type ShopIntegration, type ErpOption,
   type AppType, type AppAuth, type AppBackend, type AppStorage, type AppIntegration,
   type DesignTier, type SupportTier, type Hosting, type Timeline,
@@ -7,7 +7,7 @@ import {
 } from "./project-kinds";
 
 export type {
-  ProjectKind, SiteGoal, SiteIntegration,
+  ProjectKind, SiteIntegration,
   ShopPlatform, CatalogSize, PaymentGateway, ShopIntegration, ErpOption,
   AppType, AppAuth, AppBackend, AppStorage, AppIntegration,
   DesignTier, SupportTier, Hosting, Timeline,
@@ -122,7 +122,6 @@ export const APP_MOBILE_COST = 8000;
 // ---------- input shapes ----------
 
 export interface SiteFields {
-  goal: SiteGoal;
   pages: number;
   cms: boolean;
   siteIntegrations: SiteIntegration[];

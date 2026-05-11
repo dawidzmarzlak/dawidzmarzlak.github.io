@@ -5,7 +5,7 @@ import {
   type AdvancedQuoteInput, type ProjectKind, type SiteFields, type ShopFields, type AppFields,
 } from "@/lib/design/calculator";
 import {
-  PROJECT_KINDS, SITE_GOALS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
+  PROJECT_KINDS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
   SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, POPULAR_SHOP_INTEGRATIONS, ERP_OPTIONS,
   APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS, POPULAR_APP_INTEGRATIONS,
   DESIGN_TIERS, SUPPORT_TIERS, HOSTINGS, TIMELINES,
@@ -87,7 +87,7 @@ function emptyInput(kind: ProjectKind, prev: AdvancedQuoteInput): AdvancedQuoteI
     industry: prev.industry, audience: prev.audience, stage: prev.stage,
   };
   if (kind === "site") {
-    return { kind: "site", ...shared, site: { goal: "company", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
+    return { kind: "site", ...shared, site: { pages: 6, cms: true, siteIntegrations: ["analytics"] } };
   }
   if (kind === "shop") {
     return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
@@ -99,7 +99,6 @@ function emptyInput(kind: ProjectKind, prev: AdvancedQuoteInput): AdvancedQuoteI
 
 function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: SiteFields) => void }) {
   const t = useTranslations("pricing.knobs");
-  const tCalc = useTranslations("calculator");
   const set = <K extends keyof SiteFields>(k: K, v: SiteFields[K]) => onChange({ ...value, [k]: v });
   const toggle = (k: typeof SITE_INTEGRATIONS[number]) =>
     set("siteIntegrations", value.siteIntegrations.includes(k) ? value.siteIntegrations.filter(x => x !== k) : [...value.siteIntegrations, k]);
@@ -107,9 +106,6 @@ function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: Sit
   const extra = SITE_INTEGRATIONS.filter((k) => !popular.includes(k));
   return (
     <>
-      <Knob label={t("siteGoal")}>
-        <Pills options={SITE_GOALS} value={value.goal} onChange={(v) => set("goal", v)} labelFn={(k) => tCalc(`siteGoals.${k}`)} cols={5} />
-      </Knob>
       <Knob label={`${t("pages")} — ${value.pages}`}>
         <input type="range" min={1} max={30} value={value.pages} onChange={(e) => set("pages", +e.target.value)} className="w-full h-1 bg-line rounded outline-none accent-accent" />
       </Knob>

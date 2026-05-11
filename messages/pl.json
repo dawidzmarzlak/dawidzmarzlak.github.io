@@ -2832,13 +2832,6 @@
         "hint": "System z logowaniem, panelami, rolami użytkowników i własną logiką biznesową."
       }
     },
-    "siteGoals": {
-      "landing": "Landing",
-      "company": "Firmowa",
-      "portfolio": "Portfolio",
-      "blog": "Blog",
-      "showcase": "Showcase"
-    },
     "shopPlatforms": {
       "woo": "WooCommerce",
       "presta": "PrestaShop",
@@ -2959,7 +2952,6 @@
       "cms": "Samodzielna edycja treści",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
-      "siteGoal": "Cel strony",
       "siteIntegrations": "Integracje",
       "shopPlatform": "Platforma",
       "catalogSize": "Liczba produktów",
