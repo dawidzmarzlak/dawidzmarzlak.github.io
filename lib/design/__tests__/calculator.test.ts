@@ -9,18 +9,18 @@ function presetInput(key: string): AdvancedQuoteInput {
 }
 
 describe("computeAdvancedQuote — preset calibration (2025/2026)", () => {
-  it("LP preset (landing) gives ~3 400 zl (+/-5%)", () => {
+  it("LP preset (landing) gives ~3 800 zl (+/-5%) - with contact form", () => {
     const input = presetInput("landing");
     const result = computeAdvancedQuote(input);
-    expect(result.total).toBeGreaterThanOrEqual(3230);
-    expect(result.total).toBeLessThanOrEqual(3570);
+    expect(result.total).toBeGreaterThanOrEqual(3610);
+    expect(result.total).toBeLessThanOrEqual(3990);
   });
 
-  it("Strona firmowa preset (company) gives ~10 800 zl (+/-5%)", () => {
+  it("Strona firmowa preset (company) gives ~13 000 zl (+/-5%) - with blog CMS", () => {
     const input = presetInput("company");
     const result = computeAdvancedQuote(input);
-    expect(result.total).toBeGreaterThanOrEqual(10260);
-    expect(result.total).toBeLessThanOrEqual(11340);
+    expect(result.total).toBeGreaterThanOrEqual(12350);
+    expect(result.total).toBeLessThanOrEqual(13650);
   });
 
   it("Sklep preset (ecom) gives ~9 950 zl (+/-5%) - minimal viable shop", () => {

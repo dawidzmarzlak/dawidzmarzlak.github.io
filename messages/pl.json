@@ -96,7 +96,7 @@
       },
       {
         "label": "// support",
-        "num": "6 mies.",
+        "num": "2 mies.",
         "foot": "Wsparcie po wdrożeniu w cenie projektu — bug fixy gratis."
       }
     ],
@@ -189,7 +189,7 @@
         "size": "big"
       },
       {
-        "q": "6 miesięcy wsparcia w cenie wdrożenia. Bezpłatne poprawki bug'ów. Płatne tylko nowe funkcje.",
+        "q": "2 miesiące wsparcia w cenie wdrożenia. Bezpłatne poprawki bug'ów. Płatne tylko nowe funkcje.",
         "name": "Wsparcie",
         "role": "Po wdrożeniu",
         "avatar": "→",
@@ -283,7 +283,7 @@
       ],
       [
         "Wsparcie",
-        "6 mies. w cenie. SLA opcjonalne."
+        "2 mies. w cenie. SLA opcjonalne."
       ]
     ],
     "page": {
@@ -322,8 +322,8 @@
           "Pipeline GitHub Actions, certyfikat SSL, backup'y, monitoring uptime + błędów. Wdrożenie wieczorem (poza godzinami szczytu) z planem rollback'u."
         ],
         [
-          "Wsparcie — 6 miesięcy w cenie",
-          "6 miesięcy bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."
+          "Wsparcie — 2 miesiące w cenie",
+          "2 miesiące bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."
         ]
       ],
       "philosophy": {
@@ -465,7 +465,7 @@
             ],
             [
               "Czy są ukryte koszty?",
-              "Nie. Cena obejmuje rozwój, design, testy, wdrożenie, dokumentację i 6 mies. wsparcia. Płatne dodatkowo: licencje (np. fonty premium), hosting po stronie klienta, integracje, które wymagają płatnych SaaS."
+              "Nie. Cena obejmuje rozwój, design, testy, wdrożenie, dokumentację i 2 mies. wsparcia. Płatne dodatkowo: licencje (np. fonty premium), hosting po stronie klienta, integracje, które wymagają płatnych SaaS."
             ],
             [
               "Co jeśli budżet nie wystarczy?",
@@ -524,7 +524,7 @@
             ],
             [
               "Co jeśli będę potrzebować zmian po wdrożeniu?",
-              "6 miesięcy bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."
+              "2 miesiące bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."
             ],
             [
               "Co jeśli serwer padnie?",
@@ -2990,7 +2990,7 @@
       },
       "supports": {
         "none": "Brak",
-        "basic": "6 mies. (gratis)",
+        "basic": "2 mies. (gratis)",
         "pro": "12 mies. + SLA"
       },
       "hostings": {

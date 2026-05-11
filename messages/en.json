@@ -96,7 +96,7 @@
       },
       {
         "label": "// support",
-        "num": "6 mo.",
+        "num": "2 mo.",
         "foot": "Post-launch support included — free bug fixes."
       }
     ],
@@ -189,7 +189,7 @@
         "size": "big"
       },
       {
-        "q": "6 months of support included in the launch fee. Free bug fixes. Paid only for new features.",
+        "q": "2 months of support included in the launch fee. Free bug fixes. Paid only for new features.",
         "name": "Support",
         "role": "Post-launch",
         "avatar": "→",
@@ -283,7 +283,7 @@
       ],
       [
         "Support",
-        "6 months included. Optional SLA."
+        "2 months included. Optional SLA."
       ]
     ],
     "page": {
@@ -322,8 +322,8 @@
           "GitHub Actions pipeline, SSL cert, backups, uptime + error monitoring. Deploy in the evening (off-peak) with a rollback plan."
         ],
         [
-          "Support — 6 months included",
-          "6 months of bug-fixes free (anything I broke). Paid only for new features. SLA on request."
+          "Support — 2 months included",
+          "2 months of bug-fixes free (anything I broke). Paid only for new features. SLA on request."
         ]
       ],
       "philosophy": {
@@ -465,7 +465,7 @@
             ],
             [
               "Are there hidden costs?",
-              "No. Price covers development, design, testing, deploy, docs and 6 months of support. Extra: licenses (e.g. premium fonts), client-side hosting, paid SaaS integrations."
+              "No. Price covers development, design, testing, deploy, docs and 2 months of support. Extra: licenses (e.g. premium fonts), client-side hosting, paid SaaS integrations."
             ],
             [
               "What if my budget falls short?",
@@ -524,7 +524,7 @@
             ],
             [
               "What if I need changes after launch?",
-              "6 months of bug-fixes free. New features — quoted per request or 'Pro' subscription (10–20h/mo). No surprises."
+              "2 months of bug-fixes free. New features — quoted per request or 'Pro' subscription (10–20h/mo). No surprises."
             ],
             [
               "What if the server goes down?",
@@ -2964,7 +2964,7 @@
       },
       "supports": {
         "none": "None",
-        "basic": "6 mo. (free)",
+        "basic": "2 mo. (free)",
         "pro": "12 mo. + SLA"
       },
       "hostings": {
