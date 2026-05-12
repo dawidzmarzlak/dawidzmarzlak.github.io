@@ -34,6 +34,14 @@ export const DESIGN_TIER_PRICE: Record<DesignTier, number> = {
   lite: 0, standard: 700, premium: 5050,
 };
 
+// Platform-aware design pricing for sites:
+// WP custom UI is more expensive than Next.js — fighting against WP/template constraints
+// adds overhead. Next.js is custom from the start, no constraints.
+export const SITE_DESIGN_TIER_PRICE: Record<SitePlatform, Record<DesignTier, number>> = {
+  wp: { lite: 0, standard: 1500, premium: 7500 },
+  nextjs: { lite: 0, standard: 700, premium: 4500 },
+};
+
 export const SUPPORT_YEARLY: Record<SupportTier, number> = {
   none: 0, basic: 0, pro: 4800,
 };
@@ -225,6 +233,8 @@ export function computeAdvancedQuote(input: AdvancedQuoteInput): AdvancedQuoteRe
   if (input.kind === "site") {
     const s = input.site;
     b.pages = Math.max(0, s.pages - 1) * PAGE_UNIT;
+    // Platform-aware design: WP custom UI > Next.js custom UI (WP constraint overhead).
+    b.design = SITE_DESIGN_TIER_PRICE[s.platform][input.designTier];
     // CMS edit capability: free on WP (admin built-in), CMS_FLAT on Next.js (Sanity setup).
     b.cms = s.cms ? (s.platform === "wp" ? 0 : CMS_FLAT) : 0;
     b.siteIntegrations = s.siteIntegrations.reduce((a, k) => a + SITE_INTEGRATION_COST[k], 0);
