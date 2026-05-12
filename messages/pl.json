@@ -30,7 +30,7 @@
     "h1c": "i aplikacje które",
     "h1d": "pozwalają zarabiać.",
     "leadStrong": "IT Solutions",
-    "leadRest": " — pracownia stron, sklepów i aplikacji. Rozwiązania, z których codziennie korzystają tysiące użytkowników. Stack dopasowany do problemu — nie odwrotnie."
+    "leadRest": " - pracownia stron, sklepów i aplikacji. Rozwiązania, z których codziennie korzystają tysiące użytkowników. Stack dopasowany do problemu - nie odwrotnie."
   },
   "stats": {
     "projects": {
@@ -76,7 +76,7 @@
     "big": [
       "Dopasowuję rozwiązanie do ",
       "Twoich potrzeb",
-      " — nie odwrotnie."
+      " - nie odwrotnie."
     ],
     "stats": [
       {
@@ -97,7 +97,7 @@
       {
         "label": "// support",
         "num": "2 mies.",
-        "foot": "Wsparcie po wdrożeniu w cenie projektu — bug fixy gratis."
+        "foot": "Wsparcie po wdrożeniu w cenie projektu - bug fixy gratis."
       }
     ],
     "quote": {
@@ -124,7 +124,7 @@
     },
     "wpExpress": {
       "title": "WP Express",
-      "description": "Premium szablon Astra/Kadence + customizacja pod markę — strona w tydzień"
+      "description": "Premium szablon Astra/Kadence + customizacja pod markę - strona w tydzień"
     },
     "webapp": {
       "title": "Aplikacje Webowe",
@@ -149,12 +149,12 @@
       {
         "num": "[04]",
         "title": "WP Express",
-        "desc": "Astra Pro / Kadence + Elementor — strona w tydzień dla mikro-firm i jednoosobowych biznesów."
+        "desc": "Astra Pro / Kadence + Elementor - strona w tydzień dla mikro-firm i jednoosobowych biznesów."
       },
       {
         "num": "[05]",
         "title": "Aplikacje webowe",
-        "desc": "Spring Boot + Next.js. SSO, RBAC — gotowe na produkcję enterprise."
+        "desc": "Spring Boot + Next.js. SSO, RBAC - gotowe na produkcję enterprise."
       }
     ]
   },
@@ -179,10 +179,10 @@
   },
   "testimonials": {
     "title": "Co dostajesz, pracując ze mną",
-    "subtitle": "Wartości, które działają — niezależnie od projektu",
+    "subtitle": "Wartości, które działają - niezależnie od projektu",
     "items": [
       {
-        "q": "Kod, który dostajesz po wdrożeniu, jest twoją własnością — bez vendor lock-inu, bez płatnych licencji ukrytych w stacku.",
+        "q": "Kod, który dostajesz po wdrożeniu, jest twoją własnością - bez vendor lock-inu, bez płatnych licencji ukrytych w stacku.",
         "name": "Własność kodu",
         "role": "Każdy projekt",
         "avatar": "→",
@@ -196,14 +196,14 @@
         "size": "med"
       },
       {
-        "q": "Dokumentacja po polsku, README z runbook'iem, video-walkthrough panelu. Wracasz po roku — wciąż wiesz jak edytować.",
+        "q": "Dokumentacja po polsku, README z runbook'iem, video-walkthrough panelu. Wracasz po roku - wciąż wiesz jak edytować.",
         "name": "Dokumentacja",
         "role": "Standard",
         "avatar": "→",
         "size": "med"
       },
       {
-        "q": "<<USER_INPUT: autoryzowany cytat klienta — wstawić później>>",
+        "q": "<<USER_INPUT: autoryzowany cytat klienta - wstawić później>>",
         "name": "<<USER_INPUT: imię>>",
         "role": "<<USER_INPUT: rola, firma>>",
         "avatar": "<<USER_INPUT: inicjały>>",
@@ -294,35 +294,35 @@
           "live",
           " w siedmiu krokach."
         ],
-        "intro": "Współpraca w siedmiu jasnych krokach. Każdy etap ma konkretny rezultat, znany czas trwania i jeden kontakt po Twojej stronie. Demo co piątek — bez prezentacji, bez handlowca w pętli."
+        "intro": "Współpraca w siedmiu jasnych krokach. Każdy etap ma konkretny rezultat, znany czas trwania i jeden kontakt po Twojej stronie. Demo co piątek - bez prezentacji, bez handlowca w pętli."
       },
       "extended": [
         [
-          "Konsultacja — 30 minut",
+          "Konsultacja - 30 minut",
           "Bezpłatne 30 minut. Rozmawiamy o celu projektu, KPI, ograniczeniach budżetowych i terminowych. Wychodzisz z notatką: co budujemy, jakim stackiem, w jakim modelu rozliczeń. Bez zobowiązań."
         ],
         [
           "Wycena w 48 godzin",
-          "Stała cena (Fixed) lub Time & Materials. Harmonogram tygodniowy z kamieniami milowymi. Wycenę dostajesz mailem — możesz zaakceptować, dopytać albo odpuścić bez kosztów."
+          "Stała cena (Fixed) lub Time & Materials. Harmonogram tygodniowy z kamieniami milowymi. Wycenę dostajesz mailem - możesz zaakceptować, dopytać albo odpuścić bez kosztów."
         ],
         [
-          "UX/UI — wireframe → Figma hi-fi",
-          "Najpierw szkic — żeby uzgodnić strukturę informacji. Potem hi-fi w Figmie z gotowym design system'em (kolory, typografia, komponenty). Akceptujesz w jednym widoku, nie w 30 mailach."
+          "UX/UI - wireframe → Figma hi-fi",
+          "Najpierw szkic - żeby uzgodnić strukturę informacji. Potem hi-fi w Figmie z gotowym design system'em (kolory, typografia, komponenty). Akceptujesz w jednym widoku, nie w 30 mailach."
         ],
         [
-          "Development — sprinty 2-tygodniowe",
-          "Każdy sprint kończy się demo (piątek, 30 min). Widzisz postęp na żywo: na staging URL, klikalna wersja. Bug tracker po Twojej stronie — wszystko transparentnie."
+          "Development - sprinty 2-tygodniowe",
+          "Każdy sprint kończy się demo (piątek, 30 min). Widzisz postęp na żywo: na staging URL, klikalna wersja. Bug tracker po Twojej stronie - wszystko transparentnie."
         ],
         [
-          "Testy — E2E, perf, a11y, security",
+          "Testy - E2E, perf, a11y, security",
           "Playwright (E2E + regresje wizualne), Lighthouse 95+, axe-core (WCAG AA), audyt bezpieczeństwa OWASP Top 10. Raport dostarczany przed wdrożeniem."
         ],
         [
-          "Wdrożenie — CI/CD, SSL, monitoring",
+          "Wdrożenie - CI/CD, SSL, monitoring",
           "Pipeline GitHub Actions, certyfikat SSL, backup'y, monitoring uptime + błędów. Wdrożenie wieczorem (poza godzinami szczytu) z planem rollback'u."
         ],
         [
-          "Wsparcie — 2 miesiące w cenie",
+          "Wsparcie - 2 miesiące w cenie",
           "2 miesiące bug-fix'ów gratis (wszystko, co popsuje się z mojej winy). Płatne tylko nowe funkcje. SLA na życzenie."
         ]
       ],
@@ -339,7 +339,7 @@
             "Widzisz postęp w piątek, nie w dniu odbioru. Reagujesz wcześniej, zmiany są tańsze."
           ],
           [
-            "Stała cena albo T&M — Twój wybór",
+            "Stała cena albo T&M - Twój wybór",
             "Fixed daje przewidywalność budżetu. T&M elastyczność zakresu. Decydujesz na etapie wyceny."
           ],
           [
@@ -371,7 +371,7 @@
     "items": {
       "duration": {
         "question": "Jak długo trwa realizacja projektu?",
-        "answer": "Czas realizacji zależy od skomplikowania projektu. Wizytówka Express na WordPressie to 5–7 dni, strona firmowa Next.js 2–4 tygodnie, sklep WooCommerce 4–8 tygodni, aplikacja webowa od 12 tygodni."
+        "answer": "Czas realizacji zależy od skomplikowania projektu. Wizytówka Express na WordPressie to 5-7 dni, strona firmowa Next.js 2-4 tygodnie, sklep WooCommerce 4-8 tygodni, aplikacja webowa od 12 tygodni."
       },
       "cost": {
         "question": "Ile kosztuje strona internetowa?",
@@ -379,7 +379,7 @@
       },
       "hosting": {
         "question": "Czy oferujesz hosting?",
-        "answer": "Tak — doradzam i konfiguruję hosting dopasowany do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
+        "answer": "Tak - doradzam i konfiguruję hosting dopasowany do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
       },
       "cms": {
         "question": "Czy mogę samodzielnie edytować stronę?",
@@ -401,7 +401,7 @@
     "itemsList": [
       [
         "Ile trwa realizacja projektu?",
-        "Wizytówka Express: 5–7 dni. Landing/firmowa: 2–4 tyg. Sklep: 4–8 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje harmonogram tygodniowy."
+        "Wizytówka Express: 5-7 dni. Landing/firmowa: 2-4 tyg. Sklep: 4-8 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje harmonogram tygodniowy."
       ],
       [
         "Ile kosztuje strona internetowa?",
@@ -409,7 +409,7 @@
       ],
       [
         "Czy oferujecie hosting?",
-        "Tak — doradzam i konfiguruję hosting dopasowany do stacku i budżetu."
+        "Tak - doradzam i konfiguruję hosting dopasowany do stacku i budżetu."
       ],
       [
         "Czy mogę edytować stronę samodzielnie?",
@@ -428,7 +428,7 @@
           "odpowiadam najczęściej",
           "."
         ],
-        "intro": "Pięć kategorii, kilkanaście pytań. Jeśli Twojego pytania tu nie ma — napisz, odpowiadam w 24 godziny."
+        "intro": "Pięć kategorii, kilkanaście pytań. Jeśli Twojego pytania tu nie ma - napisz, odpowiadam w 24 godziny."
       },
       "categories": [
         {
@@ -436,15 +436,15 @@
           "items": [
             [
               "Jak zacząć współpracę?",
-              "Wypełnij brief lub umów konsultację (30 min, bezpłatnie). W 48 godzin wracam z wyceną i harmonogramem. Decyzja po Twojej stronie — bez zobowiązań."
+              "Wypełnij brief lub umów konsultację (30 min, bezpłatnie). W 48 godzin wracam z wyceną i harmonogramem. Decyzja po Twojej stronie - bez zobowiązań."
             ],
             [
               "Czy podpisujemy umowę?",
-              "Tak — każdy projekt to umowa B2B z konkretnym zakresem, kamieniami milowymi i warunkami płatności. Wzór wysyłam razem z wyceną."
+              "Tak - każdy projekt to umowa B2B z konkretnym zakresem, kamieniami milowymi i warunkami płatności. Wzór wysyłam razem z wyceną."
             ],
             [
               "Jak wygląda komunikacja?",
-              "Email + Slack/Teams (do wyboru). Codziennie krótki status, w piątki demo. Bug tracker (Linear/GitHub) — pełna transparentność postępu."
+              "Email + Slack/Teams (do wyboru). Codziennie krótki status, w piątki demo. Bug tracker (Linear/GitHub) - pełna transparentność postępu."
             ],
             [
               "Czy mogę przerwać współpracę w trakcie?",
@@ -457,7 +457,7 @@
           "items": [
             [
               "Jak liczona jest cena?",
-              "Fixed (stała cena) lub T&M (Time & Materials). Stała cena = przewidywalny budżet, jasny zakres. T&M = elastyczność, kiedy zakres się zmienia. Kalkulator pokazuje cenę bazową — finalna w wycenie."
+              "Fixed (stała cena) lub T&M (Time & Materials). Stała cena = przewidywalny budżet, jasny zakres. T&M = elastyczność, kiedy zakres się zmienia. Kalkulator pokazuje cenę bazową - finalna w wycenie."
             ],
             [
               "Kiedy płacę?",
@@ -478,7 +478,7 @@
           "items": [
             [
               "Czym się zajmujesz?",
-              "Strony (Next.js, WordPress), sklepy (WooCommerce), aplikacje webowe (Spring Boot + Next.js). Stack dobieram do problemu — nie odwrotnie."
+              "Strony (Next.js, WordPress), sklepy (WooCommerce), aplikacje webowe (Spring Boot + Next.js). Stack dobieram do problemu - nie odwrotnie."
             ],
             [
               "Czyj jest kod?",
@@ -486,7 +486,7 @@
             ],
             [
               "Czy mogę edytować stronę samodzielnie?",
-              "Tak — WordPress ma wbudowany panel admin (w cenie). Next.js dostaje Sanity Studio jeśli zaznaczysz opcję samodzielnej edycji w kalkulatorze. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."
+              "Tak - WordPress ma wbudowany panel admin (w cenie). Next.js dostaje Sanity Studio jeśli zaznaczysz opcję samodzielnej edycji w kalkulatorze. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."
             ],
             [
               "A co z SEO?",
@@ -499,15 +499,15 @@
           "items": [
             [
               "Ile trwa realizacja?",
-              "Wizytówka Express: 5–7 dni. Landing/firmowa: 2–4 tygodnie. Sklep: 4–8 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje harmonogram tygodniowy z wyceną."
+              "Wizytówka Express: 5-7 dni. Landing/firmowa: 2-4 tygodnie. Sklep: 4-8 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje harmonogram tygodniowy z wyceną."
             ],
             [
               "Co spowalnia projekt?",
-              "Zwykle: brak treści (teksty, zdjęcia, logo), długie cykle akceptacji, zmieniający się zakres. Pomagam tego unikać — checklisty contentu, akceptacje w 48h, zmiany w sprincie."
+              "Zwykle: brak treści (teksty, zdjęcia, logo), długie cykle akceptacji, zmieniający się zakres. Pomagam tego unikać - checklisty contentu, akceptacje w 48h, zmiany w sprincie."
             ],
             [
               "Czy mogę zamówić ekspresowo?",
-              "Tak — opcja 'Przyspieszony' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."
+              "Tak - opcja 'Przyspieszony' (+25%) skraca czas o 30-40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."
             ]
           ]
         },
@@ -524,11 +524,11 @@
             ],
             [
               "Co jeśli będę potrzebować zmian po wdrożeniu?",
-              "2 miesiące bug-fix'ów gratis. Nowe funkcje — wycena per zlecenie albo abonament 'Pro' (10–20h/mies.). Bez zaskoczeń."
+              "2 miesiące bug-fix'ów gratis. Nowe funkcje - wycena per zlecenie albo abonament 'Pro' (10-20h/mies.). Bez zaskoczeń."
             ],
             [
               "Co jeśli serwer padnie?",
-              "Pakiet 'Pro' obejmuje SLA z czasem reakcji. Bez SLA — odpowiadam w godzinach roboczych w ciągu 24h."
+              "Pakiet 'Pro' obejmuje SLA z czasem reakcji. Bez SLA - odpowiadam w godzinach roboczych w ciągu 24h."
             ]
           ]
         }
@@ -2852,8 +2852,8 @@
     },
     "catalogSizes": {
       "sm": "do 50",
-      "md": "50–500",
-      "lg": "500–5k",
+      "md": "50-500",
+      "lg": "500-5k",
       "xl": "5k+"
     },
     "paymentGateways": {
@@ -2933,9 +2933,9 @@
       "title": [
         "4 presety. ",
         "Reszta",
-        " — kalkulator."
+        " - kalkulator."
       ],
-      "intro": "Wybierz jeden z 4 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
+      "intro": "Wybierz jeden z 4 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj - cena zmienia się na żywo. Po skończeniu wyślij brief - kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
       "title": "Wybierz pakiet",
@@ -2943,15 +2943,15 @@
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, jak się z Tobą skontaktować i zbierzesz pierwsze zapytania. Sprawdza się gdy klienci trafiają na stronę z innych źródeł — stopki maila, papierowej wizytówki czy reklamy. Podstawowe SEO i samodzielna edycja w WordPressie w cenie. Gotowa w tydzień."
+        "desc": "Strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, jak się z Tobą skontaktować i zbierzesz pierwsze zapytania. Sprawdza się gdy klienci trafiają na stronę z innych źródeł - stopki maila, papierowej wizytówki czy reklamy. Podstawowe SEO i samodzielna edycja w WordPressie w cenie. Gotowa w tydzień."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "Strona pod konkretną kampanię reklamową lub jeden produkt. Jej zadaniem jest pozyskiwanie klientów z wyszukiwarki — wyraźna oferta, mocne wezwanie do działania, formularz zapytań. Solidne SEO żeby Google pokazywało Cię na właściwe frazy. Sprawdzi się jako osobna strona pod każdą promowaną usługę."
+        "desc": "Strona pod konkretną kampanię reklamową lub jeden produkt. Jej zadaniem jest pozyskiwanie klientów z wyszukiwarki - wyraźna oferta, mocne wezwanie do działania, formularz zapytań. Solidne SEO żeby Google pokazywało Cię na właściwe frazy. Sprawdzi się jako osobna strona pod każdą promowaną usługę."
       },
       "company": {
         "name": "Strona firmowa",
-        "desc": "Kompletna prezentacja firmy w internecie. Usługi, zespół, realizacje, blog do budowania pozycji eksperta. Dwie wersje językowe (PL + EN) i panel CMS, więc sam zaktualizujesz treści. Najczęściej wybierany pakiet — dla firm które chcą mieć więcej niż wizytówkę."
+        "desc": "Kompletna prezentacja firmy w internecie. Usługi, zespół, realizacje, blog do budowania pozycji eksperta. Dwie wersje językowe (PL + EN) i panel CMS, więc sam zaktualizujesz treści. Najczęściej wybierany pakiet - dla firm które chcą mieć więcej niż wizytówkę."
       },
       "ecom": {
         "name": "Sklep online",
@@ -2992,9 +2992,9 @@
       "showAllOptions": "Pokaż wszystkie opcje",
       "hideExtraOptions": "Ukryj dodatkowe opcje",
       "tiers": {
-        "lite": "Lite — szablon",
-        "standard": "Standard — custom UI",
-        "premium": "Premium — UX/UI od zera"
+        "lite": "Lite - szablon",
+        "standard": "Standard - custom UI",
+        "premium": "Premium - UX/UI od zera"
       },
       "supports": {
         "none": "Brak",
@@ -3121,14 +3121,14 @@
         "krótka wycena",
         ", potem brief."
       ],
-      "body": "Wypełnij szybki kalkulator (3 minuty), żebym wiedział co budujemy i z jakim budżetem. Brief wyśle się razem z wyceną — bez powtarzania pytań.",
+      "body": "Wypełnij szybki kalkulator (3 minuty), żebym wiedział co budujemy i z jakim budżetem. Brief wyśle się razem z wyceną - bez powtarzania pytań.",
       "cta": "Otwórz kalkulator →"
     },
     "fields": {
       "name": "Imię i nazwisko",
       "email": "Email",
       "company": "Firma",
-      "desc": "Opisz projekt w 3–5 zdaniach",
+      "desc": "Opisz projekt w 3-5 zdaniach",
       "descMin": "min. 20 znaków",
       "timelineNote": "Termin (opcjonalnie)",
       "industry": "Branża / sektor",
@@ -3137,7 +3137,7 @@
     },
     "context": {
       "kicker": "// Krótki kontekst",
-      "intro": "Trzy szybkie pytania o Twoją firmę — pomagają mi zrozumieć biznes przed konsultacją."
+      "intro": "Trzy szybkie pytania o Twoją firmę - pomagają mi zrozumieć biznes przed konsultacją."
     },
     "placeholders": {
       "name": "np. Anna Kowalska",
@@ -3145,7 +3145,7 @@
       "company": "opcjonalnie",
       "timelineNote": "np. start za 4 tygodnie",
       "desc": {
-        "site": "Co budujemy? Dla kogo? Najważniejsze sekcje? Czy masz benchmark — link?",
+        "site": "Co budujemy? Dla kogo? Najważniejsze sekcje? Czy masz benchmark - link?",
         "shop": "Co sprzedajesz? Skąd produkty (ręcznie / hurtownia / ERP)? Najważniejsze integracje?",
         "app": "Co aplikacja ma robić? Główni użytkownicy i ich role? Najważniejsze przepływy?"
       }
@@ -3178,7 +3178,7 @@
       },
       "picker": {
         "kicker": "// Wycena szybka",
-        "body": "Wybierz typ projektu — przeniesiemy Cię do kalkulatora."
+        "body": "Wybierz typ projektu - przeniesiemy Cię do kalkulatora."
       }
     }
   },
@@ -3217,7 +3217,7 @@
           "różnych branż",
           "."
         ],
-        "subtitle": "Inspiracje. Każdy showcase to inny stack, inny system kolorów, inny ton — żeby pokazać że nowy design ≠ szablon.",
+        "subtitle": "Inspiracje. Każdy showcase to inny stack, inny system kolorów, inny ton - żeby pokazać że nowy design ≠ szablon.",
         "cta": "Wszystkie demo'a →"
       },
       "testi": {

@@ -30,7 +30,7 @@
     "h1c": "and apps that",
     "h1d": "make money.",
     "leadStrong": "IT Solutions",
-    "leadRest": " — a studio for websites, shops and web apps. Solutions used daily by thousands of users. Stack tailored to the problem — not the other way around."
+    "leadRest": " - a studio for websites, shops and web apps. Solutions used daily by thousands of users. Stack tailored to the problem - not the other way around."
   },
   "stats": {
     "projects": {
@@ -76,7 +76,7 @@
     "big": [
       "I tailor the solution to ",
       "your needs",
-      " — not the other way around."
+      " - not the other way around."
     ],
     "stats": [
       {
@@ -97,7 +97,7 @@
       {
         "label": "// support",
         "num": "2 mo.",
-        "foot": "Post-launch support included — free bug fixes."
+        "foot": "Post-launch support included - free bug fixes."
       }
     ],
     "quote": {
@@ -124,7 +124,7 @@
     },
     "wpExpress": {
       "title": "WP Express",
-      "description": "Premium Astra/Kadence template + brand customization — site in a week"
+      "description": "Premium Astra/Kadence template + brand customization - site in a week"
     },
     "webapp": {
       "title": "Web Applications",
@@ -149,12 +149,12 @@
       {
         "num": "[04]",
         "title": "WP Express",
-        "desc": "Astra Pro / Kadence + Elementor — site in a week for micro-businesses and freelancers."
+        "desc": "Astra Pro / Kadence + Elementor - site in a week for micro-businesses and freelancers."
       },
       {
         "num": "[05]",
         "title": "Web apps",
-        "desc": "Spring Boot + Next.js. SSO, RBAC — ready for enterprise production."
+        "desc": "Spring Boot + Next.js. SSO, RBAC - ready for enterprise production."
       }
     ]
   },
@@ -179,10 +179,10 @@
   },
   "testimonials": {
     "title": "What you get working with me",
-    "subtitle": "Values that hold — regardless of the project",
+    "subtitle": "Values that hold - regardless of the project",
     "items": [
       {
-        "q": "The code you get after launch is yours — no vendor lock-in, no hidden paid licenses in the stack.",
+        "q": "The code you get after launch is yours - no vendor lock-in, no hidden paid licenses in the stack.",
         "name": "Code ownership",
         "role": "Every project",
         "avatar": "→",
@@ -196,14 +196,14 @@
         "size": "med"
       },
       {
-        "q": "Docs in your language, README with runbook, video walkthrough of the panel. Come back a year later — you still know how to edit.",
+        "q": "Docs in your language, README with runbook, video walkthrough of the panel. Come back a year later - you still know how to edit.",
         "name": "Documentation",
         "role": "Standard",
         "avatar": "→",
         "size": "med"
       },
       {
-        "q": "<<USER_INPUT: authorized client quote — fill in later>>",
+        "q": "<<USER_INPUT: authorized client quote - fill in later>>",
         "name": "<<USER_INPUT: name>>",
         "role": "<<USER_INPUT: role, company>>",
         "avatar": "<<USER_INPUT: initials>>",
@@ -294,35 +294,35 @@
           "live",
           " in seven steps."
         ],
-        "intro": "Collaboration in seven clear steps. Each phase has a concrete deliverable, a known duration and one point of contact on your side. Demo every Friday — no slides, no salesperson in the loop."
+        "intro": "Collaboration in seven clear steps. Each phase has a concrete deliverable, a known duration and one point of contact on your side. Demo every Friday - no slides, no salesperson in the loop."
       },
       "extended": [
         [
-          "Consultation — 30 minutes",
+          "Consultation - 30 minutes",
           "Free 30 minutes. We talk about project goals, KPIs, budget and timeline constraints. You leave with a note: what we're building, with which stack, in which billing model. No commitments."
         ],
         [
           "Quote in 48 hours",
-          "Fixed price or Time & Materials. Weekly schedule with milestones. You get the quote by email — accept, ask follow-ups, or pass at no cost."
+          "Fixed price or Time & Materials. Weekly schedule with milestones. You get the quote by email - accept, ask follow-ups, or pass at no cost."
         ],
         [
-          "UX/UI — wireframe → Figma hi-fi",
-          "Sketch first — to align on information structure. Then hi-fi in Figma with a ready design system (colors, typography, components). Approve in one view, not in 30 emails."
+          "UX/UI - wireframe → Figma hi-fi",
+          "Sketch first - to align on information structure. Then hi-fi in Figma with a ready design system (colors, typography, components). Approve in one view, not in 30 emails."
         ],
         [
-          "Development — 2-week sprints",
-          "Every sprint ends with a demo (Friday, 30 min). You see progress live: on a staging URL, a clickable version. Bug tracker on your side — full transparency."
+          "Development - 2-week sprints",
+          "Every sprint ends with a demo (Friday, 30 min). You see progress live: on a staging URL, a clickable version. Bug tracker on your side - full transparency."
         ],
         [
-          "Testing — E2E, perf, a11y, security",
+          "Testing - E2E, perf, a11y, security",
           "Playwright (E2E + visual regressions), Lighthouse 95+, axe-core (WCAG AA), OWASP Top 10 security audit. Report delivered before deploy."
         ],
         [
-          "Deploy — CI/CD, SSL, monitoring",
+          "Deploy - CI/CD, SSL, monitoring",
           "GitHub Actions pipeline, SSL cert, backups, uptime + error monitoring. Deploy in the evening (off-peak) with a rollback plan."
         ],
         [
-          "Support — 2 months included",
+          "Support - 2 months included",
           "2 months of bug-fixes free (anything I broke). Paid only for new features. SLA on request."
         ]
       ],
@@ -336,10 +336,10 @@
         "items": [
           [
             "Weekly demo",
-            "You see progress on Friday, not on delivery day. React earlier — changes are cheaper."
+            "You see progress on Friday, not on delivery day. React earlier - changes are cheaper."
           ],
           [
-            "Fixed price or T&M — your call",
+            "Fixed price or T&M - your call",
             "Fixed gives budget predictability. T&M gives scope flexibility. You decide at quote time."
           ],
           [
@@ -371,7 +371,7 @@
     "items": {
       "duration": {
         "question": "How long does project delivery take?",
-        "answer": "Delivery time depends on project complexity. WordPress Express business card: 5–7 days, Next.js business site: 2–4 weeks, WooCommerce store: 4–8 weeks, web application: from 12 weeks."
+        "answer": "Delivery time depends on project complexity. WordPress Express business card: 5-7 days, Next.js business site: 2-4 weeks, WooCommerce store: 4-8 weeks, web application: from 12 weeks."
       },
       "cost": {
         "question": "How much does a website cost?",
@@ -379,7 +379,7 @@
       },
       "hosting": {
         "question": "Do you offer hosting?",
-        "answer": "Yes — I advise and set up hosting tailored to the stack and budget. You can host it yourself or have me handle it."
+        "answer": "Yes - I advise and set up hosting tailored to the stack and budget. You can host it yourself or have me handle it."
       },
       "cms": {
         "question": "Can I edit the website myself?",
@@ -401,7 +401,7 @@
     "itemsList": [
       [
         "How long does a project take?",
-        "Express business card: 5–7 days. Landing/business site: 2–4 weeks. Shop: 4–8 weeks. App: from 12 weeks. Every project gets a weekly timeline."
+        "Express business card: 5-7 days. Landing/business site: 2-4 weeks. Shop: 4-8 weeks. App: from 12 weeks. Every project gets a weekly timeline."
       ],
       [
         "How much does a website cost?",
@@ -409,7 +409,7 @@
       ],
       [
         "Do you offer hosting?",
-        "Yes — I advise and set up hosting tailored to the stack and budget."
+        "Yes - I advise and set up hosting tailored to the stack and budget."
       ],
       [
         "Can I edit the site myself?",
@@ -428,7 +428,7 @@
           "I answer most often",
           "."
         ],
-        "intro": "Five categories, a dozen questions. If yours isn't here — write to me, I reply within 24 hours."
+        "intro": "Five categories, a dozen questions. If yours isn't here - write to me, I reply within 24 hours."
       },
       "categories": [
         {
@@ -436,15 +436,15 @@
           "items": [
             [
               "How do we start?",
-              "Fill the brief or book a 30-min consultation (free). I come back with a quote and timeline within 48 hours. Decision is yours — no commitment."
+              "Fill the brief or book a 30-min consultation (free). I come back with a quote and timeline within 48 hours. Decision is yours - no commitment."
             ],
             [
               "Do we sign a contract?",
-              "Yes — every project is a B2B contract with a defined scope, milestones, and payment terms. I send the template along with the quote."
+              "Yes - every project is a B2B contract with a defined scope, milestones, and payment terms. I send the template along with the quote."
             ],
             [
               "How do we communicate?",
-              "Email + Slack/Teams (your pick). Short daily status, demo on Friday. Bug tracker (Linear/GitHub) — full transparency."
+              "Email + Slack/Teams (your pick). Short daily status, demo on Friday. Bug tracker (Linear/GitHub) - full transparency."
             ],
             [
               "Can I cancel mid-project?",
@@ -457,7 +457,7 @@
           "items": [
             [
               "How is the price calculated?",
-              "Fixed (set price) or T&M (Time & Materials). Fixed = predictable budget, clear scope. T&M = flexibility when scope changes. The calculator shows base price — final one in the quote."
+              "Fixed (set price) or T&M (Time & Materials). Fixed = predictable budget, clear scope. T&M = flexibility when scope changes. The calculator shows base price - final one in the quote."
             ],
             [
               "When do I pay?",
@@ -478,7 +478,7 @@
           "items": [
             [
               "What do you build?",
-              "Sites (Next.js, WordPress), stores (WooCommerce), web apps (Spring Boot + Next.js). Stack picked for the problem — not the other way."
+              "Sites (Next.js, WordPress), stores (WooCommerce), web apps (Spring Boot + Next.js). Stack picked for the problem - not the other way."
             ],
             [
               "Who owns the code?",
@@ -486,7 +486,7 @@
             ],
             [
               "Can I edit the site myself?",
-              "Yes — WordPress has a built-in admin (included). Next.js gets Sanity Studio if you select the self-edit option in the calculator. After deploy: training + PDF docs + video walkthrough."
+              "Yes - WordPress has a built-in admin (included). Next.js gets Sanity Studio if you select the self-edit option in the calculator. After deploy: training + PDF docs + video walkthrough."
             ],
             [
               "What about SEO?",
@@ -499,15 +499,15 @@
           "items": [
             [
               "How long does delivery take?",
-              "Express business card: 5–7 days. Landing/business site: 2–4 weeks. Shop: 4–8 weeks. App: from 12 weeks. Each project gets a weekly schedule with the quote."
+              "Express business card: 5-7 days. Landing/business site: 2-4 weeks. Shop: 4-8 weeks. App: from 12 weeks. Each project gets a weekly schedule with the quote."
             ],
             [
               "What slows projects down?",
-              "Usually: missing content (copy, photos, logo), long approval cycles, scope creep. I help avoid these — content checklists, 48h approvals, in-sprint changes."
+              "Usually: missing content (copy, photos, logo), long approval cycles, scope creep. I help avoid these - content checklists, 48h approvals, in-sprint changes."
             ],
             [
               "Can I rush it?",
-              "Yes — 'Rush' option (+25%) cuts time by 30–40%. Requires client-side availability and clear scope from day zero."
+              "Yes - 'Rush' option (+25%) cuts time by 30-40%. Requires client-side availability and clear scope from day zero."
             ]
           ]
         },
@@ -524,11 +524,11 @@
             ],
             [
               "What if I need changes after launch?",
-              "2 months of bug-fixes free. New features — quoted per request or 'Pro' subscription (10–20h/mo). No surprises."
+              "2 months of bug-fixes free. New features - quoted per request or 'Pro' subscription (10-20h/mo). No surprises."
             ],
             [
               "What if the server goes down?",
-              "'Pro' package includes SLA with response times. Without SLA — I reply during business hours within 24h."
+              "'Pro' package includes SLA with response times. Without SLA - I reply during business hours within 24h."
             ]
           ]
         }
@@ -2826,8 +2826,8 @@
     },
     "catalogSizes": {
       "sm": "up to 50",
-      "md": "50–500",
-      "lg": "500–5k",
+      "md": "50-500",
+      "lg": "500-5k",
       "xl": "5k+"
     },
     "paymentGateways": {
@@ -2907,9 +2907,9 @@
       "title": [
         "4 presets. ",
         "The rest",
-        " — calculator."
+        " - calculator."
       ],
-      "intro": "Pick one of 4 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click — the price updates live. When done, send the brief — quote context travels with it."
+      "intro": "Pick one of 4 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click - the price updates live. When done, send the brief - quote context travels with it."
     },
     "presets": {
       "title": "Pick a package",
@@ -2917,19 +2917,19 @@
       "from": "from",
       "express": {
         "name": "Express business card",
-        "desc": "A business-card site for a micro-business or freelancer. Showcase what you do, how to reach you, collect your first inquiries. Works best when clients find you through other channels — email signatures, printed cards, ads. Basic SEO and WordPress self-edit included. Ready in a week."
+        "desc": "A business-card site for a micro-business or freelancer. Showcase what you do, how to reach you, collect your first inquiries. Works best when clients find you through other channels - email signatures, printed cards, ads. Basic SEO and WordPress self-edit included. Ready in a week."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "A page for a specific ad campaign or single product. Its job is to bring in customers from search — clear offer, strong CTA, lead form. Solid SEO so Google shows you for the right keywords. Works well as a dedicated page per promoted service."
+        "desc": "A page for a specific ad campaign or single product. Its job is to bring in customers from search - clear offer, strong CTA, lead form. Solid SEO so Google shows you for the right keywords. Works well as a dedicated page per promoted service."
       },
       "company": {
         "name": "Business site",
-        "desc": "Complete business presence online. Services, team, case studies, blog to build expert authority. Bilingual (PL + EN) with a CMS panel so you can update content yourself. Most-chosen package — for companies that want more than a business card."
+        "desc": "Complete business presence online. Services, team, case studies, blog to build expert authority. Bilingual (PL + EN) with a CMS panel so you can update content yourself. Most-chosen package - for companies that want more than a business card."
       },
       "ecom": {
         "name": "Online store",
-        "desc": "A starter online store for small business. InPost shipping, Przelewy24 payments (BLIK, card, fast transfers), Omnibus compliance and basic SEO included. KSeF invoicing, Allegro integration or newsletter — add them in the calculator if needed."
+        "desc": "A starter online store for small business. InPost shipping, Przelewy24 payments (BLIK, card, fast transfers), Omnibus compliance and basic SEO included. KSeF invoicing, Allegro integration or newsletter - add them in the calculator if needed."
       }
     },
     "knobs": {
@@ -2966,9 +2966,9 @@
       "showAllOptions": "Show all options",
       "hideExtraOptions": "Hide extra options",
       "tiers": {
-        "lite": "Lite — template",
-        "standard": "Standard — custom UI",
-        "premium": "Premium — UX/UI from scratch"
+        "lite": "Lite - template",
+        "standard": "Standard - custom UI",
+        "premium": "Premium - UX/UI from scratch"
       },
       "supports": {
         "none": "None",
@@ -3095,14 +3095,14 @@
         "short quote",
         ", then the brief."
       ],
-      "body": "Fill the quick calculator (3 min) so I know what we're building and at what budget. The brief sends together with your quote — no repeated questions.",
+      "body": "Fill the quick calculator (3 min) so I know what we're building and at what budget. The brief sends together with your quote - no repeated questions.",
       "cta": "Open the calculator →"
     },
     "fields": {
       "name": "Full name",
       "email": "Email",
       "company": "Company",
-      "desc": "Describe the project in 3–5 sentences",
+      "desc": "Describe the project in 3-5 sentences",
       "descMin": "min. 20 chars",
       "timelineNote": "Timeline (optional)",
       "industry": "Industry / sector",
@@ -3111,7 +3111,7 @@
     },
     "context": {
       "kicker": "// Quick context",
-      "intro": "Three quick questions about your business — they help me understand the company before the consultation."
+      "intro": "Three quick questions about your business - they help me understand the company before the consultation."
     },
     "placeholders": {
       "name": "e.g. Anna Kowalska",
@@ -3119,7 +3119,7 @@
       "company": "optional",
       "timelineNote": "e.g. kickoff in 4 weeks",
       "desc": {
-        "site": "What are we building? For whom? Most important sections? Got a benchmark — link?",
+        "site": "What are we building? For whom? Most important sections? Got a benchmark - link?",
         "shop": "What do you sell? Source of products (manual / wholesale / ERP)? Top integrations?",
         "app": "What does the app do? Main users and their roles? Critical flows?"
       }
@@ -3152,7 +3152,7 @@
       },
       "picker": {
         "kicker": "// Quick quote",
-        "body": "Pick the project type — we'll take you to the calculator."
+        "body": "Pick the project type - we'll take you to the calculator."
       }
     }
   },
@@ -3191,7 +3191,7 @@
           "industries",
           "."
         ],
-        "subtitle": "Inspirations. Each showcase has its own stack, color system and tone — to prove the new design is not a template.",
+        "subtitle": "Inspirations. Each showcase has its own stack, color system and tone - to prove the new design is not a template.",
         "cta": "All demos →"
       },
       "testi": {
