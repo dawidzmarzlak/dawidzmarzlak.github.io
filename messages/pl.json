@@ -21,7 +21,7 @@
   "hero": {
     "badge": "Ponad 50 zrealizowanych projektów od 2020 roku",
     "title": "Tworzę Strony, Które Sprzedają",
-    "subtitle": "Specjalizuję się w Next.js, WordPress (Astra/Elementor lub custom theme), WooCommerce z integracjami KSeF + Omnibus + BaseLinker oraz aplikacjach webowych Spring Boot + Next.js. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
+    "subtitle": "Strony Next.js i WordPress, sklepy WooCommerce, aplikacje webowe Spring Boot + Next.js. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
     "cta": "Wycena →",
     "cta_secondary": "Zobacz moje portfolio",
     "tag": "Available · 5+ lat doświadczenia",
@@ -86,8 +86,8 @@
       },
       {
         "label": "// stacks",
-        "num": "5",
-        "foot": "Next.js, WordPress, WooCommerce, WP Express, Spring Boot."
+        "num": "4",
+        "foot": "Next.js, WordPress, WooCommerce, Spring Boot."
       },
       {
         "label": "// quote SLA",
@@ -379,7 +379,7 @@
       },
       "hosting": {
         "question": "Czy oferujesz hosting?",
-        "answer": "Tak — Vercel dla Next.js, cyber_Folks lub LH.pl dla WordPress, Hetzner VPS dla aplikacji. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
+        "answer": "Tak — doradzam i konfiguruję hosting dopasowany do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
       },
       "cms": {
         "question": "Czy mogę samodzielnie edytować stronę?",
@@ -409,7 +409,7 @@
       ],
       [
         "Czy oferujecie hosting?",
-        "Tak — Vercel (Next.js), cyber_Folks lub LH.pl (WordPress), Hetzner VPS (aplikacje). Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."
+        "Tak — doradzam i konfiguruję hosting dopasowany do stacku i budżetu."
       ],
       [
         "Czy mogę edytować stronę samodzielnie?",
@@ -478,7 +478,7 @@
           "items": [
             [
               "Czym się zajmujesz?",
-              "Strony (Next.js, WordPress z Astra/Elementor lub custom theme), sklepy (WooCommerce z KSeF + Omnibus + BaseLinker), aplikacje webowe (Spring Boot + Next.js). Stack dobieram do problemu — nie odwrotnie."
+              "Strony (Next.js, WordPress), sklepy (WooCommerce), aplikacje webowe (Spring Boot + Next.js). Stack dobieram do problemu — nie odwrotnie."
             ],
             [
               "Czyj jest kod?",
@@ -520,7 +520,7 @@
             ],
             [
               "Co z hostingiem?",
-              "Doradzam i konfiguruję: Vercel (Next.js), AWS, OVH, własny VPS — co pasuje do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
+              "Doradzam i konfiguruję hosting dopasowany do stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
             ],
             [
               "Co jeśli będę potrzebować zmian po wdrożeniu?",
@@ -599,7 +599,7 @@
   "metadata": {
     "title": "IT Solutions - Freelance Web Developer | Strony Internetowe",
     "siteName": "IT Solutions",
-    "description": "Freelance web developer - tworzę profesjonalne strony internetowe i sklepy online. Next.js, WordPress (Astra/Elementor lub custom theme), WooCommerce z integracjami KSeF + Omnibus + BaseLinker, aplikacje webowe Spring Boot. Indywidualne podejście do projektu.",
+    "description": "Freelance web developer - tworzę profesjonalne strony internetowe i sklepy online. Next.js, WordPress, WooCommerce, aplikacje webowe Spring Boot. Indywidualne podejście do projektu.",
     "keywords": "freelance web developer, strony internetowe, tworzenie stron www, sklepy internetowe, WordPress developer, Next.js developer, web developer polska"
   },
   "showcase": {
