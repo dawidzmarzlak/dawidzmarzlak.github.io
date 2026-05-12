@@ -2786,6 +2786,8 @@
     "cms": "CMS editing",
     "out": "Estimated from",
     "currency": "PLN",
+    "netNote": "net",
+    "netDisclaimer": "All prices are net (excl. 23% VAT). B2B invoice.",
     "heroStat": "Years on production since the first deploy in 2020.",
     "heroUnit": "+ yr",
     "fullCalc": "Full calculator",

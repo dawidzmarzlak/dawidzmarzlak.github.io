@@ -54,7 +54,10 @@ export function ContactAside() {
           <div className="px-4 py-4 bg-bg rounded-xl flex items-baseline justify-between border border-line">
             <span className="font-mono text-[11px] text-fg-muted uppercase">{tCalc("out")}</span>
             <span className="font-display italic text-[28px] text-accent leading-none">
-              {fmt(stored.total)} <span className="font-mono not-italic text-[11px] text-fg-muted ml-1">{tCalc("currency")}</span>
+              {fmt(stored.total)}{" "}
+              <span className="font-mono not-italic text-[11px] text-fg-muted ml-1">
+                {tCalc("currency")} <span className="opacity-60">{tCalc("netNote")}</span>
+              </span>
             </span>
           </div>
           <Link href="/pricing" className="text-[12px] font-mono text-accent hover:underline">{t("summary.edit")} →</Link>

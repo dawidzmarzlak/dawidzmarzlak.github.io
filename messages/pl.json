@@ -2812,6 +2812,8 @@
     "cms": "Edycja przez CMS",
     "out": "Szacunkowo od",
     "currency": "PLN",
+    "netNote": "netto",
+    "netDisclaimer": "Wszystkie ceny są podane w kwotach netto (bez VAT 23%). Faktura B2B.",
     "heroStat": "Lat na produkcji od pierwszego deployu w 2020.",
     "heroUnit": "+ lat",
     "fullCalc": "Pełny kalkulator",

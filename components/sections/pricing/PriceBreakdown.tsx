@@ -59,7 +59,10 @@ export function PriceBreakdown({ quote }: Props) {
             <span className="font-mono text-[11px] text-fg-muted uppercase">{t("total")}</span>
             <span className="flex flex-col items-end">
               <span className="font-display italic text-[36px] text-accent leading-none" title={tooltip ?? undefined}>
-                {fmt(quote.total)} <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">{tCalc("currency")}</span>
+                {fmt(quote.total)}{" "}
+                <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">
+                  {tCalc("currency")} <span className="opacity-60">{tCalc("netNote")}</span>
+                </span>
               </span>
               {tooltip && (
                 <span className="font-mono text-[11px] text-fg-muted opacity-70 mt-1">{tooltip}</span>
@@ -74,6 +77,7 @@ export function PriceBreakdown({ quote }: Props) {
           <span className="font-mono">+{fmt(quote.supportYearly)} / {t("year")}</span>
         </div>
       )}
+      <p className="mt-4 text-[11px] text-fg-muted leading-[1.5] opacity-70">{tCalc("netDisclaimer")}</p>
       <Link href="/contact?from=quote#brief" className="mt-6 block text-center bg-accent text-accent-fg rounded-full py-3 font-bold no-underline">
         {t("cta")}
       </Link>

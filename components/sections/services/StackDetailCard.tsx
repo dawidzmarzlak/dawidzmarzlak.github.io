@@ -9,6 +9,7 @@ interface Props { stack: Stack; }
 export function StackDetailCard({ stack: s }: Props) {
   const locale = useLocale();
   const tPricing = useTranslations("pricing");
+  const tCalc = useTranslations("calculator");
   const { text: priceText, tooltip: priceTooltip } = formatPlnWithEurTooltip(s.fromPln, locale);
   const perMonthSuffix = s.fromPlnPerMonth ? ` ${tPricing("perMonth")}` : "";
   return (
@@ -65,7 +66,8 @@ export function StackDetailCard({ stack: s }: Props) {
             <div>
               <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-fg-muted">Od</div>
               <div className="font-display italic text-[36px] leading-none text-accent mt-1.5" title={priceTooltip ?? undefined}>
-                {priceText}{perMonthSuffix}
+                {priceText}{perMonthSuffix}{" "}
+                <span className="font-mono not-italic text-[12px] text-fg-muted opacity-70">{tCalc("netNote")}</span>
               </div>
               {priceTooltip && (
                 <div className="font-mono text-[11px] text-fg-muted opacity-70 mt-1">{priceTooltip}{perMonthSuffix}</div>

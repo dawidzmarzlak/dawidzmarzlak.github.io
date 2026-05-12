@@ -93,7 +93,9 @@ export function QuoteCalculator() {
         <span className="font-mono text-[11px] text-fg-muted uppercase">{tPresets("from")}</span>
         <span className="font-display italic text-[32px] text-accent leading-none">
           {price.toLocaleString(locale === "pl" ? "pl-PL" : "en-US")}{" "}
-          <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">{t("currency")}</span>
+          <span className="font-mono not-italic text-[12px] text-fg-muted ml-1.5">
+            {t("currency")} <span className="opacity-60">{t("netNote")}</span>
+          </span>
         </span>
       </div>
 
