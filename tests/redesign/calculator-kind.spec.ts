@@ -17,6 +17,8 @@ const SITE_BASELINE: AdvancedQuoteInput = {
     platform: "nextjs",
     pages: 8,
     cms: true,
+    contentSource: "client",
+    imagesSource: "client",
     siteIntegrations: [],
   },
 };

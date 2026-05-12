@@ -5,6 +5,11 @@ export type ProjectKind = typeof PROJECT_KINDS[number];
 export const SITE_PLATFORMS = ["wp", "nextjs"] as const;
 export type SitePlatform = typeof SITE_PLATFORMS[number];
 
+// Content sourcing — does the client provide the content (text/images),
+// or do we prepare it? Default 'client' is free; 'creator' adds setup cost.
+export const CONTENT_SOURCES = ["client", "creator"] as const;
+export type ContentSource = typeof CONTENT_SOURCES[number];
+
 export const SITE_INTEGRATIONS = [
   "analytics", "newsletter", "form", "chat", "map", "booking",
   // New addons (2025/2026 market calibration)

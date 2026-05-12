@@ -26,6 +26,8 @@ export const PRESETS: Preset[] = [
         platform: "wp",
         pages: 5,
         cms: true,
+        contentSource: "client",
+        imagesSource: "client",
         siteIntegrations: ["analytics", "form"],
       },
     },
@@ -41,6 +43,8 @@ export const PRESETS: Preset[] = [
         platform: "nextjs",
         pages: 4,
         cms: false,
+        contentSource: "client",
+        imagesSource: "client",
         // Extended on-page SEO (schema, optimized meta, canonical) — LP relies on
         // organic search traffic, so SEO is core to its purpose (vs Express which
         // gets traffic from direct sources like email signature / printed cards).
@@ -59,6 +63,8 @@ export const PRESETS: Preset[] = [
         platform: "nextjs",
         pages: 10,
         cms: true,
+        contentSource: "client",
+        imagesSource: "client",
         siteIntegrations: ["analytics", "newsletter", "form", "blog-cms"],
       },
     },

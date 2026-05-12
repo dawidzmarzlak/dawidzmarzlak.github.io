@@ -18,6 +18,8 @@ export function PriceBreakdown({ quote }: Props) {
     [t("cms"),              b.cms],
     [t("design"),           b.design],
     [t("languages"),        b.languages],
+    [t("content"),          b.content],
+    [t("images"),           b.images],
     [t("siteIntegrations"), b.siteIntegrations],
     [t("catalog"),          b.catalog],
     [t("payments"),         b.payments],

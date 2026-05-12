@@ -2810,6 +2810,14 @@
       "wp": "WordPress",
       "nextjs": "Next.js"
     },
+    "contentSources": {
+      "client": "Client provides",
+      "creator": "We prepare"
+    },
+    "imagesSources": {
+      "client": "Client provides",
+      "creator": "We prepare"
+    },
     "shopPlatforms": {
       "woo": "WooCommerce",
       "presta": "PrestaShop",
@@ -2908,19 +2916,19 @@
       "from": "from",
       "express": {
         "name": "Express business card",
-        "desc": "A simple business-card site for micro-businesses. Showcase what you do, contact details, lead form. Traffic comes from direct sources — email signatures, printed business cards, ads. Basic SEO and WP self-edit included. Ready in a week."
+        "desc": "A business-card site for a micro-business or freelancer. Showcase what you do, how to reach you, collect your first inquiries. Works best when clients find you through other channels — email signatures, printed cards, ads. Basic SEO and WordPress self-edit included. Ready in a week."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "A page for a single ad campaign or product. Goal: acquire customers from Google Search. Clear offer, strong CTAs, lead form + extended on-page SEO (schema, optimized meta) to drive organic traffic."
+        "desc": "A page for a specific ad campaign or single product. Its job is to bring in customers from search — clear offer, strong CTA, lead form. Solid SEO so Google shows you for the right keywords. Works well as a dedicated page per promoted service."
       },
       "company": {
         "name": "Business site",
-        "desc": "Complete business presence online. Services, team, case studies, blog to build client trust. Bilingual (Polish + English) with self-edit content management."
+        "desc": "Complete business presence online. Services, team, case studies, blog to build expert authority. Bilingual (PL + EN) with a CMS panel so you can update content yourself. Most-chosen package — for companies that want more than a business card."
       },
       "ecom": {
         "name": "Online store",
-        "desc": "Starter online store for small business. InPost shipping, online payments via Przelewy24 (BLIK, card, fast transfers), Omnibus-directive compliant. Basic SEO included. KSeF invoicing, Allegro integration and newsletter — available as optional add-ons in the calculator."
+        "desc": "A starter online store for small business. InPost shipping, Przelewy24 payments (BLIK, card, fast transfers), Omnibus compliance and basic SEO included. KSeF invoicing, Allegro integration or newsletter — add them in the calculator if needed."
       }
     },
     "knobs": {
@@ -2929,6 +2937,8 @@
       "contentPages": "Content pages",
       "cms": "Self-edit content",
       "sitePlatform": "Stack",
+      "contentSource": "Text content",
+      "imagesSource": "Images / photos",
       "designTier": "Design level",
       "languages": "Number of languages",
       "siteIntegrations": "Integrations",
@@ -3041,6 +3051,8 @@
       "cms": "CMS",
       "design": "Design",
       "languages": "Translations",
+      "content": "Content (copywriting)",
+      "images": "Images (sourcing + stock)",
       "siteIntegrations": "Site integrations",
       "catalog": "Catalog",
       "payments": "Payment gateways",

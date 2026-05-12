@@ -1,5 +1,5 @@
 import {
-  type ProjectKind, type SitePlatform, type SiteIntegration,
+  type ProjectKind, type SitePlatform, type SiteIntegration, type ContentSource,
   type ShopPlatform, type CatalogSize, type PaymentGateway, type ShopIntegration, type ErpOption,
   type AppType, type AppAuth, type AppBackend, type AppStorage, type AppIntegration,
   type DesignTier, type SupportTier, type Hosting, type Timeline,
@@ -7,7 +7,7 @@ import {
 } from "./project-kinds";
 
 export type {
-  ProjectKind, SitePlatform, SiteIntegration,
+  ProjectKind, SitePlatform, SiteIntegration, ContentSource,
   ShopPlatform, CatalogSize, PaymentGateway, ShopIntegration, ErpOption,
   AppType, AppAuth, AppBackend, AppStorage, AppIntegration,
   DesignTier, SupportTier, Hosting, Timeline,
@@ -32,6 +32,12 @@ export const PAGE_UNIT = 350;
 export const LANGUAGE_UNIT = 1400;
 export const CMS_FLAT = 3000;
 export const TIMELINE_RUSH_MULT = 1.25;
+
+// Content sourcing — when client doesn't provide, we prepare:
+// - text content: SEO copywriting up to ~10k zzs (~10 typical pages worth)
+// - images: stock licenses + selection (premium stock or custom photo is extra)
+export const CONTENT_BY_CREATOR_COST = 800;
+export const IMAGES_BY_CREATOR_COST = 600;
 
 export const DESIGN_TIER_PRICE: Record<DesignTier, number> = {
   lite: 0, standard: 700, premium: 5050,
@@ -136,6 +142,8 @@ export interface SiteFields {
   platform: SitePlatform;
   pages: number;
   cms: boolean;
+  contentSource: ContentSource;
+  imagesSource: ContentSource;
   siteIntegrations: SiteIntegration[];
 }
 
@@ -195,6 +203,8 @@ export interface AdvancedQuoteBreakdown {
   cms: number;
   design: number;
   languages: number;
+  content: number;
+  images: number;
   siteIntegrations: number;
   catalog: number;
   payments: number;
@@ -219,7 +229,7 @@ export interface AdvancedQuoteResult {
 }
 
 const ZERO_BREAKDOWN: AdvancedQuoteBreakdown = {
-  base: 0, pages: 0, cms: 0, design: 0, languages: 0,
+  base: 0, pages: 0, cms: 0, design: 0, languages: 0, content: 0, images: 0,
   siteIntegrations: 0, catalog: 0, payments: 0, shopIntegrations: 0, erp: 0,
   appAuth: 0, appBackend: 0, appStorage: 0, appIntegrations: 0, appRoles: 0, appMobile: 0,
   hosting: 0, supportYearly: 0,
@@ -240,6 +250,9 @@ export function computeAdvancedQuote(input: AdvancedQuoteInput): AdvancedQuoteRe
     b.design = SITE_DESIGN_TIER_PRICE[s.platform][input.designTier];
     // CMS edit capability: free on WP (admin built-in), CMS_FLAT on Next.js (Sanity setup).
     b.cms = s.cms ? (s.platform === "wp" ? 0 : CMS_FLAT) : 0;
+    // Content sourcing: free if client provides, surcharge if we create.
+    b.content = s.contentSource === "creator" ? CONTENT_BY_CREATOR_COST : 0;
+    b.images = s.imagesSource === "creator" ? IMAGES_BY_CREATOR_COST : 0;
     b.siteIntegrations = s.siteIntegrations.reduce((a, k) => a + SITE_INTEGRATION_COST[k], 0);
   } else if (input.kind === "shop") {
     const s = input.shop;
@@ -259,7 +272,7 @@ export function computeAdvancedQuote(input: AdvancedQuoteInput): AdvancedQuoteRe
   }
 
   const subtotal =
-    b.base + b.pages + b.cms + b.design + b.languages +
+    b.base + b.pages + b.cms + b.design + b.languages + b.content + b.images +
     b.siteIntegrations + b.catalog + b.payments + b.shopIntegrations + b.erp +
     b.appAuth + b.appBackend + b.appStorage + b.appIntegrations + b.appRoles + b.appMobile +
     b.hosting;

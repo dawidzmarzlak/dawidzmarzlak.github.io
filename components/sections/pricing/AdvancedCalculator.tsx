@@ -5,7 +5,7 @@ import {
   type AdvancedQuoteInput, type ProjectKind, type SiteFields, type ShopFields, type AppFields,
 } from "@/lib/design/calculator";
 import {
-  PROJECT_KINDS, SITE_PLATFORMS, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
+  PROJECT_KINDS, SITE_PLATFORMS, CONTENT_SOURCES, SITE_INTEGRATIONS, POPULAR_SITE_INTEGRATIONS,
   SHOP_PLATFORMS, CATALOG_SIZES, PAYMENT_GATEWAYS, SHOP_INTEGRATIONS, POPULAR_SHOP_INTEGRATIONS, ERP_OPTIONS,
   APP_TYPES, APP_AUTH, APP_BACKENDS, APP_STORAGE, APP_INTEGRATIONS, POPULAR_APP_INTEGRATIONS,
   DESIGN_TIERS, SUPPORT_TIERS, HOSTINGS, TIMELINES,
@@ -87,7 +87,7 @@ function emptyInput(kind: ProjectKind, prev: AdvancedQuoteInput): AdvancedQuoteI
     industry: prev.industry, audience: prev.audience, stage: prev.stage,
   };
   if (kind === "site") {
-    return { kind: "site", ...shared, site: { platform: "nextjs", pages: 6, cms: true, siteIntegrations: ["analytics"] } };
+    return { kind: "site", ...shared, site: { platform: "nextjs", pages: 6, cms: true, contentSource: "client", imagesSource: "client", siteIntegrations: ["analytics"] } };
   }
   if (kind === "shop") {
     return { kind: "shop", ...shared, shop: { platform: "woo", catalogSize: "md", contentPages: 5, paymentGateways: ["blik", "p24"], shopIntegrations: ["courier"], erp: "none" } };
@@ -99,6 +99,7 @@ function emptyInput(kind: ProjectKind, prev: AdvancedQuoteInput): AdvancedQuoteI
 
 function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: SiteFields) => void }) {
   const t = useTranslations("pricing.knobs");
+  const tCalc = useTranslations("calculator");
   const set = <K extends keyof SiteFields>(k: K, v: SiteFields[K]) => onChange({ ...value, [k]: v });
   const toggle = (k: typeof SITE_INTEGRATIONS[number]) =>
     set("siteIntegrations", value.siteIntegrations.includes(k) ? value.siteIntegrations.filter(x => x !== k) : [...value.siteIntegrations, k]);
@@ -111,6 +112,12 @@ function SiteSection({ value, onChange }: { value: SiteFields; onChange: (v: Sit
       </Knob>
       <Knob label={t("cms")}>
         <Toggle on={value.cms} onToggle={() => set("cms", !value.cms)} />
+      </Knob>
+      <Knob label={t("contentSource")}>
+        <Pills options={CONTENT_SOURCES} value={value.contentSource} onChange={(v) => set("contentSource", v)} labelFn={(k) => tCalc(`contentSources.${k}`)} cols={2} />
+      </Knob>
+      <Knob label={t("imagesSource")}>
+        <Pills options={CONTENT_SOURCES} value={value.imagesSource} onChange={(v) => set("imagesSource", v)} labelFn={(k) => tCalc(`imagesSources.${k}`)} cols={2} />
       </Knob>
       <Knob label={t("siteIntegrations")}>
         <CollapsibleChipGrid

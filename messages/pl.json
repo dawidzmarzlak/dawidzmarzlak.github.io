@@ -2836,6 +2836,14 @@
       "wp": "WordPress",
       "nextjs": "Next.js"
     },
+    "contentSources": {
+      "client": "Klient dostarcza",
+      "creator": "Przygotowuję ja"
+    },
+    "imagesSources": {
+      "client": "Klient dostarcza",
+      "creator": "Przygotowuję ja"
+    },
     "shopPlatforms": {
       "woo": "WooCommerce",
       "presta": "PrestaShop",
@@ -2934,19 +2942,19 @@
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Prosta strona-wizytówka dla mikro-firmy. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Ruch trafia tu z direct — stopki maila, papierowej wizytówki, baneru reklamowego. Podstawowe SEO i samodzielna edycja treści w WP w cenie. Gotowa w tydzień."
+        "desc": "Strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, jak się z Tobą skontaktować i zbierzesz pierwsze zapytania. Sprawdza się gdy klienci trafiają na stronę z innych źródeł — stopki maila, papierowej wizytówki czy reklamy. Podstawowe SEO i samodzielna edycja w WordPressie w cenie. Gotowa w tydzień."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "Strona pod jedną kampanię reklamową lub konkretny produkt. Cel: pozyskiwać klientów z wyszukiwarki Google. Wyraźna oferta, mocne CTA, formularz zapytań + rozszerzone SEO on-page (schema, zoptymalizowane meta) by sprowadzać ruch organiczny."
+        "desc": "Strona pod konkretną kampanię reklamową lub jeden produkt. Jej zadaniem jest pozyskiwanie klientów z wyszukiwarki — wyraźna oferta, mocne wezwanie do działania, formularz zapytań. Solidne SEO żeby Google pokazywało Cię na właściwe frazy. Sprawdzi się jako osobna strona pod każdą promowaną usługę."
       },
       "company": {
         "name": "Strona firmowa",
-        "desc": "Kompletna prezentacja firmy online. Usługi, zespół, realizacje, blog do budowania zaufania klientów. Dwujęzyczna (PL + EN), z możliwością samodzielnej edycji treści."
+        "desc": "Kompletna prezentacja firmy w internecie. Usługi, zespół, realizacje, blog do budowania pozycji eksperta. Dwie wersje językowe (PL + EN) i panel CMS, więc sam zaktualizujesz treści. Najczęściej wybierany pakiet — dla firm które chcą mieć więcej niż wizytówkę."
       },
       "ecom": {
         "name": "Sklep online",
-        "desc": "Sklep dla małej firmy w wersji startowej. Dostawa InPostem, płatności online przez Przelewy24 (BLIK, karta, szybkie przelewy), zgodny z dyrektywą Omnibus. Podstawowe SEO w cenie. Fakturowanie KSeF, integracja z Allegro i newsletter — możesz dodać jako opcje w kalkulatorze."
+        "desc": "Sklep online dla małej firmy zaczynającej sprzedaż. Dostawa InPostem, płatności przez Przelewy24 (BLIK, karta, szybkie przelewy), Omnibus i podstawowe SEO w cenie. KSeF, integrację z Allegro czy newsletter dołożysz w kalkulatorze jeśli będą potrzebne."
       }
     },
     "knobs": {
@@ -2955,6 +2963,8 @@
       "contentPages": "Strony treściowe",
       "cms": "Samodzielna edycja treści",
       "sitePlatform": "Stack",
+      "contentSource": "Teksty na stronę",
+      "imagesSource": "Grafiki / zdjęcia",
       "designTier": "Poziom designu",
       "languages": "Liczba języków",
       "siteIntegrations": "Integracje",
@@ -3067,6 +3077,8 @@
       "cms": "CMS",
       "design": "Design",
       "languages": "Tłumaczenia",
+      "content": "Teksty (copywriting)",
+      "images": "Grafiki (dobór + stock)",
       "siteIntegrations": "Integracje strony",
       "catalog": "Katalog",
       "payments": "Bramki płatności",
