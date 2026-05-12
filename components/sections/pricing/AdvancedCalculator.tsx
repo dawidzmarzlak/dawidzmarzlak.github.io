@@ -238,7 +238,24 @@ function TechPreferencesPanel({ value, onChange }: { value: AdvancedQuoteInput; 
         <div className="px-5 pb-5 pt-1 flex flex-col gap-5 border-t border-line">
           {value.kind === "site" && (
             <Knob label={t("sitePlatform")}>
-              <Pills options={SITE_PLATFORMS} value={value.site.platform} onChange={(v) => onChange({ ...value, site: { ...value.site, platform: v } })} labelFn={(k) => tCalc(`sitePlatforms.${k}`)} cols={2} />
+              <Pills
+                options={SITE_PLATFORMS}
+                value={value.site.platform}
+                onChange={(v) =>
+                  onChange({
+                    ...value,
+                    site: {
+                      ...value.site,
+                      platform: v,
+                      // Switching to WP auto-enables CMS (WP admin always included);
+                      // switching to Next.js preserves the user's current CMS preference.
+                      cms: v === "wp" ? true : value.site.cms,
+                    },
+                  })
+                }
+                labelFn={(k) => tCalc(`sitePlatforms.${k}`)}
+                cols={2}
+              />
             </Knob>
           )}
           {value.kind === "shop" && (
