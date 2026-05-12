@@ -2837,12 +2837,12 @@
       "nextjs": "Next.js"
     },
     "contentSources": {
-      "client": "Klient dostarcza",
-      "creator": "Przygotowuję ja"
+      "client": "Dostarczam",
+      "creator": "Przygotujesz dla mnie"
     },
     "imagesSources": {
-      "client": "Klient dostarcza",
-      "creator": "Przygotowuję ja"
+      "client": "Dostarczam",
+      "creator": "Przygotujesz dla mnie"
     },
     "shopPlatforms": {
       "woo": "WooCommerce",

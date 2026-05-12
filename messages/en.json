@@ -2811,12 +2811,12 @@
       "nextjs": "Next.js"
     },
     "contentSources": {
-      "client": "Client provides",
-      "creator": "We prepare"
+      "client": "I'll provide",
+      "creator": "Prepare for me"
     },
     "imagesSources": {
-      "client": "Client provides",
-      "creator": "We prepare"
+      "client": "I'll provide",
+      "creator": "Prepare for me"
     },
     "shopPlatforms": {
       "woo": "WooCommerce",
