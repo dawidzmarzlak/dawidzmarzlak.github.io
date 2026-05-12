@@ -9,11 +9,11 @@ function presetInput(key: string): AdvancedQuoteInput {
 }
 
 describe("computeAdvancedQuote — preset calibration (2025/2026)", () => {
-  it("LP preset (landing) gives ~3 800 zl (+/-5%) - with contact form", () => {
+  it("LP preset (landing) gives ~5 750 zl (+/-5%) - with form + seo-onpage", () => {
     const input = presetInput("landing");
     const result = computeAdvancedQuote(input);
-    expect(result.total).toBeGreaterThanOrEqual(3610);
-    expect(result.total).toBeLessThanOrEqual(3990);
+    expect(result.total).toBeGreaterThanOrEqual(5460);
+    expect(result.total).toBeLessThanOrEqual(6040);
   });
 
   it("Strona firmowa preset (company) gives ~13 000 zl (+/-5%) - with blog CMS", () => {

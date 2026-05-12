@@ -41,7 +41,10 @@ export const PRESETS: Preset[] = [
         platform: "nextjs",
         pages: 4,
         cms: false,
-        siteIntegrations: ["analytics", "form"],
+        // Extended on-page SEO (schema, optimized meta, canonical) — LP relies on
+        // organic search traffic, so SEO is core to its purpose (vs Express which
+        // gets traffic from direct sources like email signature / printed cards).
+        siteIntegrations: ["analytics", "form", "seo-onpage"],
       },
     },
   },

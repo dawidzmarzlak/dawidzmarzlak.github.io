@@ -22,7 +22,10 @@ export type {
 // App preset (~39 900 PLN) is added in Task 6; BASE_PRICE.app pre-sized for it.
 
 export const BASE_PRICE: Record<ProjectKind, number> = {
-  site: 750, shop: 5500, app: 28000,
+  // Base includes basic SEO essentials: sitemap.xml, robots.txt, basic meta tags,
+  // Schema.org Organization, Google Search Console submission. For app (often B2O)
+  // SEO not assumed — client can add seo-onpage addon if needed.
+  site: 900, shop: 5700, app: 28000,
 };
 
 export const PAGE_UNIT = 350;

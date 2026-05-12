@@ -2934,11 +2934,11 @@
       "from": "od",
       "express": {
         "name": "Wizytówka Express",
-        "desc": "Prosta strona-wizytówka dla mikro-firmy lub jednoosobowej działalności. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Gotowa w tydzień na premium szablonie WordPress — samodzielnie zmieniasz treści w panelu admin."
+        "desc": "Prosta strona-wizytówka dla mikro-firmy. Pokażesz czym się zajmujesz, dane kontaktowe i zbierzesz zapytania przez formularz. Ruch trafia tu z direct — stopki maila, papierowej wizytówki, baneru reklamowego. Podstawowe SEO i samodzielna edycja treści w WP w cenie. Gotowa w tydzień."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "Strona pod jedną kampanię reklamową lub konkretny produkt. Skupiona na zamianie odwiedzających w klientów — wyraźna oferta, mocne CTA, formularz zapytań."
+        "desc": "Strona pod jedną kampanię reklamową lub konkretny produkt. Cel: pozyskiwać klientów z wyszukiwarki Google. Wyraźna oferta, mocne CTA, formularz zapytań + rozszerzone SEO on-page (schema, zoptymalizowane meta) by sprowadzać ruch organiczny."
       },
       "company": {
         "name": "Strona firmowa",
@@ -2946,7 +2946,7 @@
       },
       "ecom": {
         "name": "Sklep online",
-        "desc": "Sklep dla małej firmy w wersji startowej. Dostawa InPostem, płatności online przez Przelewy24 (BLIK, karta, szybkie przelewy), zgodny z dyrektywą Omnibus. Fakturowanie KSeF, integracja z Allegro i newsletter — możesz dodać jako opcje w kalkulatorze."
+        "desc": "Sklep dla małej firmy w wersji startowej. Dostawa InPostem, płatności online przez Przelewy24 (BLIK, karta, szybkie przelewy), zgodny z dyrektywą Omnibus. Podstawowe SEO w cenie. Fakturowanie KSeF, integracja z Allegro i newsletter — możesz dodać jako opcje w kalkulatorze."
       }
     },
     "knobs": {
@@ -2996,8 +2996,8 @@
         "vps": "VPS"
       },
       "timelines": {
-        "normal": "Standard",
-        "rush": "Rush (+25%)"
+        "normal": "Standardowy",
+        "rush": "Przyspieszony (+25%)"
       },
       "siteIntegr": {
         "analytics": "Analytics",
@@ -3079,7 +3079,7 @@
       "appRoles": "Role użytkowników",
       "appMobile": "Aplikacja mobilna",
       "hosting": "Hosting (setup)",
-      "rush": "Rush (+25%)",
+      "rush": "Termin przyspieszony (+25%)",
       "total": "Suma jednorazowa",
       "supportYearly": "Wsparcie pro",
       "year": "rok",

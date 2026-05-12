@@ -2908,11 +2908,11 @@
       "from": "from",
       "express": {
         "name": "Express business card",
-        "desc": "A simple business-card site for micro-businesses and freelancers. Showcase what you do, contact details, and collect inquiries via form. Ready in a week on a premium WordPress template — self-edit content via the admin panel."
+        "desc": "A simple business-card site for micro-businesses. Showcase what you do, contact details, lead form. Traffic comes from direct sources — email signatures, printed business cards, ads. Basic SEO and WP self-edit included. Ready in a week."
       },
       "landing": {
         "name": "Landing Page",
-        "desc": "A page for a single ad campaign or product. Focused on turning visitors into customers — clear offer, strong CTAs, lead form."
+        "desc": "A page for a single ad campaign or product. Goal: acquire customers from Google Search. Clear offer, strong CTAs, lead form + extended on-page SEO (schema, optimized meta) to drive organic traffic."
       },
       "company": {
         "name": "Business site",
@@ -2920,7 +2920,7 @@
       },
       "ecom": {
         "name": "Online store",
-        "desc": "Starter online store for small business. InPost shipping, online payments via Przelewy24 (BLIK, card, fast transfers), Omnibus-directive compliant. KSeF invoicing, Allegro integration and newsletter — available as optional add-ons in the calculator."
+        "desc": "Starter online store for small business. InPost shipping, online payments via Przelewy24 (BLIK, card, fast transfers), Omnibus-directive compliant. Basic SEO included. KSeF invoicing, Allegro integration and newsletter — available as optional add-ons in the calculator."
       }
     },
     "knobs": {

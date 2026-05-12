@@ -4,7 +4,6 @@ import {
   computeMiniQuote,
   BASE_PRICE,
   CMS_FLAT,
-  DESIGN_TIER_PRICE,
   TIMELINE_RUSH_MULT,
   type AdvancedQuoteInput,
 } from "@/lib/design/calculator";
@@ -55,16 +54,16 @@ const APP_BASELINE: AdvancedQuoteInput = {
 
 test.describe("BASE_PRICE — project kinds", () => {
   test("site/shop/app base prices match handoff", () => {
-    expect(BASE_PRICE).toEqual({ site: 750, shop: 5500, app: 28000 });
+    expect(BASE_PRICE).toEqual({ site: 900, shop: 5700, app: 28000 });
   });
 });
 
 test.describe("computeMiniQuote", () => {
-  test("site + 8 pages + cms = 750 + 7*350 + 3000 = 6 200", () => {
-    expect(computeMiniQuote({ kind: "site", pages: 8, cms: true })).toBe(6_200);
+  test("site + 8 pages + cms = 900 + 7*350 + 3000 = 6 350", () => {
+    expect(computeMiniQuote({ kind: "site", pages: 8, cms: true })).toBe(6_350);
   });
-  test("shop + 8 pages + cms = 5500 + 7*350 + 3000 = 10 950", () => {
-    expect(computeMiniQuote({ kind: "shop", pages: 8, cms: true })).toBe(10_950);
+  test("shop + 8 pages + cms = 5700 + 7*350 + 3000 = 11 150", () => {
+    expect(computeMiniQuote({ kind: "shop", pages: 8, cms: true })).toBe(11_150);
   });
   test("app + 8 pages + cms = 28000 + 7*350 + 3000 = 33 450", () => {
     expect(computeMiniQuote({ kind: "app", pages: 8, cms: true })).toBe(33_450);
@@ -74,8 +73,8 @@ test.describe("computeMiniQuote", () => {
 test.describe("computeAdvancedQuote — site", () => {
   test("baseline subtotal includes base + pages + cms + design tier", () => {
     const out = computeAdvancedQuote(SITE_BASELINE);
-    // 750 (base) + 7*350 (pages) + 3000 (cms) + 700 (design standard) = 6_900
-    expect(out.subtotal).toBe(6_900);
+    // 900 (base) + 7*350 (pages) + 3000 (cms nextjs) + 700 (design nextjs standard) = 7_050
+    expect(out.subtotal).toBe(7_050);
   });
   test("each extra page adds 350 PLN", () => {
     const a = computeAdvancedQuote({ ...SITE_BASELINE, site: { ...SITE_BASELINE.site, pages: 8 } });
@@ -84,7 +83,8 @@ test.describe("computeAdvancedQuote — site", () => {
   });
   test("design tier 'lite' is 0 PLN", () => {
     const out = computeAdvancedQuote({ ...SITE_BASELINE, designTier: "lite" });
-    expect(out.subtotal).toBe(6_900 - DESIGN_TIER_PRICE.standard);
+    // Baseline uses platform=nextjs, where standard=700 → lite=0 saves 700.
+    expect(out.subtotal).toBe(7_050 - 700);
   });
   test("CMS_FLAT exported constant equals 3000", () => {
     expect(CMS_FLAT).toBe(3000);
@@ -94,9 +94,9 @@ test.describe("computeAdvancedQuote — site", () => {
 test.describe("computeAdvancedQuote — shop", () => {
   test("baseline subtotal: base + content pages + design + catalog md", () => {
     const out = computeAdvancedQuote(SHOP_BASELINE);
-    // 5500 (base) + 5*350 (contentPages 6 → 5 extra) +
-    // 700 (design standard) + 1500 (catalog md) = 9_450
-    expect(out.subtotal).toBe(9_450);
+    // 5700 (base) + 5*350 (contentPages 6 → 5 extra) +
+    // 700 (design standard) + 1500 (catalog md) = 9_650
+    expect(out.subtotal).toBe(9_650);
   });
   test("payment gateways add 600 each", () => {
     const a = computeAdvancedQuote(SHOP_BASELINE);
