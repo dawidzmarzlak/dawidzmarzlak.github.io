@@ -21,7 +21,7 @@
   "hero": {
     "badge": "Over 50 completed projects since 2020",
     "title": "I Build Websites That Sell",
-    "subtitle": "I specialize in Next.js, WordPress, WooCommerce, PrestaShop, and web applications built on Spring Boot. I transform your ideas into working digital solutions.",
+    "subtitle": "I specialize in Next.js, WordPress (Astra/Elementor or custom theme), WooCommerce with KSeF + Omnibus + BaseLinker integrations, and Spring Boot + Next.js web applications. I transform your ideas into working digital solutions.",
     "cta": "Get a quote →",
     "cta_secondary": "View My Portfolio",
     "tag": "Available · 5+ years of experience",
@@ -87,7 +87,7 @@
       {
         "label": "// stacks",
         "num": "5",
-        "foot": "Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot."
+        "foot": "Next.js, WordPress, WooCommerce, WP Express, Spring Boot."
       },
       {
         "label": "// quote SLA",
@@ -122,13 +122,13 @@
       "title": "WooCommerce",
       "description": "Complete e-commerce stores on WordPress"
     },
-    "prestashop": {
-      "title": "PrestaShop",
-      "description": "Advanced e-commerce platforms for demanding clients"
+    "wpExpress": {
+      "title": "WP Express",
+      "description": "Premium Astra/Kadence template + brand customization — site in a week"
     },
     "webapp": {
       "title": "Web Applications",
-      "description": "Spring Boot backend + React/Next.js/Angular frontend"
+      "description": "Spring Boot backend + Next.js frontend"
     },
     "items": [
       {
@@ -148,13 +148,13 @@
       },
       {
         "num": "[04]",
-        "title": "Presta\nShop",
-        "desc": ""
+        "title": "WP Express",
+        "desc": "Astra Pro / Kadence + Elementor — site in a week for micro-businesses and freelancers."
       },
       {
         "num": "[05]",
         "title": "Web apps",
-        "desc": "Spring Boot + React/Angular. SSO, RBAC, audit — ready for enterprise production."
+        "desc": "Spring Boot + Next.js. SSO, RBAC — ready for enterprise production."
       }
     ]
   },
@@ -371,19 +371,19 @@
     "items": {
       "duration": {
         "question": "How long does project delivery take?",
-        "answer": "Delivery time depends on project complexity. A simple business card website takes 2-3 weeks, more advanced e-commerce takes 6-12 weeks."
+        "answer": "Delivery time depends on project complexity. WordPress Express business card: 5–7 days, Next.js business site: 2–4 weeks, WooCommerce store: 4–8 weeks, web application: from 12 weeks."
       },
       "cost": {
         "question": "How much does a website cost?",
-        "answer": "Prices are individual and depend on project scope. Simple business card websites start from $1,200, advanced online stores from $3,500."
+        "answer": "Prices are individual and depend on scope. Express business card from 3,000 PLN, landing page from 5,750 PLN, business site from 13,150 PLN, online store from 10,150 PLN. Full calculator available on the pricing page."
       },
       "hosting": {
         "question": "Do you offer hosting?",
-        "answer": "Yes, I can handle your website hosting. I work with the best hosting providers in Poland and abroad."
+        "answer": "Yes — Vercel for Next.js, cyber_Folks or LH.pl for WordPress, Hetzner VPS for applications. I recommend the best option for your stack and budget. You can host it yourself or have me handle it."
       },
       "cms": {
         "question": "Can I edit the website myself?",
-        "answer": "Of course! All my projects come with intuitive admin panels. Additionally, I provide training on how to use them."
+        "answer": "Yes. WordPress sites have a built-in admin panel (self-edit included by default). Next.js gets Sanity Studio if you choose the self-edit option in the calculator. After launch I provide training."
       },
       "changes": {
         "question": "What if I need changes after deployment?",
@@ -401,23 +401,23 @@
     "itemsList": [
       [
         "How long does a project take?",
-        "Brochure site: 3–4 weeks. Shop: 6–10 weeks. App: from 12 weeks. Every project gets a precise weekly timeline."
+        "Express business card: 5–7 days. Landing/business site: 2–4 weeks. Shop: 4–8 weeks. App: from 12 weeks. Every project gets a weekly timeline."
       ],
       [
         "How much does a website cost?",
-        "Brochure from 5,500 PLN, shop from 9,500 PLN, app from 18,000 PLN. Detailed quote in 48h from the brief."
+        "Express business card from 3,000 PLN, landing page from 5,750 PLN, business site from 13,150 PLN, shop from 10,150 PLN. Detailed quote in 48h from the brief."
       ],
       [
         "Do you offer hosting?",
-        "Yes — Vercel, AWS, OVH or your own VPS. I recommend the best option for your stack and budget."
+        "Yes — Vercel (Next.js), cyber_Folks or LH.pl (WordPress), Hetzner VPS (apps). I recommend the best option for your stack and budget."
       ],
       [
         "Can I edit the site myself?",
-        "Every project has a CMS (WordPress, Sanity, Strapi) or admin panel. After launch I run training + documentation."
+        "WordPress has a built-in admin (included). Next.js + Sanity Studio is an option in the calculator. After launch I run training + documentation."
       ],
       [
         "What about SEO?",
-        "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. All by default. Plus a post-launch audit."
+        "Basic SEO included: sitemap.xml, robots.txt, meta tags, Schema.org Organization, Google Search Console submission. Extended on-page SEO (schema, optimized meta, canonical) is an option in the calculator."
       ]
     ],
     "page": {
@@ -478,7 +478,7 @@
           "items": [
             [
               "What do you build?",
-              "Sites (Next.js, WordPress), stores (WooCommerce, PrestaShop, custom Next), web apps (Spring Boot + React/Next/Angular). Stack picked for the problem — not the other way."
+              "Sites (Next.js, WordPress with Astra/Elementor or custom theme), stores (WooCommerce with KSeF + Omnibus + BaseLinker), web apps (Spring Boot + Next.js). Stack picked for the problem — not the other way."
             ],
             [
               "Who owns the code?",
@@ -486,11 +486,11 @@
             ],
             [
               "Can I edit the site myself?",
-              "Yes — every project ships with a CMS (WordPress, Sanity, Strapi) or admin panel. After deploy: training + PDF docs + video walkthrough."
+              "Yes — WordPress has a built-in admin (included). Next.js gets Sanity Studio if you select the self-edit option in the calculator. After deploy: training + PDF docs + video walkthrough."
             ],
             [
               "What about SEO?",
-              "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — all default. Plus a post-deploy audit with concrete recommendations."
+              "Basic SEO included: sitemap.xml, robots.txt, meta tags, Schema.org Organization, Google Search Console submission. Lighthouse 95+ on Next.js, 90+ on WordPress. Extended on-page SEO (schema, optimized meta, canonical) as an option in the calculator."
             ]
           ]
         },
@@ -499,7 +499,7 @@
           "items": [
             [
               "How long does delivery take?",
-              "Marketing site: 3–4 weeks. Shop: 6–10 weeks. App: from 12 weeks. Each project gets an exact weekly schedule with the quote."
+              "Express business card: 5–7 days. Landing/business site: 2–4 weeks. Shop: 4–8 weeks. App: from 12 weeks. Each project gets a weekly schedule with the quote."
             ],
             [
               "What slows projects down?",
@@ -564,7 +564,7 @@
       "nextjs": "Next.js Websites",
       "wordpress": "WordPress",
       "woocommerce": "WooCommerce",
-      "prestashop": "PrestaShop",
+      "wpExpress": "WP Express",
       "webapp": "Web Applications"
     },
     "brand": "IT Solutions",
@@ -599,8 +599,8 @@
   "metadata": {
     "title": "IT Solutions - Freelance Web Developer",
     "siteName": "IT Solutions",
-    "description": "Freelance web developer - I create professional websites and online stores. Next.js, WordPress, WooCommerce, PrestaShop. Individual approach to every project.",
-    "keywords": "freelance web developer, web development, web applications, Next.js, WordPress, WooCommerce, PrestaShop, web developer Poland"
+    "description": "Freelance web developer - I create professional websites and online stores. Next.js, WordPress (Astra/Elementor or custom theme), WooCommerce with KSeF + Omnibus + BaseLinker integrations, Spring Boot web applications. Individual approach to every project.",
+    "keywords": "freelance web developer, web development, web applications, Next.js, WordPress, WooCommerce, Spring Boot, web developer Poland"
   },
   "showcase": {
     "demoBadge": "Demo / inspiration",

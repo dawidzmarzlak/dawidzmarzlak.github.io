@@ -21,7 +21,7 @@
   "hero": {
     "badge": "Ponad 50 zrealizowanych projektów od 2020 roku",
     "title": "Tworzę Strony, Które Sprzedają",
-    "subtitle": "Specjalizuję się w Next.js, WordPress, WooCommerce, PrestaShop i aplikacjach webowych opartych na Spring Boot. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
+    "subtitle": "Specjalizuję się w Next.js, WordPress (Astra/Elementor lub custom theme), WooCommerce z integracjami KSeF + Omnibus + BaseLinker oraz aplikacjach webowych Spring Boot + Next.js. Przekształcam Twoje pomysły w działające rozwiązania cyfrowe.",
     "cta": "Wycena →",
     "cta_secondary": "Zobacz moje portfolio",
     "tag": "Available · 5+ lat doświadczenia",
@@ -87,7 +87,7 @@
       {
         "label": "// stacks",
         "num": "5",
-        "foot": "Next.js, WordPress, WooCommerce, PrestaShop, Spring Boot."
+        "foot": "Next.js, WordPress, WooCommerce, WP Express, Spring Boot."
       },
       {
         "label": "// quote SLA",
@@ -122,13 +122,13 @@
       "title": "WooCommerce",
       "description": "Kompleksowe sklepy internetowe na WordPress"
     },
-    "prestashop": {
-      "title": "PrestaShop",
-      "description": "Zaawansowane platformy e-commerce dla wymagających"
+    "wpExpress": {
+      "title": "WP Express",
+      "description": "Premium szablon Astra/Kadence + customizacja pod markę — strona w tydzień"
     },
     "webapp": {
       "title": "Aplikacje Webowe",
-      "description": "Spring Boot backend + React/Next.js/Angular frontend"
+      "description": "Spring Boot backend + Next.js frontend"
     },
     "items": [
       {
@@ -148,13 +148,13 @@
       },
       {
         "num": "[04]",
-        "title": "Presta\nShop",
-        "desc": ""
+        "title": "WP Express",
+        "desc": "Astra Pro / Kadence + Elementor — strona w tydzień dla mikro-firm i jednoosobowych biznesów."
       },
       {
         "num": "[05]",
         "title": "Aplikacje webowe",
-        "desc": "Spring Boot + React/Angular. SSO, RBAC, audyt — gotowe na produkcję enterprise."
+        "desc": "Spring Boot + Next.js. SSO, RBAC — gotowe na produkcję enterprise."
       }
     ]
   },
@@ -371,19 +371,19 @@
     "items": {
       "duration": {
         "question": "Jak długo trwa realizacja projektu?",
-        "answer": "Czas realizacji zależy od skomplikowania projektu. Prosta strona wizytówka to 2-3 tygodnie, bardziej zaawansowany e-commerce to 6-12 tygodni."
+        "answer": "Czas realizacji zależy od skomplikowania projektu. Wizytówka Express na WordPressie to 5–7 dni, strona firmowa Next.js 2–4 tygodnie, sklep WooCommerce 4–8 tygodni, aplikacja webowa od 12 tygodni."
       },
       "cost": {
         "question": "Ile kosztuje strona internetowa?",
-        "answer": "Ceny są indywidualne i zależą od zakresu projektu. Proste strony wizytówki startują od 5000 zł, zaawansowane sklepy internetowe od 15000 zł."
+        "answer": "Ceny są indywidualne i zależą od zakresu. Wizytówka Express startuje od 3 000 zł, landing page od 5 750 zł, strona firmowa od 13 150 zł, sklep online od 10 150 zł. Pełny kalkulator dostępny na stronie cennika."
       },
       "hosting": {
         "question": "Czy oferujesz hosting?",
-        "answer": "Tak, mogę zająć się hostingiem Twojej strony. Współpracuję z najlepszymi dostawcami hostingu w Polsce i za granicą."
+        "answer": "Tak — Vercel dla Next.js, cyber_Folks lub LH.pl dla WordPress, Hetzner VPS dla aplikacji. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu. Możesz hostować u siebie albo zlecić mi."
       },
       "cms": {
         "question": "Czy mogę samodzielnie edytować stronę?",
-        "answer": "Oczywiście! Wszystkie moje projekty są wyposażone w intuicyjne panele administracyjne. Dodatkowo przeprowadzam szkolenia z obsługi."
+        "answer": "Tak. Strony WordPress mają wbudowany panel admin (samodzielna edycja domyślnie w cenie). Next.js dostaje Sanity Studio jeśli wybierzesz opcję samodzielnej edycji w kalkulatorze. Po wdrożeniu prowadzę szkolenie z obsługi."
       },
       "changes": {
         "question": "Co jeśli będę potrzebować zmian po wdrożeniu?",
@@ -401,23 +401,23 @@
     "itemsList": [
       [
         "Ile trwa realizacja projektu?",
-        "Wizytówka: 3–4 tyg. Sklep: 6–10 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje dokładny harmonogram tygodniowy."
+        "Wizytówka Express: 5–7 dni. Landing/firmowa: 2–4 tyg. Sklep: 4–8 tyg. Aplikacja: od 12 tyg. Każdy projekt dostaje harmonogram tygodniowy."
       ],
       [
         "Ile kosztuje strona internetowa?",
-        "Wizytówka od 5 500 PLN, sklep od 9 500 PLN, aplikacja od 18 000 PLN. Dokładna wycena w 48h od briefu."
+        "Wizytówka Express od 3 000 PLN, landing page od 5 750 PLN, strona firmowa od 13 150 PLN, sklep od 10 150 PLN. Dokładna wycena w 48h od briefu."
       ],
       [
         "Czy oferujecie hosting?",
-        "Tak — Vercel, AWS, OVH lub własny VPS. Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."
+        "Tak — Vercel (Next.js), cyber_Folks lub LH.pl (WordPress), Hetzner VPS (aplikacje). Doradzam najlepsze rozwiązanie dla danego stacku i budżetu."
       ],
       [
         "Czy mogę edytować stronę samodzielnie?",
-        "Każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja."
+        "WordPress ma wbudowany admin (w cenie). Next.js + Sanity Studio jako opcja w kalkulatorze. Po wdrożeniu prowadzę szkolenie + dokumentacja."
       ],
       [
         "Co z SEO?",
-        "Schema.org, meta, OG, sitemap, robots, Lighthouse 95+. Wszystko domyślnie. Plus audyt po wdrożeniu."
+        "Podstawowe SEO w cenie: sitemap.xml, robots.txt, meta tagi, Schema.org Organization, podpięcie do Google Search Console. Rozszerzone on-page SEO (schema, optimized meta, canonical) jako opcja w kalkulatorze."
       ]
     ],
     "page": {
@@ -478,7 +478,7 @@
           "items": [
             [
               "Czym się zajmujesz?",
-              "Strony (Next.js, WordPress), sklepy (WooCommerce, PrestaShop, custom Next), aplikacje webowe (Spring Boot + React/Next/Angular). Stack dobieram do problemu — nie odwrotnie."
+              "Strony (Next.js, WordPress z Astra/Elementor lub custom theme), sklepy (WooCommerce z KSeF + Omnibus + BaseLinker), aplikacje webowe (Spring Boot + Next.js). Stack dobieram do problemu — nie odwrotnie."
             ],
             [
               "Czyj jest kod?",
@@ -486,11 +486,11 @@
             ],
             [
               "Czy mogę edytować stronę samodzielnie?",
-              "Tak — każdy projekt ma CMS (WordPress, Sanity, Strapi) lub panel admina. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."
+              "Tak — WordPress ma wbudowany panel admin (w cenie). Next.js dostaje Sanity Studio jeśli zaznaczysz opcję samodzielnej edycji w kalkulatorze. Po wdrożeniu prowadzę szkolenie + dokumentacja w PDF + video-walkthrough."
             ],
             [
               "A co z SEO?",
-              "Schema.org, meta, OG tags, sitemap, robots.txt, Lighthouse 95+ — wszystko domyślnie. Plus audyt po wdrożeniu z konkretnymi rekomendacjami."
+              "Podstawowe SEO w cenie: sitemap.xml, robots.txt, meta tagi, Schema.org Organization, podpięcie do Google Search Console. Lighthouse 95+ na Next.js, 90+ na WordPress. Rozszerzone on-page SEO (schema, optimized meta, canonical) jako opcja w kalkulatorze."
             ]
           ]
         },
@@ -499,7 +499,7 @@
           "items": [
             [
               "Ile trwa realizacja?",
-              "Wizytówka: 3–4 tygodnie. Sklep: 6–10 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje dokładny harmonogram tygodniowy z wyceną."
+              "Wizytówka Express: 5–7 dni. Landing/firmowa: 2–4 tygodnie. Sklep: 4–8 tygodni. Aplikacja: od 12 tygodni. Każdy projekt dostaje harmonogram tygodniowy z wyceną."
             ],
             [
               "Co spowalnia projekt?",
@@ -507,7 +507,7 @@
             ],
             [
               "Czy mogę zamówić ekspresowo?",
-              "Tak — opcja 'Rush' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."
+              "Tak — opcja 'Przyspieszony' (+25%) skraca czas o 30–40%. Wymagana dostępność zespołu po stronie klienta i jasny zakres od dnia zero."
             ]
           ]
         },
@@ -564,7 +564,7 @@
       "nextjs": "Strony w Next.js",
       "wordpress": "WordPress",
       "woocommerce": "WooCommerce",
-      "prestashop": "PrestaShop",
+      "wpExpress": "WP Express",
       "webapp": "Aplikacje Webowe"
     },
     "brand": "IT Solutions",
@@ -599,7 +599,7 @@
   "metadata": {
     "title": "IT Solutions - Freelance Web Developer | Strony Internetowe",
     "siteName": "IT Solutions",
-    "description": "Freelance web developer - tworzę profesjonalne strony internetowe i sklepy online. Next.js, WordPress, WooCommerce, PrestaShop. Indywidualne podejście do projektu.",
+    "description": "Freelance web developer - tworzę profesjonalne strony internetowe i sklepy online. Next.js, WordPress (Astra/Elementor lub custom theme), WooCommerce z integracjami KSeF + Omnibus + BaseLinker, aplikacje webowe Spring Boot. Indywidualne podejście do projektu.",
     "keywords": "freelance web developer, strony internetowe, tworzenie stron www, sklepy internetowe, WordPress developer, Next.js developer, web developer polska"
   },
   "showcase": {
