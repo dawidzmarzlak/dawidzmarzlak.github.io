@@ -25,7 +25,7 @@ export default function PortfolioPage() {
       <PortfolioPageClient />
       <CaseStudy data={getDefaultCaseStudy()} />
       <CtaCard
-        heading={<>Twój projekt może być <ItalicAccent>następny</ItalicAccent>.</>}
+        heading={<>Twój projekt może być <ItalicAccent onAccent>następny</ItalicAccent>.</>}
         sub="30 minut konsultacji. 48h na wycenę. Zero zobowiązań."
         primaryHref="/contact"
         primaryLabel="Umów konsultację →"

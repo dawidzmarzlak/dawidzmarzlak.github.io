@@ -16,7 +16,7 @@ export default async function ServicesPage({
       <ServicesHero />
       <ServicesPageClient />
       <CtaCard
-        heading={<>Twój projekt zaczyna się od <ItalicAccent>briefu</ItalicAccent>.</>}
+        heading={<>Twój projekt zaczyna się od <ItalicAccent onAccent>briefu</ItalicAccent>.</>}
         sub="Wypełnij formularz, opisz w 5 zdaniach co chcesz zrobić — wracam z rekomendowanym stackiem i wyceną w 48h."
         primaryHref="/contact"
         primaryLabel="Umów wycenę →"

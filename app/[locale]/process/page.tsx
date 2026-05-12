@@ -18,7 +18,7 @@ function ProcessCta() {
     <CtaCard
       heading={
         <>
-          Krok pierwszy: <ItalicAccent>30 minut konsultacji</ItalicAccent>.
+          Krok pierwszy: <ItalicAccent onAccent>30 minut konsultacji</ItalicAccent>.
         </>
       }
       sub={t("p")}

@@ -18,7 +18,7 @@ function FaqCta() {
     <CtaCard
       heading={
         <>
-          Twojego pytania tu nie ma? <ItalicAccent>Napisz</ItalicAccent>.
+          Twojego pytania tu nie ma? <ItalicAccent onAccent>Napisz</ItalicAccent>.
         </>
       }
       sub={t("p")}

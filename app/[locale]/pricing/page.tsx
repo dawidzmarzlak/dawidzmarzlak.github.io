@@ -17,7 +17,7 @@ export default function PricingPage() {
       <PricingHero />
       <PricingPageClient />
       <CtaCard
-        heading={<>Niestandardowy projekt? <ItalicAccent>Porozmawiajmy</ItalicAccent>.</>}
+        heading={<>Niestandardowy projekt? <ItalicAccent onAccent>Porozmawiajmy</ItalicAccent>.</>}
         sub="Każdy projekt jest inny — jeśli kalkulator nie obejmuje Twojego scenariusza, wracam z indywidualną wyceną w 48h."
         primaryHref="/contact"
         primaryLabel="Wyślij brief →"

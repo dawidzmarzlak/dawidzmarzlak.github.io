@@ -36,7 +36,7 @@ export default function ShowcasePage() {
       <ShowcaseList />
 
       <CtaCard
-        heading={<>Twoja branża nie znalazła się w galerii? <ItalicAccent>Porozmawiajmy</ItalicAccent>.</>}
+        heading={<>Twoja branża nie znalazła się w galerii? <ItalicAccent onAccent>Porozmawiajmy</ItalicAccent>.</>}
         sub="Każdy showcase to przykład — nie szablon. Pod Twoje wymagania budujemy od zera."
         primaryHref="/contact"
         primaryLabel="Wycena →"
