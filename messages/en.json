@@ -2912,6 +2912,7 @@
       "intro": "Pick one of 4 popular configurations or build your own with the calculator below. Each option is a concrete line item. Click — the price updates live. When done, send the brief — quote context travels with it."
     },
     "presets": {
+      "title": "Pick a package",
       "popular": "Most popular",
       "from": "from",
       "express": {

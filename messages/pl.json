@@ -2938,6 +2938,7 @@
       "intro": "Wybierz jeden z 4 popularnych zestawów albo ułóż własny w kalkulatorze poniżej. Każda opcja to konkretna pozycja w wycenie. Klikaj — cena zmienia się na żywo. Po skończeniu wyślij brief — kontekst wyceny przychodzi razem z zapytaniem."
     },
     "presets": {
+      "title": "Wybierz pakiet",
       "popular": "Najpopularniejsze",
       "from": "od",
       "express": {
